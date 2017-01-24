@@ -1,0 +1,139 @@
+//多重列表
+
+//頁次導航列================================================================
+
+.list-multiple.page-click {
+
+	> .bg-drop-layout > .in, > .in {
+		
+	}
+
+	.hd {
+		display: none;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		padding-top: $interval-s;
+		border-top: $border;
+
+		> .in {
+			
+			&:after {
+				@extend %clear;
+			}
+		}
+
+		ul {
+
+			&[data-index="1"] {
+				float: left;
+			}
+
+			&[data-index="2"] {
+				float: right;
+			}
+
+			&[data-index="3"] {
+				overflow: hidden;
+				text-align: center;
+
+				@include media('phone') {
+					display: none;
+				}
+			}
+		}
+
+		li {
+			display: inline-block;
+
+			+ li {
+				margin-left: $interval-xs;
+			}
+
+			&.first {
+				
+			}
+
+			&.prev {
+				
+			}
+
+			&.next {
+
+			}
+
+			&.last {
+				
+			}
+
+			&.is-active {
+
+				a {
+					background-color: $minor-color;
+
+					&:hover {
+						background-color: deeper($minor-color);
+					}
+				}
+			}
+
+			span {
+
+				a {
+
+				}
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %btn;
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

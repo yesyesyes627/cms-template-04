@@ -1,0 +1,29 @@
+<div class="area-form page-search <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="select" data-before="類別： ">
+				<select>
+					<option data-href="" selected>請選擇</option>
+					<option data-href="http://www.google.com"><%= zh_lorem_sentence %></option>
+					<option data-href="http://tw.yahoo.com"><%= zh_lorem_sentence %></option>
+				</select>
+			</span>
+		</div>
+		<div class="fieldset">
+			<span class="date" data-before="開始日： "><input type="date" value="2016/01/01"></span>
+			<span class="date" data-before="結束日： "><input type="date" value="2016/12/31"></span>
+		</div>
+		<div class="fieldset">
+			<span class="search" data-before="關鍵字： "><input type="search" placeholder="Input key word here"></span>
+		</div>
+		<div class="fieldset">
+			<span class="submit"><input type="submit" value="送出"></span>
+			<span class="reset"><input type="reset" value="清除"></span>
+		</div>
+	</div></div>
+</div></div>

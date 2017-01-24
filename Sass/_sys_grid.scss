@@ -1,0 +1,140 @@
+//排版框架
+
+// type 0 模組(module)
+// type 1 分割(cell)
+// type 2 頁籤(tab)
+// type 3 單欄(row)
+// type 4 清單(list)
+
+@for $i from 1 through $max-child {
+
+	[data-type="1"][data-child="#{$i}"] { //自然分割
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .ct {
+
+				> .in {
+
+					> [data-index][data-type] {
+						width: 100% / $i;
+					}
+				}
+			}
+		}
+	}
+}
+
+@for $i from 2 through $max-child {
+
+	[data-type="1"][data-setlen="#{$i}"] { //設定分割
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .ct {
+
+				> .in {
+
+					> [data-index][data-type] {
+						width: 100% / $i;
+					}
+				}
+			}
+		}
+	}
+}
+
+[data-type="1"][data-child] { //分割
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .ct {
+
+			> .in {
+
+				> [data-index][data-type] {
+					float: left;
+
+					@include media('pad') {
+						width: 50%;
+
+						&:nth-of-type(odd){
+							clear: left;
+						}
+
+						[data-index][data-type] {
+							width: 100%;
+						}
+					}
+
+					@include media('phone') {
+						width: 100%;
+					}
+				}
+
+				&:after{
+					@extend %clear;
+				}
+			}
+		}
+	}
+}
+
+[data-index][data-type] { //模組與群組
+
+	> .bg-drop-layout > .in, > .in {
+		position: relative;
+		min-height: 1px;
+	}
+
+	.hd {
+
+		h3, h4 {
+			@extend %reset-outer;
+			@extend %reset-inner;
+		}
+
+		span {
+			color: inherit;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	.ct {
+		
+		.list {
+
+			ul {
+				@extend %reset-outer;
+				@extend %reset-inner;
+			}
+		}
+
+		.label {
+
+			ul {
+				@extend %reset-outer;
+				@extend %reset-inner;
+			}
+		}
+
+		.p {
+
+			p {
+				@extend %reset-outer;
+				@extend %reset-inner;
+			}
+		}
+	}
+
+	.ft {
+
+		ul {
+			@extend %reset-outer;
+			@extend %reset-inner;
+		}
+	}
+}

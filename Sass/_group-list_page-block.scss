@@ -1,0 +1,71 @@
+//列表群組
+
+//內頁區塊群組================================================================
+
+.group-list.page-block {
+	@include default-len(4, 3);
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+			@extend %header;
+
+			> .in {
+
+			}
+
+			h3 {
+				
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> ul {
+
+					> li {
+						box-sizing: border-box;
+						padding: 0 $interval-xs $interval-s;
+
+						@include len-rwd('pad', 2);
+						@include len-rwd('phone', 1);
+					}
+				}
+			}
+		}
+
+		> .ft {
+			@extend %footer;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

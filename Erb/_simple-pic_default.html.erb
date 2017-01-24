@@ -1,0 +1,14 @@
+<%
+	img = lorem_image('1024x360')
+%>
+
+<div class="simple-pic default <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<span style="background-image: url('<%= img %>');"><a href="#"><img src="<%= img %>" alt=""></a></span>
+	</div></div>
+</div></div>

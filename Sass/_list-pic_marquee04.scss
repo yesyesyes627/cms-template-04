@@ -1,0 +1,180 @@
+//圖片列表
+
+//跑馬燈(羅渣士體育網 - 彥專)================================================================
+
+.list-pic.marquee04 {
+	$btn-width: 20px; //設定按鈕寬度
+	$btn-height: 38px; //設定按鈕高度
+	$max-li-len: 50; //設定 li 的最大數量
+	$show-li-len: 3; //設定一次要秀的數量
+	$max-show-li-len: 10; //設定一次要秀的範圍數量，給 alinelwngth 用
+
+	@for $i from 1 through $max-show-li-len { //使數量可以被控制 1 ~ $max-show-li-len
+	
+		&[data-setLen="#{$i}"] {
+
+			.ct ul {
+				width: $max-li-len * 100% / $i;
+			}
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h3 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+
+		+ .ct {
+
+			+ .ft {
+
+				li {
+
+					&.next, &.prev {
+
+						a {
+							margin-top: -0.5 * $btn-height + 28px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ct {
+
+		> .in {
+			overflow: hidden;
+			margin: 0 $btn-width; //如果要與圖不重疊
+
+			@include js(false) {
+				margin: 0;
+			}
+		}
+
+		ul {
+			width: $max-li-len * 100% / $show-li-len;
+
+			@include len-rwd('pad', 2, $max-li-len * 100%);
+			@include len-rwd('phone', 1, $max-li-len * 100%);
+
+			@include js(false) {
+				width: 100%;
+			}
+		}
+
+		li {
+			width: 100% / $max-li-len;
+			float: left;
+			box-sizing: border-box;
+			padding: $interval-m;
+
+			@include js(false) {
+				width: 100% / $show-li-len;
+			}
+		}
+
+		span {
+			@extend %bg-cover;
+			display: block;
+		}
+
+		a {
+			display: block;
+			position: relative;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+
+		/*i*/.mark {
+			@extend %mark-absolute;
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			&.next, &.prev {
+
+				@include js(false) {
+					display: none;
+				}
+
+				a {
+					@extend %hide-text;
+					position: absolute;
+					top: 50%;
+					margin-top: -0.5 * $btn-height;
+					display: block;
+					width: $btn-width;
+					height: $btn-height;
+					transition: $transition;
+					background-color: $deep-gray;
+					background-color: rgba($deep-gray, $opacity-h);
+
+					&:hover {
+						background-color: rgba($deep-gray, $opacity-vh);
+					}
+				}
+			}
+
+			&.prev {
+
+				a {
+					left: 0;
+					@include bg-to-pic('icon-pic/away-w-left04.png', false);
+				}
+			}
+
+			&.next {
+
+				a {
+					right: 0;
+					@include bg-to-pic('icon-pic/away-w-right04.png', false);
+				}
+			}
+
+			&.more {
+				display: none;
+			}
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

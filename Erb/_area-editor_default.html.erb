@@ -1,0 +1,22 @@
+<%
+	max_paragraph_size = 1 #最少的段落長度
+	min_paragraph_size = 2 #最多的段落長度
+	min_paragraph = 1 #最少的段落
+	max_paragraph = 3 #最多的段落
+
+	paragraph_length = (min_paragraph..min_paragraph_size).to_a.sample
+%>
+
+<div class="area-editor default <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+
+		<% paragraph_length.times do |i| %>
+			<p><%= zh_lorem_paragraphs rand( paragraph_length ) + min_paragraph_size %></p>
+		<% end %>
+	</div></div>
+</div></div>

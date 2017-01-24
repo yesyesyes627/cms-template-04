@@ -1,0 +1,27 @@
+<%
+	min_ul = 2 #最少的ul數量
+	max_ul = 4 #最多的ul數量
+
+	min_li = 2 #最少的li數量
+	max_li = 10 #最多的li數量
+
+	min_text = 3 #最少的字元
+	max_text = 8 #最多的字元
+%>
+
+<div class="list-multiple default <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+
+		<%
+			ul_length = (min_ul..max_ul).to_a.sample
+			
+			ul_length.times do |i|
+		%><ul data-index="#{i + 1}" <% li_length = (min_li..max_li).to_a.sample %> data-child="<%= li_length %>"><% li_length.times do |j| %><li data-index="<%= j + 1 %>"><span><a href="#"><%= zh_lorem_words (min_text..max_text).to_a.sample %></a></span></li><% end %></ul>
+		<% end %>
+	</div></div>
+</div></div>

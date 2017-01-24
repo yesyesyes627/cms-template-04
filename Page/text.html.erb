@@ -1,0 +1,10 @@
+<%= render partial: "/erb/sys_variable" %>
+<!-- default 結束 -->
+
+<!-- page-list 內頁文字列表 -->
+	<%= render partial: "/erb/list-text_page-list", locals: set({ header_text: "內頁文字(列表)" }) %>
+<!-- page-list 結束 -->
+
+<!-- page-list-text 內頁文字列表群組 -->
+	<%= render partial: "/erb/group-list_page-list-text", locals: set({ header_text: "內頁文字(列表群組)", inner: "/erb/list-text_page-list" }) %>
+<!-- page-list-text 結束 -->

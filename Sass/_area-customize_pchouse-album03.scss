@@ -1,0 +1,261 @@
+//客製區塊
+
+//相簿(pchouse03 - 彥專)================================================================
+
+.area-customize.pchouse-album03 {
+
+	@include js(false) {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$list-are_w: 235px;
+
+		> .in {
+
+		}
+
+		.slider-box {
+			position: relative;
+		}
+
+		.pic-area {
+			margin-left: $list-are_w - 20px;
+			overflow: hidden;
+
+			@include media('phone') {
+				margin-left: 0;
+			}
+			
+			/*a*/.div {
+
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.list-area {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: $list-are_w;
+			z-index: 1;
+
+			@include media('phone') {
+				position: static;
+				top: auto;
+				left: auto;
+				bottom: auto;
+				width: auto;
+			}
+
+			ul {
+				padding-left: 0;
+				margin: 0;
+				list-style: none;
+			}
+
+			li { //1
+				position: absolute;
+				width: 100%;
+				height: 22%;
+				top: 2.4%;
+
+				@include media('phone') {
+					position: static;
+					top: auto !important;
+					height: auto;
+					width: auto;
+				}
+
+				&.is-active {
+
+					a {
+						background-color: $major-color;
+						border-color: $major-color;
+
+						&:after {
+							content: $content;
+						}
+
+						&:hover {
+							background-color: deeper($major-color);
+
+							&:after {
+								border-left-color: deeper($major-color);
+							}
+						}
+					}
+
+					i {
+
+						&.caption {
+							color: $white;
+						}
+
+						&.p {
+							color: $white;
+						}
+					}
+				}
+
+				+ li { //2
+					top: 26.8%;
+
+					+ li { //3
+						top: 51.2%;
+
+						+ li { //4
+							top: 75.6%;
+
+							+ li { //5
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			a {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: 0 $interval-l;
+				border: $border;
+				background-color: $white;
+				transition: $transition;
+
+				@include media('phone') {
+					position: static;
+					top: auto;
+					right: auto;
+					bottom: auto;
+					left: auto;
+					padding: $interval-m $interval-l;
+					display: block;
+				}
+
+				&:before {
+					content: $content;
+					display: inline-block;
+					width: 0;
+					height: 100%;
+					vertical-align: middle;
+
+					@include media('phone') {
+						content: none;
+					}
+				}
+
+				&:after {
+					$size: 15px;
+
+					position: absolute;
+					top: 50%;
+					left: 100%;
+					margin-top: -1 * $size;
+					width: 0;
+					height: 0;
+					border: $size solid transparent;
+					border-left-color: $major-color;
+					transition: $transition;
+				}
+
+				&:hover {
+					background-color: $light;
+				}
+			}
+
+			img {
+				display: none;
+			}
+
+			/*span*/.essay {
+				display: inline-block;
+				vertical-align: middle;
+
+				@include media('phone') {
+					display: block;
+				}
+			}
+
+			i {
+				@extend %ellipsis;
+				font-style: normal;
+				display: block;
+				max-width: 190px;
+				transition: $transition;
+
+				@include media('phone') {
+					max-width: auto;
+				}
+
+				&.caption {
+					font-size: $font-size-l;
+					font-weight: $font-weight-b;
+					color: $major-color;
+				}
+
+				&.p {
+					margin-top: $interval-xs;
+					color: $body-font-color;
+				}
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

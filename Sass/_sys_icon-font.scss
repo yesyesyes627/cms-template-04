@@ -1,0 +1,16 @@
+//文字圖示
+
+	// 請注意！本 scss 所做設定皆全域可見。
+	// 本 sass 引入 icomoon 圖示字型，用以作為文字圖示。
+	// 詳細資訊請參閱 base/icon-font 中的說明。
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../images/icon-font/icomoon.eot?59oic8');
+	src:url('../images/icon-font/icomoon.eot?#iefix59oic8') format('embedded-opentype'),
+		url('../images/icon-font/icomoon.ttf?59oic8') format('truetype'),
+		url('../images/icon-font/icomoon.woff?59oic8') format('woff'),
+		url('../images/icon-font/icomoon.svg?59oic8#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

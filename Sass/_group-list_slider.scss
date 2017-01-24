@@ -1,0 +1,74 @@
+//列表群組
+
+//輪播================================================================
+
+.group-list.slider {
+		
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+			@extend %header;
+
+			> .in {
+
+			}
+
+			h3 {
+				
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> ul {
+
+					> li {
+
+						+ li {
+							display: none;
+
+							@include js(false) {
+								display: block;
+								margin-top: $interval-m;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+			@extend %footer;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

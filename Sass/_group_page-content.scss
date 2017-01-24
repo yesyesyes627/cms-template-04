@@ -1,0 +1,61 @@
+//群組
+
+//內頁主要內容================================================================
+
+.group.page-content {
+	@extend %area-page;
+	position: relative;
+	margin: $interval-l 0 $interval-xl;
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

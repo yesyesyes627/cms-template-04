@@ -1,0 +1,17 @@
+<%
+	min_num = 1 #最少的數字
+	max_num = 100 #最多的數字
+
+	num = (min_num..max_num).to_a.sample
+%>
+
+<div class="simple-text vote-result <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<span style="width: <%= num %>%"><%= num %></span>
+	</div></div>
+</div></div>

@@ -1,0 +1,78 @@
+//簡單文字
+
+//天氣================================================================
+
+.simple-text.weather {
+
+	@include js(false) {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+
+		> .in {
+			
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

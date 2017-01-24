@@ -1,0 +1,13 @@
+<%= render partial: "/erb/sys_variable" %>
+
+<!-- page-block 內頁區塊 -->
+	<%= render partial: "/erb/list-pic_page-block", locals: set({ func_set: "{'fadeSlider':{'auto':false,'delay':5000,'speed':300},'gallery':{}}", header_text: " 內頁圖片(區塊)" }) %>
+<!-- page-block 結束 -->
+
+<!-- page-list 內頁圖片列表 -->
+	<%= render partial: "/erb/list-pic_page-list", locals: set({ header_text: "內頁圖片(圖片列表)", func_set: "{'gallery':{}}" }) %>
+<!-- page-list 結束 -->
+
+<!-- page-list-pic 內頁圖片列表群組 -->
+	<%= render partial: "/erb/group-list_page-list-pic", locals: set({ header_text: "內頁圖片(圖片列表群組)", inner: "/erb/list-pic_page-list" }) %>
+<!-- page-list-pic 結束 -->

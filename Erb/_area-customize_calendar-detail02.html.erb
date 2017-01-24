@@ -1,0 +1,88 @@
+<%
+	min_li = 1 #最少的li數量
+	max_li = 4 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="area-customize calendar-detail02 <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="caption"><span><a href="#">2015年11月</a></span></div>
+		<div class="heading">
+			<div class="list"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#"><i class="mark">2</i>日</a></span></li><li data-index="2" class="is-active"><span><a href="#"><i class="mark">3</i>一</a></span></li><li data-index="3"><span><a href="#"><i class="mark">4</i>二</a></span></li><li data-index="4"><span><a href="#"><i class="mark">5</i>三</a></span></li><li data-index="5"><span><a href="#"><i class="mark">6</i>四</a></span></li><li data-index="6" class="is-today"><span><a href="#"><i class="mark">7</i>五</a></span></li><li data-index="7"><span><a href="#"><i class="mark">8</i>六</a></span></li></ul></div>
+			<div class="label"><ul data-index="1" data-child="2"><li data-index="1" class="prev"><span><a href="#">上週</a></span></li><li data-index="2" class="next"><span><a href="#">下週</a></span></li></ul></div>
+		</div>
+		<div class="table">
+			<table summary="2015年11月" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<th scope="col" title="活動類型"><span>活動類型</span></th>
+						<th scope="col" title="地區"><span>地區</span></th>
+						<th scope="col" title="活動時間"><span>活動時間</span></th>
+						<th scope="col" title="活動主題"><span>活動主題</span></th>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+					<tr>
+						<td title="活動類型"><span><i class="mark">觀光休閒</i></span></td>
+						<td title="地區"><span>南屯區</span></td>
+						<td title="活動時間"><span>全天</span></td>
+						<td title="活動主題"><span><a href="#">小小探險家‧南屯尋寶趣活動又來囉~~</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

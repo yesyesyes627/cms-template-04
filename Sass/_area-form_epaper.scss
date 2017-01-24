@@ -1,0 +1,104 @@
+//表單區塊
+
+//電子報================================================================
+
+.area-form.epaper {
+
+	@include js(false) {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		.fieldset{
+
+			+ .fieldset {
+				margin-top: $interval-s;
+				text-align: right;
+			}
+
+			span {
+
+				&.text {
+					display: block;
+				}
+
+				&.submit {
+					display: inline-block;
+				}
+
+				&.reset {
+					display: inline-block;
+				}
+			}
+
+			input {
+
+				&[type="text"] {
+					display: block;
+					width: 100%;
+				}
+
+				&[type="submit"] {
+					@extend %btn-imp;
+				}
+
+				&[type="reset"] {
+
+				}
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

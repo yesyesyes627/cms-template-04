@@ -1,0 +1,65 @@
+//客製區塊
+
+//客戶自訂選單================================================================
+
+.area-customize.nav {
+
+	&.is-close {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+		@extend %center;
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		padding: $interval-s $interval-m;
+		border-bottom: $border;
+
+		> .in {
+
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

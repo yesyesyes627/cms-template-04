@@ -1,0 +1,49 @@
+<%
+	min_cell = 2 #最少的欄數量
+	max_cell = 6 #最多的欄數量
+	min_row = 3 #最少的行數量
+	max_row = 12 #最多的行數量
+	min_text = 3 #最少的字元
+	max_text = 8 #最多的字元
+
+	cell_length = (min_cell..max_cell).to_a.sample
+	row_length = (min_row..max_row).to_a.sample
+%>
+
+<div class="area-table page-table <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<table>
+			<thead data-index="1" data-child="1">
+				<tr data-index="1" data-child="<%= cell_length %>">
+
+					<% cell_length.times do |i| %>
+
+						<th><span><%= zh_lorem_words (min_text..max_text).to_a.sample %></span></th>
+					<% end %>
+				</tr>
+			</thead>
+			<tbody data-index="2" data-child="<%= row_length %>">
+
+				<% row_length.times do |i| %>
+					<tr data-index="<%= i + 1 %>" data-child="<%= cell_length %>">
+
+						<% cell_length.times do |i| %>
+
+							<td><span><%= zh_lorem_sentence %></span></td>
+						<% end %>
+					</tr>
+				<% end %>
+			</tbody>
+			<tfoot data-index="3" data-child="1">
+				<tr data-index="1" data-child="1">
+					<td data-index="1" colspan="<%= cell_length %>"><span><%= zh_lorem_sentence %></span></td>
+				</tr>
+			</tfoot>
+		</table>
+	</div></div>
+</div></div>

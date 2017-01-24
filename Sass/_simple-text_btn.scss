@@ -1,0 +1,322 @@
+//簡單文字
+
+//按鈕================================================================
+
+.simple-text.btn {
+
+	.base-mobile & {
+		position: absolute;
+		left: 100%;
+
+		@include js(false) {
+			display: none;
+		}
+
+		&.is-active {
+
+			.ct {
+
+				a {
+					width: auto;
+					background-color: transparent;
+					
+					&:before {
+						@include icon-font('close');
+						line-height: $rwd-btn-size;
+						color: $white;
+					}
+
+					&:after {
+						content: $content;
+					}
+				}
+			}
+		}
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+				
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				display: block;
+				width: $rwd-btn-size;
+				font-size: $font-size-xl;
+				background-color: deeper($major-color);
+				
+				&:before {
+					@include icon-font('menu');
+					display: block;
+					width: $rwd-btn-size;
+					text-align: center;
+					line-height: $rwd-btn-size;
+					color: $white;
+				}
+
+				&:after {
+					position: fixed;
+					top: 0;
+					right: 0;
+					width: 100vw;
+					height: 100vh;
+					background-color: rgba($deep, $opacity-m);
+					z-index: -1;
+				}
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-wrapper & {
+		border-bottom: $interval-xs solid $deep-gray;
+
+		@include js(false) {
+			display: none;
+		}
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		&.is-active {
+
+			.ct {
+
+				a {
+
+					&:before {
+						@include icon-font('arrow_drop_up');
+					}
+				}
+			}
+		}
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+			@extend %center;
+			position: relative;
+
+			> .in {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -1px;
+				text-align: right;
+			}
+
+			span {
+				display: inline-block;
+			}
+
+			a {
+				@extend %btn;
+				border-radius: $border-radius $border-radius 0 0;
+
+				&:before {
+					@include icon-font('arrow_drop_down');
+					margin-right: $interval-xs;
+				}
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-extend & {
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		> .bg-drop-layout > .in, > .in {
+			@extend %center;
+			position: relative;
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+			$pic: 'icon-pic/away-w-top.png'; //圖片
+			$btn-w: 50px;
+			$btn-h: 25px;
+
+			> .in {
+
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@include bg-to-pic($pic, false);
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				display: block;
+				width: $btn-w;
+				height: $btn-h;
+				background-color: $btn-bg-color;
+				opacity: $opacity-l;
+				transition: $transition;
+
+				&:hover {
+					background-color: $btn-hover-bg-color;
+					opacity: $opacity-h;
+				}
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

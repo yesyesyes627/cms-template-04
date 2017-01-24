@@ -1,0 +1,25 @@
+<%= render partial: "/erb/sys_variable" %>
+
+<!-- calendar 月曆 -->
+	<%= render partial: "/erb/area-customize_calendar", locals: set({ header_text: "月曆(一般)" }) %>
+<!-- calendar 結束 -->
+
+<!-- calendar 月曆 -->
+	<%= render partial: "/erb/area-customize_calendar-detail", locals: set({ header_text: "月曆(詳細)" }) %>
+<!-- calendar 結束 -->
+
+<!-- calendar 月曆(台中市府 - hyc) -->
+	<%= render partial: "/erb/area-customize_calendar-detail02", locals: set({ header_text: "月曆(台中市府 - hyc)" }) %>
+<!-- calendar 結束 -->
+
+<!-- calendar 月曆(apple - hyc) -->
+	<%= render partial: "/erb/area-customize_calendar-detail03", locals: set({ header_text: "月曆(apple - hyc)" }) %>
+<!-- calendar 結束 -->
+
+<!-- calendar 月曆(墾丁 - hyc) -->
+	<%= render partial: "/erb/area-customize_calendar-detail04", locals: set({ header_text: "月曆(墾丁 - hyc)", func_set: "{'toggleBtn':{'bindNode':'.ft','toggleClass':'is-list'}}" }) %>
+<!-- calendar 結束 -->
+
+<!-- calendar 月曆(國美) -->
+	<%= render partial: "/erb/area-customize_calendar-schedule", locals: set({ header_text: "月曆(國美)" }) %>
+<!-- calendar 結束 -->

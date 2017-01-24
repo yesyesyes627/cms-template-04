@@ -1,0 +1,38 @@
+<%
+	verification_code = '/images/verification_code.jpg'
+%>
+
+<div class="area-form submit <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="select is-error" data-message="錯誤訊息">
+				<label>類別</label>
+				<select>
+					<option data-href="" selected>請選擇</option>
+					<option data-href="http://www.google.com"><%= zh_lorem_sentence %></option>
+					<option data-href="http://tw.yahoo.com"><%= zh_lorem_sentence %></option>
+				</select>
+			</span>
+			<span class="text is-required"><label>標題</label><input type="text" placeholder="請輸入文字"></span>
+			<span class="text"><label>姓名</label><input type="text" placeholder="請輸入文字"></span>
+			<span class="email"><label>E-mail</label><input type="email" placeholder="請輸入電子郵件"></span>
+			<span class="textarea"><label>內容</label><textarea cols="30" rows="10"></textarea></span>
+			<span class="text">
+				<label>驗證碼</label>
+				<input type="text" placeholder="驗證碼">
+				<div class="img"><span style="background-image: url('<%= verification_code %>')"><img src="<%= verification_code %>" alt=""></span></div>
+				<span class="button"><input type="button" value="重新產生"></span>
+				<span class="button"><input type="button" value="語音撥放"></span>
+			</span>
+		</div>
+		<div class="fieldset">
+			<span class="submit"><input type="submit" value="送出"></span>
+			<span class="reset"><input type="reset" value="清除"></span>
+		</div>
+	</div></div>
+</div></div>

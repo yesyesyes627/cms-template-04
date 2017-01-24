@@ -1,0 +1,142 @@
+//列表群組
+
+//相簿================================================================
+
+.group-list.album {
+
+	.base-module-area & {
+		@include average(4, 1); 
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				@extend %header;
+
+				> .in {
+
+				}
+
+				h3 {
+					
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					> ul {
+
+						> li {
+							box-sizing: border-box;
+							padding: $interval-s;
+
+							@include len-rwd('pad', 2);
+							@include len-rwd('phone', 1);
+						}
+					}
+				}
+			}
+
+			> .ft {
+				@extend %footer;
+
+				> .in {
+
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+	}
+
+	.base-page-area & {
+		@include default-len(4, 3);
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				@extend %header;
+
+				> .in {
+
+				}
+
+				h3 {
+					
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					> ul {
+
+						> li {
+							box-sizing: border-box;
+							padding: $interval-s;
+
+							@include len-rwd('pad', 2);
+							@include len-rwd('phone', 1);
+						}
+					}
+				}
+			}
+
+			> .ft {
+				@extend %footer;
+
+				> .in {
+
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+	}
+}

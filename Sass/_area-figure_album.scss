@@ -1,0 +1,138 @@
+//圖片區塊
+
+//相簿================================================================
+
+.area-figure.album {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		/*a*/.div {
+			display: block;
+
+			&:hover {
+
+				p {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.img {
+
+			span {
+				display: block;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		$mark_lineHeight: 30px;
+
+		.essay {
+			position: relative;
+			padding: $interval-m 0;
+			padding-bottom: $mark_lineHeight + $interval-s;
+			background-color: $white;
+		}
+
+		.figcaption {
+			@extend %caption;
+
+			span {
+				
+			}
+		}
+
+		.label {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: $interval-s;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+				display: block;
+				@extend %ellipsis;
+			}
+		}
+
+		/*i*/.mark {
+			color: $gray;
+			line-height: $mark_lineHeight;
+		}
+
+		.p {
+			@extend %paragraph;
+
+			p {
+				@include multi-ellipsis();
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

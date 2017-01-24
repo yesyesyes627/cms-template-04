@@ -1,0 +1,80 @@
+//簡單文字
+
+//頁面標題================================================================
+
+.simple-text.heading {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		h3 {
+			@extend %reset;
+			padding-left: $interval-s;
+			padding-bottom: $interval-m;
+			border-bottom: $border;
+			border-bottom-color: $body-font-color;
+			font-size: $font-size-xxl;
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,1277 @@
+<!doctype html>
+<html lang="zh-TW">
+	<head>
+
+	<!-- Meta 各種資訊 -->
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Meta 結束 -->
+
+	<!-- Title 網站標題 -->
+		<title>共通平台 v2.0</title>
+	<!-- Title 結束 -->
+
+	<!-- Icon 小圖示 -->
+		<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"> <!-- for ios 設備 -->
+	<!-- Icon 結束 -->
+	
+	<!-- Script 程式 -->
+		
+			<script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script> 
+<script src="/js/jquery.touchwipe.min.js"></script> 
+<script src="/js/jquery.cookie.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="/js/flowplayer-5.4.3/flowplayer.min.js"></script>
+<script src="/js/Chart/highcharts.js"></script> 
+<script src="/js/Chart/map.src.js"></script>
+<script src="/js/Chart/highcharts_theme.js"></script> 
+<script src="/js/Chart/tw-all.js"></script>
+<script src="/js/airdatepicker/datepicker.min.js"></script>
+<script src="/js/airdatepicker/datepicker.en.js"></script>
+<script src="/js/airdatepicker/datepicker.zh-tw.js"></script>
+<script src="/js/lightGallery/js/lightgallery-all.min.js"></script> 
+		
+	<!-- Script 結束 -->
+
+	</head>
+	<body data-js="false" data-admin="false"><form action="#" method="POST">
+
+	
+		<script>document.body.setAttribute("data-js", "true");</script>
+	
+
+	<!-- Css 樣式表 -->
+		<link rel="stylesheet" media="screen" href="/css/global.css"> <!-- 全域 -->
+<link rel="stylesheet" media="print" href="/css/print.css"> <!-- 列印 -->
+<link rel="stylesheet" media="screen" href="/js/flowplayer-5.4.3/skin/functional.css"> <!-- flowplayer -->
+<link rel="stylesheet" media="screen" href="/js/Chart/highcharts.css"> <!-- Chart -->
+<link rel="stylesheet" media="screen" href="/js/airdatepicker/datepicker.min.css"> <!-- Air Datepicker -->
+<link rel="stylesheet" media="screen" href="/js/lightGallery/css/lightgallery.min.css"> <!-- lightGallery -->
+		<link rel="stylesheet" media="screen" href="/css/page.css"> <!-- 內頁覆蓋 -->
+	<!-- Css 結束 -->		
+
+	<!-- sys-root 拖曳根節點 -->
+		<div class="group sys-root" id="sys-root" data-type="3" data-child="3" data-func="{'datePicker':{'language':'zh-tw','navTitles':{'days':'<i>民國 rrr 年</i> &nbsp; MM','months':'民國 rrr 年','years':'民國 rrr1 至 rrr2 年'}}}"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- base-mobile 行動載具-->
+				<div class="group base-mobile" id="base-mobile" data-index="1" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="1" data-type="0"  data-func="{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-mobile','targetClass':'is-open'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">收合側欄</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="2" data-type="3" data-child="2"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- search 搜尋 -->
+				<div class="area-form search " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">搜尋</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="search"><input type="search" placeholder="Search"></span>
+			<span class="submit"><a href="#">搜尋</a></span>
+		</div>
+		<div class="list"><ul data-index="1" data-child="4"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="advanced"><span><a href="#">進階搜尋</a></span></li></ul></div></div>
+</div></div>
+			<!-- search 結束 -->
+
+			<!-- share 分享 -->
+				<div class="list-text share " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">分享</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li class="facebook" data-index="1"><span><a href="http://www.facebook.com/share.php?u=網址" target="_blank" title="分享至 Facebook">Facebook</a></span></li><li class="google" data-index="2"><span><a href="https://plus.google.com/share?url=網址" target="_blank" title="分享至 google+">Google</a></span></li><li class="twitter" data-index="3"><span><a href="http://twitter.com/home?status=主題-網址" target="_blank" title="分享至 twitter">Twitter</a></span></li><li class="plurk" data-index="5"><span><a href="http://www.plurk.com/?qualifier=shares&status=主題-網址" target="_blank" title="分享至 plurk">plurk</a></span></li><li class="line" data-index="5"><span><a href="http://line.naver.jp/R/msg/text/?主題-網址" target="_blank" title="分享至 Line">Line</a></span></li><li class="email" data-index="6"><span><a href="mailto:?subject=主題&body=網址" target="_blank" title="透過 mail 分享">E-mail</a></span></li></ul></div></div>
+</div></div>
+			<!-- share 結束 -->
+
+			<!-- nav 選單 -->
+				
+
+<div class="group-list nav " data-index="3" data-type="4" data-child="5"  data-func="{'majorNavMobile':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1" data-width="3">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">perferendis</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#">consequatur</a></span></li><li data-index="2"><span><a href="#">cumque</a></span></li><li data-index="3"><span><a href="#">voluptates</a></span></li><li data-index="4"><span><a href="#">sed</a></span></li><li data-index="5"><span><a href="#">eveniet</a></span></li><li data-index="6"><span><a href="#">eaque</a></span></li><li data-index="7"><span><a href="#">at</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">aspernatur</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"><span><a href="#">mollitia</a></span></li><li data-index="2"><span><a href="#">quia</a></span></li><li data-index="3"><span><a href="#">in</a></span></li><li data-index="4"><span><a href="#">amet</a></span></li><li data-index="5"><span><a href="#">vel</a></span></li><li data-index="6"><span><a href="#">omnis</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="3" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">ipsum</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#">rem</a></span></li><li data-index="2"><span><a href="#">sint</a></span></li><li data-index="3"><span><a href="#">officiis</a></span></li><li data-index="4"><span><a href="#">voluptates</a></span></li><li data-index="5"><span><a href="#">dolor</a></span></li><li data-index="6"><span><a href="#">quis</a></span></li><li data-index="7"><span><a href="#">ut</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="4" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">dignissimos</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">recusandae</a></span></li><li data-index="2"><span><a href="#">deserunt</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="5" data-width="5">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">qui</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+			<!-- nav 結束 -->
+
+			<!-- hot-key-word 熱門關鍵字 -->
+				
+
+<div class="list-text hot-key-word " data-index="4" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1"><span><a href="#">et</a></span></li></ul></div></div>
+</div></div>
+			<!-- hot-key-word 結束 -->
+
+			<!-- link 連結 -->
+				
+
+<div class="list-text link " data-index="5" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">aut</i>voluptas</a></span></li><li data-index="2"><span><a href="#"><i class="mark">occaecati</i>aut</a></span></li><li data-index="3"><span><a href="#"><i class="mark">deserunt</i>id</a></span></li><li data-index="4"><span><a href="#"><i class="mark">inventore</i>molestiae</a></span></li></ul></div></div>
+</div></div>
+			<!-- link 結束 -->
+
+			<!-- link 連結 -->
+				
+
+<div class="list-text link " data-index="6" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">quia</i>nihil</a></span></li><li data-index="2"><span><a href="#"><i class="mark">blanditiis</i>nemo</a></span></li></ul></div></div>
+</div></div>
+			<!-- link 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-mobile 結束 -->
+
+			<!-- base-extend 額外資訊 -->
+				<div class="group base-extend" id="base-extend" data-index="2" data-type="3" data-child="5"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- share 分享 -->
+		<div class="list-text share " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">分享</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li class="facebook" data-index="1"><span><a href="http://www.facebook.com/share.php?u=網址" target="_blank" title="分享至 Facebook">Facebook</a></span></li><li class="google" data-index="2"><span><a href="https://plus.google.com/share?url=網址" target="_blank" title="分享至 google+">Google</a></span></li><li class="twitter" data-index="3"><span><a href="http://twitter.com/home?status=主題-網址" target="_blank" title="分享至 twitter">Twitter</a></span></li><li class="plurk" data-index="5"><span><a href="http://www.plurk.com/?qualifier=shares&status=主題-網址" target="_blank" title="分享至 plurk">plurk</a></span></li><li class="line" data-index="5"><span><a href="http://line.naver.jp/R/msg/text/?主題-網址" target="_blank" title="分享至 Line">Line</a></span></li><li class="email" data-index="6"><span><a href="mailto:?subject=主題&body=網址" target="_blank" title="透過 mail 分享">E-mail</a></span></li></ul></div></div>
+</div></div>
+	<!-- share 結束 -->
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="2" data-type="0"  data-func="{'anchor':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">回到最頂</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- query 詢問 -->
+		
+	<!-- query 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-extend 結束 -->
+
+			<!-- base-wrapper 固定佈局 -->
+				<div class="group base-wrapper" id="base-wrapper" data-index="3" data-type="3" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- test 測試-->
+		<!-- test-require requireJS 測試 -->
+	
+<!-- test-require 結束 -->
+	<!-- test 結束 -->
+	
+	<!-- base-header 頁首資訊 -->
+		<div class="group base-header" id="base-header" data-index="1" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="U" title="上方選單連結區，此區塊列有本網站的主要連結">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="1" data-type="3" data-child="2"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- logo 主要標誌 -->
+				<div class="simple-text major-logo " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標誌</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<h1><span><a href="#">哈瑪星科技股份有限公司</a></span></h1>
+	</div></div>
+</div></div>
+			<!-- logo 結束 -->
+
+			<!-- msg-tool 資訊與工具群組 -->
+				<div class="group msg-tool" data-index="2" data-type="3" data-child="4"><div class="in">
+					<div class="ct"><div class="in">
+
+					<!-- link 連結 -->
+						
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">上方連結</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">sint</i>accusantium</a></span></li><li data-index="2"><span><a href="#"><i class="mark">assumenda</i>sit</a></span></li><li data-index="3"><span><a href="#"><i class="mark">nesciunt</i>explicabo</a></span></li><li data-index="4"><span><a href="#"><i class="mark">commodi</i>sequi</a></span></li><li data-index="5"><span><a href="#"><i class="mark">mollitia</i>id</a></span></li></ul></div></div>
+</div></div>
+					<!-- link 結束 -->
+
+					<!-- font-size 字級 -->
+						<div class="list-text font-size " data-index="2" data-type="0"  data-func="{'fontSize':{'defaultItem': 'medium'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">字級</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="small"><span><a href="#">小</a></span></li><li data-index="2" class="medium"><span><a href="#">中</a></span></li><li data-index="3" class="large"><span><a href="#">大</a></span></li></ul></div></div>
+</div></div>
+
+					<!-- font-size 結束 -->
+
+					<!-- hot-key-word 熱門關鍵字 -->
+						
+
+<div class="list-text hot-key-word " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">熱門關鍵字</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1"><span><a href="#">et</a></span></li></ul></div></div>
+</div></div>
+					<!-- hot-key-word 結束 -->
+
+					<!-- search 搜尋 -->
+						<div class="area-form search " data-index="4" data-type="0"  data-func="{'showDataList':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">搜尋</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="search"><input type="search" placeholder="Search"></span>
+			<span class="submit"><a href="#">搜尋</a></span>
+		</div>
+		<div class="list"><ul data-index="1" data-child="4"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="advanced"><span><a href="#">進階搜尋</a></span></li></ul></div></div>
+</div></div>
+					<!-- search 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- msg-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	<!-- nav 選單 -->
+		
+
+<div class="group-list nav " data-index="2" data-type="4" data-child="6"  data-func="{'hud':{},'majorNavHorizontal':{},'setNavWidth':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1" data-width="3">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">alias</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#">dolor</a></span></li><li data-index="2"><span><a href="#">temporibus</a></span></li><li data-index="3"><span><a href="#">dicta</a></span></li><li data-index="4"><span><a href="#">nisi</a></span></li><li data-index="5"><span><a href="#">deleniti</a></span></li><li data-index="6"><span><a href="#">autem</a></span></li><li data-index="7"><span><a href="#">illo</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">vel</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">accusantium</a></span></li><li data-index="2"><span><a href="#">consequatur</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="3" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">dignissimos</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">porro</a></span></li><li data-index="2"><span><a href="#">et</a></span></li><li data-index="3"><span><a href="#">repellendus</a></span></li><li data-index="4"><span><a href="#">ipsam</a></span></li><li data-index="5"><span><a href="#">quas</a></span></li><li data-index="6"><span><a href="#">dolorem</a></span></li><li data-index="7"><span><a href="#">voluptate</a></span></li><li data-index="8"><span><a href="#">et</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="4" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">incidunt</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">dolor</a></span></li><li data-index="2"><span><a href="#">ut</a></span></li><li data-index="3"><span><a href="#">consequatur</a></span></li><li data-index="4"><span><a href="#">quia</a></span></li><li data-index="5"><span><a href="#">deleniti</a></span></li><li data-index="6"><span><a href="#">vel</a></span></li><li data-index="7"><span><a href="#">quaerat</a></span></li><li data-index="8"><span><a href="#">aut</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="5" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">sapiente</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">ipsum</a></span></li><li data-index="2"><span><a href="#">facilis</a></span></li><li data-index="3"><span><a href="#">deleniti</a></span></li><li data-index="4"><span><a href="#">officiis</a></span></li><li data-index="5"><span><a href="#">veritatis</a></span></li><li data-index="6"><span><a href="#">explicabo</a></span></li><li data-index="7"><span><a href="#">dicta</a></span></li><li data-index="8"><span><a href="#">fuga</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="6" data-width="3">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">repudiandae</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"><span><a href="#">voluptatem</a></span></li><li data-index="2"><span><a href="#">illum</a></span></li><li data-index="3"><span><a href="#">non</a></span></li><li data-index="4"><span><a href="#">fugit</a></span></li><li data-index="5"><span><a href="#">ut</a></span></li><li data-index="6"><span><a href="#">numquam</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+	<!-- nav 結束 -->
+	
+	</div></div>
+</div></div>
+	<!-- base-header 結束 -->
+
+	<!-- base-content 主要內容 -->
+		<div class="group base-content" id="base-content" data-index="2" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- base-module-area 模組區塊 -->
+		
+	<!-- base-module-area 結束 -->
+
+	<!-- base-page-area 內頁區塊 -->
+		<div class="group base-page-area" id="base-wrapper" data-index="2" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+		<!-- base-aside 內頁側欄區塊 -->
+			<div class="group base-aside" id="base-aside" data-index="1" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="L" title="左方次要連結區，此區塊列有本網站的次要連結">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- nav 選單 -->
+		
+
+<div class="group-list nav is-pad-hide is-phone-hide" data-index="1" data-type="4" data-child="2"  data-func="{'majorNavStraight':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">non</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">impedit</a></span></li><li data-index="2"><span><a href="#">consequatur</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">architecto</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">natus</a></span></li><li data-index="2"><span><a href="#">ab</a></span></li><li data-index="3"><span><a href="#">necessitatibus</a></span></li><li data-index="4"><span><a href="#">non</a></span></li><li data-index="5"><span><a href="#">voluptates</a></span></li><li data-index="6"><span><a href="#">sunt</a></span></li><li data-index="7"><span><a href="#">quibusdam</a></span></li><li data-index="8"><span><a href="#">repellat</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+	<!-- nav 結束 -->
+
+	<!-- minor-nav 次選單 -->
+		
+
+<div class="list-text minor-nav is-pad-hide is-phone-hide" data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">次選單</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+			
+				<li data-index="1">
+				
+				<span><a href="#">commodi</a></span></li>
+			
+				<li data-index="2" class="is-active">
+				
+				<span><a href="#">et</a></span></li></ul></div></div>
+</div></div>
+	<!-- minor-nav 結束 -->
+
+	<!-- recitation 朗誦 -->
+		<div class="area-customize recitation is-pad-hide is-phone-hide" data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">朗誦</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div id="media"><div><img src="http://tts.itri.org.tw//TTScript/images/playing.png" id="loading1469669391735" width="32" height="32"></div></div>
+	</div></div>
+</div></div>
+	<!-- recitation 結束 -->
+
+	</div></div>
+</div></div>
+		<!-- base-aside 結束 -->
+
+		<!-- base-section 內頁內容區塊 -->
+			<div class="group base-section" id="base-section" data-index="2" data-type="3" data-child="3" data-func="{'linkType':{'domains':['http://ccmsws19.hamastar.com.tw/']}}"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="C" title="中間主要內容區，此區塊呈現網頁的網頁內容">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- group-page-header 內頁頁首 -->
+		<div class="group page-header" data-index="1" data-type="3" data-child="4"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- group-info 資訊群組 -->
+				<div class="group info" data-index="3" data-type="3" data-child="2"><div class="in">
+					<div class="ct"><div class="in">
+
+					<!-- breadcrumb 麵包屑 -->
+						
+
+<div class="list-text breadcrumb " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">index</a></span></li><li data-index="2"><span><a href="#">et</a></span></li><li data-index="3"><span><a href="#">minus</a></span></li></ul></div></div>
+</div></div>
+					<!-- breadcrumb 結束 -->
+
+					<!-- user-tool 使用者工具 -->
+						<div class="list-text user-tool " data-index="1" data-type="0"  data-func="{'toggleBtn':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">工具</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="9"><li data-index="1" class="login"><span><a href="#">登入</a></span></li><li data-index="2" class="logout"><span><a href="#">登出</a></span></li><li data-index="3" class="bopomofo"><span><a href="#">注音</a></span></li><li data-index="4" class="edit"><span><a href="#">編輯</a></span></li><li data-index="5" class="print"><span><a href="#">列印</a></span></li><li data-index="6" class="data"><span><a href="#">詮釋資料</a></span></li><li data-index="7" class="nav-edit"><span><a href="#">選單編輯</a></span></li><li data-index="8" class="index-edit"><span><a href="#">首頁編輯</a></span></li><li data-index="9" class="article-edit"><span><a href="#">文章編輯</a></span></li></ul></div></div>
+</div></div>
+					<!-- user-tool 結束 -->
+
+					<!-- open-data 開放資料 -->
+						<div class="list-text open-data " data-index="2" data-type="0"  data-func="{'toggleBtn':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">開放資料</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4"><li data-index="1" class="rss"><span><a href="#">RSS</a></span></li><li data-index="2" class="json"><span><a href="#">JSON</a></span></li><li data-index="3" class="xml"><span><a href="#">XML</a></span></li><li data-index="4" class="csv"><span><a href="#">CSV</a></span></li></ul></div></div>
+</div></div>
+					<!-- open-data 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- group-info 結束 -->
+
+			<!-- heading 頁面標題 -->
+				<div class="simple-text heading " data-index="2" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<h3><span><a href="#">sint</a></span></h3>
+	</div></div>
+</div></div>
+			<!-- heading 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-page-header 結束 -->
+
+	<!-- group-page-content 內頁主要內容 -->
+		<div class="group page-content" data-index="2" data-type="3" data-child="6"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- 內頁內容開始 -->
+				
+<!-- page-form 內頁表單 -->
+	
+
+<div class="area-form page-form " data-index="1" data-type="0"  data-func="{'reset':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">一般表單</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="form">
+			<div class="fieldset">
+				<div class="legend">
+					<span>表單標頭</span>
+				</div>
+				<span class="select is-error" data-message="錯誤訊息">
+					<label>選擇：</label>
+					<select>
+						<option data-href="" selected>請選擇</option>
+						<option data-href="http://www.google.com">所以這一回，我去拿一面鑼來。</option>
+						<option data-href="http://tw.yahoo.com">一份貼心，是鬧哪樣啊！</option>
+					</select>
+				</span>
+				<span class="text is-required">
+					<label>文字：</label>
+					<input type="text">
+				</span>
+				<span class="password">
+					<label>密碼：</label>
+					<input type="password">
+				</span>
+				<span class="date">
+					<label>日期：</label>
+					<input type="date">
+					<label>至</label>
+					<input type="date">
+				</span>
+				<span class="number">
+					<label>數字：</label>
+					<input type="number">
+				</span>
+				<span class="search">
+					<label>搜尋：</label>
+					<input type="search">
+				</span>
+				<span class="email">
+					<label>信箱：</label>
+					<input type="text">
+					<label>@</label>
+					<input type="text">
+				</span>
+				<span class="radio">
+					<input type="radio">
+					<label>複選框</label>
+				</span>
+				<span class="checkbox">
+					<input type="checkbox">
+					<label>單選框</label>
+				</span>
+				<span class="textarea"><label>文字區塊：</label><textarea cols="30" rows="10"></textarea></span>
+				<span class="text">
+					<label>驗證碼</label>
+					<input type="text" placeholder="驗證碼">
+					<div class="img"><span style="background-image: url('/images/verification_code.jpg')"><img src="/images/verification_code.jpg" alt=""></span></div>
+					<span class="button"><input type="button" value="重新產生"></span>
+					<span class="button"><input type="button" value="語音撥放"></span>
+				</span>
+			</div>
+			<div class="fieldset"><span class="submit"><input type="submit" value="送出"></span><span class="reset"><input type="reset" value="清除"></span><span class="button"><input type="button" value="上一步"></span><span class="button"><input type="button" value="下一步"></span></div>
+		</div>
+	</div></div>
+</div></div>
+<!-- page-form 結束 -->
+
+<!-- submit 送出 -->
+	
+
+<div class="area-form submit " data-index="1" data-type="0"  data-func="{'reset':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">送出表單</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="select is-error" data-message="錯誤訊息">
+				<label>類別</label>
+				<select>
+					<option data-href="" selected>請選擇</option>
+					<option data-href="http://www.google.com">一夜的花費，覺得分外悠遠，愈會碰著痛苦。</option>
+					<option data-href="http://tw.yahoo.com">要好好記得，２２８運去台中！</option>
+				</select>
+			</span>
+			<span class="text is-required"><label>標題</label><input type="text" placeholder="請輸入文字"></span>
+			<span class="text"><label>姓名</label><input type="text" placeholder="請輸入文字"></span>
+			<span class="email"><label>E-mail</label><input type="email" placeholder="請輸入電子郵件"></span>
+			<span class="textarea"><label>內容</label><textarea cols="30" rows="10"></textarea></span>
+			<span class="text">
+				<label>驗證碼</label>
+				<input type="text" placeholder="驗證碼">
+				<div class="img"><span style="background-image: url('/images/verification_code.jpg')"><img src="/images/verification_code.jpg" alt=""></span></div>
+				<span class="button"><input type="button" value="重新產生"></span>
+				<span class="button"><input type="button" value="語音撥放"></span>
+			</span>
+		</div>
+		<div class="fieldset">
+			<span class="submit"><input type="submit" value="送出"></span>
+			<span class="reset"><input type="reset" value="清除"></span>
+		</div>
+	</div></div>
+</div></div>
+<!-- submit 結束 -->
+			<!-- 內頁內容結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-page-content 結束 -->
+
+	<!-- group-page-footer 內頁頁尾 -->
+		<div class="group page-footer" data-index="3" data-type="6" data-child="3"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- jump-tool 跳轉導航列 -->
+				<div class="list-text jump-tool " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跳轉導航列</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="back"><span><a href="#">回上一頁</a></span></li><li class="to-top" data-index="2"><span><a href="#">回最上面</a></span></li><li data-index="3" class="home"><span><a href="#">HOME</a></span></li></ul></div></div>
+</div></div>
+			<!-- jump-tool 結束 -->
+
+			<!-- page-select 頁次導航列 -->
+				<div class="list-multiple page-select " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">頁次導航列</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1" class="first"><span><a href="#">最前頁</a></span></li><li data-index="2" class="prev"><span><a href="#">上一頁</a></span></li></ul><ul data-index="2" data-child="2"><li data-index="1" class="next"><span><a href="#">下一頁</a></span></li><li data-index="2" class="last"><span><a href="#">最後頁</a></span></li></ul><ul data-index="3" data-child="3"><li data-index="1">
+				<span class="select">
+					<label>第 </label>
+					<select>
+						<option selected>1</option>
+					</select>
+					<label> 頁</label>
+				</span>
+			</li><li data-index="2">
+				<span class="number">
+					<label>，顯示 </label>
+					<input type="number" min="1" max="999" value="20">
+					<label> 筆</label>
+				</span>
+			</li><li data-index="3">
+				<span class="count">，共 275 頁</label>
+			</li></ul></div></div>
+</div></div>
+			<!-- page-tool 結束 -->
+
+			<!-- page-click 頁次導航列 -->
+				
+
+<div class="list-multiple page-click " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">頁次導航列</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1" class="first"><span><a href="#">最前頁</a></span></li><li data-index="2" class="prev"><span><a href="#">上一頁</a></span></li></ul><ul data-index="2" data-child="2"><li data-index="1" class="next"><span><a href="#">下一頁</a></span></li><li data-index="2" class="last"><span><a href="#">最後頁</a></span></li></ul><ul data-index="3" data-child="9"><li data-index="1"  ><span><a href="#">1</a></span></li><li data-index="2"  ><span><a href="#">2</a></span></li><li data-index="3"  ><span><a href="#">3</a></span></li><li data-index="4"  ><span><a href="#">4</a></span></li><li data-index="5"  ><span><a href="#">5</a></span></li><li data-index="6"  class="is-active"  ><span><a href="#">6</a></span></li><li data-index="7"  ><span><a href="#">7</a></span></li><li data-index="8"  ><span><a href="#">8</a></span></li><li data-index="9"  ><span><a href="#">9</a></span></li></ul></div></div>
+</div></div>
+			<!-- page-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-page-footer 結束 -->
+
+	</div></div>
+</div></div>
+		<!-- base-section 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-page-area 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-content 結束 -->
+
+	<!-- base-footer 頁尾資訊 -->
+		<div class="group base-footer" id="base-footer" data-index="3" data-type="3" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="Z" title="下方選單連結區，此區塊列有[意見信箱]、[資訊安全政策]、[隱私權政策]等連結">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="1" data-type="0"  data-func="{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">收合選單</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- nav 選單 -->
+		
+
+<div class="group-list nav " data-index="2" data-type="4" data-child="7"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1" data-width="3">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">doloribus</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1"><span><a href="#">quia</a></span></li><li data-index="2"><span><a href="#">aut</a></span></li><li data-index="3"><span><a href="#">et</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="3">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">fugit</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1"><span><a href="#">sunt</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="3" data-width="5">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">sunt</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#">deleniti</a></span></li><li data-index="2"><span><a href="#">ab</a></span></li><li data-index="3"><span><a href="#">blanditiis</a></span></li><li data-index="4"><span><a href="#">molestias</a></span></li><li data-index="5"><span><a href="#">eveniet</a></span></li><li data-index="6"><span><a href="#">corrupti</a></span></li><li data-index="7"><span><a href="#">officiis</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="4" data-width="7">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">ad</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="5" data-width="7">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">iure</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">sapiente</a></span></li><li data-index="2"><span><a href="#">et</a></span></li><li data-index="3"><span><a href="#">similique</a></span></li><li data-index="4"><span><a href="#">illum</a></span></li><li data-index="5"><span><a href="#">suscipit</a></span></li><li data-index="6"><span><a href="#">architecto</a></span></li><li data-index="7"><span><a href="#">aut</a></span></li><li data-index="8"><span><a href="#">voluptas</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="6" data-width="5">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">dolorem</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="7" data-width="5">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">veniam</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+	<!-- nav 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="3" data-type="3" data-child="3"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- minor-logo 次要標誌 -->
+				<div class="simple-text minor-logo " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標誌</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#">哈瑪星科技股份有限公司</a></span>
+	</div></div>
+</div></div>
+			<!-- minor-logo 結束 -->
+
+			<!-- icon 各種標章 -->
+				<div class="list-pic icon " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標章</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="wcag"><span style="background-image: url('/images/aplus.jpg');"><a href="#"><img src="/images/aplus.jpg" alt="無障礙 A+"></a></span></li><li data-index="2" class="egov"><span style="background-image: url('/images/egov.png');"><a href="#"><img src="/images/egov.png" alt="E政府"></a></span></li><li data-index="3" class="qrcode"><span style="background-image: url('/images/qrcode.gif');"><a href="#"><img src="/images/qrcode.gif" alt="QRCode"></a></span></li></ul></div></div>
+</div></div>
+			<!-- icon 結束 -->
+
+			<!-- group-msg-tool 資訊與工具群組 -->
+				<div class="group msg-tool" data-index="4" data-type="3" data-child="3"><div class="in">
+					<div class="hd"><div class="in">
+						<h3><span><a href="#"></a></span></h3>
+					</div></div>
+					<div class="ct"><div class="in">
+
+					<!-- link 連結 -->
+						
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">下方連結</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">aut</i>laudantium</a></span></li><li data-index="2"><span><a href="#"><i class="mark">distinctio</i>aspernatur</a></span></li><li data-index="3"><span><a href="#"><i class="mark">modi</i>ipsam</a></span></li><li data-index="4"><span><a href="#"><i class="mark">ipsum</i>modi</a></span></li></ul></div></div>
+</div></div>
+					<!-- link 結束 -->
+
+					<!-- update-time 更新時間 -->
+						<div class="simple-text update-time " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">更新時間</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span>2016/05/04 16:42</span>
+	</div></div>
+</div></div>
+					<!-- update-time 結束 -->
+
+					<!-- visit-count 瀏覽人次 -->
+						<div class="simple-text visit-count " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">瀏覽人次</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span>19870709</span>
+	</div></div>
+</div></div>
+					<!-- visit-count 結束 -->
+
+					<!-- address 聯絡資訊編輯 -->
+						<div class="area-editor address " data-index="4" data-type="0"  data-func="{'linkToMap':{'bindSelector':'.map','linkClass':'is-map'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">聯絡資訊</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		高雄總公司地址：<span class="map">806高雄市前鎮區民權二路8號18樓</span><br />
+		高雄總公司電話：FAX：+886-7-5364899<br />
+		台北辦事處地址：<span class="map">100台北市中正區北平西路3號3樓3004室</span><br />
+		台北辦事處電話：FAX: +886-2-2388917<br />
+		Copyright © 2014 HAMASTAR Technology Co., Ltd. All rights reserved. 建議瀏覽解析度1024x 768
+	</div></div>
+</div></div>
+					<!-- address 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- group-msg-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-footer 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-wrapper 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- sys-root 結束 -->
+
+		
+			<script data-main="/js/app" src="/js/require.js"></script>
+		
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	</form></body>
+</html>

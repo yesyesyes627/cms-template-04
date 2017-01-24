@@ -1,0 +1,39 @@
+//框架
+
+//內頁側欄區塊================================================================
+
+.base-aside {
+	@extend %area-module;
+	width: 220px;
+	float: left;
+
+	@include media('mobile') {
+		width: 100%;
+		float: none;
+	}
+
+	> .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

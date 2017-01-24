@@ -1,0 +1,95 @@
+//頁籤群組
+
+//設定================================================================
+
+.group-tab {
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h3 {
+				
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> ul {
+					@extend %reset;
+
+					> li {
+
+						+ li {
+							@include js(false) {
+								display: none;
+							}
+
+							+ li {
+								display: none;
+
+								@include js(false) {
+									display: block;
+								}
+							}
+						}
+
+						> [data-index][data-type] {
+							@extend %reset-outer;
+
+							> .bg-drop-layout > .in, > .in {
+								@extend %reset-outer;
+
+								> .hd {
+									display: none;
+
+									@include js(false) {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

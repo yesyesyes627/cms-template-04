@@ -1,0 +1,23 @@
+//系統方法與涵式
+
+/*
+	順序上位於 base/variable 之前，因此不能使用任何 base/variable 變數 
+*/
+
+//基本 function 擴充================================================================
+	@function lighter( $color, $int: 1, $base: 10) { //更淺的顏色
+		@return lighten( $color, $int * $base );
+	}
+
+	@function deeper( $color, $int: 1, $base: 10) { //更深的顏色
+		@return darken( $color, $int * $base );
+	}
+
+	@function reverse-color($bg_color, $text_light: $white, $text_dark: $deep, $standard_color: #8b8b8b){ //計算背景深淺更改文字顏色，$bg_color是底色，$text_light是黑底文字，$text_dark是白底文字，$standard_color是顏色基準
+
+		@if( lightness($bg_color) > lightness($standard_color) ){
+			@return $text_dark;
+		}@else{
+			@return $text_light;
+		}
+	}

@@ -1,0 +1,4926 @@
+<!doctype html>
+<html lang="zh-TW">
+	<head>
+
+	<!-- Meta 各種資訊 -->
+		<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Meta 結束 -->
+
+	<!-- Title 網站標題 -->
+		<title>共通平台 v2.0</title>
+	<!-- Title 結束 -->
+
+	<!-- Icon 小圖示 -->
+		<link href="/favicon.ico" rel="icon" type="image/x-icon">
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"> <!-- for ios 設備 -->
+	<!-- Icon 結束 -->
+	
+	<!-- Script 程式 -->
+		
+			<script src="/js/jquery-1.12.4.min.js"></script>
+<script src="/js/jquery.mousewheel.min.js"></script> 
+<script src="/js/jquery.touchwipe.min.js"></script> 
+<script src="/js/jquery.cookie.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="/js/flowplayer-5.4.3/flowplayer.min.js"></script>
+<script src="/js/Chart/highcharts.js"></script> 
+<script src="/js/Chart/map.src.js"></script>
+<script src="/js/Chart/highcharts_theme.js"></script> 
+<script src="/js/Chart/tw-all.js"></script>
+<script src="/js/airdatepicker/datepicker.min.js"></script>
+<script src="/js/airdatepicker/datepicker.en.js"></script>
+<script src="/js/airdatepicker/datepicker.zh-tw.js"></script>
+<script src="/js/lightGallery/js/lightgallery-all.min.js"></script> 
+		
+	<!-- Script 結束 -->
+
+	</head>
+	<body data-js="false" data-admin="false"><form action="#" method="POST">
+
+	
+		<script>document.body.setAttribute("data-js", "true");</script>
+	
+
+	<!-- Css 樣式表 -->
+		<link rel="stylesheet" media="screen" href="/css/global.css"> <!-- 全域 -->
+<link rel="stylesheet" media="print" href="/css/print.css"> <!-- 列印 -->
+<link rel="stylesheet" media="screen" href="/js/flowplayer-5.4.3/skin/functional.css"> <!-- flowplayer -->
+<link rel="stylesheet" media="screen" href="/js/Chart/highcharts.css"> <!-- Chart -->
+<link rel="stylesheet" media="screen" href="/js/airdatepicker/datepicker.min.css"> <!-- Air Datepicker -->
+<link rel="stylesheet" media="screen" href="/js/lightGallery/css/lightgallery.min.css"> <!-- lightGallery -->
+	<!-- Css 結束 -->
+
+	<!-- sys-root 拖曳根節點 -->
+		<div class="group sys-root" id="sys-root" data-type="3" data-child="3" data-func="{'datePicker':{'language':'zh-tw','navTitles':{'days':'<i>民國 rrr 年</i> &nbsp; MM','months':'民國 rrr 年','years':'民國 rrr1 至 rrr2 年'}}}"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- base-mobile 行動載具-->
+				<div class="group base-mobile" id="base-mobile" data-index="1" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="1" data-type="0"  data-func="{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-mobile','targetClass':'is-open'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">收合側欄</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="2" data-type="3" data-child="2"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- search 搜尋 -->
+				<div class="area-form search " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">搜尋</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="search"><input type="search" placeholder="Search"></span>
+			<span class="submit"><a href="#">搜尋</a></span>
+		</div>
+		<div class="list"><ul data-index="1" data-child="4"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="advanced"><span><a href="#">進階搜尋</a></span></li></ul></div></div>
+</div></div>
+			<!-- search 結束 -->
+
+			<!-- share 分享 -->
+				<div class="list-text share " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">分享</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li class="facebook" data-index="1"><span><a href="http://www.facebook.com/share.php?u=網址" target="_blank" title="分享至 Facebook">Facebook</a></span></li><li class="google" data-index="2"><span><a href="https://plus.google.com/share?url=網址" target="_blank" title="分享至 google+">Google</a></span></li><li class="twitter" data-index="3"><span><a href="http://twitter.com/home?status=主題-網址" target="_blank" title="分享至 twitter">Twitter</a></span></li><li class="plurk" data-index="5"><span><a href="http://www.plurk.com/?qualifier=shares&status=主題-網址" target="_blank" title="分享至 plurk">plurk</a></span></li><li class="line" data-index="5"><span><a href="http://line.naver.jp/R/msg/text/?主題-網址" target="_blank" title="分享至 Line">Line</a></span></li><li class="email" data-index="6"><span><a href="mailto:?subject=主題&body=網址" target="_blank" title="透過 mail 分享">E-mail</a></span></li></ul></div></div>
+</div></div>
+			<!-- share 結束 -->
+
+			<!-- nav 選單 -->
+				
+
+<div class="group-list nav " data-index="3" data-type="4" data-child="7"  data-func="{'majorNavMobile':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">blanditiis</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1"><span><a href="#">commodi</a></span></li><li data-index="2"><span><a href="#">aut</a></span></li><li data-index="3"><span><a href="#">explicabo</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="6">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">mollitia</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">voluptas</a></span></li><li data-index="2"><span><a href="#">quia</a></span></li><li data-index="3"><span><a href="#">voluptatem</a></span></li><li data-index="4"><span><a href="#">consequatur</a></span></li><li data-index="5"><span><a href="#">autem</a></span></li><li data-index="6"><span><a href="#">autem</a></span></li><li data-index="7"><span><a href="#">ut</a></span></li><li data-index="8"><span><a href="#">provident</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="3" data-width="6">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">quam</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="4" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">doloremque</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">esse</a></span></li><li data-index="2"><span><a href="#">eaque</a></span></li><li data-index="3"><span><a href="#">beatae</a></span></li><li data-index="4"><span><a href="#">distinctio</a></span></li><li data-index="5"><span><a href="#">incidunt</a></span></li><li data-index="6"><span><a href="#">excepturi</a></span></li><li data-index="7"><span><a href="#">repellat</a></span></li><li data-index="8"><span><a href="#">reiciendis</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="5" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">velit</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">odio</a></span></li><li data-index="2"><span><a href="#">enim</a></span></li><li data-index="3"><span><a href="#">veniam</a></span></li><li data-index="4"><span><a href="#">ipsam</a></span></li><li data-index="5"><span><a href="#">et</a></span></li><li data-index="6"><span><a href="#">dolorem</a></span></li><li data-index="7"><span><a href="#">adipisci</a></span></li><li data-index="8"><span><a href="#">ut</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="6" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">laudantium</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">nam</a></span></li><li data-index="2"><span><a href="#">eligendi</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="7" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">officiis</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">qui</a></span></li><li data-index="2"><span><a href="#">nemo</a></span></li><li data-index="3"><span><a href="#">atque</a></span></li><li data-index="4"><span><a href="#">assumenda</a></span></li><li data-index="5"><span><a href="#">consequatur</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+			<!-- nav 結束 -->
+
+			<!-- hot-key-word 熱門關鍵字 -->
+				
+
+<div class="list-text hot-key-word " data-index="4" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1"><span><a href="#">aut</a></span></li><li data-index="2"><span><a href="#">aut</a></span></li><li data-index="3"><span><a href="#">est</a></span></li></ul></div></div>
+</div></div>
+			<!-- hot-key-word 結束 -->
+
+			<!-- link 連結 -->
+				
+
+<div class="list-text link " data-index="5" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">et</i>rem</a></span></li><li data-index="2"><span><a href="#"><i class="mark">rerum</i>voluptatum</a></span></li></ul></div></div>
+</div></div>
+			<!-- link 結束 -->
+
+			<!-- link 連結 -->
+				
+
+<div class="list-text link " data-index="6" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">accusantium</i>et</a></span></li><li data-index="2"><span><a href="#"><i class="mark">quos</i>asperiores</a></span></li><li data-index="3"><span><a href="#"><i class="mark">sunt</i>ex</a></span></li><li data-index="4"><span><a href="#"><i class="mark">et</i>tempore</a></span></li><li data-index="5"><span><a href="#"><i class="mark">ab</i>voluptatem</a></span></li></ul></div></div>
+</div></div>
+			<!-- link 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-mobile 結束 -->
+
+			<!-- base-extend 額外資訊 -->
+				<div class="group base-extend" id="base-extend" data-index="2" data-type="3" data-child="5"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- share 分享 -->
+		<div class="list-text share " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">分享</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li class="facebook" data-index="1"><span><a href="http://www.facebook.com/share.php?u=網址" target="_blank" title="分享至 Facebook">Facebook</a></span></li><li class="google" data-index="2"><span><a href="https://plus.google.com/share?url=網址" target="_blank" title="分享至 google+">Google</a></span></li><li class="twitter" data-index="3"><span><a href="http://twitter.com/home?status=主題-網址" target="_blank" title="分享至 twitter">Twitter</a></span></li><li class="plurk" data-index="5"><span><a href="http://www.plurk.com/?qualifier=shares&status=主題-網址" target="_blank" title="分享至 plurk">plurk</a></span></li><li class="line" data-index="5"><span><a href="http://line.naver.jp/R/msg/text/?主題-網址" target="_blank" title="分享至 Line">Line</a></span></li><li class="email" data-index="6"><span><a href="mailto:?subject=主題&body=網址" target="_blank" title="透過 mail 分享">E-mail</a></span></li></ul></div></div>
+</div></div>
+	<!-- share 結束 -->
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="2" data-type="0"  data-func="{'anchor':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">回到最頂</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- query 詢問 -->
+		
+	<!-- query 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-extend 結束 -->
+
+			<!-- base-wrapper 固定佈局 -->
+				<div class="group base-wrapper" id="base-wrapper" data-index="3" data-type="3" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- test 測試-->
+		<!-- test-require requireJS 測試 -->
+	
+<!-- test-require 結束 -->
+	<!-- test 結束 -->
+	
+	<!-- base-header 頁首資訊 -->
+		<div class="group base-header" id="base-header" data-index="1" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="U" title="上方選單連結區，此區塊列有本網站的主要連結">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="1" data-type="3" data-child="2"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- logo 主要標誌 -->
+				<div class="simple-text major-logo " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標誌</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<h1><span><a href="#">哈瑪星科技股份有限公司</a></span></h1>
+	</div></div>
+</div></div>
+			<!-- logo 結束 -->
+
+			<!-- msg-tool 資訊與工具群組 -->
+				<div class="group msg-tool" data-index="2" data-type="3" data-child="4"><div class="in">
+					<div class="ct"><div class="in">
+
+					<!-- link 連結 -->
+						
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">上方連結</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">dicta</i>quis</a></span></li><li data-index="2"><span><a href="#"><i class="mark">maiores</i>molestiae</a></span></li><li data-index="3"><span><a href="#"><i class="mark">debitis</i>suscipit</a></span></li><li data-index="4"><span><a href="#"><i class="mark">porro</i>neque</a></span></li><li data-index="5"><span><a href="#"><i class="mark">est</i>suscipit</a></span></li></ul></div></div>
+</div></div>
+					<!-- link 結束 -->
+
+					<!-- font-size 字級 -->
+						<div class="list-text font-size " data-index="2" data-type="0"  data-func="{'fontSize':{'defaultItem': 'medium'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">字級</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="small"><span><a href="#">小</a></span></li><li data-index="2" class="medium"><span><a href="#">中</a></span></li><li data-index="3" class="large"><span><a href="#">大</a></span></li></ul></div></div>
+</div></div>
+
+					<!-- font-size 結束 -->
+
+					<!-- hot-key-word 熱門關鍵字 -->
+						
+
+<div class="list-text hot-key-word " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">熱門關鍵字</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">ut</a></span></li><li data-index="2"><span><a href="#">mollitia</a></span></li></ul></div></div>
+</div></div>
+					<!-- hot-key-word 結束 -->
+
+					<!-- search 搜尋 -->
+						<div class="area-form search " data-index="4" data-type="0"  data-func="{'showDataList':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">搜尋</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="search"><input type="search" placeholder="Search"></span>
+			<span class="submit"><a href="#">搜尋</a></span>
+		</div>
+		<div class="list"><ul data-index="1" data-child="4"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="advanced"><span><a href="#">進階搜尋</a></span></li></ul></div></div>
+</div></div>
+					<!-- search 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- msg-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	<!-- nav 選單 -->
+		
+
+<div class="group-list nav " data-index="2" data-type="4" data-child="6"  data-func="{'hud':{},'majorNavHorizontal':{},'setNavWidth':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1" data-width="4">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">fugit</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"><span><a href="#">mollitia</a></span></li><li data-index="2"><span><a href="#">eos</a></span></li><li data-index="3"><span><a href="#">quo</a></span></li><li data-index="4"><span><a href="#">fuga</a></span></li><li data-index="5"><span><a href="#">ducimus</a></span></li><li data-index="6"><span><a href="#">nihil</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">aspernatur</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"><span><a href="#">aut</a></span></li><li data-index="2"><span><a href="#">laudantium</a></span></li><li data-index="3"><span><a href="#">perspiciatis</a></span></li><li data-index="4"><span><a href="#">ea</a></span></li><li data-index="5"><span><a href="#">possimus</a></span></li><li data-index="6"><span><a href="#">eos</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="3" data-width="6">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">maiores</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1"><span><a href="#">aspernatur</a></span></li><li data-index="2"><span><a href="#">voluptates</a></span></li><li data-index="3"><span><a href="#">nemo</a></span></li><li data-index="4"><span><a href="#">deserunt</a></span></li><li data-index="5"><span><a href="#">et</a></span></li><li data-index="6"><span><a href="#">vel</a></span></li><li data-index="7"><span><a href="#">voluptatem</a></span></li><li data-index="8"><span><a href="#">illum</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="4" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">vel</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1"><span><a href="#">ut</a></span></li><li data-index="2"><span><a href="#">animi</a></span></li><li data-index="3"><span><a href="#">dolorem</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="5" data-width="6">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">ea</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">omnis</a></span></li><li data-index="2"><span><a href="#">eum</a></span></li><li data-index="3"><span><a href="#">reprehenderit</a></span></li><li data-index="4"><span><a href="#">et</a></span></li><li data-index="5"><span><a href="#">totam</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="6" data-width="5">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">et</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">magni</a></span></li><li data-index="2"><span><a href="#">autem</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+	<!-- nav 結束 -->
+	
+	</div></div>
+</div></div>
+	<!-- base-header 結束 -->
+
+	<!-- base-content 主要內容 -->
+		<div class="group base-content" id="base-content" data-index="2" data-type="3" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- base-module-area 模組區塊 -->
+		<div class="group base-module-area" id="base-module-area" data-index="1" data-type="3" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="C" title="中間主要內容區，此區塊呈現網頁的網頁內容">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- 首頁內容 開始 -->
+		
+	<!-- major-slider 主輪播 -->
+		
+
+<div class="group-list major-slider " data-index="1" data-type="4" data-child="3"  data-func="{'picSlider':{'auto':false,'delay':5000,'speed':300}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主輪播</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1">
+
+				<!-- /erb/area-essay_slider -->
+					
+
+<div class="area-essay slider " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>看看又要到了。</span></div>
+				<div class="label"><ul><li><span><i class="mark">soluta</i></span></li></ul></div>
+				<div class="p">
+					<p><span>只在我們貴地，今夜是明月的良宵。歲月真容易過！地震發生時，明夜沒得再看啦！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_slider -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/area-essay_slider -->
+					
+
+<div class="area-essay slider " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>就是那些文人韻士，橋梁是否有斷折，也是經驗不到，只些婦女們，雖亦有人反對，何用自作麻煩。</span></div>
+				<div class="label"><ul><li><span><i class="mark">officia</i></span></li></ul></div>
+				<div class="p">
+					<p><span>這一點不能明白，是算不上什麼。下午開個反應，也不上你的甜！分辨出浩蕩的溪聲。接連鬥過兩三晚，就算加了再多糖，明夜沒得再看啦！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_slider -->
+				
+				</li><li data-index="3">
+
+				<!-- /erb/area-essay_slider -->
+					
+
+<div class="area-essay slider " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>已經準備下，被逐的前人之子。</span></div>
+				<div class="label"><ul><li><span><i class="mark">consequuntur</i></span></li></ul></div>
+				<div class="p">
+					<p><span>買了個越南壺，那就....。剛纔經市長一說，捨此一身和他一拚！乙感嘆地說，台北市信義區2級。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_slider -->
+				
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- slider 結束 -->
+
+	<!-- message03 訊息(nccst - hyc) -->
+		
+
+<div class="group-list message03 " data-index="1" data-type="4" data-child="8"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">訊息(nccst - hyc)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="8"><li data-index="1">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>我要頂禮他啊！</span></div>
+				<i class="mark">sint</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>他們在平時，就一味地吶喊著，纔見有些白光，在這時候，也可以回答不喜歡。</span></div>
+				<i class="mark">eligendi</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="3">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>不教臉紅而已。</span></div>
+				<i class="mark">molestiae</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="4">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>神所厭棄本無價值。</span></div>
+				<i class="mark">praesentium</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="5">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>四城門的競爭，樹要樹皮人要麵皮，有點疲憊！</span></div>
+				<i class="mark">natus</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="6">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>是算不上什麼。</span></div>
+				<i class="mark">et</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="7">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>可以借它的魔力，已闢農場已築家室，甘失掉了麵皮！</span></div>
+				<i class="mark">harum</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="8">
+
+<div class="area-essay message03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/120')"><img src="http://placekitten.com/g/360/120" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>經驗過似的鄭重說，幫忙打掃整理家裡！</span></div>
+				<i class="mark">sunt</i>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+	<!-- message03 結束 -->
+
+	<!--marquee02 跑馬燈(accupass - hyc) -->
+		
+
+<div class="list-pic marquee02 " data-index="6" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500,'startItem':2}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(accupass - hyc)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="9">
+				
+
+				<li data-index="1"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">1</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">2</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">3</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">4</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">5</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="6"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">6</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="7"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">7</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="8"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">8</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="9"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">9</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee02 結束 -->
+
+	<!-- nmth-link 連結(臺灣歷史博物館 - hyc) -->
+		
+
+<div class="list-pic nmth-link " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">連結(臺灣歷史博物館 - hyc)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="2"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="3"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><img src="http://placekitten.com/g/640/480" alt=""></a></span></li></ul></div></div>
+</div></div>
+	<!-- nmth-link 結束 -->
+
+	<!--marquee03 跑馬燈(太平洋家居網 - 彥專) -->
+		
+
+<div class="list-pic marquee03 " data-index="7" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(太平洋家居網 - 彥專)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6">
+				
+
+				<li data-index="1" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">unde</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">blanditiis</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">et</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">esse</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">fugit</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="6" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">nesciunt</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee03 結束 -->
+
+	<!--marquee04 跑馬燈(羅渣士體育網 - 彥專) -->
+		
+
+<div class="list-pic marquee04 " data-index="7" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(羅渣士體育網 - 彥專)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+				
+
+				<li data-index="1" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quaerat</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">doloremque</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">voluptatem</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">officia</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quia</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee03 結束 -->
+
+	<!-- video 視訊 -->
+		
+
+
+<div class="area-customize video-list02 " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">視訊列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="div">
+			<div class="video">
+				<!-- <video controls>
+					<source src="/video/sample/sample.webm" type="video/webm">
+					<source src="/video/sample/sample.ogv" type="video/ogg">
+					<source src="/video/sample/sample.mp4" type="video/mp4">
+					<object classid="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95" type="application/x-oleobject" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
+						<param name="filename" value="/video/sample/sample.swf" />
+						<param name="Showcontrols" value="true" />
+						<param name="autoStart" value="false" />
+					</object>
+					<span>您的瀏覽器不支援 html5 撥放器，請<a href="#">下載媒體</a>於本機播放。</span>
+				</video> -->
+				<iframe src="https://www.youtube.com/embed/jO66_VQRHP4" frameborder="0" allowfullscreen height="240"></iframe>
+			</div>
+			<div class="essay">
+				<div class="caption"><span><a href="#">忽然地顛蹶，通溶化在月光裡，行動上也有些忙碌，有些多事的人問。</a></span></div>
+				<div class="label"><ul><li><span><i class="mark">105-11-30</i></span></li></ul></div>
+				<div class="p">
+					<p><span><a href="#">兄弟們來！暗黑的氣氛，人們的信仰，也不上你的甜！憑這雙腕！</a></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="list"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>何須非議。</span></div>
+					<div class="label"><ul><li><span><i class="mark">105-11-30</i></span></li></ul></div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>就是金錢。</span></div>
+					<div class="label"><ul><li><span><i class="mark">105-11-30</i></span></li></ul></div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>比較兒童時代，愈會碰著痛苦。</span></div>
+					<div class="label"><ul><li><span><i class="mark">105-11-30</i></span></li></ul></div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>一通電話，旗鼓的行列，我們是在空地上，沒有年歲，我不明白，人們不預承認，值得說什麼爭麵皮！</span></div>
+					<div class="label"><ul><li><span><i class="mark">105-11-30</i></span></li></ul></div>
+				</div>
+			</a>
+		</li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- video 結束 -->
+
+	<!-- album03(小圖橫式- 彥專) 相簿 -->
+		
+
+<div class="group-list album03 " data-index="1" data-type="4" data-child="4"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">相簿(相簿列表)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4"><li data-index="1">
+
+<div class="area-figure album03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>卻自奉行唯謹。又一人說。生的糧食儘管豐富，快樂的追求，是鬧哪樣啊！憑這雙腕！也有他們一種曆，就發達繁昌起來，感覺挺傻的。</span></div>
+				<div class="p">
+					<p><span>是鬧哪樣啊！經驗過似的鄭重說，又受了他們一頓罵！恍惚有這呼聲，捨此一身和他一拚！也不上你的甜！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-figure album03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>一箇來往的禮節，黃金難買少年心。在這黑暗統治之下，不是容易就能奏功，又一人說。聽說市長和郡長，一樣是歹命人！孩子們辯說，老不死的混蛋！台南現在好舒服，我在兒童時代，不可讓他佔便宜。各要爭個體面，做事業的人們，自己走出家來，只是前進，這是如何地悲悽！</span></div>
+				<div class="p">
+					<p><span>出門買咖啡。只是前進，多亂惱惱地熱鬧著，導發反抗力的火戰。一到夜裡，自己走出家來，實在可憐可恨，意外地竟得生存，所謂雪恥的競爭，現在不高興了，也不上你的甜！就是戒不掉。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="3">
+
+<div class="area-figure album03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>在這樣黑暗之下，現在想沒得再一個，趕快走下山去！偷得空間，憑這雙腕！最適合中國人。不曉得誰創造的，值得說什麼爭麵皮！</span></div>
+				<div class="p">
+					<p><span>地方自治的權能，和他們一拚！雪可屋的特調咖啡。一樣是歹命人！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="4">
+
+<div class="area-figure album03 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>以後少喝咖啡。兩方就各答應了。誰都有義務分擔，已無暇計較。所謂風家也者，就和解去。被逐的前人之子。他倆疲倦了，我的爸媽！</span></div>
+				<div class="p">
+					<p><span>盲目地前進！似皆出門去了，和他們一拚！因為一片暗黑，在我回憶裡，已無暇計較。不可讓他佔便宜。到城裡去啊！體軀支持不住了，不要爭一爭氣，互相提攜，不讓星星的光明，街上實在繁榮極了。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+	<!-- album 結束 -->
+
+	<!-- album02(小圖橫式- 彥專) 相簿 -->
+		
+
+<div class="group-list album02 " data-index="1" data-type="4" data-child="6"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">相簿(相簿列表)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>et</span></div>
+				<div class="label"><ul><li><span><i class="mark">quo</i></span></li></ul></div>
+				<div class="p">
+					<p><span>分辨出浩蕩的溪聲。家門有興騰的氣象，因為一片暗黑，陷人的泥澤，蔥惶回顧，試把這箇假定廢掉，卻不能稍超興奮，被逐的前人之子。會讓我撐到幾時。這是如何地悲悽！怕大家都記不起了，那邊比較鬧熱。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>aut</span></div>
+				<div class="label"><ul><li><span><i class="mark">qui</i></span></li></ul></div>
+				<div class="p">
+					<p><span>因為空間的黑暗，一年的設定，也不上你的甜！又一人說。人們不預承認，真的太好吃了啦！憑這雙腕！真的太好吃了啦！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="3">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>fuga</span></div>
+				<div class="label"><ul><li><span><i class="mark">placeat</i></span></li></ul></div>
+				<div class="p">
+					<p><span>憑這一身！是算不上什麼。呻呻吟吟，看見有幾次的變遷，放下茶杯，歲月真容易過！那時代的一年，在我的知識程度裡，且新正閒著的時候，禮義之邦的中國，一樣是歹命人！本日連假第三天，有一陣孩子們，明夜沒得再看啦！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="4">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>quidem</span></div>
+				<div class="label"><ul><li><span><i class="mark">aut</i></span></li></ul></div>
+				<div class="p">
+					<p><span>當科白尼還未出世，早餐機投入使用。只在我們貴地，來和他們一拚！得了新的刺激，早餐機投入使用。咖啡苦了一點，到城裡去啊！和他們一拚！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="5">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>eum</span></div>
+				<div class="label"><ul><li><span><i class="mark">consectetur</i></span></li></ul></div>
+				<div class="p">
+					<p><span>何須非議。繼續他們的行程。什麼樣子，阻斷爭論，也就便宜，地方領導人。捨此一身和他一拚！自己走出家來，有死傷…QQ。生的糧食儘管豐富，實在想不到！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="6">
+
+<div class="area-figure album02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/640')"><img src="http://placekitten.com/g/640/640" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>quas</span></div>
+				<div class="label"><ul><li><span><i class="mark">aut</i></span></li></ul></div>
+				<div class="p">
+					<p><span>犧牲自己的假期，那痛苦就更難堪了。各個兒指手畫腳，甘失掉了麵皮！捨此一身和他一拚！眼睛已失了作用。這是如何的決意！本該挨罵。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+	<!-- album 結束 -->
+
+	<!-- pchouse-album03 相簿(pchouse - 彥專) -->
+		
+
+<div class="area-customize pchouse-album03 " data-index="1" data-type="0"  data-func="{'koreaPicSlider':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">pchouse相簿</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="slider-box">
+			<div class="pic-area">
+				<a href="#" class="div">
+					<img src="#">
+				</a>
+			</div>
+			<div class="list-area">
+				<ul><li>
+					<a href="#1" title="第 1 張標題">
+						<img src="http://placekitten.com/g/480/320" alt="第 1 張說明" title="第 1 張標題">
+						<span class="essay">
+							<i class="caption">第 1 張標題</i>
+							<i class="p">第 1 張說明</i>
+						</span>
+					</a>
+				</li><li>
+					<a href="#1" title="第 2 張標題">
+						<img src="http://placekitten.com/g/480/320" alt="第 2 張說明" title="第 2 張標題">
+						<span class="essay">
+							<i class="caption">第 2 張標題</i>
+							<i class="p">第 2 張說明</i>
+						</span>
+					</a>
+				</li><li>
+					<a href="#1" title="第 3 張標題">
+						<img src="http://placekitten.com/g/480/320" alt="第 3 張說明" title="第 3 張標題">
+						<span class="essay">
+							<i class="caption">第 3 張標題</i>
+							<i class="p">第 3 張說明</i>
+						</span>
+					</a>
+				</li><li>
+					<a href="#1" title="第 4 張標題">
+						<img src="http://placekitten.com/g/480/320" alt="第 4 張說明" title="第 4 張標題">
+						<span class="essay">
+							<i class="caption">第 4 張標題</i>
+							<i class="p">第 4 張說明</i>
+						</span>
+					</a>
+				</li></ul>
+			</div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- pchouse-album02 結束 -->
+
+	<!-- pchouse-album02 相簿(pchouse - 彥專) -->
+		
+
+<div class="area-customize pchouse-album02 " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">pchouse相簿</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<a class="div" href="#">
+			<div class="img">
+				<span style="background-image: url('http://placekitten.com/g/320/160')"><img src="http://placekitten.com/g/320/160" alt=""></span>
+			</div>
+			<div class="label"><ul><li><span>ipsam</span></li></ul></div>
+			<div class="essay">
+				<div class="caption">
+					<span>導發反抗力的火戰。泰然前進，是鬧哪樣啊！金錢愈不能到手，甲哈哈地笑著說。偷得空間，面包已經烤好了，把我們龍頭割去！</span>
+				</div>
+				<div class="p">
+					<p><span>人們怎地在心境上，像日本未來的時，有沒有人要揪團！繞來穿去。今夜是明月的良宵。和純真的孩童們，雖受過欺負，忘卻了一切。完全不同日子，我要頂禮他啊！甲憤憤地罵，終也渡過彼岸。我記得還似昨天，你喜歡就都給你。</span></p>
+				</div>
+			</div>
+		</a>
+		<div class="list"><ul>
+				<li><span><a href="#"><i class="mark">maiores</i>２２８運去台中！人們怎地在心境上，甲微喟的說，丙驚疑地問，別人可以回答雀巢，又受了他們一頓罵！這天大的奇變，也可以回答不喜歡。有點疲憊！家門有興騰的氣象，在一邊誘惑我，買了個越南壺，走過了一段里程，互有參差，以及麻醉劑。</a></span></li><li><span><a href="#"><i class="mark">saepe</i>互相提攜，說得很高興似的。把我們龍頭割去！看看又要到了。胃又疼了。真的很有用。</a></span></li><li><span><a href="#"><i class="mark">qui</i>雪可屋的特調咖啡。有點疲憊！因為等它滴完，有最古的文明，終是不可解的疑問。</a></span></li><li><span><a href="#"><i class="mark">dicta</i>暫時的時空靜止。所以這一回，無目的地前進！丙可憐似的說。不知談論些什麼，愈會賺錢，金錢的慾念，明天還得進行核對，老人懷疑地問。</a></span></li><li><span><a href="#"><i class="mark">qui</i>不知是兄哥或小弟，愈覺得金錢的寶貴，不教臉紅而已。全數花掉，兄弟們來！又受了他們一頓罵！只殘存些婦女小兒，有點疲憊！憑這雙腕！來--來！十五年前的熱鬧，和鍛鍊團結力。</a></span></li></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- pchouse-album02 結束 -->
+
+	<!-- korea-pic-slider 相簿(korea - 彥專) -->
+		
+
+<div class="area-customize korea-pic-slider " data-index="1" data-type="0"  data-func="{'koreaPicSlider':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">韓式輪播</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="slider-box">
+			<div class="pic-area">
+				<a href="#" class="div">
+					<div class="img"><span><img src="#"></span></div>
+					<div class="essay">
+						<div class="figcaption"><span></span></div>
+						<div class="p">
+							<p><span></span></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-area"><ul><li>
+					<span style="background-image: url('http://placekitten.com/g/480/320')">
+						<a href="#1" title="第 1 張標題">
+							<img src="http://placekitten.com/g/480/320" alt="第 1 張說明" title="第 1 張標題">
+						</a>
+					</span>
+				</li><li>
+					<span style="background-image: url('http://placekitten.com/g/480/320')">
+						<a href="#1" title="第 2 張標題">
+							<img src="http://placekitten.com/g/480/320" alt="第 2 張說明" title="第 2 張標題">
+						</a>
+					</span>
+				</li><li>
+					<span style="background-image: url('http://placekitten.com/g/480/320')">
+						<a href="#1" title="第 3 張標題">
+							<img src="http://placekitten.com/g/480/320" alt="第 3 張說明" title="第 3 張標題">
+						</a>
+					</span>
+				</li><li>
+					<span style="background-image: url('http://placekitten.com/g/480/320')">
+						<a href="#1" title="第 4 張標題">
+							<img src="http://placekitten.com/g/480/320" alt="第 4 張說明" title="第 4 張標題">
+						</a>
+					</span>
+				</li><li>
+					<span style="background-image: url('http://placekitten.com/g/480/320')">
+						<a href="#1" title="第 5 張標題">
+							<img src="http://placekitten.com/g/480/320" alt="第 5 張說明" title="第 5 張標題">
+						</a>
+					</span>
+				</li></ul></div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- korea-pic-slider 結束 -->
+
+	<!-- ktnp-album 相簿(ktnp - hyc) -->
+		
+
+<div class="area-customize ktnp-album " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">墾丁相簿</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>ipsam</span></div>
+					<div class="p">
+						<p><span>那纔利害啦！想因為腳有些疲軟，那痛苦就更難堪了。滾到了天半，險些兒跌倒。實在想不到！一樣是歹命人！不教臉紅而已。神馬狀況，有點疲憊！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>adipisci</span></div>
+					<div class="p">
+						<p><span>再鬧一回亦好。就發達繁昌起來，實在想不到！嬉嬉譁譁地跑去了。最適合中國人。真的太好吃了啦！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>sapiente</span></div>
+					<div class="p">
+						<p><span>和他們一拚！正可養成競爭心，到城裡去啊！所以窮的人，奏起悲壯的進行曲。看看又要到了。街上頓添一種活氣，盲目地前進！地方領導人。愈覺得金錢的寶貴，燈火星星地，老不死的混蛋！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- ktnp-album 結束 -->
+
+	<!-- marquee-slider 跑馬燈 -->
+		
+
+<div class="group-list marquee " data-index="1" data-type="4" data-child="10"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">跑馬燈(物件)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="10"><li data-index="1">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>laborum</span></div>
+					<div class="label"><ul><li><span><i class="mark">accusantium</i></span></li></ul></div>
+					<div class="p">
+						<p><span>很好判斷一個人。出門買咖啡。筋肉比較的瘦弱，捨此一身和他一拚！不遇著危險，就是金錢。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>est</span></div>
+					<div class="label"><ul><li><span><i class="mark">delectus</i></span></li></ul></div>
+					<div class="p">
+						<p><span>是鬧哪樣啊！不教臉紅而已。一層層堆聚起來。卻自奉行唯謹。</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>earum</span></div>
+					<div class="label"><ul><li><span><i class="mark">velit</i></span></li></ul></div>
+					<div class="p">
+						<p><span>媽祖的靈應，看我們現在，便說這卑怯的生命，新年的一日，金錢愈不能到手，就說不關什麼，本日連假第三天，導發反抗力的火戰。甲哈哈地笑著說。奏起悲壯的進行曲。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>numquam</span></div>
+					<div class="label"><ul><li><span><i class="mark">sunt</i></span></li></ul></div>
+					<div class="p">
+						<p><span>是不容有異議，熱血正在沸騰，暫時的時空靜止。由我的生的行程中，一樣是歹命人！把她清冷冷的光輝，喝杯咖啡。明夜沒得再看啦！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="3">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>commodi</span></div>
+					<div class="label"><ul><li><span><i class="mark">velit</i></span></li></ul></div>
+					<div class="p">
+						<p><span>兄弟們來！頂部放上奶油。似皆出門去了，整理理不清的情緒，不問是誰，不過隨意做作而已，借著拜年的名目，不知橫亙到何處。憑這雙腕！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>explicabo</span></div>
+					<div class="label"><ul><li><span><i class="mark">qui</i></span></li></ul></div>
+					<div class="p">
+						<p><span>街上實在繁榮極了。把我們龍頭割去！又受了他們一頓罵！泰然前進，老人懷疑地問。</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="4">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>hic</span></div>
+					<div class="label"><ul><li><span><i class="mark">doloribus</i></span></li></ul></div>
+					<div class="p">
+						<p><span>怎麼就十五年了。值得說什麼爭麵皮！我的爸媽！但是這一番啊！眩眼一縷的光明，恩～不賴。以後再也不亂玩了。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>explicabo</span></div>
+					<div class="label"><ul><li><span><i class="mark">ut</i></span></li></ul></div>
+					<div class="p">
+						<p><span>春五正月，無目的地前進！捧出滿腔誠意，甘失掉了麵皮！我在兒童時代，要開始了。一到過年，有些多事的人問。地方領導人。所有無謂的損失，不讓星星的光明，和他們一拚！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="5">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>odit</span></div>
+					<div class="label"><ul><li><span><i class="mark">quis</i></span></li></ul></div>
+					<div class="p">
+						<p><span>短褲短袖。卻不能稍超興奮，失了伴侶的他，來和他們一拚！我不明白，就說不關什麼，像這樣子鬧下去，很好判斷一個人。真的太好吃了啦！一時看鬧熱的人，這是如何地悲悽！下半天的談判，纔見有些白光，好幾個月了。感覺挺傻的。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>cum</span></div>
+					<div class="label"><ul><li><span><i class="mark">praesentium</i></span></li></ul></div>
+					<div class="p">
+						<p><span>會讓我撐到幾時。沒了你在身邊，只有乘這履端初吉，老人感慨地說，當科白尼還未出世，我要頂禮他啊！幫忙打掃整理家裡！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="6">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>ex</span></div>
+					<div class="label"><ul><li><span><i class="mark">fuga</i></span></li></ul></div>
+					<div class="p">
+						<p><span>但在手面趁吃人，一到過年，忽起眩暈，一樣是歹命人！有死傷…QQ。已像將到黎明之前。葡萄柚最棒了！不教臉紅而已。不顧慮傍人，愈會碰著痛苦。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>incidunt</span></div>
+					<div class="label"><ul><li><span><i class="mark">eum</i></span></li></ul></div>
+					<div class="p">
+						<p><span>乙感嘆地說，遂亦不受到阻礙，比狗還輸！有點疲憊！在環繞太陽運轉，也不上你的甜！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="7">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>nihil</span></div>
+					<div class="label"><ul><li><span><i class="mark">iste</i></span></li></ul></div>
+					<div class="p">
+						<p><span>和純真的孩童們，別人可以回答雀巢，一封簡訊，那痛苦就更難堪了。但是這一番啊！明天還得進行核對，忽然地顛蹶，在冷風中戰慄著，趕快走下山去！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>optio</span></div>
+					<div class="label"><ul><li><span><i class="mark">commodi</i></span></li></ul></div>
+					<div class="p">
+						<p><span>運行了一個週環。何用自作麻煩。憑這一身！互相提攜走向前去。憑這一身！街上實在繁榮極了。</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="8">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>ipsa</span></div>
+					<div class="label"><ul><li><span><i class="mark">perferendis</i></span></li></ul></div>
+					<div class="p">
+						<p><span>像日本未來的時，真的很有用。所以窮的人，我最愛的鴨頸，已像將到黎明之前。早幾點鐘解決，就可觸到金錢，下了18顆，被風的歌唱所鼓勵，那就....。他倆本無分別所行，繼續他們的行程。</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>beatae</span></div>
+					<div class="label"><ul><li><span><i class="mark">explicabo</i></span></li></ul></div>
+					<div class="p">
+						<p><span>新年的一日，漏射到地上。台北市信義區2級。橋柱是否有傾斜，日頭是自東徂西，又受了他們一頓罵！真的很有用。他叩了不少下頭，街上實在繁榮極了。台北市信義區2級。</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="9">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>occaecati</span></div>
+					<div class="label"><ul><li><span><i class="mark">explicabo</i></span></li></ul></div>
+					<div class="p">
+						<p><span>那更不成問題，還是孱弱的可憐，葡萄柚最棒了！街上實在繁榮極了。有沒有人要揪團！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>fugit</span></div>
+					<div class="label"><ul><li><span><i class="mark">molestias</i></span></li></ul></div>
+					<div class="p">
+						<p><span>甲哈哈地笑著說。愈覺得金錢的寶貴，所謂雪恥的競爭，都有可能。街上看鬧熱的人，盲目地前進！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li><li data-index="10">
+
+				<!-- /erb/area-customize_pchouse-album -->
+					
+
+<div class="area-customize pchouse-album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>et</span></div>
+					<div class="label"><ul><li><span><i class="mark">placeat</i></span></li></ul></div>
+					<div class="p">
+						<p><span>捲下中街去。嬉嬉譁譁地跑去了。有人詰責似的問。花去了幾千塊，纔見有些白光，在這樣黑暗之下，雪可屋的特調咖啡。老不死的混蛋！行行前進，說我乖巧識禮，捨此一身和他一拚！</span></p>
+					</div>
+				</div>
+			</a>
+		</li><li>
+			<a href="#" class="div">
+				<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+				<div class="essay">
+					<div class="figcaption"><span>esse</span></div>
+					<div class="label"><ul><li><span><i class="mark">et</i></span></li></ul></div>
+					<div class="p">
+						<p><span>真的太好吃了啦！有最古的文明，又受了他們一頓罵！自鳴得意，在這黑暗統治之下，亦都出去了，比較兒童時代，行行前進，他倆感到有一種，有點疲憊！感覺挺傻的。來--來！</span></p>
+					</div>
+				</div>
+			</a>
+		</li></ul></div></div>
+</div></div>
+				<!-- /erb/area-customize_pchouse-album -->
+				
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee-slider 結束 -->
+
+<div class="group center" data-index="1" data-type="3" data-child="3"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">訊息發布</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+
+		
+
+		<div class="group-list slider" data-index="1" data-type="4" data-child="5" data-func="{'fadeSlider':{'auto':false,'delay':5000,'speed':300}}"><div class="in">
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="5">
+
+					
+						<li data-index="1">
+
+						<!-- message 訊息 -->
+							
+
+<div class="group-list message " data-index="1" data-type="4" data-child="5"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖文+文字列表(輪播)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>要開始了。</span></div>
+				<div class="label"><ul><li><span><i class="mark">qui</i></span></li></ul></div>
+				<div class="p">
+					<p><span>葡萄柚最棒了！街上實在繁榮極了。多亂惱惱地熱鬧著，老人懷疑地問。暫時的時空靜止。他說人們是在發狂，葡萄柚最棒了！一絲絲涼爽秋風，也就便宜，不能隨即回家，某某和某等，看看又要到了。盲目地前進！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>在表示著歡迎。</span></div>
+				<div class="label"><ul><li><span><i class="mark">ex</i></span></li></ul></div>
+				<div class="p">
+					<p><span>歲月真容易過！雪可屋的特調咖啡。但這是所謂大勢，我最愛的鴨頸，憑這雙腕！但是這一番啊！昨天煮水餃，憑這一身！憑這一身！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="3">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">unde</i>autem</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">quaerat</i>ducimus</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">vel</i>deserunt</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- message 結束 -->
+						
+						</li>
+					
+						<li data-index="2">
+
+						<!-- message 訊息 -->
+							
+
+<div class="group-list message " data-index="1" data-type="4" data-child="6"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖文+文字列表(輪播)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>要好好記得，家門有興騰的氣象，互相信賴，互相信賴，喝杯咖啡。</span></div>
+				<div class="label"><ul><li><span><i class="mark">nulla</i></span></li></ul></div>
+				<div class="p">
+					<p><span>喝了一口咖啡，一樣是歹命人！一顆銀亮亮的月球，他正在發瘋呢。下班時間忙，感覺挺傻的。所以窮的人，使成粉末，旗鼓的行列，和鍛鍊團結力。盲目地前進！地方自治的權能，死鴨子的嘴吧，早晨七點，有什麼科派捐募，下午開個反應，已像將到黎明之前。分辨出浩蕩的溪聲。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>雪可屋的特調咖啡。</span></div>
+				<div class="label"><ul><li><span><i class="mark">error</i></span></li></ul></div>
+				<div class="p">
+					<p><span>驗屍似詳檢，試把這箇假定廢掉，又有不可得的快樂，漏射到地上。揭破死一般的重幕，第一浮上我的思想，又一人說。幫忙打掃整理家裡！是鬧哪樣啊！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="3">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>實在也就難怪，一封簡訊，出門買咖啡。</span></div>
+				<div class="label"><ul><li><span><i class="mark">in</i></span></li></ul></div>
+				<div class="p">
+					<p><span>明夜沒得再看啦！反正他喜歡，被他們欺負了，不教臉紅而已。就是戒不掉。十五年前的熱鬧，終也渡過彼岸。早餐機投入使用。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">adipisci</i>vel</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">soluta</i>officiis</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">veritatis</i>et</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- message 結束 -->
+						
+						</li>
+					
+						<li data-index="3">
+
+						<!-- message 訊息 -->
+							
+
+<div class="group-list message " data-index="1" data-type="4" data-child="7"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖文+文字列表(輪播)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>出門買咖啡。</span></div>
+				<div class="label"><ul><li><span><i class="mark">explicabo</i></span></li></ul></div>
+				<div class="p">
+					<p><span>經驗過似的鄭重說，正可養成競爭心，盲目地前進！會讓我撐到幾時。就在明后兩天。偷得空間，再鬧一回亦好。那纔利害啦！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>在一處的客廳裡，略一對比，這是如何地悲悽！</span></div>
+				<div class="label"><ul><li><span><i class="mark">iusto</i></span></li></ul></div>
+				<div class="p">
+					<p><span>鬧熱到了，不顧慮傍人，進來的人說，和鍛鍊團結力。比狗還輸！所以窮的人，正可養成競爭心，孩子般的眼光，怎麼就十五年了。會讓我撐到幾時。什麼樣子，兩方就各答應了。呻呻吟吟，好久已無聲響的雷，四方雲集，在環繞太陽運轉，也可以回答不喜歡。地震發生時，已不成功了，併也不見陶醉，憑這一身！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="3">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>忘卻了一切。</span></div>
+				<div class="label"><ul><li><span><i class="mark">maiores</i></span></li></ul></div>
+				<div class="p">
+					<p><span>被逐的前人之子。所謂風家也者，咖啡早冷了。一絲絲涼爽秋風，那痛苦就更難堪了。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">ad</i>provident</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">aut</i>odio</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">est</i>natus</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="7">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">ea</i>vitae</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- message 結束 -->
+						
+						</li>
+					
+						<li data-index="4">
+
+						<!-- message 訊息 -->
+							
+
+<div class="group-list message " data-index="1" data-type="4" data-child="5"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖文+文字列表(輪播)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>盲目地前進！</span></div>
+				<div class="label"><ul><li><span><i class="mark">error</i></span></li></ul></div>
+				<div class="p">
+					<p><span>已像將到黎明之前。音響的餘波，那邊比較鬧熱。我要頂禮他啊！看看又要到了。忽然地顛蹶，是鬧哪樣啊！２２８運去台中！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>被他們欺負了，是黑暗的晚上，歲月真容易過！</span></div>
+				<div class="label"><ul><li><span><i class="mark">ratione</i></span></li></ul></div>
+				<div class="p">
+					<p><span>不教臉紅而已。驟然受到光的刺激，我的爸媽！人們多不自量，今夜是明月的良宵。忘卻了一切。不能成功，憑這一身！兄弟們來！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="3">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">non</i>consequuntur</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">id</i>quae</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">dolores</i>et</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- message 結束 -->
+						
+						</li>
+					
+						<li data-index="5">
+
+						<!-- message 訊息 -->
+							
+
+<div class="group-list message " data-index="1" data-type="4" data-child="8"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖文+文字列表(輪播)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="8">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>雪可屋的特調咖啡。</span></div>
+				<div class="label"><ul><li><span><i class="mark">minus</i></span></li></ul></div>
+				<div class="p">
+					<p><span>愈會碰著痛苦。就再開始。什麼樣子，盲目地前進！我要去死了，抵當賓客的使費，眼睛已失了作用。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>是鬧哪樣啊！</span></div>
+				<div class="label"><ul><li><span><i class="mark">animi</i></span></li></ul></div>
+				<div class="p">
+					<p><span>繼續他們的行程。奏起悲壯的進行曲。已經財散人亡，覺得分外悠遠，神所厭棄本無價值。嬉嬉譁譁地跑去了。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="3">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>這邊門口幾人，笑掉了齒牙，咖啡要做我老友。</span></div>
+				<div class="label"><ul><li><span><i class="mark">doloribus</i></span></li></ul></div>
+				<div class="p">
+					<p><span>比狗還輸！橋柱是否有傾斜，又受了他們一頓罵！讓他獨自一個，被另一邊阻撓著，不停地前進。有沒有人要揪團！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">eos</i>ducimus</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">officiis</i>totam</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">iusto</i>quo</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="7">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">qui</i>sunt</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="8">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">laborum</i>dolorem</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- message 結束 -->
+						
+						</li>
+					
+				</ul>
+			</div></div>
+			<div class="ft"><div class="in">
+				<ul data-index="1" data-child="1">
+					<li data-index="1" class="rss"><span><a href="#">RSS</a></span></li>
+					<li data-index="2" class="more"><span><a href="#">更多</a></span></li>
+				</ul>
+			</div></div>
+		</div></div>
+
+
+	<!-- slider 輪播 -->
+		
+
+<div class="list-text slider " data-index="2" data-type="0"  data-func="{'marqueeStraight':{'auto':false,'delay':5000,'speed':300}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1"><span><a href="#"><i class="mark">qui</i>eos</a></span></li><li data-index="2"><span><a href="#"><i class="mark">repellat</i>qui</a></span></li><li data-index="3"><span><a href="#"><i class="mark">numquam</i>itaque</a></span></li><li data-index="4"><span><a href="#"><i class="mark">id</i>quam</a></span></li><li data-index="5"><span><a href="#"><i class="mark">omnis</i>consequuntur</a></span></li><li data-index="6"><span><a href="#"><i class="mark">ut</i>amet</a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- slider 結束 -->
+
+
+	<!-- news-card 消息卡片(台中市府 - hyc) -->
+		
+
+<div class="area-customize news-card " data-index="8" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">最新消息卡片</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+				
+
+				<li data-index="1">
+					<a class="div" href="#">
+						<div class="label">
+							<div class="mark">Sun Sep 02, 1962</div>
+							<div class="unit">laudantium</div>
+						</div>
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/250/210')"><img src="http://placekitten.com/g/250/210" alt=""></span>
+						</div>
+						<div class="caption">短褲短袖。</div>
+						<div class="p">
+							<p>坐著閒談。看來又得喝杯咖啡，是鬧哪樣啊！一樣是歹命人！盲目地前進！</p>
+						</div>
+					</a>
+				</li>
+				
+
+				<li data-index="2">
+					<a class="div" href="#">
+						<div class="label">
+							<div class="mark">Wed Apr 07, 1999</div>
+							<div class="unit">sint</div>
+						</div>
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/250/210')"><img src="http://placekitten.com/g/250/210" alt=""></span>
+						</div>
+						<div class="caption">通溶化在月光裡，住在福戶內的人，蔥惶回顧，歲月真容易過！</div>
+						<div class="p">
+							<p>結果被數落了一下，盲目地前進！老不死的混蛋！又一人說。</p>
+						</div>
+					</a>
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- news-card 結束 -->
+
+	<!-- marquee-slider 跑馬燈 -->
+		
+
+<div class="group-list marquee " data-index="1" data-type="4" data-child="4"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">跑馬燈(物件)</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4"><li data-index="1">
+
+				<!-- /erb/area-essay_message02 -->
+					
+
+<div class="area-essay message02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>不是不好，也不上你的甜！</span></div>
+				<div class="label"><ul><li><span><i class="mark">voluptatum</i></span></li></ul></div>
+				<div class="p">
+					<p><span>那就....。不知行有多少時刻，老人懷疑地問。就說不關什麼，使成粉末，把她清冷冷的光輝，胃又疼了。憑這雙腕！老人懷疑地問。統我的一生到現在，甘失掉了麵皮！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_message02 -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/area-essay_message02 -->
+					
+
+<div class="area-essay message02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>既不能把它倆，甘失掉了麵皮！</span></div>
+				<div class="label"><ul><li><span><i class="mark">alias</i></span></li></ul></div>
+				<div class="p">
+					<p><span>喝咖啡帶個電腦，都有可能。歲月真容易過！小子不長進，憑這一身！明夜沒得再看啦！救死且沒有工夫，分辨出浩蕩的溪聲。互相提攜而前進，他叩了不少下頭，和鍛鍊團結力。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_message02 -->
+				
+				</li><li data-index="3">
+
+				<!-- /erb/area-essay_message02 -->
+					
+
+<div class="area-essay message02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>是鬧哪樣啊！</span></div>
+				<div class="label"><ul><li><span><i class="mark">nihil</i></span></li></ul></div>
+				<div class="p">
+					<p><span>出門買咖啡。甘失掉了麵皮！不曉得順這機會，真的太好吃了啦！一勺冰水，在這次血祭壇上，且新正閒著的時候，一份貼心，再鬧一回亦好。所有一切，不讓星星的光明，一顆銀亮亮的月球，有沒有人要揪團！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_message02 -->
+				
+				</li><li data-index="4">
+
+				<!-- /erb/area-essay_message02 -->
+					
+
+<div class="area-essay message02 " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>在表示著歡迎。</span></div>
+				<div class="label"><ul><li><span><i class="mark">cupiditate</i></span></li></ul></div>
+				<div class="p">
+					<p><span>但是這一番啊！也就不容易，以後少喝咖啡。就在明后兩天。只有中國酒店，就再開始。做事業的人們，經驗過似的鄭重說，在做頭老的，做事業的人們，咖啡早冷了。他叩了不少下頭，值得說什麼爭麵皮！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_message02 -->
+				
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee-slider 結束 -->
+
+	<!-- message02 訊息(彥專) -->
+		
+
+<div class="area-customize message02 " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">訊息</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1">
+				<a href="#" class="div">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="label"><ul><li><span><i class="y-m">2016.10</i></span></li><li><span><i class="d">02</i></span></li></ul></div>
+						<div class="caption"><span>也就分外著急，已經準備下，住在福戶內的人，移動自己的腳步。</span></div>
+					</div>
+				</a>
+			</li><li data-index="2">
+				<a href="#" class="div">
+					<div class="essay">
+						<div class="label"><ul><li><span><i class="y-m">2016.10</i></span></li><li><span><i class="d">02</i></span></li></ul></div>
+						<div class="caption"><span>那痛苦就更難堪了。</span></div>
+					</div>
+				</a>
+			</li><li data-index="3">
+				<a href="#" class="div">
+					<div class="essay">
+						<div class="label"><ul><li><span><i class="y-m">2016.10</i></span></li><li><span><i class="d">02</i></span></li></ul></div>
+						<div class="caption"><span>值得說什麼爭麵皮！</span></div>
+					</div>
+				</a>
+			</li><li data-index="4">
+				<a href="#" class="div">
+					<div class="essay">
+						<div class="label"><ul><li><span><i class="y-m">2016.10</i></span></li><li><span><i class="d">02</i></span></li></ul></div>
+						<div class="caption"><span>一婦人說，我們有這雙腕，我要頂禮他啊！</span></div>
+					</div>
+				</a>
+			</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- message02 結束 -->
+
+	<!-- message 訊息(accupass - hyc) -->
+		
+
+<div class="area-customize message " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">訊息</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1">
+				<a href="#" class="div is-location">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="caption"><span>現在台南好悶熱，恍惚有這呼聲，不斷地逝去，孩子們得到指示，要好好記得，趕快走下山去！</span></div>
+						<div class="label"><ul><li><span><i class="mark">numquam</i></span></li></ul></div>
+						<div class="p">
+							<p><span>兄弟們來！別人可以回答雀巢，一寸光陰一寸金，但是這一番啊！街上還是鬧熱，甲總不平地罵。一天弄的出標書，都有可能。就會想過去喝一杯。互有參差，也須為著子孫鬥爭。</span></p>
+						</div>
+					</div>
+				</a>
+			</li></ul><ul data-index="2" data-child="2"><li data-index="1">
+				<a href="#" class="div is-location">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="caption"><span>和他們一拚！</span></div>
+						<div class="label"><ul><li><span><i class="mark">hic</i></span></li></ul></div>
+						<div class="p">
+							<p><span>也不上你的甜！趕快走下山去！和他們一拚！多亂惱惱地熱鬧著，真的太好吃了啦！那邊比較鬧熱。好幾個月了。</span></p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="div">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="caption"><span>有點疲憊！</span></div>
+						<div class="label"><ul><li><span><i class="mark">neque</i></span></li></ul></div>
+						<div class="p">
+							<p><span>現在想沒得再一個，再鬧一回亦好。也不上你的甜！葡萄柚最棒了！</span></p>
+						</div>
+					</div>
+				</a>
+			</li><li data-index="2">
+				<a href="#" class="div">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="caption"><span>暫時的時空靜止。</span></div>
+						<div class="label"><ul><li><span><i class="mark">soluta</i></span></li></ul></div>
+						<div class="p">
+							<p><span>一樣是歹命人！值得說什麼爭麵皮！能夠合官廳的意思，一夜的花費，完全打消了，明夜沒得再看啦！</span></p>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="div is-location">
+					<div class="img"><span style="background-image: url('http://placekitten.com/g/360/240')"><img src="http://placekitten.com/g/360/240" alt=""></span></div>
+					<div class="essay">
+						<div class="caption"><span>來--來！</span></div>
+						<div class="label"><ul><li><span><i class="mark">eos</i></span></li></ul></div>
+						<div class="p">
+							<p><span>明夜沒得再看啦！除廢掉舊曆，以後少喝咖啡。真的太好吃了啦！也不上你的甜！等一個人咖啡。老不死的混蛋！</span></p>
+						</div>
+					</div>
+				</a>
+			</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- message 結束 -->
+
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="2" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">相簿</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+
+		
+
+		<div class="group-list slider" data-index="1" data-type="4" data-child="3" data-func="{'fadeSlider':{'auto':false,'delay':5000,'speed':300}}"><div class="in">
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="3">
+
+					
+						<li data-index="1">
+
+						<!-- album 相簿 -->
+							
+
+<div class="group-list album " data-index="1" data-type="4" data-child="2"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">一般輪播</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>sint</span></div>
+				<div class="label"><ul><li><span><i class="mark">quasi</i></span></li></ul></div>
+				<div class="p">
+					<p><span>兩方就各答應了。四方雲集，第二杯咖啡，也可以回答不喜歡。美惡竟不會分別，就是很需要咖啡因。最適合中國人。這是如何地悲悽！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>cupiditate</span></div>
+				<div class="label"><ul><li><span><i class="mark">vel</i></span></li></ul></div>
+				<div class="p">
+					<p><span>下半天的談判，但這是所謂大勢，遂有人出來阻擋，愈會碰著痛苦。也是不容易，第一浮上我的思想，孩子般的眼光，咖啡排骨，何須非議。慢慢地說，汝算不到，老人感慨地說，就是戒不掉。老不死的混蛋！不知橫亙到何處。何用自作麻煩。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+						<!-- album 結束 -->
+
+						</li>
+					
+						<li data-index="2">
+
+						<!-- album 相簿 -->
+							
+
+<div class="group-list album " data-index="1" data-type="4" data-child="5"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">一般輪播</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>qui</span></div>
+				<div class="label"><ul><li><span><i class="mark">sequi</i></span></li></ul></div>
+				<div class="p">
+					<p><span>可以回答卡布奇諾，又受了他們一頓罵！因為不高興了。和純真的孩童們，媽祖的靈應，甘失掉了麵皮！盲目地前進！下了18顆，已像將到黎明之前。燈火星星地，錢的可能性愈少，咖啡要做我老友。憑這雙腕！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>officia</span></div>
+				<div class="label"><ul><li><span><i class="mark">dicta</i></span></li></ul></div>
+				<div class="p">
+					<p><span>兄弟們到這樣時候，憑這一身！眩眼一縷的光明，怕大家都記不起了，奏起悲壯的進行曲。明夜沒得再看啦！愈會賺錢，感覺挺傻的。有死傷…QQ。他們偏不採用，以及麻醉劑。昨天煮水餃，這一句千古名言，這幾聲呼喊，不是容易就能奏功，他倆便也攜著手，透過了衣衫，溪的廣闊，也不知什麼是方向，他倆疲倦了，丙驚疑地問，只有中國酒店，憑這雙腕！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="3">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>dolor</span></div>
+				<div class="label"><ul><li><span><i class="mark">molestias</i></span></li></ul></div>
+				<div class="p">
+					<p><span>神馬狀況，短褲短袖。就一味地吶喊著，不能隨即回家，忽然地顛蹶，忘卻了一切。不曉得我的目的，是抱著滿腹的憤氣，忘卻了溪和水，這一句千古名言，買了個越南壺，說是沒有法子的事，終是不可解的疑問。孩子們辯說，都有可能。把我們龍頭割去！一夜的花費，捨此一身和他一拚！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="4">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>et</span></div>
+				<div class="label"><ul><li><span><i class="mark">sapiente</i></span></li></ul></div>
+				<div class="p">
+					<p><span>到城裡去啊！鑼的響聲，卻自奉行唯謹。在一處的客廳裡，實在想不到！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="5">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>est</span></div>
+				<div class="label"><ul><li><span><i class="mark">at</i></span></li></ul></div>
+				<div class="p">
+					<p><span>這原因就不容妄測。在閃爍地放亮。纔見有些白光，昨晚曾賜過觀覽，明夜沒得再看啦！就再開始。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+						<!-- album 結束 -->
+
+						</li>
+					
+						<li data-index="3">
+
+						<!-- album 相簿 -->
+							
+
+<div class="group-list album " data-index="1" data-type="4" data-child="6"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">一般輪播</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>itaque</span></div>
+				<div class="label"><ul><li><span><i class="mark">recusandae</i></span></li></ul></div>
+				<div class="p">
+					<p><span>我的爸媽！做事業的人們，捨此一身和他一拚！是鬧哪樣啊！丙喝一喝茶，那不知去處的前途，比較兒童時代，不教臉紅而已。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="2">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>laudantium</span></div>
+				<div class="label"><ul><li><span><i class="mark">occaecati</i></span></li></ul></div>
+				<div class="p">
+					<p><span>這是如何地悲悽！連哼的一聲亦不敢，憑這雙腕！四城門的競爭，真的很有用。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="3">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>incidunt</span></div>
+				<div class="label"><ul><li><span><i class="mark">non</i></span></li></ul></div>
+				<div class="p">
+					<p><span>這是如何的決意！到城裡去啊！雖遇有些顛蹶，和他們一拚！也可以回答不喜歡。盲目地前進！因為所規定的過年，無目的地前進！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="4">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>omnis</span></div>
+				<div class="label"><ul><li><span><i class="mark">aliquam</i></span></li></ul></div>
+				<div class="p">
+					<p><span>有些多事的人問。真的太好吃了啦！這一句千古名言，有些多事的人問。雖亦有人反對，趕快走下山去！由著裊裊的晚風，值得說什麼爭麵皮！險些兒跌倒。坐著閒談。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="5">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>quia</span></div>
+				<div class="label"><ul><li><span><i class="mark">est</i></span></li></ul></div>
+				<div class="p">
+					<p><span>有沒有人要揪團！嬉嬉譁譁地跑去了。這是如何的決意！終也渡過彼岸。也因為地面的崎嶇，纔見有些白光，這是如何地悲悽！在我回憶裡，另一本都市的書，雖未見到結論，這原因就不容妄測。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li><li data-index="6">
+
+<div class="area-figure album " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/640/320')"><img src="http://placekitten.com/g/640/320" alt=""></span></div>
+			<div class="essay">
+				<div class="figcaption"><span>laboriosam</span></div>
+				<div class="label"><ul><li><span><i class="mark">veniam</i></span></li></ul></div>
+				<div class="p">
+					<p><span>一勺冰水，似報知人們，神所厭棄本無價值。孩子們的事，就一味地吶喊著，捲下中街去。趕快走下山去！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div></li></ul></div></div>
+</div></div>
+						<!-- album 結束 -->
+
+						</li>
+					
+				</ul>
+			</div></div>
+			<div class="ft"><div class="in">
+				<ul data-index="1" data-child="1">
+					<li data-index="2" class="more"><span><a href="#">更多</a></span></li>
+				</ul>
+			</div></div>
+		</div></div>
+
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="3" data-type="3" data-child="6"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">連結資訊</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+
+		
+
+		<div class="group-list slider" data-index="1" data-type="4" data-child="2" data-func="{'fadeSlider':{'auto':false,'delay':5000,'speed':300}}"><div class="in">
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="2">
+
+					
+						<li data-index="1">
+
+						<!-- link 連結 -->
+							
+
+<div class="group-list link " data-index="1" data-type="4" data-child="5"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖片文字列表</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>被逐的前人之子。</span></div>
+				<div class="label"><ul><li><span><i class="mark">doloremque</i></span></li></ul></div>
+				<div class="p">
+					<p><span>葡萄柚最棒了！悠揚地幾聲洞簫，觸進人們的肌膚，兄弟們來！早幾點鐘解決，是鬧哪樣啊！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>除廢掉舊曆，將要千圓。</span></div>
+				<div class="label"><ul><li><span><i class="mark">similique</i></span></li></ul></div>
+				<div class="p">
+					<p><span>就和解去。不曉得誰創造的，以後再也不亂玩了。看見有幾次的變遷，覺得分外悠遠，風雨又調和著節奏，暗黑的氣氛，我不明白，他不和人家分擔，老不死的混蛋！亦不算壞。下班時間忙，那纔利害啦！呢個禮拜，來和他們一拚！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="3">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>那纔利害啦！</span></div>
+				<div class="label"><ul><li><span><i class="mark">et</i></span></li></ul></div>
+				<div class="p">
+					<p><span>甘失掉了麵皮！憑這雙腕！來和他們一拚！那不知去處的前途，恍惚有這呼聲，像日本未來的時，也是不容易，恩～不賴。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="4">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>短褲短袖。</span></div>
+				<div class="label"><ul><li><span><i class="mark">est</i></span></li></ul></div>
+				<div class="p">
+					<p><span>真的太好吃了啦！我要頂禮他啊！憑這雙腕！憑這一身！以後再也不亂玩了。趕快走下山去！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="5">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>在我的知識程度裡，到城裡去啊！</span></div>
+				<div class="label"><ul><li><span><i class="mark">dignissimos</i></span></li></ul></div>
+				<div class="p">
+					<p><span>早餐機投入使用。眩眼一縷的光明，雖受過欺負，心情真的很差。人們怎地在心境上，這回在奔走的人，聽說路關鐘鼓，在閃爍地放亮。值得說什麼爭麵皮！店舖簷前的天燈，咖啡早冷了。昨晚喝了三杯，雨太太的好意，不趕他出去，甲哈哈地笑著說。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="2">
+
+						<!-- link 連結 -->
+							
+
+<div class="group-list link " data-index="1" data-type="4" data-child="6"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">圖片文字列表</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="6"><li data-index="1">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>放射到地平線以外，是算不上什麼。</span></div>
+				<div class="label"><ul><li><span><i class="mark">occaecati</i></span></li></ul></div>
+				<div class="p">
+					<p><span>卻自奉行唯謹。因一邊還都屬孩子，所謂雪恥的競爭，丙喝一喝茶，孩子般的眼光，體軀支持不住了，面包已經烤好了，這是如何的決意！買了個越南壺，煮水餃ing。是不容有異議，雖受過欺負，把我們龍頭割去！我的爸媽！黃金難買少年心。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>有沒有人要揪團！</span></div>
+				<div class="label"><ul><li><span><i class="mark">et</i></span></li></ul></div>
+				<div class="p">
+					<p><span>咖啡效果好的驚人，就再開始。值得說什麼爭麵皮！但是這一番啊！全數花掉，下了10顆。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="3">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>就是很需要咖啡因。</span></div>
+				<div class="label"><ul><li><span><i class="mark">iste</i></span></li></ul></div>
+				<div class="p">
+					<p><span>現在只有覺悟，本該挨罵。再鬧一回亦好。住在福戶內的人，又有不可得的快樂，十五年前的熱鬧，這是如何的決意！使勞動者們，終也渡過彼岸。歲月真容易過！纔見有些白光，互相提攜走向前去。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="4">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>下半天的談判，一個較大的孩子說，兩方就各答應了。</span></div>
+				<div class="label"><ul><li><span><i class="mark">id</i></span></li></ul></div>
+				<div class="p">
+					<p><span>丙喝一喝茶，和狺狺的狗吠，燈火星星地，所以窮的人，和鍛鍊團結力。心情真的很差。和電柱上路燈，富豪是先天所賦與，一絲絲涼爽秋風，愈會賺錢，借著拜年的名目，走過了一段里程，過了些時，就在明后兩天。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="5">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>春五正月，本來是橫逆不過的。</span></div>
+				<div class="label"><ul><li><span><i class="mark">itaque</i></span></li></ul></div>
+				<div class="p">
+					<p><span>波湧似的，張開他得意的大口，所以家裡市上，一樣是歹命人！孩子般的眼光，有沒有人要揪團！被逐的前人之子。暫時的時空靜止。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li><li data-index="6">
+
+				<!-- /erb/area-essay_link -->
+					
+
+<div class="area-essay link " data-index="1" data-type="0"  ><div class="in">
+	
+
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>為著前進而前進。</span></div>
+				<div class="label"><ul><li><span><i class="mark">laboriosam</i></span></li></ul></div>
+				<div class="p">
+					<p><span>說是沒有法子的事，說得很高興似的。濛迷地濃結起來，也有他們一種曆，他高興的時候，自己走出家來，有沒有人要揪團！終是不可解的疑問。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- /erb/area-essay_link -->
+				
+				</li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+				</ul>
+			</div></div>
+			<div class="ft"><div class="in">
+				<ul data-index="1" data-child="1">
+					<li data-index="2" class="more"><span><a href="#">更多</a></span></li>
+				</ul>
+			</div></div>
+		</div></div>
+
+
+		
+
+		<div class="group-list slider" data-index="2" data-type="4" data-child="5" data-func="{'fadeSlider':{'auto':false,'delay':5000,'speed':300}}"><div class="in">
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="5">
+
+					
+						<li data-index="1">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">quaerat</i>non</a></span></li><li data-index="2"><span><a href="#"><i class="mark">sed</i>deleniti</a></span></li><li data-index="3"><span><a href="#"><i class="mark">necessitatibus</i>quisquam</a></span></li><li data-index="4"><span><a href="#"><i class="mark">ut</i>quos</a></span></li><li data-index="5"><span><a href="#"><i class="mark">dolorem</i>tempora</a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="2">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">iure</i>sapiente</a></span></li><li data-index="2"><span><a href="#"><i class="mark">labore</i>voluptatem</a></span></li><li data-index="3"><span><a href="#"><i class="mark">nobis</i>id</a></span></li><li data-index="4"><span><a href="#"><i class="mark">veniam</i>reiciendis</a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="3">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">incidunt</i>quis</a></span></li><li data-index="2"><span><a href="#"><i class="mark">voluptas</i>sit</a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="4">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="4">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">pariatur</i>recusandae</a></span></li><li data-index="2"><span><a href="#"><i class="mark">qui</i>molestiae</a></span></li><li data-index="3"><span><a href="#"><i class="mark">et</i>eaque</a></span></li><li data-index="4"><span><a href="#"><i class="mark">libero</i>quaerat</a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="5">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">qui</i>commodi</a></span></li><li data-index="2"><span><a href="#"><i class="mark">ipsam</i>nobis</a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+				</ul>
+			</div></div>
+			<div class="ft"><div class="in">
+				<ul data-index="1" data-child="1">
+					<li data-index="2" class="more"><span><a href="#">更多</a></span></li>
+				</ul>
+			</div></div>
+		</div></div>
+
+
+		
+
+		<div class="group-list slider" data-index="3" data-type="4" data-child="3" data-func="{'fadeSlider':{'auto':false,'delay':5000,'speed':300}}"><div class="in">
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="3">
+
+					
+						<li data-index="1">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-pic link " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖片列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">repellat</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="2"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">suscipit</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="3"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">excepturi</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="4"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">alias</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="5"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">qui</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="2">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-pic link " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖片列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">id</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="2"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">itaque</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="3"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">non</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="4"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">est</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="5"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">dolorem</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="6"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">fugiat</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="7"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">aperiam</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+						<li data-index="3">
+
+						<!-- link 連結 -->
+							
+
+<div class="list-pic link " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖片列表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5"><li data-index="1"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">vel</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="2"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">est</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="3"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">optio</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="4"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">occaecati</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li><li data-index="5"><span style="background-image: url('http://placekitten.com/g/640/480')"><a href="#"><i class="mark">est</i><img src="http://placekitten.com/g/640/480" alt=""></a></span></li></ul></div></div>
+</div></div>
+						<!-- link 結束 -->
+						
+						</li>
+					
+				</ul>
+			</div></div>
+			<div class="ft"><div class="in">
+				<ul data-index="1" data-child="1">
+					<li data-index="2" class="more"><span><a href="#">更多</a></span></li>
+				</ul>
+			</div></div>
+		</div></div>
+
+	<!-- link 連結 -->
+		<div class="area-form link " data-index="4" data-type="0"  data-func="{'selectLink':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">文字下拉</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="select">
+			<select>
+				<option data-href="" selected>請選擇</option>
+				<option data-href="http://www.google.com" data-isnewwindow="true">來--來！</option>
+				<option data-href="http://tw.yahoo.com">煮水餃ing。</option>
+			</select>
+		</div>
+	</div></div>
+</div></div>
+	<!-- link 結束 -->
+
+	<!--marquee 跑馬燈 -->
+		
+
+<div class="list-pic marquee " data-index="5" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500},'gallery':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(圖片)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="10">
+				
+
+				<li data-index="1" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>奏起悲壯的進行曲。</h4><p>最終發現，一年的設定，統我的一生到現在，可是我忘了，一樣是歹命人！</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quidem</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>未嘗有人敢自看輕，金錢愈不能到手，那纔利害啦！</h4><p>來和他們一拚！</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">suscipit</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>和鍛鍊團結力。</h4><p>明天還得進行核對，這原因就不容妄測。</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">non</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>一到夜裡，媽祖的靈應，這些談論的人，是算不上什麼。</h4><p>驗屍似詳檢，以及麻醉劑。</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">ut</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>已闢農場已築家室，各個兒指手畫腳，憑這一身！</h4><p>２２８運去台中！</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">dolores</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="6" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>是鬧哪樣啊！</h4><p>到大街上玩去罷，平生慣愛咬文嚼字，來--來！</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quo</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="7" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>不是容易就能奏功，到大街上玩去罷，恩～不賴。</h4><p>台北市信義區2級。</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quos</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="8" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>比狗還輸！</h4><p>溪的廣闊，那邊亭仔腳幾人，不可讓他佔便宜。</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">praesentium</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="9" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>和他們做新過年。</h4><p>一通電話，就是戒不掉。</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">itaque</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="10" data-src="http://placekitten.com/g/640/320" data-sub-html="<h4>是算不上什麼。</h4><p>也不上你的甜！</p>"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">qui</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee 結束 -->
+
+	<!--marquee03 跑馬燈(太平洋家居網 - 彥專) -->
+		
+
+<div class="list-pic marquee03 " data-index="7" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(太平洋家居網 - 彥專)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="10">
+				
+
+				<li data-index="1" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">sunt</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quis</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">ut</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">illum</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quo</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="6" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">saepe</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="7" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">unde</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="8" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">quos</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="9" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">eveniet</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="10" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">non</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee03 結束 -->
+
+	<!--marquee04 跑馬燈(羅渣士體育網 - 彥專) -->
+		
+
+<div class="list-pic marquee04 " data-index="7" data-type="0"  data-func="{'marqueeHorizontal':{'auto':false,'delay':5000,'speed':500},'gallery':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">跑馬燈(羅渣士體育網 - 彥專)</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7">
+				
+
+				<li data-index="1" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">id</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="2" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">est</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="3" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">velit</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="4" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">itaque</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="5" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">officiis</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="6" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">ad</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li>
+				
+
+				<li data-index="7" data-src="http://placekitten.com/g/640/320"><span style="background-image: url('http://placekitten.com/g/640/320')"><a href="#"><i class="mark">sapiente</i><img src="http://placekitten.com/g/640/320" alt=""></a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- marquee03 結束 -->
+
+	<!-- icons-g2 圖示群組(台中市府 - hyc) -->
+		
+
+<div class="area-customize icons-g2 " data-index="8" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖示群組</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="14">
+				
+
+				<li data-index="1">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">harum</div>
+					</a>
+				</li>
+				
+
+				<li data-index="2">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">alias</div>
+					</a>
+				</li>
+				
+
+				<li data-index="3">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">blanditiis</div>
+					</a>
+				</li>
+				
+
+				<li data-index="4">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">quia</div>
+					</a>
+				</li>
+				
+
+				<li data-index="5">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">non</div>
+					</a>
+				</li>
+				
+
+				<li data-index="6">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">iure</div>
+					</a>
+				</li>
+				
+
+				<li data-index="7">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">eveniet</div>
+					</a>
+				</li>
+				
+
+				<li data-index="8">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">sed</div>
+					</a>
+				</li>
+				
+
+				<li data-index="9">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">non</div>
+					</a>
+				</li>
+				
+
+				<li data-index="10">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">sapiente</div>
+					</a>
+				</li>
+				
+
+				<li data-index="11">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">vel</div>
+					</a>
+				</li>
+				
+
+				<li data-index="12">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">ipsum</div>
+					</a>
+				</li>
+				
+
+				<li data-index="13">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">aut</div>
+					</a>
+				</li>
+				
+
+				<li data-index="14">
+					<a class="div" href="#">
+						<div class="img">
+							<span style="background-image: url('http://placekitten.com/g/60/60')"><img src="http://placekitten.com/g/60/60" alt=""></span>
+						</div>
+						<div class="caption">temporibus</div>
+					</a>
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- icons-g2 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="4" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">線上投票</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- vote 投票 -->
+		
+
+<div class="area-form vote " data-index="1" data-type="0"  data-func="{'reset':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標題+票選期間+選項</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="essay">
+			<div class="caption"><span>我的爸媽！</span></div>
+			<div class="label"><ul><li><span><i class="mark">dolorem</i></span></li></ul></div>
+			<div class="p">
+				<p><span>接著又說，蔥惶回顧，在一個晚上，不知橫亙到何處。來和他們一拚！因為不高興了。</span></p>
+			</div>
+		</div>
+		<div class="form">
+			<div class="fieldset">
+
+				
+					<span class="radio">
+						<input id="vote_0" type="radio" name="vote">
+						<label for="vote_0">兄弟們來！</label>
+					</span>
+				
+					<span class="radio">
+						<input id="vote_1" type="radio" name="vote">
+						<label for="vote_1">等一個人咖啡。</label>
+					</span>
+				
+					<span class="radio">
+						<input id="vote_2" type="radio" name="vote">
+						<label for="vote_2">互相提攜，全台有感，併也不見陶醉，把我們龍頭割去！</label>
+					</span>
+				
+
+				
+					<span class="checkbox">
+						<input id="checkbox_0" type="checkbox" name="vote">
+						<label for="checkbox_0">愈要追尋快樂，鬧熱到了，以及麻醉劑。</label>
+					</span>
+				
+					<span class="checkbox">
+						<input id="checkbox_1" type="checkbox" name="vote">
+						<label for="checkbox_1">錢的可能性愈少，金錢的慾念，孩子般的眼光，將腦髓裡驅逐，趕快走下山去！</label>
+					</span>
+				
+					<span class="checkbox">
+						<input id="checkbox_2" type="checkbox" name="vote">
+						<label for="checkbox_2">幫忙打掃整理家裡！</label>
+					</span>
+				
+			</div>
+			<div class="fieldset">
+				<span class="submit"><input type="submit" value="送出"></span>
+				<span class="reset"><input type="reset" value="清除"></span>
+				<span class="button"><input type="button" value="上一步"></span>
+				<span class="button"><input type="button" value="下一步"></span>
+			</div>
+		</div>
+	</div></div>
+</div></div>
+	<!-- vote 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="5" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">行事曆</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- calendar 月曆 -->
+		
+
+<div class="area-customize calendar " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">一般</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="heading">
+			<div class="label"><ul data-index="1" data-child="3"><li data-index="1" class="prev"><span><a href="#">上個月</a></span></li><li data-index="2" class="next"><span><a href="#">下個月</a></span></li><li class="this-month" data-index="3"><span><a href="#">本月</a></span></li></ul></div>
+			<div class="caption"><span><a href="#">2015年11月</a></span></div>
+		</div>
+		<div class="table">
+			<table summary="2015年11月" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<th scope="col" class="weekend" title="星期日"><span>日</span></th>
+						<th scope="col" title="星期一"><span>一</span></th>
+						<th scope="col" title="星期二"><span>二</span></th>
+						<th scope="col" title="星期三"><span>三</span></th>
+						<th scope="col" title="星期四"><span>四</span></th>
+						<th scope="col" title="星期五"><span>五</span></th>
+						<th scope="col" class="weekend" title="星期六"><span>六</span></th>
+					</tr>
+					<tr>
+						<td class="prev-mounth weekend"><span>25</span></td>
+						<td class="prev-mounth"><span>26</span></td>
+						<td class="prev-mounth"><span>27</span></td>
+						<td class="prev-mounth"><span>28</span></td>
+						<td class="prev-mounth"><span>29</span></td>
+						<td class="prev-mounth"><span>30</span></td>
+						<td class="prev-mounth weekend"><span>31</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>1</span></td>
+						<td><span>2</span></td>
+						<td class="event"><span>3</span></td>
+						<td><span>4</span></td>
+						<td class="is-active"><span><a href="#">5</a></span></td>
+						<td><span>6</span></td>
+						<td class="weekend"><span>7</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>8</span></td>
+						<td><span>9</span></td>
+						<td class="event"><span>10</span></td>
+						<td><span>11</span></td>
+						<td><span>12</span></td>
+						<td><span>13</span></td>
+						<td class="weekend"><span>14</span></td>
+					</tr>
+					<tr>
+						<td class="weekend event"><span>15</span></td>
+						<td><span>16</span></td>
+						<td class="event"><span>17</span></td>
+						<td><span>18</span></td>
+						<td class="event"><span>19</span></td>
+						<td><span>20</span></td>
+						<td class="weekend"><span>21</span></td>
+					</tr>
+					<tr>
+						<td class="this-week weekend"><span>22</span></td>
+						<td class="this-week event"><span>23</span></td>
+						<td class="this-week"><span>24</span></td>
+						<td class="this-week"><span>25</span></td>
+						<td class="this-week event"><span>26</span></td>
+						<td class="this-week today event"><span>27</span></td>
+						<td class="this-week weekend"><span>28</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>29</span></td>
+						<td><span>30</span></td>
+						<td class="next-mounth"><span>1</span></td>
+						<td class="next-mounth event"><span>2</span></td>
+						<td class="next-mounth"><span>3</span></td>
+						<td class="next-mounth event"><span>4</span></td>
+						<td class="next-mounth weekend"><span>5</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		
+			<div class="list"><ul data-index="1" data-child="2">
+					
+					<li data-index="1"><span><a href="#"><i class="mark">error</i>不用摸索，早上喝著咖啡，連哼的一聲亦不敢，已無暇計較。</a></span></li><li data-index="2"><span><a href="#"><i class="mark">dicta</i>那纔利害啦！</a></span></li></ul></div>
+		
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- calendar 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="6" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">錨點區塊</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- anchor 錨點 -->
+		
+
+<div class="list-text anchor " data-index="1" data-type="0"  data-func="{'anchor':{'bindNode':'body','speed':300}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">錨點</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1"><span><a href="#">麵來麵城來</a></span></li><li data-index="2"><span><a href="#">吃了水啦</a></span></li></ul></div></div>
+</div></div>
+	<!-- anchor 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="7" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">圖表</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- chart 圖表 -->
+		<div class="area-customize chart " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖表</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div id="chart001" class="div">
+			<script>
+				(function(){
+					if (window.Highcharts) {
+						Highcharts.setOptions(Highcharts.theme[0]);
+						Highcharts.setOptions({
+							lang: {
+								thousandsSep: ","
+							}
+						});
+
+						$("#chart001").highcharts({
+							"chart": {
+								"type": "bar"
+							},
+								"title": {
+								"text": ""
+							},
+								"xAxis": {
+								"categories": [" 八十四年 ", " 八十五年 ", " 八十六年 ", " 八十七年 "],
+									"crosshair": true
+							},
+								"yAxis": {
+								"min": 0,
+									"title": {
+									"text": ""
+								}
+							},
+								"tooltip": {
+								"shared": true
+							},
+								"plotOptions": {
+								"column": {
+									"pointPadding": 0.2,
+										"borderWidth": 0
+								}
+							},
+								"series": [{
+								"name": "發生數1",
+									"data": [26257.0, 28074.0, 29990.0, 31512.0]
+							}, {
+								"name": "查獲數21",
+									"data": [24394.0, 28583.0, 31017.0, 29776.0]
+							}, {
+								"name": "發生數31",
+									"data": [9392.0, 9436.0, 9999.0, 11015.0]
+							}, {
+								"name": "查獲數4",
+									"data": [8695.0, 9680.0, 10229.0, 10284.0]
+							}]
+						});
+						ResetOptions();
+					}
+				})();
+			</script>
+		</div>
+	</div></div>
+</div></div>
+	<!-- chart 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="8" data-type="3" data-child="2"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">rss 訂閱</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- rss 訂閱 -->
+		
+
+<div class="list-text rss " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">Rss</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="5">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">rem</i>移動自己的腳步。</a></span></li><li data-index="2"><span><a href="#"><i class="mark">culpa</i>忘卻了一切。</a></span></li><li data-index="3"><span><a href="#"><i class="mark">veritatis</i>沒了你在身邊，在表示著歡迎。</a></span></li><li data-index="4"><span><a href="#"><i class="mark">et</i>不教臉紅而已。</a></span></li><li data-index="5"><span><a href="#"><i class="mark">autem</i>值得說什麼爭麵皮！</a></span></li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- rss 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="9" data-type="3" data-child="2"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">影音</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- video 視訊 -->
+		<div class="area-customize video " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">視訊</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="video">
+			<video controls>
+				<source src="/video/sample/sample.webm" type="video/webm">
+				<source src="/video/sample/sample.ogv" type="video/ogg">
+				<source src="/video/sample/sample.mp4" type="video/mp4">
+				<object classid="CLSID:22D6f312-B0F6-11D0-94AB-0080C74C7E95" type="application/x-oleobject" codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=6,4,7,1112">
+					<param name="filename" value="/video/sample/sample.swf" />
+					<param name="Showcontrols" value="true" />
+					<param name="autoStart" value="false" />
+				</object>
+				<span>您的瀏覽器不支援 html5 撥放器，請<a href="#">下載媒體</a>於本機播放。</span>
+			</video>
+		</div>
+		<div class="essay">
+			<div class="caption"><span>有死傷…QQ。</span></div>
+			<div class="label"><ul><li><span><i class="mark">blanditiis</i></span></li></ul></div>
+			<div class="p">
+				<p><span>喝了一口咖啡，憑這雙腕！運行了一個週環。上了一課，就在明后兩天。</span></p>
+			</div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- video 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="10" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">圖文區塊</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- default 預設 -->
+		
+
+<div class="area-editor default " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">圖文區塊</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+
+		
+			<p>好久已無聲響的雷，看我們現在，趕快走下山去！盲目地前進！有死傷…QQ。一箇來往的禮節，導發反抗力的火戰。
+
+捨此一身和他一拚！農民播種犁田，不曉得誰創造的，兄弟們來！這是如何的決意！他們偏不採用，分辨出浩蕩的溪聲。這是如何地悲悽！</p>
+		
+	</div></div>
+</div></div>
+	<!-- default 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="11" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">天氣概況</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- weather 天氣 -->
+		<div class="simple-text weather " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">天氣</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">高雄市</i>23 ~ 29 ℃</a></span>
+	</div></div>
+</div></div>
+
+	<!-- weather 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="12" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">訂閱電子報</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- epaper 電子報 -->
+		<div class="area-form epaper " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">訂閱電子報</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div class="fieldset">
+			<span class="text"><input type="text" placeholder="請輸入 Email"></span>
+		</div>
+		<div class="fieldset">
+			<span class="submit"><input type="submit" value="訂閱"></span>
+			<span class="submit"><input type="reset" value="清除"></span>
+		</div>
+	</div></div>
+</div></div>
+	<!-- epaper 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="13" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">主橫幅樣式</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- major-slider 主輪播 -->
+		
+
+<div class="group-list major-slider " data-index="1" data-type="4" data-child="2"  data-func="{'picSlider':{'auto':false,'delay':5000,'speed':300,'sliderType':4}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主輪播</a></span></h3>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1">
+
+				<!-- /erb/simple-pic_default -->
+					
+
+<div class="simple-pic default " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span style="background-image: url('http://placekitten.com/g/1024/360');"><a href="#"><img src="http://placekitten.com/g/1024/360" alt=""></a></span>
+	</div></div>
+</div></div>
+				<!-- /erb/simple-pic_default -->
+				
+				</li><li data-index="2">
+
+				<!-- /erb/simple-pic_default -->
+					
+
+<div class="simple-pic default " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span style="background-image: url('http://placekitten.com/g/1024/360');"><a href="#"><img src="http://placekitten.com/g/1024/360" alt=""></a></span>
+	</div></div>
+</div></div>
+				<!-- /erb/simple-pic_default -->
+				
+				</li></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>
+	<!-- slider 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<div class="group" data-index="14" data-type="3" data-child="1"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">地圖</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!-- map 地圖 -->
+		<div class="area-customize map " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">地圖</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<div id="map001" class="div" style="height: 500px;">
+			<script type="text/javascript">
+				(function(){
+					var map;
+					var latlng = new google.maps.LatLng(24.068, 121.1743);
+					var mapOptions = {
+						zoom: 7,
+						center: latlng,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+
+					map = new google.maps.Map(document.getElementById('map001'), mapOptions);
+
+					PlotMarker(map, 25.0303947926719, 121.509861946106, '和平西路標', '和平西路說明');
+					PlotMarker(map, 24.1477358, 120.6736482, '台中', '台中');
+
+					function PlotMarker(map, lat, lang, stitle, sContent) {
+						var marker = new google.maps.Marker({
+							position: new google.maps.LatLng(lat, lang),
+							title: stitle,
+							icon: '',
+						});
+						marker.setMap(map);
+						var infowindow = new google.maps.InfoWindow({
+							content: '<div style="line-height:1.35;overflow:hidden;white-space:nowrap;">' + sContent + '</div>'
+						});
+						google.maps.event.addListener(marker, 'click', function() {
+							infowindow.open(map, marker);
+						});
+					}
+				})();
+			</script>
+		</div>
+		<div class="essay">
+			<div class="caption"><span>就再開始。</span></div>
+			<div class="label"><ul><li><span><i class="mark">deleniti</i></span></li></ul></div>
+			<div class="p">
+				<p><span>他那麼盡力，四城門的競爭，眩眼一縷的光明，說了不少好話，體軀支持不住了，和鍛鍊團結力。今夜是明月的良宵。我要頂禮他啊！</span></p>
+			</div>
+		</div>
+	</div></div>
+</div></div>
+	<!-- map 結束 -->
+
+	</div></div>
+</div></div>
+
+
+
+
+<!-- tab 頁籤 -->
+	
+
+<div class="group-tab default " data-index="7" data-type="2" data-child="4"  data-func="{'tab':{}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">頁籤</a></span></h3>
+		</div></div>
+	
+
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="4"><li data-index="1">
+
+				<!-- tab 頁籤 -->
+					<div class="list-text tab " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">頁籤</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="is-active"><span><a href="#">qui</a></span></li><li data-index="2"><span><a href="#">ut</a></span></li><li data-index="3"><span><a href="#">consequatur</a></span></li></ul></div></div>
+</div></div>
+				<!-- tab 結束 -->
+				
+				</li><li data-index="2">
+
+					<!-- /erb/group-list_message -->
+						
+
+<div class="group-list message " data-index="4" data-type="4" data-child="7"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>遂亦不受到阻礙，捲下中街去。</span></div>
+				<div class="label"><ul><li><span><i class="mark">suscipit</i></span></li></ul></div>
+				<div class="p">
+					<p><span>金錢的慾念，驗屍似詳檢，是鬧哪樣啊！來和他們一拚！吃了水餃6顆，聽說路關鐘鼓，將要千圓。最終發現，本來是橫逆不過的。幫忙打掃整理家裡！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>我要頂禮他啊！</span></div>
+				<div class="label"><ul><li><span><i class="mark">qui</i></span></li></ul></div>
+				<div class="p">
+					<p><span>這是如何地悲悽！農民播種犁田，沒了你在身邊，恩～不賴。憑這雙腕！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="3">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">dolore</i>voluptate</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">id</i>assumenda</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">voluptate</i>omnis</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">eveniet</i>soluta</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="7">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">consectetur</i>sit</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+					<!-- /erb/group-list_message -->
+
+					</li><li data-index="3">
+
+					<!-- /erb/group-list_message -->
+						
+
+<div class="group-list message " data-index="4" data-type="4" data-child="8"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="8">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>神所厭棄本無價值。</span></div>
+				<div class="label"><ul><li><span><i class="mark">unde</i></span></li></ul></div>
+				<div class="p">
+					<p><span>再鬧一回亦好。那纔利害啦！筋肉比較的瘦弱，有死傷…QQ。有沒有人要揪團！便把眼皮睜開。一層層堆聚起來。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>連生意本，一邊的行列，隔壁的老兄，不論什麼階級的人，燈火星星地，在幾千年前，看見有幾次的變遷，也不知什麼是方向，水☆餃☆子。</span></div>
+				<div class="label"><ul><li><span><i class="mark">et</i></span></li></ul></div>
+				<div class="p">
+					<p><span>有沒有人要揪團！蔥惶回顧，雪可屋的特調咖啡。我要頂禮他啊！真的太好吃了啦！那邊有些人，老不死的混蛋！真的太好吃了啦！憑這雙腕！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="3">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>孩子們回答著，已像將到黎明之前。</span></div>
+				<div class="label"><ul><li><span><i class="mark">eaque</i></span></li></ul></div>
+				<div class="p">
+					<p><span>既不能把它倆，鑼聲亦不響了，遂有人出來阻擋，老不死的混蛋！和鍛鍊團結力。疲憊不堪，就可觸到金錢，和鍛鍊團結力。不知談論些什麼，真的太好吃了啦！是道路或非道路，反正他喜歡，真的太好吃了啦！兄弟們來！在表示著歡迎。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="4">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">commodi</i>sit</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">facere</i>facilis</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">aut</i>quaerat</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="7">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">eos</i>ut</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="8">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">repellat</i>aut</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+					<!-- /erb/group-list_message -->
+
+					</li><li data-index="4">
+
+					<!-- /erb/group-list_message -->
+						
+
+<div class="group-list message " data-index="4" data-type="4" data-child="7"  ><div class="in">
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="7">
+
+			<li data-index="1">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>別地方是什麼樣子，憑這雙腕！</span></div>
+				<div class="label"><ul><li><span><i class="mark">rerum</i></span></li></ul></div>
+				<div class="p">
+					<p><span>由著裊裊的晚風，但是這一番啊！終是不可解的疑問。滾到了天半，都很讚成，都有可能。喝咖啡帶個電腦，已無暇計較。說什麼爭氣，汝算不到，兄弟們到這樣時候，一夜的花費，就和解去。我的爸媽！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="2">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>實在可憐可恨，一樣是歹命人！</span></div>
+				<div class="label"><ul><li><span><i class="mark">fugit</i></span></li></ul></div>
+				<div class="p">
+					<p><span>幫忙打掃整理家裡！又受了他們一頓罵！精神上多有些緊張，呢個禮拜，不斷地逝去，和他們一拚！運行了一個週環。有一陣孩子們，這是如何的決意！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="3">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>無目的地前進！</span></div>
+				<div class="label"><ul><li><span><i class="mark">est</i></span></li></ul></div>
+				<div class="p">
+					<p><span>但是這一番啊！真的太好吃了啦！完全不同日子，葡萄柚最棒了！金錢的慾念，最適合中國人。我記得還似昨天，就好像咖啡，被逐的前人之子。</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="4">
+
+				<!-- message 訊息 -->
+					
+
+<div class="area-essay message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('http://placekitten.com/g/360/360')"><img src="http://placekitten.com/g/360/360" alt=""></span></div>
+			<div class="essay">
+				<div class="caption"><span>略一對比，這回在奔走的人，媽祖的靈應，說是沒有法子的事，遂有人出來阻擋，咖啡效果好的驚人，那更不成問題，憑這雙腕！</span></div>
+				<div class="label"><ul><li><span><i class="mark">id</i></span></li></ul></div>
+				<div class="p">
+					<p><span>似皆出門去了，是算不上什麼。老人懷疑地問。有的孩子喊著，但在手面趁吃人，這是如何地悲悽！不能隨即回家，現在只有覺悟，隔壁的老兄，少年已去金難得，忘卻了一切。比狗還輸！到城裡去啊！</span></p>
+				</div>
+			</div>
+		</a>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li>
+
+			<li data-index="5">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">corporis</i>iusto</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="6">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">omnis</i>qui</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li><li data-index="7">
+
+				<!-- message 訊息 -->
+					<div class="simple-text message " data-index="1" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"><i class="mark">reiciendis</i>quaerat</a></span>
+	</div></div>
+</div></div>
+				<!-- message 結束 -->
+				
+				</li></ul></div></div>
+</div></div>
+					<!-- /erb/group-list_message -->
+
+					</li></ul></div></div>
+	
+</div></div>
+<!-- tab 結束 -->
+	<!-- 首頁內容 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-module-area 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-content 結束 -->
+
+	<!-- base-footer 頁尾資訊 -->
+		<div class="group base-footer" id="base-footer" data-index="3" data-type="3" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<div class="simple-text accesskey " data-type="0"><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">導盲磚</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#" accesskey="Z" title="下方選單連結區，此區塊列有[意見信箱]、[資訊安全政策]、[隱私權政策]等連結">:::</a></span>
+	</div></div>
+</div></div>
+	<!-- accesskey 結束 -->
+
+	<!-- btn 按鈕 -->
+		<div class="simple-text btn " data-index="1" data-type="0"  data-func="{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .area-customize.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">收合選單</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#"></a></span>
+	</div></div>
+</div></div>
+	<!-- btn 結束 -->
+
+	<!-- nav 選單 -->
+		
+
+<div class="group-list nav " data-index="2" data-type="4" data-child="2"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h3><span><a href="#">主選單</a></span></h3>
+		</div></div>
+	
+
+	<div class="ct"><div class="in"><ul data-index="1" data-child="2"><li data-index="1" data-width="2">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">pariatur</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="1"><li data-index="1"><span><a href="#">porro</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li><li data-index="2" data-width="1">
+
+					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+						<div class="hd"><div class="in">
+							<h3><span><a href="#">omnis</a></span></h3>
+						</div></div>
+						<div class="ct"><div class="in">
+
+						<!-- /erb/list-text_nav -->
+							
+
+<div class="list-text nav " data-index="1" data-type="0"  ><div class="in">
+	
+	
+		<div class="ct"><div class="in"><ul data-index="1" data-child="7"><li data-index="1"><span><a href="#">qui</a></span></li><li data-index="2"><span><a href="#">non</a></span></li><li data-index="3"><span><a href="#">autem</a></span></li><li data-index="4"><span><a href="#">ut</a></span></li><li data-index="5"><span><a href="#">quo</a></span></li><li data-index="6"><span><a href="#">iure</a></span></li><li data-index="7"><span><a href="#">quis</a></span></li></ul></div></div>
+	
+</div></div>
+						<!-- /erb/list-text_nav -->
+
+						</div></div>
+					</div></div>
+				
+				</li></ul></div></div>
+</div></div>
+	<!-- nav 結束 -->
+
+	<!-- address 聯絡資訊編輯 -->
+		<div class="area-customize nav " data-index="3" data-type="0"  ><div class="in">
+	
+	<div class="ct"><div class="in">		
+		//...
+	</div></div>
+</div></div>
+	<!-- address 結束 -->
+
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="4" data-type="3" data-child="3"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- minor-logo 次要標誌 -->
+				<div class="simple-text minor-logo " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標誌</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span><a href="#">哈瑪星科技股份有限公司</a></span>
+	</div></div>
+</div></div>
+			<!-- minor-logo 結束 -->
+
+			<!-- icon 各種標章 -->
+				<div class="list-pic icon " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">標章</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3"><li data-index="1" class="wcag"><span style="background-image: url('/images/aplus.jpg');"><a href="#"><img src="/images/aplus.jpg" alt="無障礙 A+"></a></span></li><li data-index="2" class="egov"><span style="background-image: url('/images/egov.png');"><a href="#"><img src="/images/egov.png" alt="E政府"></a></span></li><li data-index="3" class="qrcode"><span style="background-image: url('/images/qrcode.gif');"><a href="#"><img src="/images/qrcode.gif" alt="QRCode"></a></span></li></ul></div></div>
+</div></div>
+			<!-- icon 結束 -->
+
+			<!-- group-msg-tool 資訊與工具群組 -->
+				<div class="group msg-tool" data-index="4" data-type="3" data-child="3"><div class="in">
+					<div class="hd"><div class="in">
+						<h3><span><a href="#"></a></span></h3>
+					</div></div>
+					<div class="ct"><div class="in">
+
+					<!-- link 連結 -->
+						
+
+<div class="list-text link " data-index="1" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">下方連結</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in"><ul data-index="1" data-child="3">
+			
+			<li data-index="1"><span><a href="#"><i class="mark">neque</i>quisquam</a></span></li><li data-index="2"><span><a href="#"><i class="mark">a</i>sunt</a></span></li><li data-index="3"><span><a href="#"><i class="mark">molestiae</i>consectetur</a></span></li></ul></div></div>
+</div></div>
+					<!-- link 結束 -->
+
+					<!-- update-time 更新時間 -->
+						<div class="simple-text update-time " data-index="2" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">更新時間</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span>2016/05/04 16:42</span>
+	</div></div>
+</div></div>
+					<!-- update-time 結束 -->
+
+					<!-- visit-count 瀏覽人次 -->
+						<div class="simple-text visit-count " data-index="3" data-type="0"  ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">瀏覽人次</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		<span>19870709</span>
+	</div></div>
+</div></div>
+					<!-- visit-count 結束 -->
+
+					<!-- address 聯絡資訊編輯 -->
+						<div class="area-editor address " data-index="4" data-type="0"  data-func="{'linkToMap':{'bindSelector':'.map','linkClass':'is-map'}}" ><div class="in">
+	
+		<div class="hd"><div class="in">
+			<h4><span><a href="#">聯絡資訊</a></span></h4>
+		</div></div>
+	
+	<div class="ct"><div class="in">
+		高雄總公司地址：<span class="map">806高雄市前鎮區民權二路8號18樓</span><br />
+		高雄總公司電話：FAX：+886-7-5364899<br />
+		台北辦事處地址：<span class="map">100台北市中正區北平西路3號3樓3004室</span><br />
+		台北辦事處電話：FAX: +886-2-2388917<br />
+		Copyright © 2014 HAMASTAR Technology Co., Ltd. All rights reserved. 建議瀏覽解析度1024x 768
+	</div></div>
+</div></div>
+					<!-- address 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- group-msg-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	</div></div>
+</div></div>
+	<!-- base-footer 結束 -->
+
+	</div></div>
+</div></div>
+			<!-- base-wrapper 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- sys-root 結束 -->
+
+		
+			<script data-main="/js/app" src="/js/require.js"></script>
+		
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+	</form></body>
+</html>

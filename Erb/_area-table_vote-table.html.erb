@@ -1,0 +1,40 @@
+<%
+	min_row = 3 #最少的行數量
+	max_row = 12 #最多的行數量
+
+	row_length = (min_row..max_row).to_a.sample
+%>
+
+<div class="area-table vote-table <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<table>
+			<thead data-index="1" data-child="1">
+				<tr data-index="1" data-child="3">
+					<th><span>投票日期</span></th>
+					<th><span>活動名稱</span></th>
+					<th><span>活動狀態</span></th>
+				</tr>
+			</thead>
+			<tbody data-index="2" data-child="<%= row_length %>">
+				<tr data-index="1" data-child="3">
+					<td><span>105-12-30</span></td>
+					<td><span><%= zh_lorem_sentence %></span></td>
+					<td><span><a href="#" class="submit is-disabled">投票去</a><a href="#" class="result is-disabled">看結果</a></span></td>
+				</tr>
+
+				<% (row_length - 1).times do |i| %>
+					<tr data-index="<%= i + 1 %>" data-child="3">
+						<td><span>105-12-30</span></td>
+						<td><span><%= zh_lorem_sentence %></span></td>
+						<td><span><a href="#" class="submit">投票去</a><a href="#" class="result">看結果</a></span></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div></div>
+</div></div>

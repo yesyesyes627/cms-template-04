@@ -1,0 +1,62 @@
+//框架
+
+//行動載具================================================================
+
+.base-mobile {
+	z-index: 3;
+
+	&.is-open {
+		right: 0;
+	}
+
+	@include js(false) {
+		display: none !important;
+	}
+
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 100%;
+	max-width: 450px;
+	height: 100vh;
+	transition: $transition;
+
+	@include media('pad') {
+		max-width: 350px;
+	}
+
+	@include media('phone') {
+		max-width: 320px - $rwd-btn-size;
+	}
+
+	@include media('mobile') {
+		display: block;
+	}
+
+	> .in {
+
+		> .hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

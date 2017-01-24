@@ -1,0 +1,362 @@
+//客製區塊
+
+//月曆================================================================
+
+.area-customize.calendar-detail {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		.heading {
+
+			&:after {
+				@extend %clear;
+			}
+		}
+
+		.label {
+			float: right;
+
+			@include js(false) {
+				display: none;
+			}
+
+			@include media('phone') {
+				float: none;
+			}
+
+			ul {
+				
+				@include media('phone') {
+					text-align: center;
+				}
+			}
+
+			li {
+				display: inline-block;
+
+				+ li {
+					margin-left: $interval-xs;
+				} 
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %btn-s;
+			}
+		}
+
+		.caption {
+			@extend %ellipsis;
+			overflow: hidden;
+			font-size: $font-size-l;
+			color: $title-color;
+
+			@include media('phone') {
+				text-align: center;
+				margin-bottom: 0;
+				margin-top: $interval-s;
+			}
+
+			span {
+				color: inherit;
+			}
+
+			a {
+				color: inherit;
+				font-size: 1em;
+			}
+		}
+
+		.table {
+			margin-top: $interval-s;
+			background-color: $light;
+
+			table {
+				table-layout: fixed;
+				width: 100%;
+			}
+
+			tbody {
+
+			}
+
+			tr {
+
+			}
+
+			th {
+
+				span {
+					padding: $interval-s 0;
+					background-color: $major-color;
+					color: $white;
+				}
+			}
+
+			td {
+				transition: $transition;
+				border: $border;
+				padding: $interval-xs;
+				vertical-align: top;
+
+				@include media('phone') {
+					border: 0;
+				}
+
+				> div {
+					min-height: 120px;
+				}
+
+				&:hover {
+					background-color: $light-gray;
+				}
+			}
+
+			th ,& td {
+
+				@include media('phone') {
+					text-align: center;
+				}
+			}
+
+			th {
+
+				span {
+					display: block;
+				}
+			}
+
+			.event { //有事件
+
+				@include media('phone') {
+
+					/*a*/.mark {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.this-week { //這週
+				background-color: $white;
+
+				@include media('phone') {
+					border: $border;
+					border-color: $light;
+				}
+			}
+
+			.prev-mounth { //上個月的日期
+
+				/*a*/.mark {
+					background-color: $gray;
+
+					@include media('phone') {
+						background-color: transparent;
+						color: $gray;
+					}
+				}
+			}
+
+			.next-mounth { //下個月的日期
+
+				/*a*/.mark {
+					background-color: $gray;
+
+					@include media('phone') {
+						background-color: transparent;
+						color: $gray;
+					}
+				}
+			}
+
+			.weekend { //假日
+
+				/*a*/.mark {
+
+					@include media('phone') {
+						color: $title-color;
+					}
+				}
+
+				&.prev-mounth, &.next-mounth {
+
+					/*a*/.mark {
+
+						@include media('phone') {
+							color: mix( $deep-gray, $title-color );
+						}
+					}
+				}
+			}
+
+			.today { //今天
+				color: $major-color;
+
+				@include media('phone') {
+					background-color: $major-color;
+				}
+
+				.list {
+
+					a {
+
+						&:before {
+							background-color: $major-color;
+						}
+					}
+				}
+
+				/*a*/.mark {
+
+					@include media('phone') {
+						color: $white;
+					}
+				}
+			}
+
+			.is-active { //被選擇
+
+				@include media('phone') {
+					background-color: $minor-color;
+				}
+
+				.list {
+
+					a {
+
+						&:before {
+							background-color: $minor-color;
+						}
+					}
+				}
+
+				/*a*/.mark {
+					background-color: $minor-color;
+
+					@include media('phone') {
+						background-color: transparent;
+						color: $white;
+					}
+				}
+			}
+
+			.div {
+
+			}
+
+			.list {
+				margin-top: $interval-xs;
+
+				@include media('phone') {
+					display: none;
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+					display: block;
+				}
+
+				a {
+					position: relative;
+					display: block;
+					padding: $interval-xs;
+					padding-left: $interval-l;
+
+					&:hover {
+						background-color: $white;
+					}
+
+					&:before {
+						content: $content;
+						display: block;
+						position: absolute;
+						top: 12px;
+						left: 6px;
+						width: $interval-xs;
+						height: $interval-xs;
+						background-color: $gray;
+					}
+				}
+			}
+
+			/*a*/.mark {
+				@extend %mark;
+
+				@include media('phone') {
+					display: block;
+					font-size: $font-size-m;
+					color: $body-font-color;
+					margin-right: 0;
+					padding: 0;
+					background-color: transparent;
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

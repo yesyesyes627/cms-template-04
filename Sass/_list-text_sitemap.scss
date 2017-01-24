@@ -1,0 +1,113 @@
+//文字列表
+
+//網站地圖================================================================
+
+.list-text.sitemap {
+
+	&.is-active {
+
+		> .bg-drop-layout > .in, > .in {
+
+			.hd {
+
+				h4 {
+
+					&:before {
+						@include icon-font('arrow_drop_up');
+					}
+				}
+			}
+
+			.ct {
+				display: block;
+			}
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+		
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+
+			&:before {
+				@include icon-font('arrow_drop_down');
+			}
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		display: none;
+
+		@include js(false) {
+			display: block;
+		}
+
+		> .in {
+			
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			+ li {
+				margin-top: $interval-s;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+			
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

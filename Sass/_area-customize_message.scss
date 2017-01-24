@@ -1,0 +1,225 @@
+//客製區塊
+
+//訊息(accupass - hyc)================================================================
+
+.area-customize.message {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		background-color: $light;
+
+		> .in {
+
+			&:after {
+				@extend %clear;
+			}
+
+			> ul {
+				@extend %reset;
+				float: left;
+				width: 50%;
+
+				@include media('mobile') {
+					float: none;
+					width: auto;
+				}
+
+				+ ul {
+
+					> li {
+
+						&:after {
+							@extend %clear;
+						}
+
+						/*a*/.div {
+							float: left;
+							width: 50%;
+
+							@include media('phone') {
+								float: none;
+								width: auto;
+							}
+						}
+
+						.essay {
+							padding-bottom: $interval-m;
+						}
+
+						.img {
+
+							span {
+								height: 118px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/*a*/.div {
+			padding: $interval-m;
+			box-sizing: border-box;
+
+			&.is-location {
+
+				.label {
+					margin: $interval-s 0;
+
+					ul {
+						position: relative;
+						padding-right: $interval-xl;
+
+						&:before {
+							@include icon-font('place');
+							position: absolute;
+							top: 1px;
+							right: 6px;
+						}
+					}
+				}
+			}
+
+			&:hover {
+
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.img {
+
+			span {
+				@extend %bg-cover;
+				display: block;
+				height: 280px;
+
+				@include media('mobile') {
+					height: auto !important;
+				}
+			}
+
+			img {
+				display: none;
+				width: 100%;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+		}
+
+		.essay {
+			background-color: $white;
+			padding: $interval-m;
+			padding-bottom: 108px;
+			transition: $transition;
+
+			@include media('mobile') {
+				padding-bottom: $interval-m;
+			}
+		}
+
+		.caption {
+			@extend %ellipsis;
+			@extend %caption;
+
+			span {
+
+			}
+		}
+
+		.label {
+			margin: $interval-s 0;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			display: block;
+			position: relative;
+			padding-left: $interval-xl;
+			color: $deep-gray;
+
+			&:before {
+				@include icon-font('today');
+				position: absolute;
+				top: 1px;
+				left: 6px;
+			}
+		}
+
+		.p {
+
+			p {
+				@include multi-ellipsis(3);
+
+				@include media('mobile') {
+					@include re-multi-ellipsis();
+				}
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

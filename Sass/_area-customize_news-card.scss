@@ -1,0 +1,228 @@
+//客製區塊
+
+//消息卡片(台中市府 - hyc)================================================================
+
+.area-customize.news-card {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		ul {
+			@extend %reset;
+
+			&:after {
+				@extend %clear;
+			}
+		}
+
+		li {
+			$len: 4;
+
+			float: left;
+			width: ( 100% / $len );
+
+			@include media('pad') {
+				$len: 2;
+
+				float: left;
+				width: ( 100% / $len );
+			}
+
+			@include media('phone') {
+				float: none;
+				width: auto;
+			}
+
+			&:nth-child(4n+1) {
+				
+				.div {
+
+					&:before {
+						background-color: #619100;
+					}
+				}
+			}
+
+			&:nth-child(4n+2) {
+				
+				.div {
+
+					&:before {
+						background-color: #ce0013;
+					}
+				}
+			}
+
+			&:nth-child(4n+3) {
+				
+				.div {
+
+					&:before {
+						background-color: #e27b00;
+					}
+				}
+			}
+
+			&:nth-child(4n) {
+				
+				.div {
+
+					&:before {
+						background-color: #e0c800;
+					}
+				}
+			}
+		}
+
+		/*a*/.div {
+			position: relative;
+			display: block;
+			padding-top: $interval-m;
+			margin: $interval-s;
+			border: $border;
+			height: 400px;
+			overflow: hidden;
+			background-color: $white;
+
+			@include media('phone') {
+				margin: 0;
+				border: 0;
+				border-top: $border;
+				padding-bottom: $interval-m;
+				height: auto;
+			}
+
+			&:before, &:after {
+				content: $content;
+				position: absolute;
+				left: 0;
+				right: 0;
+
+				@include media('phone') {
+					content: none;
+				}
+			}
+
+			&:before {
+				top: 0;
+				height: 10px;
+				background-color: $major-color;
+			}
+
+			&:after {
+				bottom: 0;
+				height: 33px;
+				background-color: $white;
+			}
+
+			&:hover {
+
+				.p {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.label {
+			padding: $interval-s;
+
+			&:after {
+				@extend %clear;
+			}
+		}
+
+		.mark {
+			float: left;
+		}
+
+		.unit {
+			float: right;
+		}
+
+		.img {
+			margin-bottom: $interval-m;
+
+			@include media('phone') {
+				display: none;
+			}
+
+			span {
+				display: block;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.caption {
+			@extend %caption;
+			margin: $interval-m;
+
+			@include media('phone') {
+				margin: 0;
+				font-size: $font-size-xl;
+			}
+		}
+
+		.p {
+			margin: $interval-m;
+
+			@include media('phone') {
+				display: none;
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,76 @@
+//簡單文字
+
+//更新時間================================================================
+
+.simple-text.update-time {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		display: inline-block;
+
+		> .in {
+
+		}
+
+		h4 {
+
+			&:after {
+				content: ' : ';
+			}
+		}
+
+		span {
+			display: inline-block;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	.ct {
+		display: inline-block;
+
+		> .in {
+
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			display: block;
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

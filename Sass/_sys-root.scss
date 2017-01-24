@@ -1,0 +1,208 @@
+//框架
+
+//根節點================================================================
+
+.sys-root {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-size: $body-font-size-m; //預設大小
+	font-family: $base-font-style;
+	color: $body-font-color;
+	position: relative;
+
+	.is-pc-hide { //電腦版隱藏
+		display: none !important;
+	}
+
+	.is-pad-hide { //平板版關閉
+
+		@include media('pad') {
+			display: none !important;
+		}
+	}
+
+	.is-phone-hide { //手機版關閉
+
+		@include media('phone') {
+			display: none !important;
+		}
+	}
+
+	.is-hide-header { //沒有 header 的模組樣式，margin 設定請至 base/_function.scss 設定
+
+		> .in {
+
+			> .hd {
+				display: none !important;
+			}
+		}
+	}
+
+	@include js(false) {
+
+		&:before {
+			display: block;
+			content: '您的瀏覽器似乎不支援 JavaScript 語法，但沒關係，這並不會影響到內容的陳述。如需要選擇適合您的字級大小，可利用鍵盤 Ctrl + (+)放大 (-)縮小。如需要回到上一頁，可使用瀏覽器提供的 Alt + 左方向鍵(←)。如需要列印，可利用鍵盤 Ctrl + p 使用瀏覽器提供的列印功能。';
+			padding: $interval-m;
+			line-height: $line-height-m;
+			background-color: $deep;
+			color: $white;
+		}
+	}
+
+	@include hack('ie6-7-8') {
+		min-width: $pc-width;
+	}
+
+	&.font-size-large { //大字
+		font-size: $body-font-size-l;
+	}
+
+	&.font-size-medium { //中字
+		font-size: $body-font-size-m;
+	}
+
+	&.font-size-small { //小字
+		font-size: $body-font-size-s;
+	}
+
+	a {
+		color: $link-color;
+		text-decoration: none;
+
+		&:link {
+			color: $link-color;
+		}
+
+		&:visited {
+			color: $visited-color;
+		}
+
+		&:hover {
+			color: $hover-color;
+		}
+
+		&:active {
+			color: $active-color;
+		}
+
+		&.div {
+			display: block;
+			color: $body-font-color;
+		}
+
+		&.btn {
+			@extend %btn;
+		}
+	}
+
+	i {
+
+		&.mark {
+			font-style: normal;
+		}
+	}
+
+	fieldset {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	input{
+
+		&[type="submit"],
+		&[type="reset"],
+		&[type="button"] {
+			@extend %btn;
+		}
+
+		&[type="text"],
+		&[type="password"],
+		&[type="date"],
+		&[type="email"],
+		&[type="number"],
+		&[type="search"],
+		&[type="file"] {
+			@extend %input;
+		}
+
+		&[type="radio"],
+		&[yupe="checkbox"] {
+			cursor: pointer;
+		}
+	}
+
+	select {
+		@extend %input;
+		font-size: 14px;
+
+		option {
+
+		}
+	}
+
+	button {
+		@extend %btn;
+
+		@include js(false) {
+			display: none;
+		}
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	textarea {
+		@extend %input;
+	}
+
+	img { //消除叉燒包
+		position: relative;
+
+		&:after {
+			content: $content;
+			position: absolute;
+			display: block;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: $white;
+		}
+	}
+
+	[href] {
+		cursor: pointer;
+	}
+
+	[disabled] {
+		cursor: not-allowed;	
+	}
+
+	> .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

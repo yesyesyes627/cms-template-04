@@ -1,0 +1,75 @@
+//列表群組
+
+//設定================================================================
+
+.group-list {
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> ul {
+					@extend %reset;
+
+					&:after {
+						@extend %clear;
+					}
+
+					> li {
+
+						> [data-type] {
+
+							> .bg-drop-layout > .in, > .in {
+								margin: 0 !important;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

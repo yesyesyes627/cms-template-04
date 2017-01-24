@@ -1,0 +1,36 @@
+//框架
+
+//主要內容================================================================
+
+.base-content {
+	padding: $interval-l 0;
+	margin-bottom: $interval-xl;
+
+	> .in {
+		@extend %center;
+		background-color: $white;
+		border: $border;
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

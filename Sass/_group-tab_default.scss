@@ -1,0 +1,79 @@
+//頁籤群組
+
+//預設================================================================
+
+.group-tab.default {
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h3 {
+				
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> ul {
+
+					> li {
+
+						+ li {
+							margin-top: $interval-m;
+						}
+
+						> [data-index][data-type] { //頁籤裡的 footer 不是 absolute
+
+							> .in {
+
+								> .ft {
+									position: static;
+									margin-top: $interval-s;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<%
+	min_li = 4 #最少的li數量
+	max_li = 16 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="group-list marquee <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $list %>" data-child="<%= li_length %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h3><span><a href="#"><%= header_text %></a></span></h3>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %><li data-index="<%= i + 1 %>">
+
+				<!-- <%= inner %> -->
+					<%= render partial:  inner, locals: set({}) %>
+				<!-- <%= inner %> -->
+				
+				</li><% end %></ul></div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

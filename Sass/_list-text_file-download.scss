@@ -1,0 +1,114 @@
+//文字列表
+
+//檔案下載================================================================
+
+.list-text.file-download {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			+ li {
+				margin-top: $interval-s;
+			}
+
+			@each $key, $map in $file-type-map {
+				$pic: map-get($map, 'pic');
+				$color: map-get($map, 'color');
+
+				&.#{$key} {
+
+					a {
+						border-left-color: $color;
+
+						&:before {
+							@include icon-pic($pic);
+						}
+					}
+				}
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+			border-left-width: $interval-xs;
+			border-left-style: solid;
+
+			&:before {
+				margin-right: $interval-xs;
+			}
+
+			&:hover {
+				border-left-width: $interval-m;
+			}
+
+			&:after {
+				content: none;
+			}
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

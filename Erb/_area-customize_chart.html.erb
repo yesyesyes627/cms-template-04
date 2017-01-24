@@ -1,0 +1,65 @@
+<div class="area-customize chart <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div id="chart001" class="div">
+			<script>
+				(function(){
+					if (window.Highcharts) {
+						Highcharts.setOptions(Highcharts.theme[0]);
+						Highcharts.setOptions({
+							lang: {
+								thousandsSep: ","
+							}
+						});
+
+						$("#chart001").highcharts({
+							"chart": {
+								"type": "bar"
+							},
+								"title": {
+								"text": ""
+							},
+								"xAxis": {
+								"categories": [" 八十四年 ", " 八十五年 ", " 八十六年 ", " 八十七年 "],
+									"crosshair": true
+							},
+								"yAxis": {
+								"min": 0,
+									"title": {
+									"text": ""
+								}
+							},
+								"tooltip": {
+								"shared": true
+							},
+								"plotOptions": {
+								"column": {
+									"pointPadding": 0.2,
+										"borderWidth": 0
+								}
+							},
+								"series": [{
+								"name": "發生數1",
+									"data": [26257.0, 28074.0, 29990.0, 31512.0]
+							}, {
+								"name": "查獲數21",
+									"data": [24394.0, 28583.0, 31017.0, 29776.0]
+							}, {
+								"name": "發生數31",
+									"data": [9392.0, 9436.0, 9999.0, 11015.0]
+							}, {
+								"name": "查獲數4",
+									"data": [8695.0, 9680.0, 10229.0, 10284.0]
+							}]
+						});
+						ResetOptions();
+					}
+				})();
+			</script>
+		</div>
+	</div></div>
+</div></div>

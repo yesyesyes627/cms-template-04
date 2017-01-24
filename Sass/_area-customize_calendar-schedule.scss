@@ -1,0 +1,318 @@
+//客製區塊
+
+//月曆(國美 - hyc)================================================================
+
+.area-customize.calendar-schedule {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$awa_s: 30px;
+
+		> .in {
+
+		}
+
+		.heading {
+			position: relative;
+			width: 320px;
+			margin: 0 auto;
+		}
+
+		.label {
+
+			@include js(false) {
+				display: none;
+			}
+
+			ul {
+
+			}
+
+			li {
+
+				&.prev {
+
+					a {
+						left: 0;
+						background-image: image-url('icon-pic/away-double-b-left.png');
+					}
+				}
+
+				&.next {
+
+					a {
+						right: 0;
+						background-image: image-url('icon-pic/away-double-b-right.png');
+					}
+				}
+			}
+
+			span {
+
+			}
+
+			a {
+				@extend %hide-text;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				width: $awa_s;
+				background-position: center;
+				background-repeat: no-repeat;
+				transition: $transition;
+
+				&:hover {
+					transform: scale($size-l);
+				}
+			}
+		}
+
+		.caption {
+			margin: 0 $awa_s;
+			font-size: $font-size-l;
+			font-weight: $font-weight-b;
+			color: $title-color;
+			text-align: center;
+
+			span {
+				color: inherit;
+			}
+
+			a {
+				color: inherit;
+				font-size: 1em;
+			}
+		}
+
+		.table {
+			margin: $interval-l 0;
+
+			table {
+				table-layout: fixed;
+				width: 100%;
+			}
+
+			tbody {
+
+			}
+
+			tr {
+
+			}
+
+			th {
+
+			}
+
+			td {
+				transition: $transition;
+				padding: 0 $interval-xs;
+				vertical-align: top;
+
+				> span {
+
+				}
+
+				&:hover {
+					background-color: $light-gray;
+				}
+			}
+
+			th ,& td {
+				text-align: center;
+			}
+
+			span {
+				padding: $interval-m 0;
+				display: block;
+				position: relative;
+				z-index: 1;
+
+				&:after {
+					$circle_s: 30px; 
+
+					display: block;
+					position: absolute;
+					left: 50%;
+					top: $interval-xs;
+					bottom: $interval-xs;
+					width: $circle_s;
+					margin-left: $circle_s * -0.5;
+					z-index: -1;
+					border-radius: ( $circle_s / 2 );
+				}
+			}
+
+			a {
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			.event { //有事件
+				text-decoration: underline;
+				font-weight: $font-weight-b;
+			}
+
+			.this-week { //這週
+
+			}
+
+			.prev-mounth { //上個月的日期
+				color: $gray;
+			}
+
+			.next-mounth { //下個月的日期
+				color: $gray;
+			}
+
+			.weekend { //假日
+				color: $minor-color;
+
+				&.prev-mounth, &.next-mounth {
+					color: $gray;
+				}
+			}
+
+			.today { //今天
+
+				span {
+					display: block;
+					color: $white;
+
+					&:after {
+						content: $content;
+						background-color: $major-color;
+					}
+				}
+
+				a {
+					color: inherit;
+				}
+			}
+
+			.is-active { //被選擇
+				// background-color: $minor-color;
+				// color: $white;
+			}
+		}
+
+		.list {
+			margin-top: $interval-m;
+
+			ul {
+				
+			}
+
+			li {
+				display: inline-block;
+				vertical-align: middle;
+
+				&.is-event {
+
+					a {
+
+						&:before {
+							background-color: $major-color;
+							border-radius: 50%;
+						}
+					}
+				}
+
+				&.is-this-week {
+
+					a {
+
+						&:before {
+							background-color: $gray;
+						}
+					}
+				}
+
+				&.is-this-month {
+
+					a {
+
+						&:before {
+							background-color: $black;
+						}
+					}
+				}
+
+				+ li {
+					margin-left: $interval-s;
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				display: block;
+
+				&:before {
+					content: $content;
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					vertical-align: middle;
+					margin-right: $interval-s;
+				}
+			}
+		}
+
+		/*i*/.mark {
+			margin-top: $interval-m;
+			color: $deep-gray;
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

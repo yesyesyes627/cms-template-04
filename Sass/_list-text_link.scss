@@ -1,0 +1,363 @@
+//文字列表
+
+//連結================================================================
+
+.list-text.link {
+
+	.base-mobile & {
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+				
+			}
+
+			ul {
+
+			}
+
+			li {
+
+				+ li {
+					border-top: $border;
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				display: block;
+				padding: $interval-m;
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+			display: none;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-header & {
+		position: absolute;
+		top: 7px;
+		right: 90px;
+
+		@include js(false) {
+			right: 10px;
+		}
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		> .bg-drop-layout > .in, > .in {
+			
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				
+				+ li {
+
+					&:before {
+						content: ' | ';
+						vertical-align: middle;
+					}
+				}
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			a {
+				display: block;
+				font-size: $font-size-xs;
+			}
+
+			/*i*/.mark {
+				@extend %mark;
+			}
+		}
+
+		.ft {
+			display: none;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-content & {
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			@extend %header;
+
+			> .in {
+
+			}
+
+			h4 {
+				
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+				+ li {
+					margin-top: $interval-s;
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %ellipsis;
+				@extend %list;
+				@extend %list-hover;
+			}
+
+			/*i*/.mark {
+				@extend %mark;
+			}
+		}
+
+		.ft {
+			@extend %footer;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-footer & {
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				
+				+ li {
+
+					&:before {
+						content: ' | ';
+						vertical-align: middle;
+					}
+				}
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			a {
+				display: block;
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+			display: none;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

@@ -1,0 +1,947 @@
+//文字圖示樣式
+
+// 本 sass 引入 icomoon 圖示字型，用以作為文字圖示。
+// 詳細資訊請參閱 https://icomoon.io/，教學請參閱 http://www.minwt.com/html/12931.html
+// 1 將 icon 包下載回來後，將包裡的 fonts 目錄檔案 .eot .svg .ttf .woff 檔案複製到 /images/icon-font
+// 2 修改 style.css 裡的項目，步驟如下：
+// 	1 將 @font-face 與 [class^="icon-"], [class*=" icon-"] 樣式刪除
+// 	2 將 ":before" 字串全數刪除
+// 	3 將 ".icon-" 取代成 "%icon-font-"
+// 	4 將修改的內容複製至 /Sass/bace/icon-font.scss
+
+%icon-font-error {
+	content: "\e000";
+}
+%icon-font-error_outline {
+	content: "\e001";
+}
+%icon-font-warning {
+	content: "\e002";
+}
+%icon-font-album {
+	content: "\e004";
+}
+%icon-font-equalizer {
+	content: "\e007";
+}
+%icon-font-mic {
+	content: "\e00f";
+}
+%icon-font-mic_none {
+	content: "\e010";
+}
+%icon-font-mic_off {
+	content: "\e011";
+}
+%icon-font-movie {
+	content: "\e012";
+}
+%icon-font-library_add {
+	content: "\e013";
+}
+%icon-font-library_books {
+	content: "\e014";
+}
+%icon-font-library_music {
+	content: "\e015";
+}
+%icon-font-play_arrow {
+	content: "\e01b";
+}
+%icon-font-play_circle_filled {
+	content: "\e01c";
+}
+%icon-font-play_circle_outline {
+	content: "\e01d";
+}
+%icon-font-queue {
+	content: "\e01f";
+}
+%icon-font-recent_actors {
+	content: "\e022";
+}
+%icon-font-subtitles {
+	content: "\e02b";
+}
+%icon-font-volume_down {
+	content: "\e030";
+}
+%icon-font-volume_mute {
+	content: "\e031";
+}
+%icon-font-volume_up {
+	content: "\e033";
+}
+%icon-font-chat {
+	content: "\e046";
+}
+%icon-font-clear_all {
+	content: "\e047";
+}
+%icon-font-comment {
+	content: "\e048";
+}
+%icon-font-email {
+	content: "\e04c";
+}
+%icon-font-forum {
+	content: "\e04d";
+}
+%icon-font-location_off {
+	content: "\e051";
+}
+%icon-font-location_on {
+	content: "\e052";
+}
+%icon-font-message {
+	content: "\e053";
+}
+%icon-font-chat_bubble {
+	content: "\e054";
+}
+%icon-font-chat_bubble_outline {
+	content: "\e055";
+}
+%icon-font-contact_phone {
+	content: "\e059";
+}
+%icon-font-stay_current_landscape {
+	content: "\e05c";
+}
+%icon-font-stay_current_portrait {
+	content: "\e05d";
+}
+%icon-font-stay_primary_landscape {
+	content: "\e05e";
+}
+%icon-font-stay_primary_portrait {
+	content: "\e05f";
+}
+%icon-font-add {
+	content: "\e069";
+}
+%icon-font-add_box {
+	content: "\e06a";
+}
+%icon-font-add_circle {
+	content: "\e06b";
+}
+%icon-font-add_circle_outline {
+	content: "\e06c";
+}
+%icon-font-content_copy {
+	content: "\e071";
+}
+%icon-font-drafts {
+	content: "\e075";
+}
+%icon-font-flag {
+	content: "\e077";
+}
+%icon-font-forward {
+	content: "\e078";
+}
+%icon-font-inbox {
+	content: "\e07a";
+}
+%icon-font-mail {
+	content: "\e07c";
+}
+%icon-font-markunread {
+	content: "\e07d";
+}
+%icon-font-remove_circle {
+	content: "\e080";
+}
+%icon-font-remove_circle_outline {
+	content: "\e081";
+}
+%icon-font-report {
+	content: "\e084";
+}
+%icon-font-font_download {
+	content: "\e08b";
+}
+%icon-font-data_usage {
+	content: "\e09f";
+}
+%icon-font-storage {
+	content: "\e0bc";
+}
+%icon-font-border_color {
+	content: "\e0c5";
+}
+%icon-font-format_list_bulleted {
+	content: "\e0db";
+}
+%icon-font-format_list_numbered {
+	content: "\e0dc";
+}
+%icon-font-format_quote {
+	content: "\e0de";
+}
+%icon-font-insert_chart {
+	content: "\e0e5";
+}
+%icon-font-insert_comment {
+	content: "\e0e6";
+}
+%icon-font-insert_drive_file {
+	content: "\e0e7";
+}
+%icon-font-insert_emo.icon-font {
+	content: "\e0e8";
+}
+%icon-font-insert_invitation {
+	content: "\e0e9";
+}
+%icon-font-insert_photo {
+	content: "\e0eb";
+}
+%icon-font-mode_comment {
+	content: "\e0ed";
+}
+%icon-font-mode_edit {
+	content: "\e0ee";
+}
+%icon-font-publish {
+	content: "\e0ef";
+}
+%icon-font-attachment {
+	content: "\e0f7";
+}
+%icon-font-cloud {
+	content: "\e0f8";
+}
+%icon-font-cloud_circle {
+	content: "\e0f9";
+}
+%icon-font-cloud_done {
+	content: "\e0fa";
+}
+%icon-font-cloud_download {
+	content: "\e0fb";
+}
+%icon-font-cloud_queue {
+	content: "\e0fd";
+}
+%icon-font-cloud_upload {
+	content: "\e0fe";
+}
+%icon-font-folder {
+	content: "\e101";
+}
+%icon-font-folder_open {
+	content: "\e102";
+}
+%icon-font-folder_shared {
+	content: "\e103";
+}
+%icon-font-computer {
+	content: "\e106";
+}
+%icon-font-desktop_mac {
+	content: "\e107";
+}
+%icon-font-desktop_windows {
+	content: "\e108";
+}
+%icon-font-keyboard_arrow_down {
+	content: "\e10f";
+}
+%icon-font-keyboard_arrow_left {
+	content: "\e110";
+}
+%icon-font-keyboard_arrow_right {
+	content: "\e111";
+}
+%icon-font-keyboard_arrow_up {
+	content: "\e112";
+}
+%icon-font-laptop {
+	content: "\e119";
+}
+%icon-font-laptop_chromebook {
+	content: "\e11a";
+}
+%icon-font-laptop_mac {
+	content: "\e11b";
+}
+%icon-font-laptop_windows {
+	content: "\e11c";
+}
+%icon-font-phone_android {
+	content: "\e11f";
+}
+%icon-font-phone_iphone {
+	content: "\e120";
+}
+%icon-font-tablet_android {
+	content: "\e12b";
+}
+%icon-font-tablet_mac {
+	content: "\e12c";
+}
+%icon-font-tv {
+	content: "\e12e";
+}
+%icon-font-watch {
+	content: "\e12f";
+}
+%icon-font-add_to_photos {
+	content: "\e132";
+}
+%icon-font-assistant {
+	content: "\e134";
+}
+%icon-font-assistant_photo {
+	content: "\e135";
+}
+%icon-font-audiotrack {
+	content: "\e136";
+}
+%icon-font-brightness_1 {
+	content: "\e13b";
+}
+%icon-font-broken_image {
+	content: "\e142";
+}
+%icon-font-camera {
+	content: "\e144";
+}
+%icon-font-camera_alt {
+	content: "\e145";
+}
+%icon-font-camera_roll {
+	content: "\e148";
+}
+%icon-font-collections {
+	content: "\e14b";
+}
+%icon-font-compare {
+	content: "\e14e";
+}
+%icon-font-control_point {
+	content: "\e14f";
+}
+%icon-font-crop_original {
+	content: "\e159";
+}
+%icon-font-crop_square {
+	content: "\e15b";
+}
+%icon-font-dehaze {
+	content: "\e15c";
+}
+%icon-font-edit {
+	content: "\e15e";
+}
+%icon-font-filter_1 {
+	content: "\e165";
+}
+%icon-font-filter_2 {
+	content: "\e166";
+}
+%icon-font-filter_3 {
+	content: "\e167";
+}
+%icon-font-filter {
+	content: "\e168";
+}
+%icon-font-filter_4 {
+	content: "\e169";
+}
+%icon-font-filter_5 {
+	content: "\e16a";
+}
+%icon-font-filter_6 {
+	content: "\e16b";
+}
+%icon-font-filter_7 {
+	content: "\e16c";
+}
+%icon-font-filter_8 {
+	content: "\e16d";
+}
+%icon-font-filter_9 {
+	content: "\e16e";
+}
+%icon-font-filter_9_plus {
+	content: "\e16f";
+}
+%icon-font-filter_hdr {
+	content: "\e174";
+}
+%icon-font-filter_none {
+	content: "\e175";
+}
+%icon-font-filter_tilt_shift {
+	content: "\e176";
+}
+%icon-font-image {
+	content: "\e186";
+}
+%icon-font-lens {
+	content: "\e18c";
+}
+%icon-font-looks_3 {
+	content: "\e18d";
+}
+%icon-font-looks_4 {
+	content: "\e18f";
+}
+%icon-font-looks_5 {
+	content: "\e190";
+}
+%icon-font-looks_6 {
+	content: "\e191";
+}
+%icon-font-looks_one {
+	content: "\e192";
+}
+%icon-font-looks_two {
+	content: "\e193";
+}
+%icon-font-monochrome_photos {
+	content: "\e195";
+}
+%icon-font-movie_creation {
+	content: "\e196";
+}
+%icon-font-music_note {
+	content: "\e197";
+}
+%icon-font-navigate_before {
+	content: "\e19a";
+}
+%icon-font-navigate_next {
+	content: "\e19b";
+}
+%icon-font-panorama {
+	content: "\e19d";
+}
+%icon-font-panorama_fish_eye {
+	content: "\e19e";
+}
+%icon-font-photo {
+	content: "\e1a2";
+}
+%icon-font-photo_album {
+	content: "\e1a3";
+}
+%icon-font-photo_camera {
+	content: "\e1a4";
+}
+%icon-font-photo_library {
+	content: "\e1a5";
+}
+%icon-font-picture_as_pdf {
+	content: "\e1a6";
+}
+%icon-font-portrait {
+	content: "\e1a7";
+}
+%icon-font-slideshow {
+	content: "\e1ac";
+}
+%icon-font-tag_faces {
+	content: "\e1b1";
+}
+%icon-font-tonality {
+	content: "\e1b8";
+}
+%icon-font-transform {
+	content: "\e1b9";
+}
+%icon-font-tune {
+	content: "\e1ba";
+}
+%icon-font-view_comfortable {
+	content: "\e1bb";
+}
+%icon-font-view_compact {
+	content: "\e1bc";
+}
+%icon-font-wb_cloudy {
+	content: "\e1be";
+}
+%icon-font-collections_bookmark {
+	content: "\e1c1";
+}
+%icon-font-photo_size_select_actual {
+	content: "\e1c2";
+}
+%icon-font-beenhere {
+	content: "\e1c7";
+}
+%icon-font-directions {
+	content: "\e1c8";
+}
+%icon-font-local_hospital {
+	content: "\e1e0";
+}
+%icon-font-local_mall {
+	content: "\e1e4";
+}
+%icon-font-local_movies {
+	content: "\e1e5";
+}
+%icon-font-local_offer {
+	content: "\e1e6";
+}
+%icon-font-local_post_office {
+	content: "\e1ec";
+}
+%icon-font-local_print_shop {
+	content: "\e1ed";
+}
+%icon-font-local_see {
+	content: "\e1ef";
+}
+%icon-font-location_history {
+	content: "\e1f2";
+}
+%icon-font-map {
+	content: "\e1f3";
+}
+%icon-font-my_location {
+	content: "\e1f4";
+}
+%icon-font-pin_drop {
+	content: "\e1f6";
+}
+%icon-font-place {
+	content: "\e1f7";
+}
+%icon-font-satellite {
+	content: "\e1fa";
+}
+%icon-font-arrow_drop_down {
+	content: "\e201";
+}
+%icon-font-arrow_drop_down_circle {
+	content: "\e202";
+}
+%icon-font-arrow_drop_up {
+	content: "\e203";
+}
+%icon-font-cancel {
+	content: "\e205";
+}
+%icon-font-check {
+	content: "\e206";
+}
+%icon-font-chevron_left {
+	content: "\e207";
+}
+%icon-font-chevron_right {
+	content: "\e208";
+}
+%icon-font-close {
+	content: "\e209";
+}
+%icon-font-expand_less {
+	content: "\e20a";
+}
+%icon-font-expand_more {
+	content: "\e20b";
+}
+%icon-font-fullscreen {
+	content: "\e20c";
+}
+%icon-font-menu {
+	content: "\e20e";
+}
+%icon-font-keyboard_control {
+	content: "\e20f";
+}
+%icon-font-more_vert {
+	content: "\e210";
+}
+%icon-font-event_available {
+	content: "\e21a";
+}
+%icon-font-event_busy {
+	content: "\e21b";
+}
+%icon-font-event_note {
+	content: "\e21c";
+}
+%icon-font-folder_special {
+	content: "\e21d";
+}
+%icon-font-mms {
+	content: "\e21e";
+}
+%icon-font-more {
+	content: "\e21f";
+}
+%icon-font-sms {
+	content: "\e229";
+}
+%icon-font-sms_failed {
+	content: "\e22a";
+}
+%icon-font-wc {
+	content: "\e241";
+}
+%icon-font-wifi {
+	content: "\e242";
+}
+%icon-font-group {
+	content: "\e245";
+}
+%icon-font-group_add {
+	content: "\e246";
+}
+%icon-font-mood {
+	content: "\e248";
+}
+%icon-font-mood_bad {
+	content: "\e249";
+}
+%icon-font-pages {
+	content: "\e24f";
+}
+%icon-font-party_mode {
+	content: "\e250";
+}
+%icon-font-people {
+	content: "\e251";
+}
+%icon-font-people_outline {
+	content: "\e252";
+}
+%icon-font-person {
+	content: "\e253";
+}
+%icon-font-person_add {
+	content: "\e254";
+}
+%icon-font-person_outline {
+	content: "\e255";
+}
+%icon-font-poll {
+	content: "\e257";
+}
+%icon-font-public {
+	content: "\e258";
+}
+%icon-font-share {
+	content: "\e25a";
+}
+%icon-font-whatshot {
+	content: "\e25b";
+}
+%icon-font-check_box {
+	content: "\e25c";
+}
+%icon-font-check_box_outline_blank {
+	content: "\e25d";
+}
+%icon-font-radio_button_unchecked {
+	content: "\e25e";
+}
+%icon-font-radio_button_checked {
+	content: "\e25f";
+}
+%icon-font-star {
+	content: "\e260";
+}
+%icon-font-star_half {
+	content: "\e261";
+}
+%icon-font-star_outline {
+	content: "\e262";
+}
+%icon-font-accessibility {
+	content: "\e264";
+}
+%icon-font-account_balance {
+	content: "\e265";
+}
+%icon-font-account_box {
+	content: "\e267";
+}
+%icon-font-account_circle {
+	content: "\e268";
+}
+%icon-font-announcement {
+	content: "\e26f";
+}
+%icon-font-assessment {
+	content: "\e271";
+}
+%icon-font-assignment {
+	content: "\e272";
+}
+%icon-font-assignment_ind {
+	content: "\e273";
+}
+%icon-font-assignment_late {
+	content: "\e274";
+}
+%icon-font-assignment_return {
+	content: "\e275";
+}
+%icon-font-assignment_returned {
+	content: "\e276";
+}
+%icon-font-assignment_turned_in {
+	content: "\e277";
+}
+%icon-font-book {
+	content: "\e27a";
+}
+%icon-font-bookmark {
+	content: "\e27b";
+}
+%icon-font-bookmark_outline {
+	content: "\e27c";
+}
+%icon-font-bug_report {
+	content: "\e27d";
+}
+%icon-font-build {
+	content: "\e27e";
+}
+%icon-font-check_circle {
+	content: "\e281";
+}
+%icon-font-chrome_reader_mode {
+	content: "\e282";
+}
+%icon-font-class {
+	content: "\e283";
+}
+%icon-font-code {
+	content: "\e284";
+}
+%icon-font-dashboard {
+	content: "\e286";
+}
+%icon-font-delete {
+	content: "\e287";
+}
+%icon-font-dns {
+	content: "\e289";
+}
+%icon-font-done {
+	content: "\e28a";
+}
+%icon-font-done_all {
+	content: "\e28b";
+}
+%icon-font-event {
+	content: "\e28c";
+}
+%icon-font-explore {
+	content: "\e28e";
+}
+%icon-font-extension {
+	content: "\e28f";
+}
+%icon-font-face {
+	content: "\e290";
+}
+%icon-font-favorite {
+	content: "\e291";
+}
+%icon-font-favorite_outline {
+	content: "\e292";
+}
+%icon-font-feedback {
+	content: "\e293";
+}
+%icon-font-find_in_page {
+	content: "\e294";
+}
+%icon-font-get_app {
+	content: "\e298";
+}
+%icon-font-grade {
+	content: "\e299";
+}
+%icon-font-help {
+	content: "\e29b";
+}
+%icon-font-highlight_remove {
+	content: "\e29c";
+}
+%icon-font-home {
+	content: "\e29e";
+}
+%icon-font-info {
+	content: "\e2a2";
+}
+%icon-font-info_outline {
+	content: "\e2a3";
+}
+%icon-font-label {
+	content: "\e2a6";
+}
+%icon-font-label_outline {
+	content: "\e2a7";
+}
+%icon-font-language {
+	content: "\e2a8";
+}
+%icon-font-launch {
+	content: "\e2a9";
+}
+%icon-font-list {
+	content: "\e2aa";
+}
+%icon-font-open_in_new {
+	content: "\e2b2";
+}
+%icon-font-open_with {
+	content: "\e2b3";
+}
+%icon-font-pageview {
+	content: "\e2b4";
+}
+%icon-font-perm_contact_calendar {
+	content: "\e2b7";
+}
+%icon-font-perm_identity {
+	content: "\e2ba";
+}
+%icon-font-perm_media {
+	content: "\e2bb";
+}
+%icon-font-print {
+	content: "\e2c1";
+}
+%icon-font-query_builder {
+	content: "\e2c2";
+}
+%icon-font-question_answer {
+	content: "\e2c3";
+}
+%icon-font-report_problem {
+	content: "\e2c6";
+}
+%icon-font-room {
+	content: "\e2c8";
+}
+%icon-font-schedule {
+	content: "\e2c9";
+}
+%icon-font-search {
+	content: "\e2ca";
+}
+%icon-font-settings {
+	content: "\e2cb";
+}
+%icon-font-settings_applications {
+	content: "\e2cc";
+}
+%icon-font-shopping_basket {
+	content: "\e2de";
+}
+%icon-font-stars {
+	content: "\e2e2";
+}
+%icon-font-subject {
+	content: "\e2e4";
+}
+%icon-font-supervisor_account {
+	content: "\e2e5";
+}
+%icon-font-swap_vert {
+	content: "\e2e7";
+}
+%icon-font-swap_vertical_circle {
+	content: "\e2e8";
+}
+%icon-font-theaters {
+	content: "\e2ec";
+}
+%icon-font-thumb_down {
+	content: "\e2ed";
+}
+%icon-font-thumb_up {
+	content: "\e2ee";
+}
+%icon-font-thumbs_up_down {
+	content: "\e2ef";
+}
+%icon-font-toc {
+	content: "\e2f0";
+}
+%icon-font-today {
+	content: "\e2f1";
+}
+%icon-font-trending_neutral {
+	content: "\e2f6";
+}
+%icon-font-turned_in {
+	content: "\e2f8";
+}
+%icon-font-turned_in_not {
+	content: "\e2f9";
+}
+%icon-font-verified_user {
+	content: "\e2fa";
+}
+%icon-font-view_agenda {
+	content: "\e2fb";
+}
+%icon-font-view_array {
+	content: "\e2fc";
+}
+%icon-font-view_carousel {
+	content: "\e2fd";
+}
+%icon-font-view_column {
+	content: "\e2fe";
+}
+%icon-font-view_day {
+	content: "\e2ff";
+}
+%icon-font-view_headline {
+	content: "\e300";
+}
+%icon-font-view_list {
+	content: "\e301";
+}
+%icon-font-view_module {
+	content: "\e302";
+}
+%icon-font-view_quilt {
+	content: "\e303";
+}
+%icon-font-view_stream {
+	content: "\e304";
+}
+%icon-font-view_week {
+	content: "\e305";
+}
+%icon-font-card_travel {
+	content: "\e30a";
+}
+%icon-font-work {
+	content: "\e30b";
+}
+%icon-font-camera_enhance {
+	content: "\e30e";
+}
+%icon-font-help_outline {
+	content: "\e30f";
+}
+%icon-font-reorder {
+	content: "\e310";
+}
+%icon-font-zoom_in {
+	content: "\e311";
+}
+%icon-font-zoom_out {
+	content: "\e312";
+}
+%icon-font-indeterminate_check_box {
+	content: "\e319";
+}
+%icon-font-offline_pin {
+	content: "\e31a";
+}

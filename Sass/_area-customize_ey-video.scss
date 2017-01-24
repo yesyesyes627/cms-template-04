@@ -1,0 +1,150 @@
+//客製區塊
+
+//視訊(ey - hyc)================================================================
+
+.area-customize.ey-video {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			padding: $interval-l;
+			background-color: $black;
+		}
+
+		.video {
+			margin-bottom: $interval-s;
+			background-color: $black;
+
+			video {
+				width: 100%;
+			}
+
+			source {
+
+			}
+
+			object {
+				min-height: 45px;
+				width: 100%;
+				margin-bottom: $interval-s;
+			}
+
+			span {
+				display: block;
+				padding: $interval-s;
+				background-color: $light;
+			}
+
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			iframe {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.essay {
+			
+		}
+
+		.caption {
+			@extend %caption;
+			text-align: center;
+
+			span {
+				color: $white;
+			}
+
+			a {
+				color: inherit;
+			}
+		}
+
+		.label {
+			@extend %label;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			color: $white;
+		}
+
+		.p {
+			@extend %article;
+			color: $white;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

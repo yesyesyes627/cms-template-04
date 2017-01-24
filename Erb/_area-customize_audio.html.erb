@@ -1,0 +1,29 @@
+<div class="area-customize audio <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="audio">
+			<audio controls>
+				<source src="/audio/sample/sample.ogg" type="audio/ogg">
+				<source src="/audio/sample/sample.mp3" type="audio/mpeg">
+				<object data="audio/MHXSEagle.mp3" >
+					<param name="filename" value="/audio/sample/sample.mp3"/>
+					<param name="Showcontrols" value="true" />
+					<param name="autoStart" value="false" />
+				</object>
+				<span>您的瀏覽器不支援 html5 撥放器，請<a href="#">下載媒體</a>於本機播放。</span>
+			</audio>
+		</div>
+		<div class="essay">
+			<div class="caption"><span><%= zh_lorem_sentence %></span></div>
+			<div class="label"><ul><li><span><i class="mark"><%= lorem_word %></i></span></li></ul></div>
+			<div class="p">
+				<p><span><%= zh_lorem_paragraph %></span></p>
+			</div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

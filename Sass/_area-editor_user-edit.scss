@@ -1,0 +1,61 @@
+//編輯區塊
+
+//使用者編輯================================================================
+
+.area-editor.user-edit {
+	@extend %area-page-no-header;
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		@extend %article-extend;
+
+		> .in {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

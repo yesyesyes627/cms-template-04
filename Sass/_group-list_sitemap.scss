@@ -1,0 +1,72 @@
+//列表群組
+
+//網站地圖================================================================
+
+.group-list.sitemap {
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+				@extend %ellipsis;
+				padding-bottom: $interval-m;
+				border-bottom: $border;
+				margin-bottom: $interval-m;
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+			padding: $interval-s 0 0 $interval-xl;
+
+			> .in {
+
+				> ul {
+
+					> li {
+
+						+ li {
+							margin-top: $interval-l;
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+			@extend %footer;
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

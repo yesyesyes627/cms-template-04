@@ -1,0 +1,88 @@
+//文字列表
+
+//內頁階層列表================================================================
+
+.list-text.content-list {
+
+	> .bg-drop-layout > .in, > .in {
+		
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+			border-left-width: $interval-xs;
+			border-left-style: solid;
+			border-left-color: $gray;
+		}
+	}
+
+	.ct {
+		padding: $interval-s 0 0 $interval-xl;
+
+		> .in {
+			
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			+ li {
+				margin-top: $interval-s;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

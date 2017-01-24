@@ -1,0 +1,300 @@
+<%
+	min_li = 1 #最少的li數量
+	max_li = 4 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="area-customize calendar-detail <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="heading">
+			<div class="label"><ul data-index="1" data-child="3"><li data-index="1" class="prev"><span><a href="#">上個月</a></span></li><li data-index="2" class="next"><span><a href="#">下個月</a></span></li><li class="this-month" data-index="3"><span><a href="#">本月</a></span></li></ul></div>
+			<div class="caption"><span><a href="#">2015年11月</a></span></div>
+		</div>
+		<div class="table">
+			<table summary="2015年11月" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<th scope="col" class="weekend" title="星期日"><span>日</span></th>
+						<th scope="col" title="星期一"><span>一</span></th>
+						<th scope="col" title="星期二"><span>二</span></th>
+						<th scope="col" title="星期三"><span>三</span></th>
+						<th scope="col" title="星期四"><span>四</span></th>
+						<th scope="col" title="星期五"><span>五</span></th>
+						<th scope="col" class="weekend" title="星期六"><span>六</span></th>
+					</tr>
+					<tr>
+						<td class="prev-mounth weekend">
+							<div class="div">
+								<a class="mark" href="#">25</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth">
+							<div class="div">
+								<a class="mark" href="#">26</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth">
+							<div class="div">
+								<a class="mark" href="#">27</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth">
+							<div class="div">
+								<a class="mark" href="#">28</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth">
+							<div class="div">
+								<a class="mark" href="#">29</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth">
+							<div class="div">
+								<a class="mark" href="#">30</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="prev-mounth weekend">
+							<div class="div">
+								<a class="mark" href="#">31</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">1</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">2</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="event">
+							<div class="div">
+								<a class="mark" href="#">3</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">4</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="is-active">
+							<div class="div">
+								<a class="mark" href="#">5</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">6</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">7</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">8</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">9</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="event">
+							<div class="div">
+								<a class="mark" href="#">10</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">11</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">12</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">13</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">14</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="weekend event">
+							<div class="div">
+								<a class="mark" href="#">15</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">16</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="event">
+							<div class="div">
+								<a class="mark" href="#">17</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">18</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="event">
+							<div class="div">
+								<a class="mark" href="#">19</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">20</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">21</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="this-week weekend">
+							<div class="div">
+								<a class="mark" href="#">22</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week event">
+							<div class="div">
+								<a class="mark" href="#">23</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week">
+							<div class="div">
+								<a class="mark" href="#">24</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week">
+							<div class="div">
+								<a class="mark" href="#">25</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week event">
+							<div class="div">
+								<a class="mark" href="#">26</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week today event">
+							<div class="div">
+								<a class="mark" href="#">27</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="this-week weekend">
+							<div class="div">
+								<a class="mark" href="#">28</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="weekend">
+							<div class="div">
+								<a class="mark" href="#">29</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td>
+							<div class="div">
+								<a class="mark" href="#">30</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="next-mounth">
+							<div class="div">
+								<a class="mark" href="#">1</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="next-mounth event">
+							<div class="div">
+								<a class="mark" href="#">2</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="next-mounth">
+							<div class="div">
+								<a class="mark" href="#">3</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="next-mounth event">
+							<div class="div">
+								<a class="mark" href="#">4</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+						<td class="next-mounth weekend">
+							<div class="div">
+								<a class="mark" href="#">5</a>
+								<div class="list"><ul data-index="1" data-child="5"><li data-index="1"><span><a href="#">蘋果</a></span></li><li data-index="2"><span><a href="#">香蕉</a></span></li><li data-index="3"><span><a href="#">火龍果</a></span></li><li data-index="4"><span><a href="#">香瓜</a></span></li><li data-index="5"><span><a href="#">更多...</a></span></li></ul></div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

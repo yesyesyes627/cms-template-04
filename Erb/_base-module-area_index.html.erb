@@ -1,0 +1,13 @@
+<div class="group base-module-area" id="base-module-area" data-index="<%= index %>" data-type="<%= $row %>" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- accesskey 導盲磚 -->
+		<%= render partial: "/erb/simple-text_accesskey", locals: set({ access_key: "C", access_title: "中間主要內容區，此區塊呈現網頁的網頁內容", header_text: "導盲磚" }) %>
+	<!-- accesskey 結束 -->
+
+	<!-- 首頁內容 開始 -->
+		<%= yield %>
+	<!-- 首頁內容 結束 -->
+
+	</div></div>
+</div></div>

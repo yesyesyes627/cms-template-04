@@ -1,0 +1,9 @@
+<%= render partial: "/erb/sys_variable" %>
+
+<!-- page-form 內頁表單 -->
+	<%= render partial: "/erb/area-form_page-form", locals: set({ func_set: "{'reset':{}}", header_text: "一般表單" }) %>
+<!-- page-form 結束 -->
+
+<!-- submit 送出 -->
+	<%= render partial: "/erb/area-form_submit", locals: set({ func_set: "{'reset':{}}", header_text: "送出表單" }) %>
+<!-- submit 結束 -->

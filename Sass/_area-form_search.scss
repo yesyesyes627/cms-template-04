@@ -1,0 +1,288 @@
+//表單區塊
+
+//搜尋================================================================
+
+.area-form.search {
+
+	.base-mobile & {
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+				
+			}
+
+			.fieldset {
+				position: relative;
+
+				span {
+					$icon-width: 36px;
+
+					display: block;
+
+					&.search {
+						display: block;
+						padding-right: $icon-width;
+
+						input {
+							display: block;
+							width: 100%;
+						}
+					}
+
+					&.submit {
+
+						a {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							width: $icon-width;
+							background-color: $btn-bg-color;
+							@extend %hide-text;
+							@include bg-to-pic('icon-pic/icon-w-search.png' ,false)
+						}
+					}
+				}
+			}
+
+			.list {
+				display: none;
+				
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+				margin-top: $interval-m;
+			}
+
+			li {
+				@extend %btn;
+				display: block;
+				text-align: center;
+
+				&.advanced {
+
+				}
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-wrapper & {
+		position: absolute;
+		top: 36px;
+		right: 10px;
+		z-index: 3;
+
+		@include js(false) {
+			top: 40px;
+		}
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		&.is-open {
+
+			.ct {
+
+				.list {
+					display: block;
+				}
+			}
+		}
+
+		> .bg-drop-layout > .in, > .in {
+			margin: 0;
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+			display: inline-block;
+			vertical-align: middle;
+
+			> .in {
+
+			}
+
+			.fieldset {
+				position: relative;
+
+				@include js(false) {
+					display: none;
+				}
+
+				span {
+					$icon-width: 36px;
+
+					display: block;
+
+					&.search {
+						display: block;
+						padding-right: $icon-width;
+						width: 200px;
+
+						input {
+							display: block;
+							width: 100%;
+						}
+					}
+
+					&.submit {
+
+						a {
+							position: absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							width: $icon-width;
+							background-color: $btn-bg-color;
+							transition: $transition;
+							@extend %hide-text;
+							@include bg-to-pic('icon-pic/icon-w-search.png' ,false);
+
+							&:hover {
+								background-color: $btn-hover-bg-color;
+							}
+						}
+					}
+				}
+			}
+
+			.list {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				display: none;
+				
+				ul {
+					margin-top: $interval-m;
+				}
+
+				li {
+
+					+ li {
+						margin-top: $interval-s;
+					}
+				}
+
+				span {
+					display: block;
+				}
+
+				a {
+					@extend %list;
+					@extend %list-hover;
+					box-shadow: $box-shadow;
+				}
+			}
+		}
+
+		.ft {
+			display: inline-block;
+			vertical-align: middle;
+			padding-left: $interval-s;
+
+			> .in {
+
+			}
+
+			ul {
+				display: inline;
+			}
+
+			li {
+				display: inline;
+
+				&.advanced {
+					
+				}
+			}
+
+			span {
+				
+			}
+
+			a {
+				color: inherit;
+
+				@include js(false) {
+					@extend %btn;
+				}
+			}
+		}
+	}
+}

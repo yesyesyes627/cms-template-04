@@ -1,0 +1,30 @@
+<%
+	min_li = 1 #最少的li數量
+	max_li = 4 #最多的li數量
+
+	li_length = 3
+%>
+
+<div class="group-tab default <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $tab %>" data-child="<%= li_length + 1 %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h3><span><a href="#"><%= header_text %></a></span></h3>
+		</div></div>
+	<% end %>
+
+	<% if ( li_length > 0 ) %>
+		<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length + 1 %>"><li data-index="1">
+
+				<!-- tab 頁籤 -->
+					<%= render partial: "/erb/list-text_tab", locals: set({ index: 1, header_text: "頁籤", inner_len: li_length }) %>
+				<!-- tab 結束 -->
+				
+				</li><% li_length.times do |i| %><li data-index="<%= i + 2 %>">
+
+					<!-- <%= inner %> -->
+						<%= render partial:  inner, locals: set({ index: 4, inner: "/erb/area-essay_message" }) %>
+					<!-- <%= inner %> -->
+
+					</li><% end %></ul></div></div>
+	<% end %>
+</div></div>

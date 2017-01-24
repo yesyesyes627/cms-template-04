@@ -1,0 +1,48 @@
+<%
+
+#設定================================================================
+	$js = true #true 或 false，是否開啟 javascript
+
+#類別================================================================
+	$module = 0 #模組
+	$cell = 1 #分割
+	$tab = 2 #頁籤
+	$row = 3 #單欄
+	$list = 4 #清單
+
+#檔案類型陣列================================================================
+	$file_types = ["ai", "avi", "bmp", "css", "csv", "doc", "docx", "gif", "html", "ico", "jpeg", "jpg", "js", "link", "md", "mov", "mp3", "mp4", "odf", "odp", "ods", "odt", "ogg", "ogv", "other", "pdf", "png", "ppt", "pptx", "psd", "rar", "rss", "sass", "swf", "svg", "tar", "tif", "txt", "wav", "webm", "xls", "xlsx", "xml", "zip"]
+
+#設定參數方法================================================================
+
+	def set(opt = {})
+
+		@set = {
+			index: 1,
+			class_set: nil,
+			child: 0,
+			func_set: nil,
+			header_text: nil,
+			inner: "/erb/simple-pic_default",
+			access_title: nil,
+			access_key: nil,
+			inner_len: 2,
+			deep: 1
+		}
+
+		opt.each do |key, value|
+
+			@set[key.to_sym] = value
+		end
+
+		return @set
+	end
+
+#隨機圖片的方法================================================================
+
+	def lorem_image(opt = "200x200")
+
+		#return "https://dummyimage.com/#{opt}"
+		return "http://placekitten.com/g/#{opt.sub("x", "/")}"
+	end
+%>

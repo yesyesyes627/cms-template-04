@@ -1,0 +1,118 @@
+//客製區塊
+
+//框架================================================================
+
+.area-customize.iframe {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		.iframe {
+			margin-bottom: $interval-s;
+
+			iframe {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.essay {
+			
+		}
+
+		.caption {
+			@extend %caption;
+
+			span {
+				
+			}
+
+			a {
+
+			}
+		}
+
+		.label {
+			@extend %label;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+
+		.p {
+			@extend %article-extend;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

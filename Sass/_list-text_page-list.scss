@@ -1,0 +1,85 @@
+//文字列表
+
+//內頁列表================================================================
+
+.list-text.page-list {
+
+	> .bg-drop-layout > .in, > .in {
+		
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			+ li {
+				margin-top: $interval-s;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

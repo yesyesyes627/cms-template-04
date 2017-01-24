@@ -1,0 +1,138 @@
+//文字列表
+
+//按鈕================================================================
+
+.list-text.btn {
+	@extend %area-page-no-header;
+
+	&.is-right {
+
+		.ct {
+
+			ul {
+				text-align: right;
+			}
+		}
+	}
+
+	&.is-center {
+
+		.ct {
+
+			ul {
+				text-align: center;
+			}
+		}
+	}
+
+	&.is-justify {
+
+		.ct {
+
+			ul {
+				text-align: justify;
+				line-height: 0;
+
+				&:after {
+					content: $content;
+					display: inline-block;
+					width: 100%;
+					height: 0;
+				}
+			}
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		ul {
+
+			@include media('mobile') {
+				text-align: right !important;
+			}
+		}
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+
+			@include media('mobile') {
+				margin-top: $interval-xs;
+			}
+
+			+ li {
+				margin-left: $interval-xs;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %btn;
+
+			@include media('mobile') {
+				padding: $interval-m;
+			}
+
+			&:before {
+				margin-right: $interval-xs;
+			}
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

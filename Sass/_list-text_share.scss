@@ -1,0 +1,214 @@
+//文字列表
+
+//分享================================================================
+
+.list-text.share {
+
+	.base-extend & {
+		position: fixed;
+		top: 200px;
+		left: $interval-l;
+
+		@include media('mobile') {
+			display: none;
+		}
+
+		> .bg-drop-layout > .in, > .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+				
+			}
+
+			ul {
+
+			}
+
+			li {
+
+				@each $key, $map in $share-map {
+
+					$pic: map-get($map, 'pic');
+					$color: map-get($map, 'color');
+
+					&.#{$key}{
+
+						span {
+						}
+
+						a {
+							@include icon-pic('#{$pic}');
+							background-color: $color;
+
+							&:hover {
+								background-color: deeper($color);
+							}
+						}
+					}
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %hide-text;
+				display: block !important;
+				transition: $transition;
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+
+	.base-mobile & {
+
+		> .in {
+
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+
+			> .in {
+				
+			}
+
+			ul {
+
+				&:after {
+					@extend %clear;
+				}
+			}
+
+			li {
+				width: 100% / length($share-map);
+				float: left;
+
+				@each $key, $map in $share-map {
+
+					$pic: map-get($map, 'pic');
+					$color: map-get($map, 'color');
+
+					&.#{$key}{
+
+						span {
+							display: block;
+						}
+
+						a {
+							@include icon-pic('#{$pic}', false);
+							height: 40px;
+							background-color: $color;
+						}
+					}
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %hide-text;
+				display: block !important;
+				transition: $transition;
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

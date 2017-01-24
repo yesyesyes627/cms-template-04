@@ -1,0 +1,17 @@
+<%
+	img = lorem_image('640x480')
+%>
+
+<div class="area-figure page-img-figcaption <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<a href="#" class="div">
+			<div class="img"><span style="background-image: url('<%= img %>')"><img src="<%= img %>" alt=""></span></div>
+			<div class="figcaption"><span><%= zh_lorem_sentence %></span></div>
+		</a>
+	</div></div>
+</div></div>

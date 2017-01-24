@@ -1,0 +1,49 @@
+<div class="area-customize map <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div id="map001" class="div" style="height: 500px;">
+			<script type="text/javascript">
+				(function(){
+					var map;
+					var latlng = new google.maps.LatLng(24.068, 121.1743);
+					var mapOptions = {
+						zoom: 7,
+						center: latlng,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+
+					map = new google.maps.Map(document.getElementById('map001'), mapOptions);
+
+					PlotMarker(map, 25.0303947926719, 121.509861946106, '和平西路標', '和平西路說明');
+					PlotMarker(map, 24.1477358, 120.6736482, '台中', '台中');
+
+					function PlotMarker(map, lat, lang, stitle, sContent) {
+						var marker = new google.maps.Marker({
+							position: new google.maps.LatLng(lat, lang),
+							title: stitle,
+							icon: '',
+						});
+						marker.setMap(map);
+						var infowindow = new google.maps.InfoWindow({
+							content: '<div style="line-height:1.35;overflow:hidden;white-space:nowrap;">' + sContent + '</div>'
+						});
+						google.maps.event.addListener(marker, 'click', function() {
+							infowindow.open(map, marker);
+						});
+					}
+				})();
+			</script>
+		</div>
+		<div class="essay">
+			<div class="caption"><span><%= zh_lorem_sentence %></span></div>
+			<div class="label"><ul><li><span><i class="mark"><%= lorem_word %></i></span></li></ul></div>
+			<div class="p">
+				<p><span><%= zh_lorem_paragraph %></span></p>
+			</div>
+		</div>
+	</div></div>
+</div></div>

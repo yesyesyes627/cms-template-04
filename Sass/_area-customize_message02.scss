@@ -1,0 +1,173 @@
+//客製區塊
+
+//訊息================================================================
+
+.area-customize.message02 {
+	$size: 60px;
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+			> ul {
+				@extend %reset;
+
+				> li {
+
+					&:first-child { //1
+
+						.essay {
+							position: absolute;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							background-color: $black;
+							background-color: rgba($black, $opacity-m);
+						}
+
+						.label {
+
+							ul {
+								border-color: transparent;
+								border-right-color: $white;
+							}
+						}
+
+						span {
+							color: $white;
+						}
+					}
+
+					+ li { //2+
+						margin-top: $interval-m;
+					}
+				}
+			}
+		}
+
+		/*a*/.div {
+			position: relative;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.img {
+			display: block;
+
+			span {
+				@extend %bg-cover;
+				display: block;
+				min-height: 80px;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.essay {
+
+			&:after {
+
+				@extend %clear;
+			}
+		}
+
+		.label {
+			float: left;
+			min-width: $size - 2px + $interval-l;
+			width: 12%;
+
+			ul {
+				height: $size - 2px;
+				border: $border;
+			}
+
+			li {
+
+			}
+
+			span {
+				display: block;
+				text-align: center;
+			}
+
+			i {
+				display: block;
+				text-align: center;
+				font-style: normal;
+
+				&.y-m {
+					margin: 8px 0 3px;
+					font-size: $font-size-xs;
+				}
+
+				&.d {
+					font-size: $font-size-xl;
+				}
+			}
+		}
+
+		.caption {
+			@extend %ellipsis;
+			overflow: hidden;
+			line-height: $size;
+			padding: 0 $interval-l;
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<%
+	img = lorem_image('480x320')
+%>
+
+<div class="area-customize pchouse-album03 <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="slider-box">
+			<div class="pic-area">
+				<a href="#" class="div">
+					<img src="#">
+				</a>
+			</div>
+			<div class="list-area">
+				<ul><% 4.times do |i| %><li>
+					<a href="#1" title="第 <%= i + 1 %> 張標題">
+						<img src="<%= img %>" alt="第 <%= i + 1 %> 張說明" title="第 <%= i + 1 %> 張標題">
+						<span class="essay">
+							<i class="caption">第 <%= i + 1 %> 張標題</i>
+							<i class="p">第 <%= i + 1 %> 張說明</i>
+						</span>
+					</a>
+				</li><% end %></ul>
+			</div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

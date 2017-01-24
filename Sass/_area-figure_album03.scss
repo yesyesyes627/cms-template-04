@@ -1,0 +1,190 @@
+//圖片區塊
+
+//相簿(小圖橫式- 彥專)================================================================
+
+.area-figure.album03 {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$h: 190px;
+
+		> .in {
+
+		}
+
+		/*a*/.div {
+			display: block;
+			position: relative;
+			height: $h;
+			background-color: $major-color;
+			transition: $transition;
+			color: $white;
+
+			@include media('phone') {
+				height: auto;
+			}
+
+			&:hover {
+				background-color: deeper($major-color);
+
+				&:after {
+					background-color: mix($major-color, $white);
+					color: deeper($major-color);;
+				}
+			}
+
+			&:after {
+				content: '閱讀更多';
+				display: block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				padding: $interval-m $interval-l;
+				background-color: deeper($major-color);
+				font-size: $font-size-s;
+				color: mix($major-color, $white);
+				transition: $transition;
+				text-align: center;
+
+				@include media('phone') {
+					position: static;
+					right: auto;
+					bottom: auto;
+				}
+			}
+		}
+
+		.img {
+
+			span {
+				@extend %bg-cover;
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: $h;
+				height: $h;
+
+				@include media('phone') {
+					position: static;
+					top: auto;
+					left: auto;
+					width: auto;
+					height: auto;
+					background-image: none !important;
+				}
+			}
+
+			img {
+				display: none;
+
+				@include media('phone') {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+
+		.essay {
+			margin-left: $h;
+			padding: $interval-l;
+
+			@include media('phone') {
+				margin-left: 0;
+			}
+		}
+
+		.figcaption {
+			$lh: 28px;
+
+			font-size: $font-size-l;
+			line-height: $lh;
+			max-height: $lh * 2;
+			overflow: hidden;
+			margin-bottom: $interval-l;
+
+			span {
+				
+			}
+		}
+
+		/*i*/.mark {
+			color: $gray;
+		}
+
+		.p {
+			position: relative;
+			margin-top: $interval-l;
+
+			&:before {
+				content: $content;
+				display: block;
+				position: absolute;
+				top: floor(-0.5 * $interval-l);
+				left: 0;
+				height: 1px;
+				width: 42px;
+				background-color: $white;
+			}
+
+			p {
+				$lh: 26px;
+
+				line-height: $lh;
+				max-height: $lh * 2;
+				overflow: hidden;
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

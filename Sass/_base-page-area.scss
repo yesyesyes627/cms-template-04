@@ -1,0 +1,36 @@
+//框架
+
+//內頁區塊================================================================
+
+.base-page-area {
+	margin: $interval-m $interval-m $interval-l;
+
+	> .in {
+
+		&:after {
+			@extend %clear;
+		}
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

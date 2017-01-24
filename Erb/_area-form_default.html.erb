@@ -1,0 +1,85 @@
+<%
+	min_cell = 2 #最少的欄數量
+	max_cell = 6 #最多的欄數量
+	min_row = 3 #最少的行數量
+	max_row = 12 #最多的行數量
+	min_text = 3 #最少的字元
+	max_text = 8 #最多的字元
+
+	cell_length = (min_cell..max_cell).to_a.sample
+	row_length = (min_row..max_row).to_a.sample
+%>
+
+<div class="area-form default <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="form">
+			<div class="fieldset">
+				<div class="legend">
+					<span>表單標頭</span>
+				</div>
+				<span class="select is-error" data-message="錯誤訊息">
+					<label>選擇：</label>
+					<select>
+						<option data-href="" selected>請選擇</option>
+						<option data-href="http://www.google.com"><%= zh_lorem_sentence %></option>
+						<option data-href="http://tw.yahoo.com"><%= zh_lorem_sentence %></option>
+					</select>
+				</span>
+				<span class="text is-required">
+					<label>文字：</label>
+					<input type="text">
+				</span>
+				<span class="password">
+					<label>密碼：</label>
+					<input type="password">
+				</span>
+				<span class="date">
+					<label>日期：</label>
+					<input type="date">
+					<label>至</label>
+					<input type="date">
+				</span>
+				<span class="number">
+					<label>數字：</label>
+					<input type="number">
+				</span>
+				<span class="search">
+					<label>搜尋：</label>
+					<input type="search">
+				</span>
+				<span class="email">
+					<label>信箱：</label>
+					<input type="email">
+				</span>
+				<span class="radio">
+					<input type="radio">
+					<label>複選框</label>
+				</span>
+				<span class="checkbox">
+					<input type="checkbox">
+					<label>單選框</label>
+				</span>
+				<span class="textarea"><label>文字區塊：</label><textarea cols="30" rows="10"></textarea></span>
+				<span class="text">
+					<label>驗證碼：</label>
+					<input type="text" placeholder="驗證碼">
+					<div class="img"><span style="background-image: url('/images/sample/sample_verification_code.jpg')"><img src="/images/sample/sample_verification_code.jpg" alt=""></span></div>
+					<span class="button"><input type="button" value="重新產生"></span>
+					<span class="button"><input type="button" value="語音撥放"></span>
+				</span>
+			</div>
+			<div class="fieldset">
+				<span class="submit"><input type="submit" value="送出"></span>
+				<span class="reset"><input type="reset" value="清除"></span>
+				<span class="button"><input type="button" value="上一步"></span>
+				<span class="button"><input type="button" value="下一步"></span>
+			</div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

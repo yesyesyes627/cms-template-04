@@ -1,0 +1,101 @@
+//圖片區塊
+
+//內頁圖片敘述(圖片-標籤)================================================================
+
+.area-figure.page-img-label {
+	overflow: hidden;
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			position: relative;
+		}
+
+		.div {
+
+		}
+
+		.img {
+
+			span {
+				@extend %bg-cover;
+				display: block;
+				padding-bottom: 68%;
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		.label {
+			position: absolute;
+			top: $interval-s;
+			left: $interval-s;
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

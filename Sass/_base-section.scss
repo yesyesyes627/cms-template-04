@@ -1,0 +1,53 @@
+//框架
+
+//內頁內容區塊================================================================
+
+.base-section {
+	overflow: hidden;
+	position: relative;
+
+	a {
+		@each $key, $map in $file-type-map {
+			$pic: map-get($map, 'pic');
+			$color: map-get($map, 'color');
+
+			&.#{$key} {
+
+				&:after {
+					@include icon-pic($pic);
+					margin-left: $interval-s;
+				}
+			}
+		}
+	}
+
+	> .in {
+		margin: 0 $interval-m;
+
+		@include media('phone') {
+			margin: 0;
+		}
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+			}
+		}
+	}
+}

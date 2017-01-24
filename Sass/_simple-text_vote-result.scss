@@ -1,0 +1,90 @@
+//簡單文字
+
+//投票結果================================================================
+
+.simple-text.vote-result {
+
+	.is-special & {
+
+		.ct {
+
+			span {
+				background-color: $minor-color;
+			}
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+			margin-bottom: $interval-s;
+		}
+
+		span {
+				
+		}
+
+		a {
+
+			&:hover {
+				color: currentColor;
+			}
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		span {
+			display: block;
+			box-sizing: border-box;
+			padding: $interval-m;
+			text-align: right;
+			background-color: $deep-gray;
+			color: $white;
+			white-space: nowrap;
+
+			&:after {
+				content: '%';
+			}
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

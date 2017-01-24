@@ -1,0 +1,13 @@
+<div class="group base-page-area" id="base-wrapper" data-index="<%= index %>" data-type="<%= $row %>" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+		<!-- base-aside 內頁側欄區塊 -->
+			<%= render partial: "/erb/base-aside", locals: set({ index: 1 }) %>
+		<!-- base-aside 結束 -->
+
+		<!-- base-section 內頁內容區塊 -->
+			<%= render partial: "/erb/base-section", locals: set({ index: 2 }) %>
+		<!-- base-section 結束 -->
+
+	</div></div>
+</div></div>

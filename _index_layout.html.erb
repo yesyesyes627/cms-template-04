@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-TW">
+	<head>
+
+	<!-- Meta 各種資訊 -->
+		<%= render partial: "/erb/sys_meta" %>
+	<!-- Meta 結束 -->
+
+	<!-- Title 網站標題 -->
+		<%= render partial: "/erb/sys_title" %>
+	<!-- Title 結束 -->
+
+	<!-- Icon 小圖示 -->
+		<%= render partial: "/erb/sys_icon" %>
+	<!-- Icon 結束 -->
+	
+	<!-- Script 程式 -->
+		<% if( $js ) %>
+			<%= render partial: "/erb/sys_script" %>
+		<% end %>
+	<!-- Script 結束 -->
+
+	</head>
+	<body data-js="false" data-admin="false"><form action="#" method="POST">
+
+	<% if( $js ) %>
+		<script>document.body.setAttribute("data-js", "true");</script>
+	<% end %>
+
+	<!-- Css 樣式表 -->
+		<%= render partial: "/erb/sys_style" %>
+	<!-- Css 結束 -->
+
+	<!-- sys-root 拖曳根節點 -->
+		<div class="group sys-root" id="sys-root" data-type="<%= $row %>" data-child="3" data-func="{'datePicker':{'language':'zh-tw','navTitles':{'days':'<i>民國 rrr 年</i> &nbsp; MM','months':'民國 rrr 年','years':'民國 rrr1 至 rrr2 年'}}}"><div class="in">
+			<div class="ct"><div class="in">
+
+			<!-- base-mobile 行動載具-->
+				<%= render partial: "/erb/base-mobile", locals: set({ index: 1 }) %>
+			<!-- base-mobile 結束 -->
+
+			<!-- base-extend 額外資訊 -->
+				<%= render partial: "/erb/base-extend", locals: set({ index: 2 }) %>
+			<!-- base-extend 結束 -->
+
+			<!-- base-wrapper 固定佈局 -->
+				<%= render partial: "/erb/base-wrapper", locals: set({ index: 3, area: "index" }) %>
+			<!-- base-wrapper 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- sys-root 結束 -->
+
+		<% if( $js ) %>
+			<script src="/js/require.js"></script>
+			<script >
+				requirejs.config({
+					baseUrl: 'http://127.0.0.1:24681/js'
+				});
+
+				requirejs(['main'], function(func){ //執行主程式
+					func();
+				});
+			</script>
+		<% end %>
+
+		<%= livereload_js %>
+	</form></body>
+</html>

@@ -1,0 +1,117 @@
+<%= render partial: "/erb/sys_variable" %>
+
+<!-- sign-in 登入與申請帳號 -->
+	<%= render partial: "/erb/area-form_sign-in", locals: set({ header_text: "帳號申請與登入" }) %>
+<!-- sign-in 結束 -->
+
+<div class="group-tab default " data-index="9" data-type="2" data-child="4" data-func="{'tab':{}}"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">頁籤</a></span></h3>
+	</div></div>
+	<div class="ct"><div class="in">
+		<ul data-index="1" data-child="4"><li data-index="1">
+
+		<!-- tab 頁籤 -->
+		<div class="list-text tab " data-index="1" data-type="0"><div class="in">
+			<div class="hd"><div class="in">
+				<h4><span><a href="#">頁籤</a></span></h4>
+			</div></div>
+			<div class="ct"><div class="in">
+				<ul data-index="1" data-child="3"><li data-index="1" class="is-active"><span><a href="#">會員登入</a></span></li><li data-index="2"><span><a href="#">使用社群媒體登入</a></span></li><li data-index="3"><span><a href="#">忘記密碼</a></span></li></ul>
+			</div></div>
+		</div></div>
+		<!-- tab 結束 -->
+
+		</li><li data-index="2">
+
+			<div class="area-customize sign-in" data-index="1" data-type="0"><div class="in">
+				<div class="hd"><div class="in">
+					<h4><span><a href="#">會員登入</a></span></h4>
+				</div></div>
+				<div class="ct"><div class="in">
+					<div class="legend">
+						<span>首次登入時，系統將會寄發通知信到您註冊的帳號，並在(電子信箱)中點選信件內容中的網址，即可開始使用本系統。</span>
+					</div>
+					<div class="fieldset">
+						<span class="text">
+							<label>帳號</label>
+							<input type="text" placeholder="Email帳號">
+							<i class="mark">@</i>
+							<input type="text">
+						</span>
+					</div>
+					<div class="fieldset">
+						<span class="password">
+							<label>密碼</label>
+							<input type="password" placeholder="請輸入密碼">
+							<i class="mark">請填寫8位以上字符。</i>
+						</span>
+					</div>
+					<div class="fieldset">
+						<span class="text">
+							<label>驗證碼</label>
+							<input type="text" placeholder="請輸入驗證碼">
+							<img src="/images/verification_code.jpg" alt="">
+							<input type="button" value="重新產生">
+							<input type="button" value="語音撥放">
+						</span>
+					</div>
+				</div></div>
+				<div class="ft"><div class="in">
+					<ul data-index="1" data-child="2"><li data-index="1" class="submit"><span><a href="#">登入</a></span></li><li data-index="2" class="reset"><span><a href="#">清除</a></span></li></ul>
+				</div></div>
+			</div></div>
+
+		</li><li data-index="3">
+
+			<div class="area-customize sign-in" data-index="1" data-type="0"><div class="in">
+				<div class="hd"><div class="in">
+					<h4><span><a href="#">使用社群媒體登入</a></span></h4>
+				</div></div>
+				<div class="ct"><div class="in">
+					<div class="legend">
+						<span>NSN快速登入，是利用社群帳號登入，不需再加入會員，在用原有的社群帳號登入即可。</span>
+					</div>
+					<div class="facebook">
+						<a href="#">使用 Facebook 帳戶</a>
+					</div>
+					<div class="google">
+						<a href="#">使用 Google+ 帳戶</a>
+					</div>
+				</div></div>
+			</div></div>
+
+		</li><li data-index="4">
+
+			<div class="area-customize sign-in" data-index="1" data-type="0"><div class="in">
+				<div class="hd"><div class="in">
+					<h4><span><a href="#">忘記密碼</a></span></h4>
+				</div></div>
+				<div class="ct"><div class="in">
+					<div class="legend">
+						<span>系統將會寄發通知信到您註冊的帳號，並在(電子信箱)中點選信件內容中的網址。</span>
+					</div>
+					<div class="fieldset">
+						<span class="text">
+							<label>帳號</label>
+							<input type="text" placeholder="Email帳號">
+							<i class="mark">@</i>
+							<input type="text">
+						</span>
+					</div>
+					<div class="fieldset">
+						<span class="text" data-message="錯誤訊息">
+							<label>密碼</label>
+							<input type="password" placeholder="請填入密碼">
+							<i class="mark">請填寫8位以上字符。</i>
+						</span>
+					</div>
+				</div></div>
+				<div class="ft"><div class="in">
+					<ul data-index="1" data-child="1"><li data-index="1" class="submit"><span><a href="#">送出</a></span></li></ul>
+				</div></div>
+			</div></div>
+
+		</li></ul>
+	</div></div>
+</div></div>

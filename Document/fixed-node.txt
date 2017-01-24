@@ -1,0 +1,45 @@
+﻿區塊：
+01. base-header 標頭 (全域)
+02. base-footer 底部選單 (全域)
+03. base-extend 漂浮 (全域)
+04. base-mobile 手機選單 (全域)
+05. page-header 內頁標頭 (內頁)
+
+模組：
+01. Accesskey_U Accesskey_Z 導盲磚 (全域)
+02. TopLog 主要標誌 (全域)
+03. TopLink 上方連結 (全域)
+04. FontLevel 字級大小 (全域)
+05. HotKeyWord 熱門關鍵字 (全域)
+06. Search 搜尋 (全域)
+07. MagaMenu 巨型選單 (全域)
+08. ShareBox 分享 (全域)
+09. Menu 選單 (全域)
+10. FooterLog 次要標誌 (全域)
+11. FooterIcon 圖標 (全域)
+12. FooterLink 下方連結 (全域)
+13. Lastupdated 最後更新時間 (全域)
+14. Footer_Visitcount 造訪人次 (全域)
+15. Footer_Info 聯絡資訊 (全域)
+16. FixedModuleString 內頁標題 (內頁)
+17. WebArchive_Breadcrumb 麵包屑 (內頁)
+18. WebArchive_OpenData 開放資料 (內頁)
+19. Tools 工具列 (內頁)
+20. WebArchive_NextNodes 次節點 (內頁)
+21. WebArchive_TTS 語音 (內頁)
+22. WebArchive_TopDesc 上方說明 (內頁)
+
+字級大小
+$font-size-xs: .8em; // 10.24px 11.52px 14.08px
+$font-size-s: .9em; // 11.52px 12.96px 15.84px
+$font-size-m: 1em; // 12.8px 14.4px 17.6px
+$font-size-l: 1.1em; // 14.08px 15.84px 19.36px
+$font-size-xl: 1.4em; // 17.92px 20.16px 24.64px
+
+$line-height-xs: 1;
+$line-height-s: 1.2;
+$line-height-m: 1.6;
+$line-height-l: 2;
+$line-height-xl: 2.4;
+
+$base-font-style: Arial, '微軟正黑體', 'Helvetica Neue', Helvetica, sans-serif, '新細明體';

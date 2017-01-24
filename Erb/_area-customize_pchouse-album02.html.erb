@@ -1,0 +1,30 @@
+<%
+	img = lorem_image('320x160')
+%>
+
+<div class="area-customize pchouse-album02 <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<a class="div" href="#">
+			<div class="img">
+				<span style="background-image: url('<%= img %>')"><img src="<%= img %>" alt=""></span>
+			</div>
+			<div class="label"><ul><li><span><%= lorem_word %></span></li></ul></div>
+			<div class="essay">
+				<div class="caption">
+					<span><%= zh_lorem_paragraph %></span>
+				</div>
+				<div class="p">
+					<p><span><%= zh_lorem_paragraph %></span></p>
+				</div>
+			</div>
+		</a>
+		<div class="list"><ul>
+				<% 5.times do |i| %><li><span><a href="#"><i class="mark"><%= lorem_word %></i><%= zh_lorem_paragraph %></a></span></li><% end %></ul></div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

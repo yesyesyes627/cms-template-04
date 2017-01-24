@@ -1,0 +1,96 @@
+<%
+	min_li = 1 #最少的li數量
+	max_li = 4 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="area-customize calendar <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="heading">
+			<div class="label"><ul data-index="1" data-child="3"><li data-index="1" class="prev"><span><a href="#">上個月</a></span></li><li data-index="2" class="next"><span><a href="#">下個月</a></span></li><li class="this-month" data-index="3"><span><a href="#">本月</a></span></li></ul></div>
+			<div class="caption"><span><a href="#">2015年11月</a></span></div>
+		</div>
+		<div class="table">
+			<table summary="2015年11月" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr>
+						<th scope="col" class="weekend" title="星期日"><span>日</span></th>
+						<th scope="col" title="星期一"><span>一</span></th>
+						<th scope="col" title="星期二"><span>二</span></th>
+						<th scope="col" title="星期三"><span>三</span></th>
+						<th scope="col" title="星期四"><span>四</span></th>
+						<th scope="col" title="星期五"><span>五</span></th>
+						<th scope="col" class="weekend" title="星期六"><span>六</span></th>
+					</tr>
+					<tr>
+						<td class="prev-mounth weekend"><span>25</span></td>
+						<td class="prev-mounth"><span>26</span></td>
+						<td class="prev-mounth"><span>27</span></td>
+						<td class="prev-mounth"><span>28</span></td>
+						<td class="prev-mounth"><span>29</span></td>
+						<td class="prev-mounth"><span>30</span></td>
+						<td class="prev-mounth weekend"><span>31</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>1</span></td>
+						<td><span>2</span></td>
+						<td class="event"><span>3</span></td>
+						<td><span>4</span></td>
+						<td class="is-active"><span><a href="#">5</a></span></td>
+						<td><span>6</span></td>
+						<td class="weekend"><span>7</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>8</span></td>
+						<td><span>9</span></td>
+						<td class="event"><span>10</span></td>
+						<td><span>11</span></td>
+						<td><span>12</span></td>
+						<td><span>13</span></td>
+						<td class="weekend"><span>14</span></td>
+					</tr>
+					<tr>
+						<td class="weekend event"><span>15</span></td>
+						<td><span>16</span></td>
+						<td class="event"><span>17</span></td>
+						<td><span>18</span></td>
+						<td class="event"><span>19</span></td>
+						<td><span>20</span></td>
+						<td class="weekend"><span>21</span></td>
+					</tr>
+					<tr>
+						<td class="this-week weekend"><span>22</span></td>
+						<td class="this-week event"><span>23</span></td>
+						<td class="this-week"><span>24</span></td>
+						<td class="this-week"><span>25</span></td>
+						<td class="this-week event"><span>26</span></td>
+						<td class="this-week today event"><span>27</span></td>
+						<td class="this-week weekend"><span>28</span></td>
+					</tr>
+					<tr>
+						<td class="weekend"><span>29</span></td>
+						<td><span>30</span></td>
+						<td class="next-mounth"><span>1</span></td>
+						<td class="next-mounth event"><span>2</span></td>
+						<td class="next-mounth"><span>3</span></td>
+						<td class="next-mounth event"><span>4</span></td>
+						<td class="next-mounth weekend"><span>5</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	
+		<% if ( li_length > 0 ) %>
+			<div class="list"><ul data-index="1" data-child="<%= li_length %>">
+					
+					<% li_length.times do |i| %><li data-index="<%= i + 1 %>"><span><a href="#"><i class="mark"><%= lorem_word %></i><%= zh_lorem_sentence %></a></span></li><% end %></ul></div>
+		<% end %>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

@@ -1,0 +1,195 @@
+//表單區塊
+
+//內頁搜尋================================================================
+
+.area-form.page-search {
+
+	&.is-active {
+
+		.hd {
+
+			a {
+
+				&:after {
+					background-image: image-url('icon-pic/away-b-top.png');
+				}
+			}
+		}
+
+		.ct {
+			display: block;
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+			display: block;	
+		}
+
+		a {
+			$icon_w: 30px;
+
+			position: relative;
+			display: block;
+			padding: $interval-m;
+			padding-right: $icon_w + $interval-m;
+			color: $major-color;
+			transition: $transition;
+
+			&:before {
+				content: $content;
+				display: inline-block;
+				width: $icon_w;
+				height: $icon_w;
+				border-radius: 50%;
+				background-image: image-url('icon-pic/search.png');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $major-color;
+				vertical-align: middle;
+				margin-right: $interval-s;
+			}
+
+			&:after {
+				content: $content;
+				position: absolute;
+				display: block;
+				width: $icon_w;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background-image: image-url('icon-pic/away-b-bottom.png');
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			&:hover {
+				background-color: $light;
+			}
+		}
+	}
+
+	.ct {
+		$height: 30px;
+
+		display: none;
+		background-color: $light;
+		padding: $interval-s;
+		margin-top: $interval-s;
+
+		> .in {
+
+		}
+
+		.fieldset {
+			display: inline-block;
+			margin: $interval-s;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+
+				&:before {
+					content: attr(data-before);
+				}
+
+				&:after {
+					content: attr(data-after);
+				}
+
+				&.select {
+
+				}
+
+				&.date {
+
+					input {
+						background-image: image-url('icon-pic/calendar.png');
+						background-position: center right;
+						background-repeat: no-repeat;
+					}
+				}
+
+				&.search {
+
+				}
+
+				&.submit {
+
+				}
+
+				&.reset {
+
+				}
+			}
+
+			select {
+				line-height: $height;
+				height: $height;
+				max-width: 120px;
+
+				option {
+
+				}
+			}
+
+			input {
+
+				&[type="search"] {
+					line-height: $height;
+					height: $height;
+				}
+
+				&[type="date"] {
+					line-height: $height;
+					height: $height;
+				}
+
+				&[type="submit"] {
+					@extend %btn-imp;
+				}
+
+				&[type="reset"] {
+					
+				}
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

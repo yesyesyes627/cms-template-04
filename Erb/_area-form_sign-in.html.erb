@@ -1,0 +1,31 @@
+<%
+	img = '/images/verification_code.jpg'
+%>
+
+<div class="area-form sign-in <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="form">
+			<div class="fieldset">
+				<span class="email is-error" data-message="錯誤訊息"><label>帳號</label><input type="email" placeholder="請輸入帳號"></span>
+				<span class="password is-required"><label>密碼</label><input type="password" placeholder=""></span>
+				<span class="text">
+					<label>驗證碼</label>
+					<input type="text" placeholder="驗證碼">
+					<div class="img"><span style="background-image: url('<%= img %>')"><img src="<%= img %>" alt=""></span></div>
+					<span class="button"><input type="button" value="重新產生"></span>
+					<span class="button"><input type="button" value="語音撥放"></span>
+				</span>
+			</div>
+			<div class="fieldset">
+				<span class="submit"><input type="submit" value="登入"></span>
+			</div>
+		</div>
+		<div class="list"><ul data-index="1" data-child="4"><li data-index="1" class="facebook"><span><a href="#">Login with Facebook</a></span></li><li data-index="2" class="google"><span><a href="#">Login with Google</a></span></li><li data-index="3" class="twitter"><span><a href="#">Login with Twitter</a></span></li></ul></div>
+	</div></div>
+	<!-- <div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="forget-password"><span><a href="#">忘記密碼</a></span></li></ul></div></div> -->
+</div></div>

@@ -1,0 +1,145 @@
+//文字列表
+
+//步驟================================================================
+
+.list-text.step {
+	@extend %area-page-no-header;
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		ul {
+			
+			&:after {
+				@extend %clear;
+			}
+		}
+
+		li {
+			float: left;
+			padding: $interval-xs;
+			box-sizing: border-box;
+			max-width: 100%;
+
+			@include media('phone') {
+				float: none;
+			}
+
+			&.is-active {
+
+				span {
+
+					&:before, &:after {
+						background-color: $minor-color;
+					}
+				}
+			}
+		}
+
+		span {
+			$skewX: 30deg;
+
+			display: block;
+			position: relative;
+			z-index: 1;
+
+			&:before, &:after {
+				content: $content;
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: 50%;
+				left: 0;
+				background-color: $btn-bg-color;
+				z-index: -1;
+				transition: $transition;
+			}
+
+			&:before {
+				top: 0;
+				transform: skewX($skewX);
+
+				@include media('phone') {
+					transform: skewX(0);
+				}
+			}
+
+			&:after {
+				bottom: 0;
+				transform: skewX(-1 * $skewX);
+
+				@include media('phone') {
+					transform: skewX(0);
+				}
+			}
+
+			&:hover {
+
+				&:before, &:after {
+					background-color: $btn-hover-bg-color;
+				}
+			}
+		}
+
+		a {
+			@extend %ellipsis;
+			display: block;
+			max-width: 100%;
+			padding: $interval-m $interval-l;
+			color: $white;
+		}
+
+		/*i*/.mark {
+			margin-right: $interval-s;
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

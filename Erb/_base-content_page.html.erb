@@ -1,0 +1,13 @@
+<div class="group base-content" id="base-content" data-index="<%= index %>" data-type="<%= $row %>" data-child="2"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- base-module-area 模組區塊 -->
+		<%#= render partial: "/erb/base-module-area_page", locals: set({ index: 1 }) %>
+	<!-- base-module-area 結束 -->
+
+	<!-- base-page-area 內頁區塊 -->
+		<%= render partial: "/erb/base-page-area", locals: set({ index: 2 }) %>
+	<!-- base-page-area 結束 -->
+
+	</div></div>
+</div></div>

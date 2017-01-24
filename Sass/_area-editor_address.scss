@@ -1,0 +1,74 @@
+//編輯區塊
+
+//聯絡資訊================================================================
+
+.area-editor.address {
+	@extend %area-mobile-no-header;
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		@extend %article;
+		font-size: $font-size-s;
+
+		> .in {
+			
+		}
+
+		a {
+			@extend %a;
+
+			&.is-map {
+
+				&:after {
+					@include icon-font('map');
+					margin-left: $interval-s;
+				}
+			}
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

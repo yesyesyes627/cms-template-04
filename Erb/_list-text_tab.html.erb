@@ -1,0 +1,8 @@
+<div class="list-text tab <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= inner_len %>"><% inner_len.times do |i| %><% if( i == 0 ) %><li data-index="<%= i + 1 %>" class="is-active"><% else %><li data-index="<%= i + 1 %>"><% end %><span><a href="#"><%= lorem_word %></a></span></li><% end %></ul></div></div>
+</div></div>

@@ -1,0 +1,104 @@
+//簡單文字
+
+//主要標誌================================================================
+
+.simple-text.major-logo {
+	float: left;
+	position: relative;
+	z-index: 1;
+
+	@include media('mobile') {
+		float: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		background-color: $major-color;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		display: none;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		h1 {
+			@extend %reset;
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			$pic: 'major_logo.png';
+			$pic-w: image-width($pic);
+			$pic-h: image-height($pic);
+
+			@include bg-to-pic($pic, false);
+			@extend %bg-contain;
+			@extend %hide-text;
+			display: block;
+			width: $pic-w;
+			padding-bottom: ( $pic-h / $pic-w ) * 100%;
+
+			@include media('mobile') {
+				width: auto;
+				padding-bottom: $rwd-btn-size;
+				margin-left: $rwd-btn-size;
+			}
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,238 @@
+//自訂
+
+.info {
+
+	.base-mobile.is-open & {
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .ct {
+
+				> .in {
+					overflow-y: auto;
+				}
+			}
+		}
+	}
+
+	.base-mobile & {
+		@extend %area-mobile;
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				display: none;
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					height: 100vh;
+					overflow-y: hidden;
+					background-color: $light;
+				}
+			}
+		}
+	}
+
+	.base-header & {
+		background-color: $white;
+
+		> .bg-drop-layout > .in, > .in {
+			@extend %center;
+
+			> .hd {
+				display: none;
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					&:after {
+						@extend %clear;
+					}
+				}
+			}
+		}
+	}
+
+	.base-content & {
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				display: none;
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+					border-bottom: $border;
+					text-align: right;
+					margin-bottom: $interval-m;
+				}
+			}
+		}
+	}
+
+	.base-footer & {
+
+		> .bg-drop-layout > .in, > .in {
+			@extend %center;
+			padding: $interval-l 0;
+
+			> .hd {
+				display: none;
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					&:after {
+						@extend %clear;
+					}
+				}
+			}
+		}
+	}
+}
+
+.msg-tool {
+
+	.base-header & {
+		position: relative;
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+				}
+			}
+		}
+	}
+
+	.base-footer & {
+		overflow: hidden;
+
+		> .bg-drop-layout > .in, > .in {
+			@extend %area-mobile;
+			
+			> .hd {
+
+				> .in {
+
+				}
+
+				h3 {
+
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+				}
+			}
+		}
+	}
+}

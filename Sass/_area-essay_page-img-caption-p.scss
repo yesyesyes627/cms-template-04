@@ -1,0 +1,132 @@
+//文章區塊
+
+//內頁文章敘述(圖片-標題-內文)================================================================
+
+.area-essay.page-img-caption-p {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		/*a*/.div {
+			padding: $interval-l;
+			background-color: $light;
+			transition: $transition;
+			
+			&:after {
+				@extend %clear;
+			}
+
+			&:hover {
+				background-color: $light-gray;
+			}
+		}
+
+		.img {
+			float: left;
+			margin-right: $interval-m;
+
+			@include media('phone') {
+				float: none;
+				margin-right: auto;
+				margin-bottom: $interval-l;
+			}
+
+			span {
+				@extend %bg-cover;
+				display: block;
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				
+				@include media('phone') {
+					width: 100px;
+					height: 100px;
+					margin: 0 auto;
+				}
+			}
+
+			img {
+				display: none;
+			}
+		}
+
+		.essay {
+			overflow: hidden;
+		}
+
+		.caption {
+			@extend %caption;
+
+			span {
+				
+			}
+
+			a {
+
+			}
+		}
+
+		.p {
+			@extend %paragraph;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

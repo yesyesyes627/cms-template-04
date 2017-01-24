@@ -1,0 +1,117 @@
+//客製區塊
+
+//地圖================================================================
+
+.area-customize.map {
+
+	@include js(false) {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		.div {
+			margin-bottom: $interval-s;
+		}
+
+		.essay {
+			
+		}
+
+		.caption {
+			@extend %caption;
+
+			span {
+				
+			}
+
+			a {
+
+			}
+		}
+
+		.label {
+			@extend %label;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+
+		.p {
+			@extend %article-extend;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

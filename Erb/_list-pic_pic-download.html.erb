@@ -1,0 +1,55 @@
+<%
+	min_li = 4 #最少的li數量
+	max_li = 10 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="list-pic pic-download <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %> (圖片範例)</a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %><%
+			img = lorem_image('640x480')
+			title = zh_lorem_sentence
+			alt = zh_lorem_sentence
+		%><li class="is-img" data-index="<%= i + 1 %>" data-src="<%= img %>" data-sub-html="<h4><%= title %></h4><p><%= alt %></p>"><span style="background-image: url('<%= img %>')"><a href="<%= img %>"><img src="<%= img %>" alt=""></a></span></li><% end %></ul></div></div>
+</div></div>
+
+<div class="list-pic pic-download <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %> (youtube 範例)</a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %><%
+			img = img = lorem_image('640x480')
+			title = zh_lorem_sentence
+			alt = zh_lorem_sentence
+		%><li class="is-video" data-index="<%= i + 1 %>" data-src="https://www.youtube.com/embed/jO66_VQRHP4" data-poster="<%= img %>"><span style="background-image: url('<%= img %>')"><a href="https://www.youtube.com/embed/jO66_VQRHP4"><img src="<%= img %>" alt=""></a></span></li><% end %></ul></div></div>
+</div></div>
+
+<div class="list-pic pic-download <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %> (html5 video 範例)</a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %><%
+			img = img = lorem_image('640x480')
+			video = '/video/sample/sample.mp4'
+			alt = zh_lorem_sentence
+			id = zh_lorem_word
+			flag = rand(1024)
+		%><li class="is-video" data-index="<%= i + 1 %>" data-sub-html="<%= alt %>" data-html="#<%= id %><%= flag %>" data-poster="<%= img %>">
+			<div style="display:none;" class="video" id="<%= id %><%= flag %>">
+				<video class="lg-video-object lg-html5 video-js vjs-default-skin" controls preload="none">
+					<source src="/video/sample/sample.webm" type="video/webm">
+					<source src="/video/sample/sample.ogv" type="video/ogg">
+					<source src="/video/sample/sample.mp4" type="video/mp4">
+				</video>
+			</div>
+			<span style="background-image: url('<%= img %>')"><a href="<%= video %>"><img src="<%= img %>" alt=""></a></span></li><% end %></ul></div></div>
+</div></div>

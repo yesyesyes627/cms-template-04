@@ -1,0 +1,27 @@
+<div class="group base-article" id="base-article" data-index="<%= index %>" data-type="<%= $row %>" data-child="4"><div class="in">
+	<div class="hd"><div class="in">
+	</div></div>
+	<div class="ct"><div class="in">
+
+	<!--title 文章標題 -->
+		<%= render partial: "/erb/simple-text_title", locals: set({ index: 1 }) %>
+	<!-- title 結束 -->
+
+	<!-- detail 詳細資訊 -->
+		<%= render partial: "/erb/list-text_detail", locals: set({ index: 2, header_text: "詳細資訊" }) %>
+	<!-- detail 結束 -->
+
+	<!-- user-edit 使用者編輯 -->
+		<%= render partial: "/erb/area-editor_user-edit", locals: set({ index: 3 }) %>
+	<!-- user-edit 結束 -->
+
+	<!-- label 標籤 -->
+		<%= render partial: "/erb/list-text_label", locals: set({ index: 4, header_text: "文章分類" }) %>
+	<!-- label 結束 -->
+
+	<!-- icon 各種標章 -->
+		<%= render partial: "/erb/list-pic_icon", locals: set({ index: 5 }) %>
+	<!-- icon 結束 -->
+
+	</div></div>
+</div></div>

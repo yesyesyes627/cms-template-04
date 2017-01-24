@@ -1,0 +1,140 @@
+//圖片區塊
+
+//內頁圖片敘述(圖片-標籤-內文)================================================================
+
+.area-figure.page-img-label-p {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$pic_w: 150px;
+
+		> .in {
+			
+		}
+
+		/*a*/.div {
+			position: relative;
+			background-color: $light;
+			transition: $transition;
+
+			&:hover {
+				background-color: $light-gray;
+			}
+		}
+
+		.img {
+
+			span {
+				@extend %bg-cover;
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: $pic_w;
+
+				@include media('phone') {
+					position: static;
+					width: auto;
+				}
+			}
+
+			img {
+				display: none;
+
+				@include media('phone') {
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+
+		.essay {
+			padding: $interval-l;
+			padding-left: $pic_w + $interval-l;
+
+			@include media('phone') {
+				padding-left: $interval-l;
+			}
+		}
+
+		.label {
+			margin-bottom: $interval-m;
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+
+		.p {
+			@extend %paragraph;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,171 @@
+//文字列表
+
+//開放資料================================================================
+
+.list-text.open-data {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 2;
+
+	@include js(false) {
+		display: none;
+	}
+
+	@include media('mobile') {
+		display: none;
+	}
+
+	&:hover, &.is-active {
+
+		.hd {
+			background-color: $white;
+
+			a {
+				color: $major-color;
+
+				&:before {
+					@include icon-font('arrow_drop_up');
+				}
+			}
+		}
+
+		.ct {
+			display: block;
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		background-color: $light;
+		border: $border;
+		border-bottom-width: 0;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			display: block;
+			padding: $interval-s;
+			font-size: $font-size-s;
+
+			&:before {
+				@include icon-font('arrow_drop_down');
+				margin-right: $interval-xs;
+			}
+		}
+	}
+
+	.ct {
+		display: none;
+		position: absolute;
+		top: 100%;
+		top: calc(100% - 1px);
+		right: 0;
+		min-width: 120px;
+		z-index: -1;
+
+		> .in {
+
+		}
+
+		ul {
+			background-color: $white;
+			border: $border;
+			padding: $interval-m;
+		}
+
+		li {
+
+			+ li {
+				margin-top: $interval-s;
+			}
+
+			&.json {
+
+				a {
+
+					&:before {
+
+					}
+				}
+			}
+
+			&.xml {
+
+				a {
+
+					&:before {
+
+					}
+				}
+			}
+
+			&.csv {
+
+				a {
+
+					&:before {
+
+					}
+				}
+			}
+		}
+
+		span {
+			display: block;
+			text-align: left;
+		}
+
+		a {
+
+			&:before {
+				@include icon-font('cloud_download');
+				margin-right: $interval-xs;
+			}
+
+			&:hover {
+				color: $major-color;
+			}
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

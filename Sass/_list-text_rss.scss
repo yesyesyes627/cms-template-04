@@ -1,0 +1,107 @@
+//文字列表
+
+//訂閱================================================================
+
+.list-text.rss {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$rss: map-get($file-type-map, 'rss');
+		$pic: map-get($rss, 'pic');
+		$color: map-get($rss, 'color');
+
+		> .in {
+			
+		}
+
+		ul {
+
+		}
+
+		li {
+
+			a {
+				border-left-color: $color;
+
+				&:after {
+					@include icon-pic($pic);
+				}
+			}
+
+			+ li {
+				margin-top: $interval-s;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %list;
+			@extend %list-hover;
+			border-left-width: $interval-xs;
+			border-left-style: solid;
+
+			&:after {
+				margin-left: $interval-xs;
+			}
+
+			&:hover {
+				border-left-width: $interval-m;
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+			background-color: $color;
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

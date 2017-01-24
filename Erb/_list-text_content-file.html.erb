@@ -1,0 +1,19 @@
+<%
+	min_li = 1 #最少的li數量
+	max_li = 6 #最多的li數量
+
+	li_length = (min_li..max_li).to_a.sample
+%>
+
+<div class="list-text content-file <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<div class="hd"><div class="in">
+		<h4><span><a href="#"><%= lorem_word %></a></span></h4>
+	</div></div>
+	<% if ( li_length > 0 ) %>
+		<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %>
+
+					<% file_type = $file_types[rand($file_types.length)] %>
+
+					<li class="<%= file_type %>" data-index="<%= i + 1 %>"><span><a href="#" title="<%= file_type %> 格式"><%= file_type %></a></span></li><% end %></ul></div></div>
+	<% end %>
+</div></div>

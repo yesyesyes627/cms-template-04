@@ -1,0 +1,86 @@
+//簡單文字
+
+//次要標誌================================================================
+
+.simple-text.minor-logo {
+	float: left;
+
+	@include media('mobile') {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		display: none;
+
+		> .in {
+
+		}
+
+		h4 {
+
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			$pic: 'minor_logo.png';
+			$pic-w: image-width($pic);
+			$pic-h: image-height($pic);
+
+			@include bg-to-pic($pic, false);
+			@extend %bg-contain;
+			@extend %hide-text;
+			display: block;
+			width: $pic-w;
+			padding-bottom: ( $pic-h / $pic-w ) * 100%;
+		}
+
+		/*i*/.mark {
+			
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

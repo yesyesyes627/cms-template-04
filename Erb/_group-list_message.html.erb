@@ -1,0 +1,30 @@
+<%
+	essay_length = (2..4).to_a.sample
+	text_length = (3..5).to_a.sample
+	li_length = essay_length + text_length
+%>
+
+<div class="group-list message <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $list %>" data-child="<%= li_length %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h3><span><a href="#"><%= header_text %></a></span></h3>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>">
+
+			<% essay_length.times do |i| %><li data-index="<%= i + 1 %>">
+
+				<!-- message 訊息 -->
+					<%= render partial: "/erb/area-essay_message", locals: set({ }) %>
+				<!-- message 結束 -->
+				
+				</li><% end %>
+
+			<% text_length.times do |i| %><li data-index="<%= i + essay_length + 1 %>">
+
+				<!-- message 訊息 -->
+					<%= render partial: "/erb/simple-text_message", locals: set({ }) %>
+				<!-- message 結束 -->
+				
+				</li><% end %></ul></div></div>
+</div></div>

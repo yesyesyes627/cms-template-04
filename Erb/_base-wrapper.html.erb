@@ -1,0 +1,21 @@
+<div class="group base-wrapper" id="base-wrapper" data-index="<%= index %>" data-type="<%= $row %>" data-child="3"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- test 測試-->
+		<%= render partial: "/erb/sys_test" %>
+	<!-- test 結束 -->
+	
+	<!-- base-header 頁首資訊 -->
+		<%= render partial: "/erb/base-header", locals: set({ index: 1 }) %>
+	<!-- base-header 結束 -->
+
+	<!-- base-content 主要內容 -->
+		<%= render partial: "/erb/base-content_" + area, locals: set({ index: 2 }) %>
+	<!-- base-content 結束 -->
+
+	<!-- base-footer 頁尾資訊 -->
+		<%= render partial: "/erb/base-footer", locals: set({ index: 3 }) %>
+	<!-- base-footer 結束 -->
+
+	</div></div>
+</div></div>

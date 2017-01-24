@@ -1,0 +1,140 @@
+//列表群組
+
+//連結================================================================
+
+.group-list.link {
+
+	.base-module-area & {
+		@include average(4);
+
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				@extend %header;
+
+				> .in {
+
+				}
+
+				h3 {
+					
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					> ul {
+
+						> li {
+							box-sizing: border-box;
+							padding: $interval-xs;
+
+							@include len-rwd('pad', 2);
+							@include len-rwd('phone', 1);
+						}
+					}
+				}
+			}
+
+			> .ft {
+				@extend %footer;
+
+				> .in {
+
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+	}
+
+	.base-page-area & {
+		
+		> .bg-drop-layout > .in, > .in {
+
+			> .hd {
+				@extend %header;
+
+				> .in {
+
+				}
+
+				h3 {
+					
+				}
+
+				span {
+						
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+
+				> .in {
+
+					> ul {
+
+						> li {
+
+							+ li {
+								margin-top: $interval-s;
+							}
+						}
+					}
+				}
+			}
+
+			> .ft {
+				@extend %footer;
+
+				> .in {
+
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+	}
+}

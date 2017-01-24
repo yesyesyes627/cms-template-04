@@ -1,0 +1,152 @@
+//文章區塊
+
+//訊息(台中市民政局 - hyc)================================================================
+
+.area-essay.message02 {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+
+		}
+
+		/*a*/.div {
+			display: block;
+			background-color: $white;
+
+			&:hover {
+
+				.caption {
+					background-color: $black;
+				}
+
+				.p {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		$caption_h: 36px;
+
+		.img {
+			position: relative;
+
+			span {
+				display: block;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				min-height: $caption_h;
+			}
+		}
+
+		.essay {
+			position: relative;
+		}
+
+		.caption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 100%;
+			padding: 0 $interval-m;
+			background-color: $black;
+			background-color: rgba($black, $opacity-m);
+
+			span {
+				display: block;
+				@extend %ellipsis;
+				line-height: $caption_h;
+				color: $white;
+				text-align: center;
+			}
+		}
+
+		.label {
+
+			ul {
+				padding: $interval-m;
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			@extend %mark;
+		}
+
+		.p {
+			padding: $interval-m;
+			padding-bottom: $interval-l;
+
+			p {
+				display: block;
+			}
+
+			span {
+				$lh: 26px;
+				$ll: 5;
+
+				display: block;
+				height: $ll * $lh;
+				line-height: $lh;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.ft {
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

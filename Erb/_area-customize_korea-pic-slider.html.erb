@@ -1,0 +1,34 @@
+<%
+	img = lorem_image('480x320')
+%>
+
+<div class="area-customize korea-pic-slider <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="slider-box">
+			<div class="pic-area">
+				<a href="#" class="div">
+					<div class="img"><span><img src="#"></span></div>
+					<div class="essay">
+						<div class="figcaption"><span></span></div>
+						<div class="p">
+							<p><span></span></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-area"><ul><% 5.times do |i| %><li>
+					<span style="background-image: url('<%= img %>')">
+						<a href="#1" title="第 <%= i + 1 %> 張標題">
+							<img src="<%= img %>" alt="第 <%= i + 1 %> 張說明" title="第 <%= i + 1 %> 張標題">
+						</a>
+					</span>
+				</li><% end %></ul></div>
+		</div>
+	</div></div>
+	<div class="ft"><div class="in"><ul data-index="1" data-child="1"><li data-index="1" class="more"><span><a href="#">更多</a></span></li></ul></div></div>
+</div></div>

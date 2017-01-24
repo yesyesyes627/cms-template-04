@@ -1,0 +1,17 @@
+<div class="group base-extend" id="base-extend" data-index="<%= index %>" data-type="<%= $row %>" data-child="5"><div class="in">
+	<div class="ct"><div class="in">
+
+	<!-- share 分享 -->
+		<%= render partial: "/erb/list-text_share", locals: set({ index: 1, header_text: "分享" }) %>
+	<!-- share 結束 -->
+
+	<!-- btn 按鈕 -->
+		<%= render partial: "/erb/simple-text_btn", locals: set({ index: 2, func_set: "{'anchor':{}}", header_text: "回到最頂" }) %>
+	<!-- btn 結束 -->
+
+	<!-- query 詢問 -->
+		<%#= render partial: "/erb/simple-text_query", locals: set({ index: 3, func_set: "{'query':{'msg':'測試文字','speed':300,'interval':1,'cookieName':'test5','cookieValue':'_','hideBtn':true}}", header_text: "詢問" }) %>
+	<!-- query 結束 -->
+
+	</div></div>
+</div></div>

@@ -1,0 +1,310 @@
+//客製區塊
+
+//視訊(列表 - 彥專)================================================================
+
+.area-customize.video-list02 {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			background-color: $light;
+			padding: $interval-l;
+
+			&:after {
+				@extend %clear;
+			}
+
+			> .div {
+				width: 50%;
+				float: left;
+
+				@include media('mobile') {
+					width: auto;
+					float: none;
+				}
+
+				.video {
+					@include bg-to-pic('icon-pic/icon-w-video.png', false);
+					margin-bottom: $interval-m;
+
+					@include media('center') {
+						width: auto;
+						float: none;
+					}
+
+					video {
+						width: 100%;
+					}
+
+					source {
+
+					}
+
+					object {
+						min-height: 45px;
+						width: 100%;
+						margin-bottom: $interval-s;
+					}
+
+					span {
+						display: block;
+						padding: $interval-s;
+						background-color: $light;
+					}
+
+					a {
+						text-decoration: underline;
+
+						&:hover {
+							text-decoration: none;
+						}
+					}
+
+					iframe {
+						display: block;
+						width: 100%;
+					}
+				}
+
+				.essay {
+					margin-top: $interval-l;
+				}
+
+				.caption {
+					font-size: $font-size-l;
+					color: $major-color;
+					text-decoration: underline;
+					margin-bottom: $interval-l;
+
+					span {
+						
+					}
+				}
+
+				.p {
+					@extend %article;
+					margin-top: $interval-m;
+
+					p {
+
+					}
+
+					span {
+
+					}
+				}
+
+				.label {
+					margin-top: $interval-m;
+
+					ul {
+
+					}
+
+					li {
+
+					}
+
+					span {
+
+					}
+				}
+
+				/*i*/.mark {
+
+				}
+			}
+
+			> .list {
+				overflow: hidden;
+				padding-left: $interval-l;
+
+				@include media('mobile') {
+					margin-top: $interval-l;
+					padding-left: 0;
+				}
+
+				ul {
+
+				}
+
+				li {
+
+					+ li {
+						margin-top: $interval-l;
+
+						@include media('phone') {
+							border-top: $border;
+							margin-top: 0;
+						}
+					}
+				}
+
+				/*a*/.div {
+					display: block;
+					position: relative;
+					background-color: $white;
+					transition: $transition;
+
+					&:hover {
+						background-color: hsl( hue($major-color), saturation($major-color), lightness($light));
+
+						.figcaption {
+							color: $major-color;
+						}
+					}
+				}
+
+				$pic_w: 150px;
+
+				.img {
+
+					@include media('phone') {
+						display: none;
+					}
+
+					span {
+						@extend %bg-cover;
+						position: absolute;
+						display: block;
+						top: 0;
+						left: 0;
+						bottom: 0;
+						width: $pic_w;
+					}
+
+					img {
+						display: none;
+					}
+				}
+
+				.essay {
+					margin-left: $pic_w;
+					padding: $interval-m;
+
+					@include media('phone') {
+						margin-left: 0;
+					}
+				}
+
+				.figcaption {
+					$lh: 28px;
+
+					line-height: $lh;
+					height: $lh * 2;
+					font-size: $font-size-l;
+					overflow: hidden;
+					transition: $transition;
+
+					@include media('phone') {
+						height: auto;
+					}
+
+					span {
+						
+					}
+				}
+
+				.label {
+					@extend %label;
+
+					@include media('phone') {
+						display: none;
+					}
+
+					ul {
+
+					}
+
+					li {
+
+					}
+
+					span {
+						display: block;
+
+						&:before {
+							content: $content;
+							display: inline-block;
+							vertical-align: middle;
+							width: 14px;
+							height: 14px;
+							margin-right: $interval-s;
+							background-image: image-url('icon-pic/clock.png');
+						}
+					}
+				}
+
+				/*i*/.mark {
+					font-size: $font-size-s;
+				}
+			}
+		}
+	}
+
+	.ft {
+
+		> .in {
+			background-color: $light;
+			padding: $interval-l;
+			padding-top: 0;
+		}
+
+		ul {
+			margin-left: 50%;
+
+			@include media('mobile') {
+				margin-left: 0;
+			}
+		}
+
+		li {
+			padding-left: $interval-l;
+
+			@include media('mobile') {
+				padding-left: 0;
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			display: block;
+			background-color: $white;
+			text-align: center;
+			padding: $interval-m;
+			color: $major-color;
+			transition: $transition;
+
+			&:hover {
+				background-color: hsl( hue($major-color), saturation($major-color), lightness($light));
+			}
+		}
+	}
+}

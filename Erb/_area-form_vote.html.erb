@@ -1,0 +1,47 @@
+<%
+	min_radio = 2 #最少的radio數量
+	max_radio = 4 #最多的radio數量
+
+	radio_length = (min_radio..max_radio ).to_a.sample
+%>
+
+<div class="area-form vote <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $module %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+	<% if header_text %>
+		<div class="hd"><div class="in">
+			<h4><span><a href="#"><%= header_text %></a></span></h4>
+		</div></div>
+	<% end %>
+	<div class="ct"><div class="in">
+		<div class="essay">
+			<div class="caption"><span><%= zh_lorem_sentence %></span></div>
+			<div class="label"><ul><li><span><i class="mark"><%= lorem_word %></i></span></li></ul></div>
+			<div class="p">
+				<p><span><%= zh_lorem_paragraph %></span></p>
+			</div>
+		</div>
+		<div class="form">
+			<div class="fieldset">
+
+				<% radio_length.times do |i| %>
+					<span class="radio">
+						<input id="vote_<%= i %>" type="radio" name="vote">
+						<label for="vote_<%= i %>"><%= zh_lorem_sentence %></label>
+					</span>
+				<% end %>
+
+				<% radio_length.times do |i| %>
+					<span class="checkbox">
+						<input id="checkbox_<%= i %>" type="checkbox" name="vote">
+						<label for="checkbox_<%= i %>"><%= zh_lorem_sentence %></label>
+					</span>
+				<% end %>
+			</div>
+			<div class="fieldset">
+				<span class="submit"><input type="submit" value="送出"></span>
+				<span class="reset"><input type="reset" value="清除"></span>
+				<span class="button"><input type="button" value="上一步"></span>
+				<span class="button"><input type="button" value="下一步"></span>
+			</div>
+		</div>
+	</div></div>
+</div></div>

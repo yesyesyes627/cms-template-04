@@ -1,0 +1,239 @@
+//簡單文字
+
+//詢問================================================================
+
+.simple-text.query {
+
+	.base-wrapper & {
+
+		> .bg-drop-layout > .in, > .in {
+			display: block;
+			padding: $interval-m $interval-s;
+		}
+
+		.hd {
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+			display: inline;
+			vertical-align: middle;
+
+			@include media('mobile') {
+				display: block;
+			}
+
+			> .in {
+				display: inline;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			span {
+
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: $interval-s;
+
+			@include media('mobile') {
+				display: block;
+				margin-top: $interval-m;
+				border-top: $border;
+				border-top-color: $light-gray;
+				padding-top: $interval-m;
+			}
+
+			> .in {
+				display: inline-block;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			ul {
+				display: inline-block;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			li {
+				display: inline-block;
+
+				+ li {
+					margin-left: $interval-xs;
+				}
+				
+				&.deny {
+
+					a {
+						@extend %btn-imp;
+					}
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %btn;
+			}
+		}
+	}
+
+	.base-extend & {
+		display: none;
+		position: fixed;
+		right: $interval-l;
+		bottom: $interval-l;
+		left: $interval-l;
+
+		&.is-show {
+			display: block;
+		}
+
+		> .bg-drop-layout > .in, > .in {
+			@extend %center;
+			position: relative;
+			padding: $interval-l;
+			border: $border;
+			border-color: $gray;
+			text-align: center;
+			background-color: $light;
+			box-sizing: border-box;
+			box-shadow: $box-shadow;
+
+			@include media('phone') {
+				padding: $interval-m;
+				padding-top: $interval-l;
+			}
+		}
+
+		.hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h4 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		.ct {
+			display: inline-block;
+			vertical-align: middle;
+
+			@include media('mobile') {
+				display: block;
+				text-align: justify;
+			}
+
+			> .in {
+				display: inline-block;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			span {
+
+			}
+
+			/*i*/.mark {
+				
+			}
+		}
+
+		.ft {
+			display: inline-block;
+			vertical-align: middle;
+
+			@include media('mobile') {
+				display: block;
+				margin-top: $interval-m;
+				border-top: $border;
+				border-top-color: $light-gray;
+				padding-top: $interval-m;
+			}
+
+			> .in {
+				display: inline-block;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			ul {
+				display: inline-block;
+				padding: $interval-s;
+
+				@include media('mobile') {
+					display: block;
+				}
+			}
+
+			li {
+				display: inline-block;
+
+				+ li {
+					margin-left: $interval-xs;
+				}
+				
+				&.deny {
+
+					a {
+						@extend %btn-imp;
+					}
+				}
+			}
+
+			span {
+				display: block;
+			}
+
+			a {
+				@extend %btn;
+			}
+		}
+	}
+}

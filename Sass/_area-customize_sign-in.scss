@@ -1,0 +1,246 @@
+//客製區塊
+
+//登入與申請帳號(彥專)================================================================
+
+.area-customize.sign-in {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$bg_c: hsl( hue($major-color), saturation($major-color), lightness(#f8f8f8));
+		$c: hsl( hue($major-color), saturation($major-color), lightness(#555));
+
+		padding: $interval-xl $interval-xl * 2;
+		border: $border;
+		margin-top: $interval-l;
+		background-color: $bg_c;
+
+		@include media('phone') {
+			padding: $interval-xl
+		}
+
+		> .in {
+
+		}
+
+		.legend {
+			$i_w: 50px;
+
+			position: relative;
+			padding-left: $i_w + $interval-l;
+			padding-bottom: $interval-l;
+			border-bottom: 1px solid $c;
+			margin-bottom: $interval-l;
+			color: $c;
+
+			&:before {
+				content: $content;
+				position: absolute;
+				display: block;
+				width: $i_w;
+				left: 0;
+				top: 0;
+				bottom: $interval-l;
+				max-height: 60px;
+				background-color: mix($c, $gray);
+				background-repeat: no-repeat;
+				background-image: image-url('icon-pic/info.png');
+				background-position: center;
+			}
+
+			span {
+				display: block;
+			}
+		}
+
+		$label_w: 80px;
+		
+		.fieldset {
+			position: relative;
+			padding-left: $label_w;
+			line-height: 30px;
+
+			@include media('phone') {
+				padding-left: 0;
+			}
+
+			+ .fieldset {
+				margin-top: $interval-l;
+			}
+
+			label {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $label_w;
+				text-align: right;
+				box-sizing: border-box;
+				padding: 0 $interval-m;
+
+				@include media('phone') {
+					position: static;
+					top: auto;
+					left: auto;
+					width: auto;
+					text-align: left;
+					padding: 0;
+				}
+			}
+		}
+
+		/*span*/.text {
+
+			[type="text"] {
+
+				@include media('center') {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			/*i*/.mark {
+				display: inline-block;
+				font-size: $font-size-s;
+				color: $deep-gray;
+			}
+
+			img {
+				vertical-align: middle;
+			}
+
+			[type="button"] {
+				vertical-align: middle;
+			}
+		}
+
+		/*span*/.password {
+
+			input {
+				
+				@include media('center') {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			/*i*/.mark {
+				display: inline-block;
+				font-size: $font-size-s;
+				color: $deep-gray;
+			}
+		}
+
+		@each $key, $map in $share-map {
+
+			$pic: map-get($map, 'pic');
+			$color: map-get($map, 'color');
+			$deep-color: deeper($color);
+
+			.#{$key} {
+
+				a {
+					background-color: $color;
+					border: $border-width $border-style $deep-color;
+					text-decoration: none;
+
+					&:before {
+						@include icon-pic('#{$pic}');
+					}
+
+					&:hover {
+						background-color: $deep-color;
+					}
+				}
+			}
+		}
+
+		.facebook, .google {
+
+			a {
+				display: block;
+				padding: $interval-s;
+				color: $white;
+				transition: $transition;
+				text-align: center;
+
+				&:before {
+					margin-right: $interval-s;
+				}
+			}
+		}
+
+		.facebook {
+
+			a {
+
+			}
+		}
+
+		.google {
+			margin-top: $interval-m;
+
+			a {
+				
+			}
+		}
+	}
+
+	.ft {
+		position: absolute;
+		top: $interval-l;
+		right: 0;
+
+		> .in {
+
+		}
+
+		ul {
+			text-align: right;
+			margin-top: $interval-xs;
+		}
+
+		li {
+			display: inline-block;
+			margin: $interval-xs;
+
+			&.submit {
+
+				a {
+					@extend %btn-imp;
+				}
+			}
+		}
+
+		span {
+			display: block;
+		}
+
+		a {
+			@extend %btn;
+			padding: $interval-m $interval-xl;
+			font-size: $font-size-l;
+		}
+	}
+}

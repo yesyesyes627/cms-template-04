@@ -1,0 +1,9 @@
+<%= render partial: "/erb/sys_variable" %>
+
+<!-- album 相簿 -->
+	<%= render partial: "/erb/list-pic_album", locals: set({ header_text: "相簿(圖片列表)" }) %>
+<!-- album 結束 -->
+
+<!-- album 相簿 -->
+	<%= render partial: "/erb/group-list_album", locals: set({ header_text: "相簿(相簿列表)", inner: "/erb/area-figure_album" }) %>
+<!-- album 結束 -->
