@@ -1,5 +1,9 @@
 <%= render partial: "/erb/sys_variable" %>
 
+<!-- page-search 內頁搜尋 -->
+	<%= render partial: "/erb/area-form_page-search", locals: set({ header_text: "頁面搜尋", func_set: "{'reset':{},'toggleBtn':{'cookie':'true'}}" }) %>
+<!-- page-search 結束 -->
+
 <!-- link 連結 -->
 	<%= render partial: "/erb/list-text_link", locals: set({ header_text: "文字列表" }) %>
 <!-- link 結束 -->
