@@ -103,7 +103,7 @@
 		}
 	}
 
-	.base-header & {
+	.base-extend & {
 		$min-setLen: 2;
 		$max-setLen: 8;
 
@@ -170,9 +170,9 @@
 			a {
 				@extend %ellipsis;
 				display: block;
-				padding: $interval-s;
+				padding: $interval-m;
 				transition: $transition;
-				font-size: $font-size-l;
+				border-radius: $border-radius;
 
 				&:hover {
 					background-color: $minor-color;

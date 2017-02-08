@@ -55,11 +55,16 @@
 		}
 	}
 
-	.base-header & {
-		background-color: $white;
+	.base-extend & {
+		background-color: $major-color;
 
 		> .bg-drop-layout > .in, > .in {
 			@extend %center;
+			padding: $interval-xs 0;
+
+			@include media('mobile') {
+				display: none;
+			}
 
 			> .hd {
 				display: none;
@@ -84,10 +89,7 @@
 			> .ct {
 
 				> .in {
-
-					&:after {
-						@extend %clear;
-					}
+					text-align: right;
 				}
 			}
 		}
@@ -129,10 +131,16 @@
 	}
 
 	.base-footer & {
+		background-color: $deep-gray;
+		color: $white;
 
 		> .bg-drop-layout > .in, > .in {
 			@extend %center;
 			padding: $interval-l 0;
+
+			@include media('mobile') {
+				padding: $interval-l;
+			}
 
 			> .hd {
 				display: none;

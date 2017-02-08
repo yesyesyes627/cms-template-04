@@ -37,7 +37,12 @@
 		}
 
 		a {
-			@extend %a;
+			color: $white;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
 
 			&.is-map {
 

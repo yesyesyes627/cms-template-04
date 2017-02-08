@@ -1,17 +1,41 @@
 <div class="group base-extend" id="base-extend" data-index="<%= index %>" data-type="<%= $row %>" data-child="5"><div class="in">
 	<div class="ct"><div class="in">
 
-	<!-- share 分享 -->
-		<%= render partial: "/erb/list-text_share", locals: set({ index: 1, header_text: "分享" }) %>
-	<!-- share 結束 -->
+	<!-- accesskey 導盲磚 -->
+		<%= render partial: "/erb/simple-text_accesskey", locals: set({ access_key: "U", access_title: "上方選單連結區，此區塊列有本網站的主要連結", header_text: "導盲磚" }) %>
+	<!-- accesskey 結束 -->
 
-	<!-- btn 按鈕 -->
-		<%= render partial: "/erb/simple-text_btn", locals: set({ index: 2, func_set: "{'anchor':{}}", header_text: "回到最頂" }) %>
-	<!-- btn 結束 -->
+	<!-- group-info 資訊群組 -->
+		<div class="group info" data-index="1" data-type="<%= $row %>" data-child="2"><div class="in">
+			<div class="ct"><div class="in">
 
-	<!-- query 詢問 -->
-		<%#= render partial: "/erb/simple-text_query", locals: set({ index: 3, func_set: "{'query':{'msg':'測試文字','speed':300,'interval':1,'cookieName':'test5','cookieValue':'_','hideBtn':true}}", header_text: "詢問" }) %>
-	<!-- query 結束 -->
+			<!-- msg-tool 資訊與工具群組 -->
+				<div class="group msg-tool" data-index="2" data-type="<%= $row %>" data-child="4"><div class="in">
+					<div class="ct"><div class="in">
+
+					<!-- link 連結 -->
+						<%= render partial: "/erb/list-text_link", locals: set({ index: 1, header_text: "上方連結" }) %>
+					<!-- link 結束 -->
+
+					<!-- font-size 字級 -->
+						<%= render partial: "/erb/list-text_font-size", locals: set({ index: 2, func_set: "{'fontSize':{'defaultItem': 'medium'}}", header_text: "字級" }) %>
+					<!-- font-size 結束 -->
+
+					</div></div>
+				</div></div>
+			<!-- msg-tool 結束 -->
+
+			</div></div>
+		</div></div>
+	<!-- group-info 結束 -->
+
+	<!-- logo 主要標誌 -->
+		<%= render partial: "/erb/simple-text_major-logo", locals: set({ index: 1, header_text: "標誌" }) %>
+	<!-- logo 結束 -->
+
+	<!-- nav 選單 -->
+		<%= render partial: "/erb/group-list_nav", locals: set({ index: 2, func_set: "{'hud':{},'majorNavHorizontal':{},'setNavWidth':{}}", header_text: "主選單", inner: "/erb/list-text_nav" }) %>
+	<!-- nav 結束 -->
 
 	</div></div>
 </div></div>

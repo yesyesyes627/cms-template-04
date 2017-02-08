@@ -86,17 +86,13 @@
 		}
 	}
 
-	.base-header & {
-		position: absolute;
-		top: 7px;
-		right: 90px;
+	.base-extend & {
+		display: inline-block;
+		vertical-align: middle;
+		color: $white;
 
 		@include js(false) {
 			right: 10px;
-		}
-
-		@include media('mobile') {
-			display: none;
 		}
 
 		> .bg-drop-layout > .in, > .in {
@@ -136,28 +132,35 @@
 			li {
 				display: inline-block;
 				vertical-align: middle;
+				border-left: 1px solid $white;
+				border-right: 1px solid $white;
 				
 				+ li {
-
-					&:before {
-						content: ' | ';
-						vertical-align: middle;
-					}
+					border-left: 0;
 				}
 			}
 
 			span {
-				display: inline-block;
-				vertical-align: middle;
+				display: block;
+				padding: 0 $interval-xs;
 			}
 
 			a {
 				display: block;
-				font-size: $font-size-xs;
+				padding: 0 $interval-m;
+				line-height: 26px;
+				border-radius: $border-radius;
+				transition: $transition;
+				font-size: $font-size-s;
+
+				&:hover {
+					color: inherit;
+					background-color: deeper($major-color);
+				}
 			}
 
 			/*i*/.mark {
-				@extend %mark;
+				display: none;
 			}
 		}
 
@@ -270,13 +273,19 @@
 	}
 
 	.base-footer & {
+		margin-bottom: $interval-m;
+		color: $minor-color;
+
+		@include js(false) {
+			right: 10px;
+		}
 
 		@include media('mobile') {
 			display: none;
 		}
 
 		> .bg-drop-layout > .in, > .in {
-
+			
 		}
 
 		.hd {
@@ -314,25 +323,30 @@
 				vertical-align: middle;
 				
 				+ li {
-
-					&:before {
-						content: ' | ';
-						vertical-align: middle;
-					}
+					border-left: 1px solid $minor-color;
 				}
 			}
 
 			span {
-				display: inline-block;
-				vertical-align: middle;
+				display: block;
+				padding: 0 $interval-xs;
 			}
 
 			a {
 				display: block;
+				padding: $interval-xs $interval-m;
+				border-radius: $border-radius;
+				transition: $transition;
+				font-size: $font-size-s;
+
+				&:hover {
+					color: inherit;
+					background-color: $deep;
+				}
 			}
 
 			/*i*/.mark {
-				
+				display: none;
 			}
 		}
 

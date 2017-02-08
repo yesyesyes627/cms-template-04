@@ -4,7 +4,7 @@
 
 .base-module-area {
 	@extend %area-module;
-	margin: $interval-m;
+	padding: $interval-m;
 
 	> .in {
 

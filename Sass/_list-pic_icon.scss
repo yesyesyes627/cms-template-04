@@ -95,8 +95,7 @@
 	}
 
 	.base-footer & {
-		margin-top: 0;
-		float: right;
+		margin-top: $interval-m;
 
 		@include media('mobile') {
 			display: none;
@@ -139,6 +138,10 @@
 			li {
 				display: inline-block;
 				vertical-align: top;
+
+				+ li {
+					margin-left: $interval-s;
+				}
 
 				&.wcag {
 

@@ -3,15 +3,28 @@
 //主要內容================================================================
 
 .base-content {
-	padding: $interval-l 0;
-	margin-bottom: $interval-xl;
+	@extend %center;
+	background-color: $deep;
+	background-color: rgba($deep, $opacity-h);
+	margin-bottom: 30px;
+	border-radius: 0 0 $border-radius $border-radius;
+
+	@include rwd(1080) {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	@include media('mobile') {
+		margin-right: $interval-m;
+		margin-left: $interval-m;
+	}
 
 	> .in {
-		@extend %center;
-		background-color: $white;
-		border: $border;
+		padding: $interval-m;
+		padding-top: 0;
 
 		> .hd {
+			display: none;
 
 			> .in {
 
@@ -27,6 +40,7 @@
 		}
 
 		> .ct {
+			background-color: $white;
 
 			> .in {
 

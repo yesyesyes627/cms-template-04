@@ -3,6 +3,8 @@
 //瀏覽人次================================================================
 
 .simple-text.visit-count {
+	margin: $interval-s 0;
+	font-size: $font-size-s;
 
 	> .bg-drop-layout > .in, > .in {
 

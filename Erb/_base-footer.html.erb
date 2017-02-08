@@ -6,55 +6,36 @@
 	<!-- accesskey 結束 -->
 
 	<!-- btn 按鈕 -->
-		<%= render partial: "/erb/simple-text_btn", locals: set({ index: 1, func_set: "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .area-customize.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close'}}", header_text: "收合選單" }) %>
+		<%= render partial: "/erb/simple-text_btn", locals: set({ index: 1, func_set: "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close'}}", header_text: "收合選單" }) %>
 	<!-- btn 結束 -->
 
 	<!-- nav 選單 -->
 		<%= render partial: "/erb/group-list_nav", locals: set({ index: 2, header_text: "主選單", inner: "/erb/list-text_nav" }) %>
 	<!-- nav 結束 -->
 
-	<!-- address 聯絡資訊編輯 -->
-		<%= render partial: "/erb/area-customize_nav", locals: set({ index: 3 }) %>
-	<!-- address 結束 -->
-
 	<!-- group-info 資訊群組 -->
 		<div class="group info" data-index="4" data-type="<%= $row %>" data-child="3"><div class="in">
 			<div class="ct"><div class="in">
 
-			<!-- minor-logo 次要標誌 -->
-				<%= render partial: "/erb/simple-text_minor-logo", locals: set({ index: 1, header_text: "標誌" }) %>
-			<!-- minor-logo 結束 -->
+			<!-- link 連結 -->
+				<%= render partial: "/erb/list-text_link", locals: set({ index: 1, header_text: "下方連結" }) %>
+			<!-- link 結束 -->
+
+			<!-- update-time 更新時間 -->
+				<%= render partial: "/erb/simple-text_update-time", locals: set({ index: 2, header_text: "更新時間" }) %>
+			<!-- update-time 結束 -->
+
+			<!-- visit-count 瀏覽人次 -->
+				<%= render partial: "/erb/simple-text_visit-count", locals: set({ index: 3, header_text: "瀏覽人次" }) %>
+			<!-- visit-count 結束 -->
+
+			<!-- address 聯絡資訊編輯 -->
+				<%= render partial: "/erb/area-editor_address", locals: set({ index: 4, func_set: "{'linkToMap':{'bindSelector':'.map','linkClass':'is-map'}}", header_text: "聯絡資訊" }) %>
+			<!-- address 結束 -->
 
 			<!-- icon 各種標章 -->
 				<%= render partial: "/erb/list-pic_icon", locals: set({ index: 2, header_text: "標章" }) %>
 			<!-- icon 結束 -->
-
-			<!-- group-msg-tool 資訊與工具群組 -->
-				<div class="group msg-tool" data-index="4" data-type="<%= $row %>" data-child="3"><div class="in">
-					<div class="hd"><div class="in">
-						<h3><span><a href="#"></a></span></h3>
-					</div></div>
-					<div class="ct"><div class="in">
-
-					<!-- link 連結 -->
-						<%= render partial: "/erb/list-text_link", locals: set({ index: 1, header_text: "下方連結" }) %>
-					<!-- link 結束 -->
-
-					<!-- update-time 更新時間 -->
-						<%= render partial: "/erb/simple-text_update-time", locals: set({ index: 2, header_text: "更新時間" }) %>
-					<!-- update-time 結束 -->
-
-					<!-- visit-count 瀏覽人次 -->
-						<%= render partial: "/erb/simple-text_visit-count", locals: set({ index: 3, header_text: "瀏覽人次" }) %>
-					<!-- visit-count 結束 -->
-
-					<!-- address 聯絡資訊編輯 -->
-						<%= render partial: "/erb/area-editor_address", locals: set({ index: 4, func_set: "{'linkToMap':{'bindSelector':'.map','linkClass':'is-map'}}", header_text: "聯絡資訊" }) %>
-					<!-- address 結束 -->
-
-					</div></div>
-				</div></div>
-			<!-- group-msg-tool 結束 -->
 
 			</div></div>
 		</div></div>

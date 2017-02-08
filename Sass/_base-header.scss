@@ -3,10 +3,28 @@
 //頁首資訊================================================================
 
 .base-header {
+	@extend %center;
+	background-color: $deep;
+	background-color: rgba($deep, $opacity-h);
+	margin-top: 30px;
+	border-radius: $border-radius $border-radius 0 0;
+
+	@include rwd(1080) {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+
+	@include media('mobile') {
+		margin-top: 0;
+		margin-right: $interval-m;
+		margin-left: $interval-m;
+	}
 
 	> .in {
+		padding: $interval-m;
 
 		> .hd {
+			display: none;
 
 			> .in {
 
@@ -24,7 +42,7 @@
 		> .ct {
 
 			> .in {
-
+				text-align: right;
 			}
 		}
 	}

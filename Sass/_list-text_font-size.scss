@@ -3,15 +3,10 @@
 //字級================================================================
 
 .list-text.font-size {
-	position: absolute;
-	top: 6px;
-	right: 10px;
+	display: inline-block;
+	vertical-align: middle;
 
 	@include js(false) {
-		display: none;
-	}
-
-	@include media('mobile') {
 		display: none;
 	}
 
@@ -58,9 +53,10 @@
 
 				span {
 
-					a {
-						@include bg-to-pic('icon-pic/font-smail.png');
-					}
+				}
+
+				a {
+					background-image: image-url('icon-pic/font-smail_is-active.png');
 				}
 			}
 
@@ -68,9 +64,10 @@
 
 				span {
 
-					a {
-						@include bg-to-pic('icon-pic/font-medium.png');
-					}
+				}
+
+				a {
+					background-image: image-url('icon-pic/font-medium_is-active.png');
 				}
 			}
 
@@ -78,20 +75,17 @@
 
 				span {
 
-					a {
-						@include bg-to-pic('icon-pic/font-large.png');
-					}
+				}
+
+				a {
+					background-image: image-url('icon-pic/font-large_is-active.png');
 				}
 			}
 
 			&.is-active {
 
-				span {
-
-					a {
-						border-color: $minor-color;
-						background-color: $minor-color;
-					}
+				a {
+					background-color: $minor-color;
 				}
 			}
 		}
@@ -103,9 +97,14 @@
 		a {
 			@extend %hide-text;
 			display: block;
-			border-width: 2px;
-			border-style: solid;
-			border-color: transparent;
+			width: 26px;
+			height: 26px;
+			border-radius: $border-radius;
+			transition: $transition;
+
+			&:hover {
+				background-color: deeper($major-color);
+			}
 		}
 
 		/*i*/.mark {

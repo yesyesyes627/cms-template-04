@@ -4,10 +4,9 @@
 
 .list-text.share {
 
-	.base-extend & {
-		position: fixed;
-		top: 200px;
-		left: $interval-l;
+	.base-header & {
+		position: absolute;
+		left: 100%;
 
 		@include media('mobile') {
 			display: none;
@@ -49,6 +48,10 @@
 
 			li {
 
+				+ li {
+					margin-top: $interval-s;
+				}
+
 				@each $key, $map in $share-map {
 
 					$pic: map-get($map, 'pic');
@@ -60,11 +63,18 @@
 						}
 
 						a {
-							@include icon-pic('#{$pic}');
-							background-color: $color;
+
+							&:after {
+								background-image: image-url('icon-pic/share-b-#{$pic}');
+							}
 
 							&:hover {
-								background-color: deeper($color);
+								background-color: $color;
+
+								&:after {
+									background-image: image-url('icon-pic/share-w-#{$pic}');
+									background-color: deeper($color);
+								}
 							}
 						}
 					}
@@ -77,8 +87,24 @@
 
 			a {
 				@extend %hide-text;
-				display: block !important;
+				display: block;
+				padding-left: 0;
+				width: 26px;
 				transition: $transition;
+				background-color: $light;
+
+				&:after {
+					content: $content;
+					display: block;
+					height: 26px;
+					width: 26px;
+					transition: $transition;
+					background-color: $white;
+				}
+
+				&:hover {
+					padding-left: 4px;
+				}
 			}
 
 			/*i*/.mark {
@@ -165,8 +191,7 @@
 						}
 
 						a {
-							@include icon-pic('#{$pic}', false);
-							height: 40px;
+							background-image: image-url('icon-pic/share-w-#{$pic}');
 							background-color: $color;
 						}
 					}
@@ -179,8 +204,10 @@
 
 			a {
 				@extend %hide-text;
-				display: block !important;
-				transition: $transition;
+				display: block;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
 			}
 
 			/*i*/.mark {

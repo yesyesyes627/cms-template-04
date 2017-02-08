@@ -3,7 +3,13 @@
 //頁尾資訊================================================================
 
 .base-footer {
-	background-color: $white;
+	padding-top: 60px;
+	background-color: $deep;
+	background-color: rgba($deep, $opacity-h);
+
+	@include media('mobile') {
+		margin-top: 10px;
+	}
 
 	> .in {
 

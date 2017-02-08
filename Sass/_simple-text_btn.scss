@@ -69,8 +69,12 @@
 
 			a {
 				display: block;
+				position: relative;
+				top: 10px;
+				left: 10px;
 				width: $rwd-btn-size;
 				font-size: $font-size-xl;
+				border-radius: 50%;
 				background-color: deeper($major-color);
 				
 				&:before {
@@ -123,7 +127,7 @@
 	}
 
 	.base-wrapper & {
-		border-bottom: $interval-xs solid $deep-gray;
+		border-bottom: $interval-xs solid $minor-color;
 
 		@include js(false) {
 			display: none;
@@ -188,106 +192,16 @@
 
 			a {
 				@extend %btn;
+				background-color: $minor-color;
 				border-radius: $border-radius $border-radius 0 0;
+
+				&:hover {
+					background-color: deeper($minor-color);
+				}
 
 				&:before {
 					@include icon-font('arrow_drop_down');
 					margin-right: $interval-xs;
-				}
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
-
-	.base-extend & {
-		position: fixed;
-		right: 0;
-		bottom: 0;
-		left: 0;
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		> .bg-drop-layout > .in, > .in {
-			@extend %center;
-			position: relative;
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-			$pic: 'icon-pic/away-w-top.png'; //圖片
-			$btn-w: 50px;
-			$btn-h: 25px;
-
-			> .in {
-
-			}
-
-			span {
-				display: block;
-			}
-
-			a {
-				@include bg-to-pic($pic, false);
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				display: block;
-				width: $btn-w;
-				height: $btn-h;
-				background-color: $btn-bg-color;
-				opacity: $opacity-l;
-				transition: $transition;
-
-				&:hover {
-					background-color: $btn-hover-bg-color;
-					opacity: $opacity-h;
 				}
 			}
 

@@ -182,6 +182,10 @@
 	}
 
 	> .in {
+		background-image: image-url('bg_root.png');
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-color: $major-color;
 
 		> .hd {
 

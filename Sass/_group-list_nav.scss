@@ -109,9 +109,20 @@
 		}
 	}
 
-	.base-header & {
+	.base-extend & {
 		$default-len: 6;
 		$max-len: 8;
+
+		@extend %center;
+
+		@include rwd(1080) {
+			margin-right: 30px;
+			margin-left: 30px;
+		}
+
+		@include media('mobile') {
+			display: none;
+		}
 
 		@include default-min-len(4, $default-len, $max-len);
 		position: relative;
@@ -119,10 +130,6 @@
 
 		@include js(false) {
 			padding-bottom: $interval-l;
-		}
-
-		@include media('mobile') {
-			display: none;
 		}
 
 		&.is-fixed {
@@ -138,7 +145,10 @@
 		}
 
 		> .bg-drop-layout > .in, > .in {
-			background-color: $major-color;
+			background-color: $deep;
+			background-color: rgba($deep, $opacity-h);
+			border-radius: $border-radius;
+			padding: 0 $interval-l;
 
 			> .hd {
 				display: none;
@@ -190,7 +200,7 @@
 										> .hd {
 
 											a {
-												background-color: deeper($major-color);
+												background-color: $deep;
 											}
 										}
 
@@ -360,6 +370,8 @@
 		$default-len: 6;
 		$max-len: 10;
 
+		background-color: $white;
+
 		@include default-min-len(4, $default-len, $max-len);
 
 		@include media('mobile') {
@@ -395,7 +407,6 @@
 
 			> .ct {
 				padding: $interval-s 0;
-				border-bottom: $border;
 
 				> .in {
 

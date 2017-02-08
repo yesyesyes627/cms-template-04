@@ -3,11 +3,6 @@
 //固定佈局================================================================
 
 .base-wrapper {
-	background-color: $light;
-
-	@include media('mobile') {
-		margin-top: $rwd-btn-size;
-	}
 
 	> .in {
 
