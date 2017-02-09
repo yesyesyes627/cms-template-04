@@ -104,9 +104,9 @@
 //全頁文字================================================================
 	$body-font-color: $deep; //網站文字顏色
 	
-	$body-font-size-s: $font-size-s; //small
-	$body-font-size-m: $font-size-m; //medium
-	$body-font-size-l: $font-size-l; //large
+	$body-font-size-s: 0.95em !default; //small
+	$body-font-size-m: 1em !default; //medium
+	$body-font-size-l: 1.05em !default; //large
 
 //預設線條================================================================
 	$border-style: solid;

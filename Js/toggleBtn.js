@@ -95,7 +95,7 @@ define(['getNode'], function(getNode){
 		$btn.on( $set.event, function(evt){ //觸發事件
 			evt.preventDefault();
 
-			if( !$set.focusActive && $set.event !== 'click') {
+			if( !($set.focusActive && $set.bindNode === '.hd' && $set.event == 'click')) {
 				$(this).trigger(_eventNmae);
 			}
 		});
