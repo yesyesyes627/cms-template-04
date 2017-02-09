@@ -51,7 +51,7 @@ define(['getNode'], function(getNode){
 			$btn = $env.find($set.bindNode);
 		}
 
-		if( $set.focusActive && $set.bindNode === '.hd' ) { //focus 到 hd 時會啟用程式，且離開時會關閉
+		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' ) { //focus 到 hd 時會啟用程式，且離開時會關閉
 
 			var $last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1);
 
@@ -64,6 +64,8 @@ define(['getNode'], function(getNode){
 
 			$btn.on('focusin', function(){ //觸發事件
 				$btn.trigger(_eventNmae);
+
+				$btn.blur();
 			});
 		}
 
@@ -93,7 +95,9 @@ define(['getNode'], function(getNode){
 		$btn.on( $set.event, function(evt){ //觸發事件
 			evt.preventDefault();
 
-			$(this).trigger(_eventNmae);
+			if( !$set.focusActive && $set.event !== 'click') {
+				$(this).trigger(_eventNmae);
+			}
 		});
 
 		if($set.debug) {
