@@ -51,24 +51,6 @@
 		"Sub": [
 			{
 				"GroupType": "FixedModuleString",
-				"Name": "ShareBox"
-			},
-			{
-				"GroupType": "Module",
-				"Type": 0,
-				"hd": "",
-				"ct": "<span><a href=\"#\"></a></span>",
-				"ft": "",
-				"Class": "simple-text btn",
-				"func": "{'anchor':{}}"
-			}
-		]
-	},
-	{
-		"BaseName": "base-header",
-		"Sub": [
-			{
-				"GroupType": "FixedModuleString",
 				"Name": "Accesskey_U"
 			},
 			{
@@ -79,40 +61,41 @@
 				"Sub": [
 					{
 						"GroupType": "FixedModuleString",
-						"Name": "TopLog"
+						"Name": "TopLink"
 					},
 					{
-						"GroupType": "Group",
-						"Type": 3,
-						"Class": "msg-tool",
-						"func": "",
-						"Sub": [
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "TopLink"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "FontLevel",
-								"func": "{'fontSize':{}}"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "HotKeyWord"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "Search",
-								"func": "{'showDataList':{}}"
-							}
-						]
+						"GroupType": "FixedModuleString",
+						"Name": "FontLevel",
+						"func": "{'fontSize':{}}"
 					}
 				]
 			},
 			{
 				"GroupType": "FixedModuleString",
+				"Name": "TopLog"
+			},
+			{
+				"GroupType": "FixedModuleString",
 				"Name": "MagaMenu",
 				"func": "{'hud':{},'majorNavHorizontal':{},'setNavWidth':{}}"
+			}
+		]
+	},
+	{
+		"BaseName": "base-header",
+		"Sub": [
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "HotKeyWord"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "Search",
+				"func": "{'showDataList':{}}"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "ShareBox"
 			}
 		]
 	},
@@ -137,10 +120,6 @@
 				"Name": "Menu"
 			},
 			{
-				"GroupType": "FixedModuleString",
-				"Name": "Customer_Nav"
-			},
-			{
 				"GroupType": "Group",
 				"Type": 3,
 				"Class": "info",
@@ -148,36 +127,24 @@
 				"Sub": [
 					{
 						"GroupType": "FixedModuleString",
-						"Name": "FooterLog"
+						"Name": "FooterLink"
+					},
+					{
+						"GroupType": "FixedModuleString",
+						"Name": "Lastupdated"
+					},
+					{
+						"GroupType": "FixedModuleString",
+						"Name": "Footer_Visitcount"
+					},
+					{
+						"GroupType": "FixedModuleString",
+						"Name": "Footer_Info",
+						"func": "{'linkToMap':{'bindClass':'.map','linkClass':'is-map'}}"
 					},
 					{
 						"GroupType": "FixedModuleString",
 						"Name": "FooterIcon"
-					},
-					{
-						"GroupType": "Group",
-						"Type": 3,
-						"Class": "msg-tool",
-						"func": "",
-						"Sub": [
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "FooterLink"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "Lastupdated"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "Footer_Visitcount"
-							},
-							{
-								"GroupType": "FixedModuleString",
-								"Name": "Footer_Info",
-								"func": "{'linkToMap':{'bindClass':'.map','linkClass':'is-map'}}"
-							}
-						]
 					}
 				]
 			}

@@ -9,21 +9,13 @@
 		<div class="group info" data-index="1" data-type="<%= $row %>" data-child="2"><div class="in">
 			<div class="ct"><div class="in">
 
-			<!-- msg-tool 資訊與工具群組 -->
-				<div class="group msg-tool" data-index="2" data-type="<%= $row %>" data-child="4"><div class="in">
-					<div class="ct"><div class="in">
+			<!-- link 連結 -->
+				<%= render partial: "/erb/list-text_link", locals: set({ index: 1, header_text: "上方連結" }) %>
+			<!-- link 結束 -->
 
-					<!-- link 連結 -->
-						<%= render partial: "/erb/list-text_link", locals: set({ index: 1, header_text: "上方連結" }) %>
-					<!-- link 結束 -->
-
-					<!-- font-size 字級 -->
-						<%= render partial: "/erb/list-text_font-size", locals: set({ index: 2, func_set: "{'fontSize':{'defaultItem': 'medium'}}", header_text: "字級" }) %>
-					<!-- font-size 結束 -->
-
-					</div></div>
-				</div></div>
-			<!-- msg-tool 結束 -->
+			<!-- font-size 字級 -->
+				<%= render partial: "/erb/list-text_font-size", locals: set({ index: 2, func_set: "{'fontSize':{'defaultItem': 'medium'}}", header_text: "字級" }) %>
+			<!-- font-size 結束 -->
 
 			</div></div>
 		</div></div>
