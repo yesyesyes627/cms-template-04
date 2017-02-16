@@ -3,8 +3,7 @@
 //主要標誌================================================================
 
 .simple-text.major-logo {
-	@extend %center;
-
+    @extend %center;
 	// @include media('mobile') {
 	// 	float: none;
 	// 	position: fixed;

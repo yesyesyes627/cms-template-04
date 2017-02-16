@@ -90,6 +90,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		color: $white;
+		margin-right: 15px;
 
 		@include js(false) {
 			right: 10px;
@@ -148,7 +149,6 @@
 			a {
 				display: block;
 				padding: 0 $interval-m;
-				line-height: 26px;
 				border-radius: $border-radius;
 				transition: $transition;
 				font-size: $font-size-s;
@@ -324,17 +324,20 @@
 				
 				+ li {
 					border-left: 1px solid $minor-color;
+					span{
+						padding: 0 $interval-m;
+					}
 				}
 			}
 
 			span {
 				display: block;
-				padding: 0 $interval-xs;
+				padding-right: $interval-m;
+				    line-height: 12px;
 			}
 
 			a {
 				display: block;
-				padding: $interval-xs $interval-m;
 				border-radius: $border-radius;
 				transition: $transition;
 				font-size: $font-size-s;

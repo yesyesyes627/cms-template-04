@@ -1,127 +1,77 @@
 //文字列表
-
 //頁籤================================================================
-
 .list-text.tab {
-	@include average(0, 3);
-
-	> .bg-drop-layout > .in, > .in {
-
-	}
-
-	.hd {
-		display: none;
-
-		> .in {
-
-		}
-
-		h4 {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
-
-	.ct {
-
-		> .in {
-			
-		}
-
-		ul {
-			border-bottom-style: solid;
-			border-bottom-width: 2px;
-			border-bottom-color: $major-color;
-		}
-
-		li {
-			position: relative;
-			vertical-align: bottom;
-
-			@include len-rwd('pad', 4);
-			@include len-rwd('phone', 2);
-
-			&.is-active {
-				top: 2px;
-
-				@include media('mobile') {
-					top: auto;
-				}
-
-				span {
-					border-color: $major-color;
-				}
-
-				a {
-					border-color: $major-color;
-					color: $major-color;
-				}
-			}
-		}
-
-		span {
-			display: block;
-			border: 1px solid transparent;
-			border-bottom-width: 0;
-
-			@include media('mobile') {
-				border-bottom-width: 1px;
-				margin: $interval-xs;
-			}
-		}
-
-		a {
-			@extend %ellipsis;
-			display: block;
-			padding: $interval-l;
-			background-color: $white;
-			color: $body-font-color;
-			transition: $transition;
-			border: 1px solid $border-color;
-			border-bottom-width: 0;
-			text-align: center;
-
-			@include media('mobile') {
-				border-bottom-width: 1px;
-			}
-
-			&:hover {
-				color: $major-color;
-			}
-		}
-
-		/*i*/.mark {
-			
-		}
-	}
-
-	.ft {
-
-		> .in {
-
-		}
-
-		ul {
-
-		}
-
-		li {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
+    @include average(0, 5);
+    > .bg-drop-layout > .in,
+    > .in {}
+    .hd {
+        display: none;
+        > .in {}
+        h4 {}
+        span {}
+        a {}
+    }
+    .ct {
+        > .in {}
+        ul {
+            background: $deep-gray;
+        }
+        li {
+            position: relative;
+            vertical-align: bottom;
+            @include len-rwd('pad', 4);
+            @include len-rwd('phone', 2);
+            &.is-active {
+                @include media('mobile') {
+                    top: auto;
+                }
+                span {
+                    border-color: $major-color;
+                }
+                a {
+                    border-color: $major-color;
+                    color: $white;
+                    background: $major-color;
+                }
+            }
+        }
+        span {
+            display: block;
+            border: 1px solid transparent;
+            border-bottom-width: 0;
+            @include media('mobile') {
+                border-bottom-width: 1px;
+                margin: $interval-xs;
+            }
+        }
+        a {
+            @extend %ellipsis;
+            display: block;
+            padding: $interval-l;
+            color: $white;
+            transition: $transition;
+            border-bottom-width: 0;
+            text-align: center;
+            @include media('mobile') {
+                border-bottom-width: 1px;
+            }
+            &:hover {
+                border-color: $major-color;
+                color: $white;
+                background: $major-color;
+            }
+            &:active{
+                @extend %btn-shadow;
+            }
+        }
+        /*i*/
+        .mark {}
+    }
+    .ft {
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
 }

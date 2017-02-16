@@ -1,292 +1,188 @@
 //表單區塊
-
 //搜尋================================================================
-
 .area-form.search {
-
-	.base-mobile & {
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			.fieldset {
-				position: relative;
-
-				span {
-					$icon-width: 36px;
-
-					display: block;
-
-					&.search {
-						display: block;
-						padding-right: $icon-width;
-
-						input {
-							display: block;
-							width: 100%;
-						}
-					}
-
-					&.submit {
-
-						a {
-							position: absolute;
-							top: 0;
-							right: 0;
-							bottom: 0;
-							width: $icon-width;
-							background-color: $btn-bg-color;
-							@extend %hide-text;
-							@include bg-to-pic('icon-pic/icon-w-search.png' ,false)
-						}
-					}
-				}
-			}
-
-			.list {
-				display: none;
-				
-				ul {
-
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-				margin-top: $interval-m;
-			}
-
-			li {
-				@extend %btn;
-				display: block;
-				text-align: center;
-
-				&.advanced {
-
-				}
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
-
-	.base-wrapper & {
-		display: inline-block;
-		vertical-align: middle;
-		margin-left: $interval-m;
-		text-align: left;
-
-		// @include js(false) {
-		// 	top: 40px;
-		// }
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		&.is-open {
-
-			.ct {
-
-				.list {
-					display: block;
-				}
-			}
-		}
-
-		> .bg-drop-layout > .in, > .in {
-			margin: 0;
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-			display: inline-block;
-			vertical-align: middle;
-
-			> .in {
-
-			}
-
-			.fieldset {
-				position: relative;
-
-				@include js(false) {
-					display: none;
-				}
-
-				span {
-					$icon-width: 36px;
-
-					display: block;
-
-					&.search {
-						display: block;
-						padding-right: $icon-width;
-						width: 200px;
-
-						input {
-							display: block;
-							width: 100%;
-							border-radius: $border-radius 0 0 $border-radius;
-						}
-					}
-
-					&.submit {
-
-						a {
-							position: absolute;
-							top: 0;
-							right: 0;
-							bottom: 0;
-							width: $icon-width;
-							background-color: $major-color;
-							transition: $transition;
-							border-radius: 0 $border-radius $border-radius 0;
-							@extend %hide-text;
-							@include bg-to-pic('icon-pic/icon-w-search.png' ,false);
-
-							&:hover {
-								background-color: $minor-color;
-							}
-						}
-					}
-				}
-			}
-
-			.list {
-				position: absolute;
-				top: 100%;
-				left: 0;
-				right: 0;
-				display: none;
-				
-				ul {
-					margin-top: $interval-m;
-				}
-
-				li {
-
-					+ li {
-						margin-top: $interval-s;
-					}
-				}
-
-				span {
-					display: block;
-				}
-
-				a {
-					@extend %list;
-					@extend %list-hover;
-					box-shadow: $box-shadow;
-				}
-			}
-		}
-
-		.ft {
-			display: inline-block;
-			vertical-align: middle;
-			padding-left: $interval-s;
-
-			> .in {
-
-			}
-
-			ul {
-				display: inline;
-			}
-
-			li {
-				display: inline;
-
-				&.advanced {
-					
-				}
-			}
-
-			span {
-				
-			}
-
-			a {
-				color: inherit;
-				font-size: $font-size-s;
-				color: $white;
-
-				@include js(false) {
-					@extend %btn;
-				}
-			}
-		}
-	}
+    .base-mobile & {
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            .fieldset {
+                position: relative;
+                span {
+                    $icon-width: 36px;
+                    display: block;
+                    &.search {
+                        display: block;
+                        padding-right: $icon-width;
+                        input {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    &.submit {
+                        a {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: $icon-width;
+                            background-color: $btn-bg-color;
+                            @extend %hide-text;
+                            @include bg-to-pic('icon-pic/icon-w-search.png', false)
+                        }
+                    }
+                }
+            }
+            .list {
+                display: none;
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+        .ft {
+            > .in {}
+            ul {
+                margin-top: $interval-m;
+            }
+            li {
+                @extend %btn;
+                display: block;
+                text-align: center;
+                &.advanced {}
+            }
+            span {}
+            a {}
+        }
+    }
+    .base-wrapper & {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        margin: 10px 10px 0px;
+        // @include js(false) {
+        //  top: 40px;
+        // }
+        @include media('mobile') {
+            display: none;
+        }
+        &.is-open {
+            .ct {
+                .list {
+                    display: block;
+                }
+            }
+        }
+        > .bg-drop-layout > .in,
+        > .in {
+            margin: 0;
+        }
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            display: inline-block;
+            vertical-align: middle;
+            > .in {}
+            .fieldset {
+                position: relative;
+                @include js(false) {
+                    display: none;
+                }
+                span {
+                    $icon-width: 36px;
+                    display: block;
+                    &.search {
+                        display: block;
+                        padding-right: $icon-width;
+                        width: 200px;
+                        input {
+                            display: block;
+                            width: 100%;
+                            border-radius: $border-radius 0 0 $border-radius;
+                        }
+                    }
+                    &.submit {
+                        a {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: $icon-width;
+                            background-color: $major-color;
+                            transition: $transition;
+                            border-radius: 0 $border-radius $border-radius 0;
+                            @extend %hide-text;
+                            @include bg-to-pic('icon-pic/icon-w-search.png', false);
+                            &:hover {
+                                background-color: $minor-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .list {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                display: none;
+                ul {
+                    margin-top: $interval-m;
+                }
+                li {
+                    + li {
+                        margin-top: $interval-s;
+                    }
+                }
+                span {
+                    display: block;
+                }
+                a {
+                    @extend %list;
+                    @extend %list-hover;
+                    box-shadow: $box-shadow;
+                }
+            }
+        }
+        .ft {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: $interval-s;
+            > .in {}
+            ul {
+                display: inline;
+            }
+            li {
+                display: inline;
+                &.advanced {
+                    @extend %btn;
+                    background: #04616f;
+                }
+            }
+            span {}
+            a {
+                color: inherit;
+                font-size: $font-size-s;
+                color: $white;
+                line-height: 16px;
+                border: none;
+                @include js(false) {
+                    @extend %btn;
+                }
+            }
+        }
+    }
 }

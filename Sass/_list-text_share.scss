@@ -66,6 +66,8 @@
 
 							&:after {
 								background-image: image-url('icon-pic/share-b-#{$pic}');
+								background-color: rgba($white, $opacity-m);
+								color: $white;
 							}
 
 							&:hover {

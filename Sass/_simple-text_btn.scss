@@ -1,236 +1,150 @@
 //簡單文字
-
 //按鈕================================================================
-
 .simple-text.btn {
-
-	.base-mobile & {
-		position: absolute;
-		left: 100%;
-
-		@include js(false) {
-			display: none;
-		}
-
-		&.is-active {
-
-			.ct {
-
-				a {
-					width: auto;
-					background-color: transparent;
-					
-					&:before {
-						@include icon-font('close');
-						line-height: $rwd-btn-size;
-						color: $white;
-					}
-
-					&:after {
-						content: $content;
-					}
-				}
-			}
-		}
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			span {
-				display: block;
-			}
-
-			a {
-				display: block;
-				position: relative;
-				top: 10px;
-				left: 10px;
-				width: $rwd-btn-size;
-				font-size: $font-size-xl;
-				border-radius: 50%;
-				background-color: deeper($major-color);
-				
-				&:before {
-					@include icon-font('menu');
-					display: block;
-					width: $rwd-btn-size;
-					text-align: center;
-					line-height: $rwd-btn-size;
-					color: $white;
-				}
-
-				&:after {
-					position: fixed;
-					top: 0;
-					right: 0;
-					width: 100vw;
-					height: 100vh;
-					background-color: rgba($deep, $opacity-m);
-					z-index: -1;
-				}
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
-
-	.base-wrapper & {
-		border-bottom: $interval-xs solid $minor-color;
-
-		@include js(false) {
-			display: none;
-		}
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		&.is-active {
-
-			.ct {
-
-				a {
-
-					&:before {
-						@include icon-font('arrow_drop_up');
-					}
-				}
-			}
-		}
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-			@extend %center;
-			position: relative;
-
-			> .in {
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: -1px;
-				text-align: right;
-			}
-
-			span {
-				display: inline-block;
-			}
-
-			a {
-				@extend %btn;
-				background-color: $minor-color;
-				border-radius: $border-radius $border-radius 0 0;
-
-				&:hover {
-					background-color: deeper($minor-color);
-				}
-
-				&:before {
-					@include icon-font('arrow_drop_down');
-					margin-right: $interval-xs;
-				}
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
+    .base-mobile & {
+        position: absolute;
+        left: 100%;
+        @include js(false) {
+            display: none;
+        }
+        &.is-active {
+            .ct {
+                a {
+                    width: auto;
+                    background-color: transparent;
+                    &:before {
+                        @include icon-font('close');
+                        line-height: $rwd-btn-size;
+                        color: $white;
+                    }
+                    &:after {
+                        content: $content;
+                    }
+                }
+            }
+        }
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            span {
+                display: block;
+            }
+            a {
+                display: block;
+                position: relative;
+                top: 10px;
+                left: 10px;
+                width: $rwd-btn-size;
+                font-size: $font-size-xl;
+                border-radius: 50%;
+                background-color: deeper($major-color);
+                color: $white !important;
+                &:before {
+                    @include icon-font('menu');
+                    display: block;
+                    width: $rwd-btn-size;
+                    text-align: center;
+                    line-height: $rwd-btn-size;
+                    color: $white;
+                }
+                &:after {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba($deep, $opacity-m);
+                    z-index: -1;
+                }
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
+    .base-wrapper & {
+        border-bottom: $interval-xs solid $minor-color;
+        @include js(false) {
+            display: none;
+        }
+        @include media('mobile') {
+            display: none;
+        }
+        &.is-active {
+            .ct {
+                a {
+                    &:before {
+                        @include icon-font('arrow_drop_up');
+                    }
+                }
+            }
+        }
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            @extend %center;
+            position: relative;
+            > .in {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                text-align: right;
+            }
+            span {
+                display: inline-block;
+            }
+            a {
+                border: none;
+                background-color: $minor-color;
+                border-radius: 3px 3px 0 0;
+                color: #ffffff;
+                padding: 8px 24px 7px 40px;
+                position: relative;
+                line-height: 28px;
+                &:hover {
+                    background-color: deeper($minor-color);
+                }
+                &:before {
+                    @include icon-font('arrow_drop_down');
+                    font-size: 2em !important;
+                    margin-right: $interval-xs;
+                    color: $white;
+                    position: absolute;
+                    left: 10px;
+                    top: 0px;
+                }
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
 }

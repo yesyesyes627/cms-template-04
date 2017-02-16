@@ -1,181 +1,89 @@
 //文字列表
-
 //熱門關鍵字================================================================
-
 .list-text.hot-key-word {
-
-	.base-mobile & {
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			ul {
-				
-			}
-
-			li {
-				border-top: $border;
-			}
-
-			span {
-				display: block;
-			}
-
-			a {
-				display: block;
-				padding: $interval-m;
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
-
-	.base-wrapper & {
-		display: inline-block;
-		vertical-align: middle;
-		color: $white;
-
-		@include js(false) {
-			right: 100px;
-		}
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			ul {
-				
-			}
-
-			li {
-				display: inline-block;
-				vertical-align: middle;
-				
-				+ li {
-
-					&:before {
-						content: ' , ';
-					}
-				}
-			}
-
-			span {
-				display: inline-block;
-			}
-
-			a {
-				display: block;
-				font-size: $font-size-s;
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
+    .base-mobile & {
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            ul {}
+            li {
+                border-top: $border;
+            }
+            span {
+                display: block;
+            }
+            a {
+                display: block;
+                padding: $interval-m;
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
+    .base-wrapper & {
+        color: $white;
+        position: absolute;
+        right: 120px;
+        top: -120px;
+        @include js(false) {
+            right: 100px;
+        }
+        @include media('mobile') {
+            display: none;
+        }
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            ul {}
+            li {
+                display: inline-block;
+                vertical-align: middle;
+                + li {
+                    &:before {
+                        content: ' , ';
+                    }
+                }
+            }
+            span {
+                display: inline-block;
+            }
+            a {
+                display: block;
+                font-size: $font-size-s;
+                text-shadow: 0px 0px 4px $deep;
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
 }

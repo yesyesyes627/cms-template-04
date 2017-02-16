@@ -1,199 +1,99 @@
 //圖片列表
-
 //各種標章================================================================
-
 .list-pic.icon {
-
-	.base-content & {
-		@extend %area-page-no-header;
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			ul {
-				text-align: right;
-			}
-
-			li {
-				display: inline-block;
-				vertical-align: top;
-
-				&.qrcode {
-
-				}
-			}
-
-			span {
-				display: block;
-			}
-
-			a {
-				display: block;
-			}
-
-			img {
-				display: block;
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
-
-	.base-footer & {
-		margin-top: $interval-m;
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		> .bg-drop-layout > .in, > .in {
-
-		}
-
-		.hd {
-			display: none;
-
-			> .in {
-
-			}
-
-			h4 {
-
-			}
-
-			span {
-					
-			}
-
-			a {
-
-			}
-		}
-
-		.ct {
-
-			> .in {
-				
-			}
-
-			ul {
-
-			}
-
-			li {
-				display: inline-block;
-				vertical-align: top;
-
-				+ li {
-					margin-left: $interval-s;
-				}
-
-				&.wcag {
-
-				}
-
-				&.egov {
-
-				}
-
-				&.qrcode {
-
-				}
-			}
-
-			span {
-				display: block;
-			}
-
-			a {
-				display: block;
-			}
-
-			img {
-				display: block;
-			}
-
-			/*i*/.mark {
-				
-			}
-		}
-
-		.ft {
-
-			> .in {
-
-			}
-
-			ul {
-
-			}
-
-			li {
-
-			}
-
-			span {
-
-			}
-
-			a {
-
-			}
-		}
-	}
+    .base-content & {
+        @extend %area-page-no-header;
+        @include media('mobile') {
+            display: none;
+        }
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            ul {
+                text-align: right;
+            }
+            li {
+                display: inline-block;
+                vertical-align: top;
+                &.qrcode {}
+            }
+            span {
+                display: block;
+            }
+            a {
+                display: block;
+            }
+            img {
+                display: block;
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
+    .base-footer & {
+        margin-top: $interval-m;
+        position: absolute;
+        top: 8px;
+        right: 0;
+        @include media('mobile') {
+            display: none;
+        }
+        > .bg-drop-layout > .in,
+        > .in {}
+        .hd {
+            display: none;
+            > .in {}
+            h4 {}
+            span {}
+            a {}
+        }
+        .ct {
+            > .in {}
+            ul {}
+            li {
+                display: inline-block;
+                vertical-align: top;
+                + li {
+                    margin-left: $interval-s;
+                }
+                &.wcag {}
+                &.egov {}
+                &.qrcode {}
+            }
+            span {
+                display: block;
+                background-image: none !important;
+            }
+            a {
+                display: block;
+                margin-left: 15px;
+            }
+            img {
+                display: block;
+            }
+            /*i*/
+            .mark {}
+        }
+        .ft {
+            > .in {}
+            ul {}
+            li {}
+            span {}
+            a {}
+        }
+    }
 }

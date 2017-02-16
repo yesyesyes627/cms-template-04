@@ -10,12 +10,13 @@
 	$light-gray: #e4e4e4; //淺灰
 	$gray: #b6b6b6; //灰色
 	$deep-gray: #646464; //深灰
-	$deep: #343434; //深色
+	$deep: #363636; //深色
 	$black: #1a1a1a; //黑色
 
 //主要版面顏色================================================================
-	$major-color: #0aa59b !default; //主色: #058f89 #2a6fa8 #da552f #74144f
-	$minor-color: #f2703c !default; //次色 #fa7076 #1caf9a #534540 #3e8691
+	$major-color: #17a5b9 !default; //主色: #058f89 #2a6fa8 #da552f #74144f
+	$minor-color: #ff8f00 !default; //次色 #fa7076 #1caf9a #534540 #3e8691
+	$major-deep-color: #0e7382; //主色深
 
 //其他版面顏色================================================================
 	$lesser1-color: #fff; //更次色
@@ -124,12 +125,13 @@
 	$active-color: inherit; //點擊連結顏色
 
 //按鈕樣式================================================================
-	$btn-bg-color: $deep-gray; //按鈕背景色
-	$btn-hover-bg-color: $deep; //按鈕滑入顏色
-	$btn-text-color: $white; //按鈕文字顏色
-	$btn-padding: $interval-s $interval-m; //按鈕內邊距，決定按鈕大小
+	$btn-bg-color: $white; //按鈕背景色
+	$btn-hover-bg-color: $major-color; //按鈕滑入顏色
+	$btn-text-color: $major-color; //按鈕文字顏色
+	$btn-padding: $interval-m $interval-l; //按鈕內邊距，決定按鈕大小
 	$btn-padding-xs: $interval-xs $interval-s; //按鈕內邊距，決定按鈕大小
-	$btn-border: 0; //按鈕線框
+	$btn-border: 1px solid $major-color; //按鈕線框
+	$btn-active: 0px 5px 8px rgba(2, 2, 2, 0.3) inset;
 
 //輸入框樣式================================================================
 	$input-padding: $interval-s $interval-m;

@@ -1,78 +1,47 @@
 //簡單文字
-
 //更新時間================================================================
-
 .simple-text.update-time {
-	margin: $interval-m 0;
-	font-size: $font-size-s;
-
-	> .bg-drop-layout > .in, > .in {
-
-	}
-
-	.hd {
-		display: inline-block;
-
-		> .in {
-
-		}
-
-		h4 {
-
-			&:after {
-				content: ' : ';
-			}
-		}
-
-		span {
-			display: inline-block;
-		}
-
-		a {
-			display: block;
-		}
-	}
-
-	.ct {
-		display: inline-block;
-
-		> .in {
-
-		}
-
-		span {
-			display: block;
-		}
-
-		a {
-			display: block;
-		}
-
-		/*i*/.mark {
-			
-		}
-	}
-
-	.ft {
-
-		> .in {
-
-		}
-
-		ul {
-
-		}
-
-		li {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
+    margin: $interval-m 0;
+    font-size: $font-size-s;
+    > .bg-drop-layout > .in,
+    > .in {}
+    .hd {
+        display: inline-block;
+        > .in {}
+        h4 {
+            font-size: 1em !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            float: left;
+            line-height: 1em !important;
+            &:after {
+                content: ' : ';
+            }
+        }
+        span {
+            display: inline-block;
+        }
+        a {
+            display: block;
+        }
+    }
+    .ct {
+        display: inline-block;
+        > .in {}
+        span {
+            display: block;
+        }
+        a {
+            display: block;
+        }
+        /*i*/
+        .mark {}
+    }
+    .ft {
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
 }

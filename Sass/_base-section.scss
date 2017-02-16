@@ -5,7 +5,8 @@
 .base-section {
 	overflow: hidden;
 	position: relative;
-
+	background-color: rgba($white, $opacity-vh);
+	padding: $interval-m;
 	a {
 		@each $key, $map in $file-type-map {
 			$pic: map-get($map, 'pic');

@@ -1,308 +1,189 @@
 //群組
-
 //選單================================================================
-
 .group.nav {
-
-	.base-mobile & {
-		position: relative;
-
-		> .bg-drop-layout > .in, > .in {
-
-			.hd {
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-					display: block;
-				}
-
-				a {
-					display: block;
-					padding: $interval-m;
-					transition: $transition;
-					padding-right: 40px;
-
-					&:before {
-						@include icon-font('keyboard_arrow_down');
-						position: absolute;
-						top: 10px;
-						right: 10px;
-					}
-
-					&:hover {
-						background-color: $light;
-						color: currentColor;
-					}
-				}
-			}
-
-			> .ct {
-				display: none;
-
-				> .in {
-					padding: $interval-xs;
-					background-color: $light;
-				}
-
-				[data-type][data-index] {
-
-					> .bg-drop-layout > .in, > .in {
-						margin: 0 !important;
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-					
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-extend & {
-
-		> .bg-drop-layout > .in, > .in {
-
-			> .hd {
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-
-				}
-
-				a {
-					@extend %ellipsis;
-					line-height: $interval-xl;
-					display: block;
-					padding: $interval-s;
-					text-align: center;
-					transition: $transition;
-					border-radius: $border-radius;
-					font-size: $font-size-l;
-					color: $white;
-
-					@include js(false) {
-						text-align: left;
-						font-weight: $font-weight-b;
-					}
-				}
-			}
-
-			> .ct {
-				display: none;
-				position: absolute;
-				top: 100%;
-				width: 100%;
-				left: 0;
-
-				@include js(false) {
-					display: block;
-					position: static;
-					width: 100% !important;
-				}
-
-				> .in {
-					padding: $interval-xs;
-					background-color: $white;
-					border-radius: $border-radius;
-					border: $border;
-					box-shadow: $box-shadow;
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-					
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-content & {
-		position: relative;
-
-		> .bg-drop-layout > .in, > .in {
-
-			> .hd {
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-					display: block;
-				}
-
-				a {
-					display: block;
-					padding: 12px;
-					transition: $transition;
-					font-size: $font-size-l;
-
-					&:hover {
-						background-color: $light;
-						color: currentColor;
-					}
-				}
-			}
-
-			> .ct {
-				display: none;
-
-				@include js(false) {
-					display: block;
-				}
-
-				> .in {
-					overflow: hidden;
-					background-color: deeper($major-color);
-				}
-
-				> .nav {
-					
-					> .in {
-						margin: 0;
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-					
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-footer & {
-		padding: $interval-m $interval-xs;
-
-		> .bg-drop-layout > .in, > .in {
-
-			> .hd {
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-					display: block;
-				}
-
-				a {
-					@extend %ellipsis;
-					display: block;
-					padding: $interval-s $interval-m;
-					margin-bottom: $interval-s;
-					border-bottom: $border;
-					text-align: center;
-					color: $body-font-color;
-				}
-			}
-
-			> .ct {
-
-				> .in {
-
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-					
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
+    .base-mobile & {
+        position: relative;
+        > .bg-drop-layout > .in,
+        > .in {
+            .hd {
+                > .in {}
+                h3 {}
+                span {
+                    display: block;
+                }
+                a {
+                    display: block;
+                    padding: $interval-m;
+                    transition: $transition;
+                    padding-right: 40px;
+                    &:before {
+                        @include icon-font('keyboard_arrow_down');
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                    }
+                    &:hover {
+                        background-color: $light;
+                        color: currentColor;
+                    }
+                }
+            }
+            > .ct {
+                display: none;
+                > .in {
+                    padding: $interval-xs;
+                    background-color: $light;
+                }
+                [data-type][data-index] {
+                    > .bg-drop-layout > .in,
+                    > .in {
+                        margin: 0 !important;
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-extend & {
+        > .bg-drop-layout > .in,
+        > .in {
+            > .hd {
+                > .in {}
+                h3 {}
+                span {}
+                a {
+                    @extend %ellipsis;
+                    line-height: $interval-xl;
+                    display: block;
+                    padding: $interval-s;
+                    text-align: center;
+                    transition: $transition;
+                    border-radius: $border-radius;
+                    font-size: $font-size-l;
+                    color: $white;
+                    @include js(false) {
+                        text-align: left;
+                        font-weight: $font-weight-b;
+                    }
+                }
+            }
+            > .ct {
+                display: none;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                left: 0;
+                @include js(false) {
+                    display: block;
+                    position: static;
+                    width: 100% !important;
+                }
+                > .in {
+                    padding: $interval-xs;
+                    background-color: $white;
+                    border-radius: $border-radius;
+                    border: $border;
+                    box-shadow: $box-shadow;
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-content & {
+        position: relative;
+        > .bg-drop-layout > .in,
+        > .in {
+            > .hd {
+                > .in {}
+                h3 {}
+                span {
+                    display: block;
+                }
+                a {
+                    display: block;
+                    padding: 12px;
+                    transition: $transition;
+                    font-size: $font-size-l;
+                    &:hover {
+                        background-color: $light;
+                        color: currentColor;
+                    }
+                }
+            }
+            > .ct {
+                display: none;
+                @include js(false) {
+                    display: block;
+                }
+                > .in {
+                    overflow: hidden;
+                    background-color: deeper($major-color);
+                }
+                > .nav {
+                    > .in {
+                        margin: 0;
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-footer & {
+        padding: $interval-m $interval-xs;
+        > .bg-drop-layout > .in,
+        > .in {
+            > .hd {
+                > .in {}
+                h3 {}
+                span {
+                    display: block;
+                }
+                a {
+                    @extend %ellipsis;
+                    display: block;
+                    padding: $interval-s $interval-m;
+                    margin-bottom: $interval-s;
+                    border-bottom: $border;
+                    text-align: left;
+                    color: $minor-color;
+                    font-size: 1.1em;
+                }
+            }
+            > .ct {
+                > .in {
+                    a {
+                        font-size: 1em;
+                    }
+                    span {
+                        line-height: 1em !important;
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
 }

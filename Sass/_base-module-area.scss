@@ -1,33 +1,16 @@
 //框架
-
 //模組區塊================================================================
-
 .base-module-area {
-	@extend %area-module;
-	padding: $interval-m;
-
-	> .in {
-
-		> .hd {
-
-			> .in {
-
-			}
-
-			h3 {
-
-			}
-
-			span {
-
-			}
-		}
-
-		> .ct {
-
-			> .in {
-
-			}
-		}
-	}
+    @extend %area-module;
+    // margin: $interval-m;
+    > .in {
+        > .hd {
+            > .in {}
+            h3 {}
+            span {}
+        }
+        > .ct {
+            > .in {}
+        }
+    }
 }

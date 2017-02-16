@@ -1,230 +1,159 @@
 //文字列表
-
 //使用者工具================================================================
-
 .list-text.user-tool {
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	z-index: 2;
-
-	@include js(false) {
-		display: none;
-	}
-
-	@include media('mobile') {
-		display: none;
-	}
-
-	&:hover, &.is-active {
-
-		.hd {
-			background-color: $white;
-
-			a {
-				color: $major-color;
-
-				&:before {
-					@include icon-font('arrow_drop_up');
-				}
-			}
-		}
-
-		.ct {
-			display: block;
-		}
-	}
-
-	> .bg-drop-layout > .in, > .in {
-
-	}
-
-	.hd {
-		background-color: $light;
-		border: $border;
-		border-bottom-width: 0;
-
-		> .in {
-
-		}
-
-		h4 {
-
-		}
-
-		span {
-			display: block;
-		}
-
-		a {
-			display: block;
-			padding: $interval-s;
-			font-size: $font-size-s;
-
-			&:before {
-				@include icon-font('arrow_drop_down');
-				margin-right: $interval-xs;
-			}
-		}
-	}
-
-	.ct {
-		display: none;
-		position: absolute;
-		top: 100%;
-		top: calc(100% - 1px);
-		right: 0;
-		min-width: 120px;
-		z-index: -1;
-
-		> .in {
-
-		}
-
-		ul {
-			background-color: $white;
-			border: $border;
-			padding: $interval-m;
-		}
-
-		li {
-
-			+ li {
-				margin-top: $interval-s;
-			}
-
-			&.login {
-
-				a {
-
-					&:before {
-						@include icon-font('person');
-					}
-				}
-			}
-
-			&.logout {
-
-				a {
-
-					&:before {
-						@include icon-font('person_outline');
-					}
-				}
-			}
-
-			&.bopomofo {
-
-				a {
-
-					&:before {
-						@include icon-font('font_download');
-					}
-				}
-			}
-
-			&.edit {
-
-				a {
-
-					&:before {
-						@include icon-font('edit');
-					}
-				}
-			}
-
-			&.print {
-
-				a {
-
-					&:before {
-						@include icon-font('print');
-					}
-				}
-			}
-
-			&.data {
-
-				a {
-
-					&:before {
-						@include icon-font('data_usage');
-					}
-				}
-			}
-
-			&.nav-edit {
-
-				a {
-
-					&:before {
-						@include icon-font('edit');
-					}
-				}
-			}
-
-			&.index-edit {
-
-				a {
-
-					&:before {
-						@include icon-font('edit');
-					}
-				}
-			}
-
-			&.article-edit {
-
-				a {
-
-					&:before {
-						@include icon-font('edit');
-					}
-				}
-			}
-		}
-
-		span {
-			display: block;
-			text-align: left;
-		}
-
-		a {
-
-			&:before {
-				margin-right: $interval-xs;
-			}
-
-			&:hover {
-				color: $major-color;
-			}
-		}
-
-		/*i*/.mark {
-			
-		}
-	}
-
-	.ft {
-
-		> .in {
-
-		}
-
-		ul {
-
-		}
-
-		li {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 2;
+    @include js(false) {
+        display: none;
+    }
+    @include media('mobile') {
+        display: none;
+    }
+    &:hover,
+    &.is-active {
+        .hd {
+            background-color: $white;
+            a {
+                color: $major-color;
+                &:before {
+                    @include icon-font('arrow_drop_up');
+                }
+            }
+        }
+        .ct {
+            display: block;
+        }
+    }
+    > .bg-drop-layout > .in,
+    > .in {}
+    .hd {
+        background-color: $light;
+        border: $border;
+        border-bottom-width: 0;
+        > .in {}
+        h4 {
+            font-size: 1em !important;
+            padding: 0;
+            line-height: 1em !important;
+            margin: 0 !important;
+        }
+        span {
+            display: block;
+        }
+        a {
+            display: block;
+            padding: $interval-s;
+            font-size: $font-size-s;
+            &:before {
+                @include icon-font('arrow_drop_down');
+                margin-right: $interval-xs;
+            }
+        }
+    }
+    .ct {
+        display: none;
+        position: absolute;
+        top: 100%;
+        top: calc(100% - 1px);
+        right: 0;
+        min-width: 120px;
+        z-index: -1;
+        > .in {}
+        ul {
+            background-color: $white;
+            border: $border;
+            padding: $interval-m;
+        }
+        li {
+            + li {
+                margin-top: $interval-s;
+            }
+            &.login {
+                a {
+                    &:before {
+                        @include icon-font('person');
+                    }
+                }
+            }
+            &.logout {
+                a {
+                    &:before {
+                        @include icon-font('person_outline');
+                    }
+                }
+            }
+            &.bopomofo {
+                a {
+                    &:before {
+                        @include icon-font('font_download');
+                    }
+                }
+            }
+            &.edit {
+                a {
+                    &:before {
+                        @include icon-font('edit');
+                    }
+                }
+            }
+            &.print {
+                a {
+                    &:before {
+                        @include icon-font('print');
+                    }
+                }
+            }
+            &.data {
+                a {
+                    &:before {
+                        @include icon-font('data_usage');
+                    }
+                }
+            }
+            &.nav-edit {
+                a {
+                    &:before {
+                        @include icon-font('edit');
+                    }
+                }
+            }
+            &.index-edit {
+                a {
+                    &:before {
+                        @include icon-font('edit');
+                    }
+                }
+            }
+            &.article-edit {
+                a {
+                    &:before {
+                        @include icon-font('edit');
+                    }
+                }
+            }
+        }
+        span {
+            display: block;
+            text-align: left;
+        }
+        a {
+            &:before {
+                margin-right: $interval-xs;
+            }
+            &:hover {
+                color: $major-color;
+            }
+        }
+        /*i*/
+        .mark {}
+    }
+    .ft {
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
 }
