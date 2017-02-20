@@ -7,15 +7,18 @@
         > .in {
             .hd {
                 > .in {}
-                h3 {}
+                h3 {
+                    font-size: 1.2em !important;
+                    padding-bottom: 0px !important;
+                    margin: 0 !important;
+                    line-height: 1.8em !important;
+                    text-align: center !important;
+                }
                 span {
                     display: block;
                 }
                 a {
                     display: block;
-                    padding: $interval-m;
-                    transition: $transition;
-                    padding-right: 40px;
                     &:before {
                         @include icon-font('keyboard_arrow_down');
                         position: absolute;

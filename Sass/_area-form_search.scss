@@ -33,7 +33,7 @@
                             right: 0;
                             bottom: 0;
                             width: $icon-width;
-                            background-color: $btn-bg-color;
+                            background-color: $deep-gray;
                             @extend %hide-text;
                             @include bg-to-pic('icon-pic/icon-w-search.png', false)
                         }

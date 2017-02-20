@@ -1,453 +1,274 @@
 //列表群組
-
 //選單================================================================
-
 .group-list.nav {
-
-	.base-mobile & {
-
-		> .bg-drop-layout > .in, > .in {
-
-			> .hd {
-				display: none;
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-						
-				}
-
-				a {
-
-				}
-			}
-
-			> .ct {
-
-				> .in {
-
-					> ul {
-
-						> li {
-
-							+ li {
-								border-top: $border;
-							}
-
-							&.is-active {
-
-								> .group.nav {
-
-									> .in {
-
-										.hd {
-
-											a {
-												background-color: $minor-color;
-												color: $white;
-											}
-										}
-
-										.ct {
-											display: block;
-										}
-									}
-								}
-							}
-
-							&.is-single {
-
-								> .group.nav {
-
-									> .in {
-
-										> .hd {
-
-											a {
-
-												&:before {
-													@include icon-font('keyboard_arrow_right');
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-extend & {
-		$default-len: 6;
-		$max-len: 8;
-
-		@extend %center;
-
-		@include rwd(1080) {
-			margin-right: 30px;
-			margin-left: 30px;
-		}
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		@include default-min-len(4, $default-len, $max-len);
-		position: relative;
-		z-index: 3;
-
-		@include js(false) {
-			padding-bottom: $interval-l;
-		}
-
-		&.is-fixed {
-
-			> .in {
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				max-width: 100%;
-				box-shadow: $box-shadow;
-			}
-		}
-
-		> .bg-drop-layout > .in, > .in {
-			background-color: $deep;
-			background-color: rgba($deep, $opacity-h);
-			border-radius: $border-radius;
-			padding: 0 $interval-l;
-
-			> .hd {
-				display: none;
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-						
-				}
-
-				a {
-
-				}
-			}
-
-			> .ct {
-				@extend %center;
-
-				> .in {
-
-					> ul {
-
-						&:after {
-							@extend %clear;
-						}
-
-						> li {
-							position: relative;
-							box-sizing: border-box;
-							padding: $interval-s;
-
-							@include js(false) {
-								width: 100%;
-							}
-
-							&.is-active, &:hover {
-								z-index: 1; //避免雙層選單覆蓋問題
-
-								> .group.nav {
-
-									> .in {
-
-										> .hd {
-
-											a {
-												background-color: $deep;
-											}
-										}
-
-										> .ct {
-											display: block;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-content & {
-
-		> .bg-drop-layout > .in, > .in {
-			border: $border;
-			border-bottom-width: $interval-xs;
-			border-radius: 0 0 $interval-xs $interval-xs;
-			background-color: $white;
-
-			> .hd {
-				background-color: $major-color;
-				background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px );
-
-				> .in {
-
-				}
-
-				h3 {
-					padding: 25px;
-					padding-top: 30px;
-					color: $white;
-					font-size: $font-size-xl;
-					line-height: 25px;
-				}
-
-				span {
-					
-				}
-
-				a {
-
-				}
-			}
-
-			> .ct {
-				border-top: $border;
-				border-top-color: $white;
-
-				> .in {
-
-					> ul {
-
-						> li {
-
-							+ li {
-								border-top: $border;
-							}
-
-							&.is-active {
-
-								> .group.nav {
-
-									&.is-parent {
-
-										> .in {
-
-											> .hd {
-
-												a {
-													$icon_w: 30px;
-
-													position: relative;
-													padding-right: $icon_w + $interval-m;
-
-													&:before {
-														content: $content;
-														position: absolute;
-														display: block;
-														width: $icon_w;
-														right: 0;
-														top: 0;
-														bottom: 0;
-														background-image: image-url('icon-pic/away-w-bottom.png');
-														background-repeat: no-repeat;
-														background-position: center;
-													}
-												}
-											}
-										}
-									}
-
-									> .in {
-
-										> .hd {
-
-											a {
-												background-color: $major-color !important;
-												color: $white !important;
-											}
-										}
-
-										> .ct {
-											display: block;
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
-
-	.base-footer & {
-		$default-len: 6;
-		$max-len: 10;
-
-		background-color: $white;
-
-		@include default-min-len(4, $default-len, $max-len);
-
-		@include media('mobile') {
-			display: none;
-		}
-
-		&.is-close {
-			display: none;
-		}
-
-		> .bg-drop-layout > .in, > .in {
-			@extend %center;
-
-			> .hd {
-				display: none;
-
-				> .in {
-
-				}
-
-				h3 {
-
-				}
-
-				span {
-						
-				}
-
-				a {
-
-				}
-			}
-
-			> .ct {
-				padding: $interval-s 0;
-
-				> .in {
-
-					> ul {
-
-						&:after {
-							@extend %clear;
-						}
-
-						> li {
-
-							&:nth-child(#{$max-len - 1}n+1) {
-								clear: left;
-							}
-						}
-					}
-				}
-			}
-
-			> .ft {
-
-				> .in {
-
-				}
-
-				ul {
-
-				}
-
-				li {
-
-				}
-
-				span {
-
-				}
-
-				a {
-
-				}
-			}
-		}
-	}
+    .base-mobile & {
+        > .bg-drop-layout > .in,
+        > .in {
+            > .hd {
+                display: none;
+                > .in {}
+                h3 {
+                }
+                span {}
+                a {}
+            }
+            > .ct {
+                > .in {
+                    > ul {
+                        > li {
+                            + li {
+                                border-top: $border;
+                            }
+                            &.is-active {
+                                > .group.nav {
+                                    > .in {
+                                        .hd {
+                                            a {
+                                                background-color: $minor-color;
+                                                color: $white;
+                                            }
+                                        }
+                                        .ct {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            &.is-single {
+                                > .group.nav {
+                                    > .in {
+                                        > .hd {
+                                            a {
+                                                &:before {
+                                                    @include icon-font('keyboard_arrow_right');
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-extend & {
+        $default-len: 6;
+        $max-len: 8;
+        @extend %center;
+        @include rwd(1080) {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        @include media('mobile') {
+            display: none;
+        }
+        @include default-min-len(4, $default-len, $max-len);
+        position: relative;
+        z-index: 3;
+        @include js(false) {
+            padding-bottom: $interval-l;
+        }
+        &.is-fixed {
+            > .in {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                max-width: 100%;
+                box-shadow: $box-shadow;
+            }
+        }
+        > .bg-drop-layout > .in,
+        > .in {
+            background-color: $deep;
+            background-color: rgba($deep, $opacity-h);
+            border-radius: $border-radius;
+            padding: 0 $interval-l;
+            > .hd {
+                display: none;
+                > .in {}
+                h3 {}
+                span {}
+                a {}
+            }
+            > .ct {
+                @extend %center;
+                > .in {
+                    > ul {
+                        &:after {
+                            @extend %clear;
+                        }
+                        > li {
+                            position: relative;
+                            box-sizing: border-box;
+                            padding: $interval-s;
+                            @include js(false) {
+                                width: 100%;
+                            }
+                            &.is-active,
+                            &:hover {
+                                z-index: 1; //避免雙層選單覆蓋問題
+                                > .group.nav {
+                                    > .in {
+                                        > .hd {
+                                            a {
+                                                background-color: $deep;
+                                            }
+                                        }
+                                        > .ct {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-content & {
+        > .bg-drop-layout > .in,
+        > .in {
+            border: $border;
+            border-bottom-width: $interval-xs;
+            border-radius: 0 0 $interval-xs $interval-xs;
+            background-color: $white;
+            > .hd {
+                background-color: $major-color;
+                background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px);
+                > .in {}
+                h3 {
+                    padding: 25px;
+                    padding-top: 30px;
+                    color: $white;
+                    font-size: $font-size-xl;
+                    line-height: 25px;
+                }
+                span {}
+                a {}
+            }
+            > .ct {
+                border-top: $border;
+                border-top-color: $white;
+                > .in {
+                    > ul {
+                        > li {
+                            + li {
+                                border-top: $border;
+                            }
+                            &.is-active {
+                                > .group.nav {
+                                    &.is-parent {
+                                        > .in {
+                                            > .hd {
+                                                a {
+                                                    $icon_w: 30px;
+                                                    position: relative;
+                                                    padding-right: $icon_w + $interval-m;
+                                                    &:before {
+                                                        content: $content;
+                                                        position: absolute;
+                                                        display: block;
+                                                        width: $icon_w;
+                                                        right: 0;
+                                                        top: 0;
+                                                        bottom: 0;
+                                                        background-image: image-url('icon-pic/away-w-bottom.png');
+                                                        background-repeat: no-repeat;
+                                                        background-position: center;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    > .in {
+                                        > .hd {
+                                            a {
+                                                background-color: $major-color !important;
+                                                color: $white !important;
+                                            }
+                                        }
+                                        > .ct {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
+    .base-footer & {
+        $default-len: 6;
+        $max-len: 10;
+        background-color: $white;
+        @include default-min-len(4,
+        $default-len,
+        $max-len);
+        @include media('mobile') {
+            display: none;
+        }
+        &.is-close {
+            display: none;
+        }
+        > .bg-drop-layout > .in,
+        > .in {
+            @extend %center;
+            > .hd {
+                display: none;
+                > .in {}
+                h3 {}
+                span {}
+                a {}
+            }
+            > .ct {
+                padding: $interval-s 0;
+                > .in {
+                    > ul {
+                        &:after {
+                            @extend %clear;
+                        }
+                        > li {
+                            &:nth-child(#{$max-len - 1}n+1) {
+                                clear: left;
+                            }
+                        }
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {}
+                li {}
+                span {}
+                a {}
+            }
+        }
+    }
 }
