@@ -1,0 +1,153 @@
+//客製區塊
+
+//視訊================================================================
+
+.area-customize.video {
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+
+		> .in {
+			
+		}
+
+		.video {
+			margin-bottom: $interval-l;
+			background-color: $light-gray;
+			@include bg-to-pic('icon-pic/icon-w-video.png', false);
+
+			video {
+				width: 100%;
+			}
+
+			iframe {
+				width: 100%;
+				border: none;
+			}
+
+			source {
+
+			}
+
+			object {
+				min-height: 45px;
+				width: 100%;
+				margin-bottom: $interval-s;
+			}
+
+			span {
+				display: block;
+				padding: $interval-s;
+				background-color: $light;
+			}
+
+			a {
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.essay {
+			
+		}
+
+		.caption {
+			@extend %caption;
+
+			span {
+				
+			}
+
+			a {
+
+			}
+		}
+		.figcaption{
+			text-align: center;
+			color: $major-color; 
+		}
+
+		.label {
+			@extend %label;
+
+			ul {
+
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+		}
+
+		/*i*/.mark {
+			display: none;
+		}
+
+		.p {
+			// @extend %article-extend;
+			display: none;
+
+			p {
+
+			}
+
+			span {
+
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

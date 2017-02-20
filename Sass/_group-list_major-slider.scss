@@ -1,0 +1,327 @@
+//列表群組
+//主輪播(hyc)================================================================
+.group-list.major-slider {
+    $btn-width: 40px; //設定按鈕寬度
+    > .bg-drop-layout > .in,
+    > .in {
+        > .hd {
+            @extend %header;
+            > .in {}
+            h3 {}
+            span {}
+            a {}
+            + .ct {
+                + .ft {
+                    li {
+                        &.next,
+                        &.prev {
+                            a {
+                                top: 57px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > .ct {
+            > .in {
+                > ul {
+                    > li {
+                        + li {
+                            display: none;
+                            @include js(false) {
+                                display: block;
+                                margin-top: $interval-m;
+                            }
+                        }
+                        > [data-index][data-type] {
+                            //隱藏內置模組的 header 與 footer
+                            > .in {
+                                @extend %reset;
+                                > .hd {
+                                    display: none;
+                                }
+                                > .ft {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > .ft {
+            > .in {}
+            ul {
+                background-color: $light;
+                overflow: hidden;
+                padding: 0 $interval-m;
+                text-align: center;
+            }
+            li {
+                &.next,
+                &.prev {
+                    @include js(false) {
+                        display: none;
+                    }
+                    a {
+                        @extend %hide-text;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        display: block;
+                        width: $btn-width;
+                        transition: $transition;
+                        background-color: $light;
+                        background-color: rgba($light, $opacity-h);
+                        z-index: 1;
+                        &:hover {
+                            background-color: rgba($light, $opacity-vh);
+                        }
+                    }
+                }
+                &.prev {
+                    a {
+                        left: 0;
+                        @include bg-to-pic('icon-pic/away-b-left.png', false);
+                    }
+                }
+                &.next {
+                    a {
+                        right: 0;
+                        @include bg-to-pic('icon-pic/away-b-right.png', false);
+                    }
+                }
+                &.more {
+                    display: none;
+                }
+                &.is-img {
+                    display: inline-block;
+                    margin: $interval-s $interval-xs;
+                    vertical-align: middle;
+                    border: $border;
+                    border-width: $interval-xs;
+                    @include media('mobile') {
+                        display: none;
+                    }
+                    &.is-active {
+                        border-color: $minor-color;
+                        a {
+                            &:before {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    span {
+                        @extend %bg-cover;
+                        display: block;
+                        position: relative;
+                        width: 42px;
+                        height: 42px;
+                    }
+                    a {
+                        @extend %mask;
+                        @extend %mask-link;
+                        @extend %hide-text;
+                    }
+                }
+                &.is-dot {
+                    display: inline-block;
+                    margin: $interval-m $interval-xs;
+                    vertical-align: middle;
+                    @include media('mobile') {
+                        display: none;
+                    }
+                    &.is-active {
+                        a {
+                            background-color: $minor-color;
+                        }
+                    }
+                    span {
+                        display: block;
+                    }
+                    a {
+                        @extend %hide-text;
+                        display: block;
+                        width: 12px;
+                        height: 12px;
+                        background-color: $gray;
+                        transition: $transition;
+                        border-radius: 50%;
+                        z-index: 1;
+                        &:hover {
+                            opacity: $opacity-h;
+                        }
+                    }
+                }
+            }
+            span {}
+            a {}
+        }
+    }
+}
+
+.mainslider {
+    .group-list.major-slider {
+        $btn-width: 30px; //設定按鈕寬度
+        > .bg-drop-layout > .in,
+        > .in {
+            > .hd {
+                @extend %header;
+                > .in {}
+                h3 {}
+                span {}
+                a {}
+                + .ct {
+                    + .ft {
+                        li {
+                            &.next,
+                            &.prev {
+                                a {
+                                    top: 57px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .ct {
+                > .in {
+                    > ul {
+                        > li {
+                            + li {
+                                display: none;
+                                @include js(false) {
+                                    display: block;
+                                    margin-top: $interval-m;
+                                }
+                            }
+                            > [data-index][data-type] {
+                                //隱藏內置模組的 header 與 footer
+                                > .in {
+                                    @extend %reset;
+                                    > .hd {
+                                        display: none;
+                                    }
+                                    > .ft {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .ft {
+                > .in {}
+                ul {
+                    text-align: center;
+                    background-color: transparent;
+                    padding: 0;
+                    overflow: initial;
+                }
+                li {
+                    &.next,
+                    &.prev {
+                        @include js(false) {
+                            display: none;
+                        }
+                        a {
+                            @extend %hide-text;
+                            position: absolute;
+                            top: 40%;
+                            bottom: 0;
+                            display: block;
+                            width: $btn-width;
+                            height: 70px;
+                            transition: $transition;
+                            background-color: $white;
+                            background-color: rgba($white, $opacity-m);
+                            z-index: 1;
+                            &:hover {
+                                background-color: rgba($light, $opacity-vh);
+                            }
+                        }
+                    }
+                    &.prev {
+                        a {
+                            left: 0;
+                            @include bg-to-pic('icon-pic/away-b-left.png', false);
+                        }
+                    }
+                    &.next {
+                        a {
+                            right: 0;
+                            @include bg-to-pic('icon-pic/away-b-right.png', false);
+                        }
+                    }
+                    &.more {
+                        display: none;
+                    }
+                    &.is-img {
+                        display: inline-block;
+                        margin: $interval-s $interval-xs;
+                        vertical-align: middle;
+                        border: $border;
+                        border-width: $interval-xs;
+                        @include media('mobile') {
+                            display: none;
+                        }
+                        &.is-active {
+                            border-color: $minor-color;
+                            a {
+                                &:before {
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        span {
+                            @extend %bg-cover;
+                            display: block;
+                            position: relative;
+                            width: 42px;
+                            height: 42px;
+                        }
+                        a {
+                            @extend %mask;
+                            @extend %mask-link;
+                            @extend %hide-text;
+                        }
+                    }
+                    &.is-dot {
+                        display: inline-block;
+                        margin: $interval-m $interval-xs;
+                        vertical-align: middle;
+                        @include media('mobile') {
+                            display: none;
+                        }
+                        &.is-active {
+                            a {
+                                background-color: $major-color;
+                            }
+                        }
+                        span {
+                            display: block;
+                        }
+                        a {
+                            @extend %hide-text;
+                            display: block;
+                            width: 12px;
+                            height: 12px;
+                            background-color: $white;
+                            box-shadow: 0px 0px 4px $deep-gray;
+                            transition: $transition;
+                            border-radius: 50%;
+                            z-index: 1;
+                            &:hover {
+                                opacity: $opacity-h;
+                            }
+                        }
+                    }
+                }
+                span {}
+                a {}
+            }
+        }
+    }
+}

@@ -1,0 +1,290 @@
+//客製區塊
+
+//輪播(korea - 彥專)================================================================
+
+.area-customize.korea-pic-slider {
+
+	@include js(false) {
+		display: none;
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+	}
+
+	.hd {
+		@extend %header;
+
+		> .in {
+
+		}
+
+		h4 {
+			
+		}
+
+		span {
+				
+		}
+
+		a {
+
+		}
+	}
+
+	.ct {
+		$list-are_w: 160px;
+
+		> .in {
+
+		}
+
+		.slider-box {
+			position: relative;
+			background-color: $black;
+		}
+
+		.pic-area {
+			margin-right: $list-are_w;
+			overflow: hidden;
+
+			@include media('mobile') {
+				margin-right: 0;
+			}
+			
+			/*a*/.div {
+				position: relative;
+				margin: $interval-m;
+
+				@include media('mobile') {
+					margin-bottom: 0;
+				}
+
+				&:hover {
+
+					.figcaption {
+
+						span {
+							color: $light;
+						}
+					}
+
+					.p {
+
+						p {
+
+							span {
+								color: $light;
+							}
+						}
+					}
+				}
+			}
+
+			.img {
+
+				span {
+					display: block;
+					background-image: none !important;
+				}
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			.essay {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				padding: $interval-xl;
+				background-color: $black;
+				background-color: rgba($black, $opacity-h);
+
+				@include media('phone') {
+					padding: $interval-m;
+				}
+			}
+
+			.figcaption {
+				font-weight: $font-weight-b;
+				font-size: $font-size-l;
+
+				@include media('phone') {
+					font-weight: $font-weight-n;
+					font-size: $font-size-m;
+				}
+
+				span {
+					display: block;
+					color: $white;
+					@extend %ellipsis;
+				}
+			}
+
+			.p {
+				margin-top: $interval-m;
+
+				@include media('phone') {
+					display: none;
+				}
+
+				p {
+
+				}
+
+				span {
+					color: $white;
+				}
+			}
+		}
+
+		.list-area {
+			position: absolute;
+			top: $interval-m;
+			right: $interval-m;
+			bottom: $interval-m;
+			width: $list-are_w - $interval-m;
+
+			@include media('mobile') {
+				position: static;
+				top: auto;
+				width: auto;
+				height: auto;
+				bottom: auto;
+			}
+
+			ul {
+				padding-left: 0;
+				margin: 0;
+				list-style: none;
+
+				@include media('mobile') {
+					padding: $interval-xs;
+				}
+
+				&:after {
+					@extend %clear;
+				}
+			}
+
+			li { //1
+				position: absolute;
+				width: 100%;
+				height: 19%;
+				top: 0;
+
+				@include media('mobile') {
+					position: relative;
+					top: auto !important;
+					width: 20%;
+					float: left;
+					height: auto;
+				}
+
+				&.is-active {
+
+					span {
+						border-color: $major-color;
+					}
+				}
+
+				+ li { //2
+					top: 20.25%;
+
+					+ li { //3
+						top: 40.5%;
+
+						+ li { //4
+							top: 60.75%;
+
+							+ li { //5
+								top: 81%;
+								
+								+ li {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			span {
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				box-sizing: border-box;
+				border: $interval-xs solid transparent;
+				@extend %bg-cover;
+
+				@include media('mobile') {
+					margin: 10px 5px;
+					position: relative;
+					top: auto;
+					right: auto;
+					left: auto;
+					bottom: auto;
+				}
+			}
+
+			a {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+
+				@include media('mobile') {
+					position: static;
+					height: 80px;
+					top: auto;
+					right: auto;
+					bottom: auto;
+					left: auto;
+				}
+
+				&:hover {
+
+					span {
+						border: $interval-xs solid $major-color;
+					}
+				}
+			}
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	.ft {
+		@extend %footer;
+
+		> .in {
+
+		}
+
+		ul {
+
+		}
+
+		li {
+
+		}
+
+		span {
+
+		}
+
+		a {
+
+		}
+	}
+}

@@ -1,0 +1,109 @@
+//文章區塊
+//訊息================================================================
+.area-essay.message {
+    > .bg-drop-layout > .in,
+    > .in {}
+    .hd {
+        @extend %header;
+        > .in {}
+        h4 {}
+        span {}
+        a {}
+    }
+    .ct {
+        > .in {}
+        /*a*/
+        .div {
+            padding: $interval-m;
+            transition: $transition;
+            &:after {
+                @extend %clear;
+            }
+            &:hover {
+                background-color: $light;
+            }
+        }
+        .img {
+            float: left;
+            margin-right: $interval-m;
+            span {
+                @extend %bg-cover;
+                display: block;
+                width: 170px;
+                height: 125px;
+                margin-left: -8px;
+                @include media('phone') {
+                    width: 100%;
+                        margin-bottom: 10px;
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+        .essay {
+            overflow: hidden;
+        }
+        .caption {
+            @extend %caption;
+            color: $major-color;
+            position: absolute;
+            top: 33px;
+            span {}
+            @include media('phone') {
+                position: initial;
+            }
+        }
+        .label {
+            @extend %label;
+            position: absolute;
+            top: 0;
+            ul {}
+            li {}
+            span {}
+            @include media('phone') {
+                position: initial;
+            }
+        }
+        /*i*/
+        .mark {
+            @extend %mark;
+            color: $gray;
+        }
+        .p {
+            @extend %paragraph;
+            position: absolute;
+            top: 58px;
+            @include media('phone') {
+                position: initial;
+            }
+            p {
+                @include multi-ellipsis(3);
+                letter-spacing: 1px;
+                &:after {
+                    transition: $transition;
+                }
+                &:hover {
+                    &:after {
+                        background-image: linear-gradient(to right, transparent 0, $light 60%);
+                    }
+                }
+            }
+            span {}
+        }
+    }
+    .ft {
+        @extend %footer;
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
+}
+
+.media .area-essay.message {
+    .ct {
+        .div {}
+    }
+}
