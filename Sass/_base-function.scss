@@ -471,34 +471,34 @@
 }
 
 %multi-ellipsis {
-	overflow: hidden;
-	&:before {
-		content: '\200B';
-		float: left;
-		width: 1px;
-	}
-	> * {
-		float: right;
-		width: 100%;
-		box-sizing: border-box;
-		margin-left: -1px;
-	}
-	&:after {
-		content: '...';
-		position: relative;
-		float: right;
-		left: 100%;
-		width: 50px;
-		margin-left: -50px;
-		margin-right: 1px;
-		text-indent: 30px;
-	}
+    overflow: hidden;
+    &:before {
+        content: '\200B';
+        float: left;
+        width: 1px;
+    }
+    > * {
+        float: right;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: -1px;
+    }
+    &:after {
+        content: '...';
+        position: relative;
+        float: right;
+        left: 100%;
+        width: 50px;
+        margin-left: -50px;
+        margin-right: 1px;
+        text-indent: 30px;
+    }
 }
+
 @mixin multi-ellipsis($line: 6, $line-height: 20px, $background-color: $white, $position: 60%) {
     //多行超過範圍文字變成'...'的方法
     @extend %multi-ellipsis;
     height: $line-height * $line;
-
     &:before {
         height: $line-height * $line;
     }
@@ -645,6 +645,9 @@
         margin: $interval-m 0;
         line-height: 40px;
         text-align: center;
+        background: url("../Images/bg-head.png") no-repeat;
+        width: 100%;
+        background-position: center 13px;
     }
     span {}
     a {}
@@ -701,33 +704,33 @@
 }
 
 // %btn { //按鈕組件
-// 	display: inline-block;
-// 	padding: $btn-padding;
-// 	border: $btn-border;
-// 	box-sizing: border-box;
-// 	line-height: 1;
-// 	text-align: center;
-// 	vertical-align: middle;
-// 	color: $btn-text-color;
-// 	cursor: pointer;
-// 	font-size: $font-size-s;
-// 	text-decoration: none;
-// 	background-color: $btn-bg-color;
-// 	transition: $transition;
-// 	border-radius: $border-radius;
-// 	&:link {
-// 		color: $btn-text-color;
-// 	}
-// 	&:visited {
-// 		color: $btn-text-color;
-// 	}
-// 	&:hover {
-// 		background-color: $btn-hover-bg-color;
-// 		color: $white;
-// 	}
-// 	&:active {
-// 		color: $btn-text-color;
-// 	}
+//  display: inline-block;
+//  padding: $btn-padding;
+//  border: $btn-border;
+//  box-sizing: border-box;
+//  line-height: 1;
+//  text-align: center;
+//  vertical-align: middle;
+//  color: $btn-text-color;
+//  cursor: pointer;
+//  font-size: $font-size-s;
+//  text-decoration: none;
+//  background-color: $btn-bg-color;
+//  transition: $transition;
+//  border-radius: $border-radius;
+//  &:link {
+//      color: $btn-text-color;
+//  }
+//  &:visited {
+//      color: $btn-text-color;
+//  }
+//  &:hover {
+//      background-color: $btn-hover-bg-color;
+//      color: $white;
+//  }
+//  &:active {
+//      color: $btn-text-color;
+//  }
 // }
 %btn {
     //按鈕組件
@@ -991,7 +994,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-@mixin bg-to-pic($img-src, $size: true, $height: null) {
+@mixin bg-to-pic($img-src,
+$size: true,
+$height: null) {
     //依圖改變大小並置中，$img-src為圖片檔名，$size為false就不匯出寬高，參數為數字就會出指定倍數大小，$size為數字帶單位就會匯出指定大小，若指定$height就會當作高度使用
     background-image: image-url($img-src);
     background-repeat: no-repeat;
@@ -1040,7 +1045,9 @@
     }
 }
 
-@mixin icon-pic($img-name, $size: true, $height: null) {
+@mixin icon-pic($img-name,
+$size: true,
+$height: null) {
     //取雪碧圖icon，$img-name為圖片檔名，$size為false就不匯出寬高，$size為數字就會出指定倍數大小，$size為數字帶單位就會出指定指定大小，若指定第$height就會當作高度使用
     @if( str-index( $img-name, '.png')) {
         //如果有副檔名就拿掉
@@ -1059,7 +1066,9 @@
         height: image-height('icon-pic/#{$img-name}.png');
     }
     @else {
-        @include bg-to-pic('icon-pic/#{$img-name}.png', $size, $height);
+        @include bg-to-pic('icon-pic/#{$img-name}.png',
+        $size,
+        $height);
     }
 }
 
@@ -1076,12 +1085,16 @@
     color: $icon-font-color;
 }
 
-@mixin icon-pic-btn($img-name, $size: true, $height: null) {
+@mixin icon-pic-btn($img-name,
+$size: true,
+$height: null) {
     //只有icon圖片的按鈕，隱含佔用了 :before
     @extend %hide-text;
     display: inline-block;
     &:before {
-        @include icon-pic( $img-name, $size, $height);
+        @include icon-pic( $img-name,
+        $size,
+        $height);
         display: block !important;
     }
 }
