@@ -35,17 +35,18 @@
 
 					> li {
 
+						@include js(false) {
+							display: none;
+						}
+
 						+ li {
+
 							@include js(false) {
-								display: none;
+								display: block !important;
 							}
 
 							+ li {
 								display: none;
-
-								@include js(false) {
-									display: block;
-								}
 							}
 						}
 
@@ -59,7 +60,7 @@
 									display: none;
 
 									@include js(false) {
-										display: block;
+										display: block !important;
 									}
 								}
 							}

@@ -22,7 +22,7 @@
 				</li><% li_length.times do |i| %><li data-index="<%= i + 2 %>">
 
 					<!-- <%= inner %> -->
-						<%= render partial:  inner, locals: set({ index: 4, inner: "/erb/area-essay_message" }) %>
+						<%= render partial:  inner, locals: set({ index: 4, inner: "/erb/area-essay_message", header_text: "項目#{i + 1}" }) %>
 					<!-- <%= inner %> -->
 
 					</li><% end %></ul></div></div>
