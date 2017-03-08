@@ -169,7 +169,7 @@
                 display: inline;
                 &.advanced {
                     @extend %btn;
-                    background: #04616f;
+                    background: $major-deep-color;
                 }
             }
             span {}
