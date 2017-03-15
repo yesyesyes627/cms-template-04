@@ -21,6 +21,8 @@
 	}
 
 	> .in {
+		padding: $interval-m;
+		padding-bottom: 0;
 
 		> .hd {
 			display: none;
