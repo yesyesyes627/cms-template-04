@@ -9,10 +9,7 @@
 		.hd {
 
 			a {
-
-				&:after {
-					background-image: image-url('icon-pic/away-b-top.png');
-				}
+				background-image: image-url('search-up.png');
 			}
 		}
 
@@ -36,47 +33,27 @@
 		}
 
 		span {
-			display: block;	
+			display: block;
+			text-align: right;
 		}
 
 		a {
-			$icon_w: 30px;
+			$icon_w: 38px;
+			$icon_h: 22px;
 
-			position: relative;
-			display: block;
-			padding: $interval-m;
-			padding-right: $icon_w + $interval-m;
-			color: $major-color;
+			@extend %hide-text;
+			display: inline-block;
+			width: $icon_w;
+			height: $icon_h;
+			vertical-align: middle;
+			background-image: image-url('search-down.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			border-radius: $border-radius;
+			border: $border;
 			transition: $transition;
 
-			&:before {
-				content: $content;
-				display: inline-block;
-				width: $icon_w;
-				height: $icon_w;
-				border-radius: 50%;
-				background-image: image-url('icon-pic/search.png');
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: $major-color;
-				vertical-align: middle;
-				margin-right: $interval-s;
-			}
-
-			&:after {
-				content: $content;
-				position: absolute;
-				display: block;
-				width: $icon_w;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				background-image: image-url('icon-pic/away-b-bottom.png');
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-
-			&:hover {
+			&:hover, &:focus {
 				background-color: $light;
 			}
 		}
