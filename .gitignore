@@ -1,3 +1,5 @@
 /gitignore
 /.sass-cache
+/Css/*.map
 /Css
+/Images/icon-pic-*.png

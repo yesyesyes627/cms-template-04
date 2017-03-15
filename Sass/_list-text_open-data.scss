@@ -3,46 +3,15 @@
 //開放資料================================================================
 
 .list-text.open-data {
-	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	z-index: 2;
-
-	@include js(false) {
-		display: none;
-	}
-
-	@include media('mobile') {
-		display: none;
-	}
-
-	&:hover, &.is-active {
-
-		.hd {
-			background-color: $white;
-
-			a {
-				color: $major-color;
-
-				&:before {
-					@include icon-font('arrow_drop_up');
-				}
-			}
-		}
-
-		.ct {
-			display: block;
-		}
-	}
 
 	> .bg-drop-layout > .in, > .in {
 
 	}
 
 	.hd {
-		background-color: $light;
-		border: $border;
-		border-bottom-width: 0;
+		display: none;
 
 		> .in {
 
@@ -53,91 +22,78 @@
 		}
 
 		span {
-			display: block;
+
 		}
 
 		a {
-			display: block;
-			padding: $interval-s;
-			font-size: $font-size-s;
 
-			&:before {
-				@include icon-font('arrow_drop_down');
-				margin-right: $interval-xs;
-			}
 		}
 	}
 
 	.ct {
-		display: none;
-		position: absolute;
-		top: 100%;
-		top: calc(100% - 1px);
-		right: 0;
-		min-width: 120px;
-		z-index: -1;
 
 		> .in {
 
 		}
 
 		ul {
-			background-color: $white;
-			border: $border;
-			padding: $interval-m;
+
 		}
 
 		li {
+			vertical-align: middle;
+			display: inline-block;
 
 			+ li {
-				margin-top: $interval-s;
+				margin-left: $interval-xs;
+			}
+
+			&.rss {
+
+				a {
+					background-image: image-url('icon-pic/opn-data-rss.png');
+				}
 			}
 
 			&.json {
 
 				a {
-
-					&:before {
-
-					}
+					background-image: image-url('icon-pic/opn-data-json.png');
 				}
 			}
 
 			&.xml {
 
 				a {
-
-					&:before {
-
-					}
+					background-image: image-url('icon-pic/opn-data-xml.png');
 				}
 			}
 
 			&.csv {
 
 				a {
-
-					&:before {
-
-					}
+					background-image: image-url('icon-pic/opn-data-csv.png');
 				}
 			}
 		}
 
 		span {
 			display: block;
-			text-align: left;
 		}
 
 		a {
-
-			&:before {
-				@include icon-font('cloud_download');
-				margin-right: $interval-xs;
-			}
+			@extend %hide-text;
+			display: block;
+			width: 24px;
+			height: 24px;
+			border: $border;
+			border-radius: $border-radius;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition: $transition;
 
 			&:hover {
-				color: $major-color;
+				background-color: $light;
 			}
 		}
 
