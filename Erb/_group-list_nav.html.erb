@@ -4,13 +4,17 @@
 	min_width = 1 #最窄的選單寬度
 	max_width = 6 #最寬的選單寬度
 
+	min_navlen = 6
+	max_navlen = 10
+
 	li_length = (min_li..max_li).to_a.sample
 	nav_width = (min_width..max_width).to_a.sample
+	navlen = (min_navlen..max_navlen).to_a.sample
 	
 	width = rand( li_length )
 %>
 
-<div class="group-list nav <% if class_set %><%= class_set %><% end %>" data-index="<%= index %>" data-type="<%= $list %>" data-child="<%= li_length %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
+<div class="group-list nav <% if class_set %><%= class_set %><% end %>" data-setnavlen="<%= navlen %>" data-index="<%= index %>" data-type="<%= $list %>" data-child="<%= li_length %>" <% if func_set %> data-func="<%= func_set %>"<% end %> ><div class="in">
 	<% if header_text %>
 		<div class="hd"><div class="in">
 			<h3><span><a href="#"><%= header_text %></a></span></h3>
