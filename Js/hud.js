@@ -4,6 +4,7 @@ define(function(){
 
 		var $set = {
 				activeClass: 'is-fixed',
+				speed: 300,
 				debug: false
 			}
 
@@ -15,7 +16,7 @@ define(function(){
 			$in_h = $in.outerHeight(),
 			$in_t = $in.offset().top;
 
-		var _eventNmae = 'fixed', //事件名稱
+		var _eventNmae = file, //事件名稱
 			_active = $set.activeClass; //被選擇的 class name
 
 		$win.on(_eventNmae, function () { //開始監測滾動多少的事件
@@ -35,6 +36,31 @@ define(function(){
 		});
 
 		$win.trigger(_eventNmae);
+
+		//錨點程式
+
+		var $env = $('html,body'),
+			$a = $('a[href^="#"]').filter(function(i) {
+				return !($(this).attr('href') === '#');
+			});
+
+		$a.on(_eventNmae, function(){
+
+			var $this = $(this),
+				$href = $($this.attr('href'));
+
+			if( !$href.length ) { $href = $($set.bindNode) }
+
+			$env.stop().animate({
+				scrollTop : ( $href.offset().top ) - $in_h
+			}, $set.speed );
+		});
+
+		$a.on('click', function(evt){ //觸發事件
+			evt.preventDefault();
+
+			$(this).trigger(_eventNmae);
+		});
 
 		if($set.debug) {
 			console.log('預設值:', $set);
