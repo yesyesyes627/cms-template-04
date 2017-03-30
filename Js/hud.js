@@ -41,7 +41,9 @@ define(function(){
 
 		var $env = $('html,body'),
 			$a = $('a[href^="#"]').filter(function(i) {
-				return !($(this).attr('href') === '#');
+				var $this = $(this);
+
+				return $($this.attr('href')).length > 0;
 			});
 
 		$a.on(_eventNmae, function(){
