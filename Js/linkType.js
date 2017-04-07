@@ -36,13 +36,26 @@ define(function(){
 
 			for( var i = 0; i < $domains_l; i++) {
 				_is_local = Math.max(_is_local, _href.indexOf($domains[i])); //只要有一個大於-1，就是內部
-
 			}
 
 			if( _has_http && _is_local === -1 ) { //如果有 http(s) 又不是本地 就是外部連結
 				$this.addClass($set.externalClass); //加入外部連結 class
+
 			}else if( _dot_i > _slash ) { //最後是 .*
-				$this.addClass(_href.substr(_href.lastIndexOf('.') + 1, _href.length)); //加入副檔名 class
+				var _dot_i = _href.lastIndexOf('.') + 1, //最後一個.
+					_ques_i =_href.indexOf('?'), // 最後一個問候
+					_length = _href.length,
+					_type = 'other';
+
+				if( _ques_i === -1 || _dot_i > _ques_i ){ //如果沒有問號或問號比.前面
+					_length = _href.length - _dot_i;
+				}else { //如果有問號
+					_length = _ques_i - _dot_i;
+				}
+
+				_type = _href.substr(_dot_i, _length);
+
+				$this.addClass(_type);
 			}
 		});
 

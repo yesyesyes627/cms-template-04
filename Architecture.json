@@ -117,7 +117,8 @@
 			},
 			{
 				"GroupType": "FixedModuleString",
-				"Name": "Menu"
+				"Name": "Menu",
+				"func": "{'setNavLen':{}}"
 			},
 			{
 				"GroupType": "Group",
@@ -154,6 +155,10 @@
 		"BaseName": "page-header",
 		"Sub": [
 			{
+				"GroupType": "FixedModuleString",
+				"Name": "WebArchive_Breadcrumb"
+			},
+			{
 				"GroupType": "Group",
 				"Type": 3,
 				"Class": "info",
@@ -161,31 +166,33 @@
 				"Sub": [
 					{
 						"GroupType": "FixedModuleString",
-						"Name": "WebArchive_Breadcrumb"
+						"Name": "WebArchive_Header"
 					},
 					{
-						"GroupType": "FixedModuleString",
-						"Name": "Tools",
-						"func": "{'toggleBtn':{}}"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "WebArchive_OpenData",
-						"func": "{'toggleBtn':{}}"
+						"GroupType": "Group",
+						"Type": 3,
+						"Class": "msg-tool",
+						"func": "",
+						"Sub": [
+							{
+								"GroupType": "FixedModuleString",
+								"Name": "WebArchive_OpenData"
+							},
+							{
+								"GroupType": "FixedModuleString",
+								"Name": "Tools"
+							},
+							{
+								"GroupType": "FixedModuleString",
+								"Name": "WebArchive_TTS"
+							}
+						]
 					}
 				]
 			},
 			{
 				"GroupType": "FixedModuleString",
-				"Name": "WebArchive_Header"
-			},
-			{
-				"GroupType": "FixedModuleString",
 				"Name": "WebArchive_NextNodes"
-			},
-			{
-				"GroupType": "FixedModuleString",
-				"Name": "WebArchive_TTS"
 			},
 			{
 				"GroupType": "FixedModuleString",

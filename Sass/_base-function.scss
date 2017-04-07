@@ -762,7 +762,6 @@
         color: $btn-text-color;
     }
     &:hover {
-        color: $white;
     }
     &:active {
         box-shadow: $btn-active;
@@ -810,6 +809,11 @@
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+
+    &:hover {
+        color: $white;
+    }
+
     &:before {
         content: "";
         -webkit-transform: scaleX(0);
@@ -840,9 +844,11 @@
 
 %btn-imp {
     // important 重要的按鈕組件
-    background-color: $minor-color;
+    border-color: $minor-color;
+    color: $minor-color;
+
     &:hover {
-        background-color: deeper($minor-color);
+        border-color: deeper($minor-color);
     }
 }
 

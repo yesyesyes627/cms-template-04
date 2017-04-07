@@ -19,7 +19,12 @@ define(function(){
 				$date = $this.find('[type="date"]');
 
 			$date.each(function(i,n){
-				$date.attr('type', 'text');
+				var $this = $(this),
+					_val = $this.attr('value');
+
+				$this.attr('type', 'text');
+				$this.attr('value', _val);
+
 				$(n).datepicker($set);
 			});
 		// }

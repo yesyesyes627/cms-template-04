@@ -1,4 +1,4 @@
-<div class="group base-section" id="base-section" data-index="<%= index %>" data-type="<%= $row %>" data-child="3" data-func="{'linkType':{'domains':['http://ccmsws19.hamastar.com.tw/']}}"><div class="in">
+<div class="group base-section" id="base-section" data-index="<%= index %>" data-type="<%= $row %>" data-child="3"><div class="in">
 	<div class="ct"><div class="in">
 
 	<!-- accesskey 導盲磚 -->
@@ -9,36 +9,48 @@
 		<div class="group page-header" data-index="1" data-type="<%= $row %>" data-child="4"><div class="in">
 			<div class="ct"><div class="in">
 
+			<!-- breadcrumb 麵包屑 -->
+				<%= render partial: "/erb/list-text_breadcrumb", locals: set({ index: 1 }) %>
+			<!-- breadcrumb 結束 -->
+
 			<!-- group-info 資訊群組 -->
 				<div class="group info" data-index="3" data-type="<%= $row %>" data-child="2"><div class="in">
 					<div class="ct"><div class="in">
 
-					<!-- breadcrumb 麵包屑 -->
-						<%= render partial: "/erb/list-text_breadcrumb", locals: set({ index: 1 }) %>
-					<!-- breadcrumb 結束 -->
+					<!-- heading 頁面標題 -->
+						<%= render partial: "/erb/simple-text_heading", locals: set({ index: 2 }) %>
+					<!-- heading 結束 -->
 
-					<!-- user-tool 使用者工具 -->
-						<%= render partial: "/erb/list-text_user-tool", locals: set({ index: 1, header_text: "工具", func_set: "{'toggleBtn':{}}" }) %>
-					<!-- user-tool 結束 -->
+					<!-- msg-tool 資訊與工具群組 -->
+						<div class="group msg-tool" data-index="2" data-type="<%= $row %>" data-child="4"><div class="in">
+							<div class="ct"><div class="in">
 
-					<!-- open-data 開放資料 -->
-						<%= render partial: "/erb/list-text_open-data", locals: set({ index: 2, header_text: "開放資料", func_set: "{'toggleBtn':{}}" }) %>
-					<!-- open-data 結束 -->
+							<!-- open-data 開放資料 -->
+								<%= render partial: "/erb/list-text_open-data", locals: set({ index: 2, header_text: "開放資料" }) %>
+							<!-- open-data 結束 -->
+
+							<!-- user-tool 使用者工具 -->
+								<%= render partial: "/erb/list-text_user-tool", locals: set({ index: 1, header_text: "工具" }) %>
+							<!-- user-tool 結束 -->
+
+							<!-- recitation 朗誦 -->
+								<%= render partial: "/erb/area-customize_recitation", locals: set({ index: 3, class_set: "is-pad-hide is-phone-hide", header_text: "朗誦" }) %>
+							<!-- recitation 結束 -->
+
+							</div></div>
+						</div></div>
+					<!-- msg-tool 結束 -->
 
 					</div></div>
 				</div></div>
 			<!-- group-info 結束 -->
-
-			<!-- heading 頁面標題 -->
-				<%= render partial: "/erb/simple-text_heading", locals: set({ index: 2 }) %>
-			<!-- heading 結束 -->
 
 			</div></div>
 		</div></div>
 	<!-- group-page-header 結束 -->
 
 	<!-- group-page-content 內頁主要內容 -->
-		<div class="group page-content" data-index="2" data-type="<%= $row %>" data-child="6"><div class="in">
+		<div class="group page-content" data-index="2" data-type="<%= $row %>" data-child="6" data-func="{'linkType':{'domains':['http://ccmsws19.hamastar.com.tw/']}}"><div class="in">
 			<div class="ct"><div class="in">
 
 			<!-- 內頁內容開始 -->

@@ -56,7 +56,7 @@
 			<script src="/js/require.js"></script>
 			<script >
 				requirejs.config({
-					baseUrl: 'http://127.0.0.1:24681/js'
+					baseUrl: window.location.origin + '/js'
 				});
 
 				requirejs(['main'], function(func){ //執行主程式

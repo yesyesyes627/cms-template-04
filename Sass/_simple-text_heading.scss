@@ -35,11 +35,9 @@
 
 		h3 {
 			@extend %reset;
-			padding-left: $interval-s;
-			padding-bottom: $interval-m;
-			border-bottom: $border;
-			border-bottom-color: $body-font-color;
 			font-size: $font-size-xxl;
+			padding: $interval-xs;
+			padding-right: 210px;
 		}
 
 		span {
