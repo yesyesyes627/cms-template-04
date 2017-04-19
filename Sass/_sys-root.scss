@@ -11,7 +11,13 @@
 	position: relative;
 
 	.is-pc-hide { //電腦版隱藏
-		display: none !important;
+
+		@media (min-width: #{$pad-width + 1}) {
+
+			& {
+				display: none !important;
+			}
+		}
 	}
 
 	.is-pad-hide { //平板版關閉
