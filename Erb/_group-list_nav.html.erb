@@ -30,7 +30,7 @@
 				</div></div>
 				<div class="ct"><div class="in">
 
-					<% if is_megaMenu %>
+					<% if menuType == "MagaMenu" %>
 
 						<%
 							mega_li_length = (min_li..max_li).to_a.sample
@@ -48,6 +48,16 @@
 								<% end %>
 							</div></div>
 						</div></div>
+
+					<% elsif menuType == "TripleMenu" %>
+
+						<% (min_li..max_li).to_a.sample.times do |j| %>
+
+							<!-- <%= inner %> -->
+								<%= render partial:  inner, locals: set({  index: j + 1, header_text: lorem_word }) %>
+							<!-- <%= inner %> -->
+
+						<% end %>
 
 					<% else %>
 
