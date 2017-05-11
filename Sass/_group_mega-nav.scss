@@ -1,0 +1,62 @@
+//群組
+
+//複合選單================================================================
+
+.group.mega-nav {
+	$default-len: 4;
+
+	@include default-len(3, $default-len);
+	@include set-len(3);
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+
+			}
+
+			a {
+				
+			}
+		}
+
+		> .ct {
+
+			> .in {
+				
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

@@ -135,11 +135,22 @@
 			}
 
 			span {
-
+				display: block;
+				margin: 0 $interval-xs;
+				padding: $interval-xs 0;
 			}
 
 			a {
+				@extend %ellipsis;
+				display: block;
+				padding: $interval-m;
+				border-bottom: $border;
+				color: $major-color;
+				font-size: ( $font-size-l + $font-size-m ) / 2;
 
+				&:hover {
+					color: deeper($major-color);
+				}
 			}
 		}
 
