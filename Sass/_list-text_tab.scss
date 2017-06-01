@@ -1,7 +1,7 @@
 //文字列表
 //頁籤================================================================
 .list-text.tab {
-    @include average(0, 5);
+    @include average(0, 2);
     > .bg-drop-layout > .in,
     > .in {}
     .hd {
