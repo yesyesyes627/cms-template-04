@@ -41,17 +41,16 @@ define(function(){
 
 		var $env = $('html,body'),
 			$a = $('a[href^="#"]').filter(function(i) {
-				var $this = $(this);
+				var $this = $(this),
+					$closest = $this.closest('[data-type]');
 
-				return $($this.attr('href')).length > 0;
+				return ( $($this.attr('href')).length !== 0 && !$closest.hasClass('list-text tab') );
 			});
 
 		$a.on(_eventNmae, function(){
 
 			var $this = $(this),
 				$href = $($this.attr('href'));
-
-			if( !$href.length ) { $href = $($set.bindNode) }
 
 			$env.stop().animate({
 				scrollTop : ( $href.offset().top ) - $in_h

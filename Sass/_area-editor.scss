@@ -39,6 +39,10 @@
 
 		table {
 			max-width: 100% !important;
+
+			@include media('mobile') {
+				table-layout: fixed;
+			}
 		}
 	}
 

@@ -1,6 +1,7 @@
 <%
 	min_li = 1 #最少的li數量
 	max_li = 10 #最多的li數量
+
 	min_width = 1 #最窄的選單寬度
 	max_width = 6 #最寬的選單寬度
 
@@ -23,18 +24,51 @@
 
 	<div class="ct"><div class="in"><ul data-index="1" data-child="<%= li_length %>"><% li_length.times do |i| %><li data-index="<%= i + 1 %>" data-width="<%= rand( li_length ) + 1 %>">
 
-					<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
-						<div class="hd"><div class="in">
-							<h3><span><a href="#"><%= lorem_word %></a></span></h3>
+			<div class="group nav" data-index="1" data-type="3" data-child="1"><div class="in">
+				<div class="hd"><div class="in">
+					<h3><span><a href="#"><%= lorem_word %></a></span></h3>
+				</div></div>
+				<div class="ct"><div class="in">
+
+					<% if menuType == "MagaMenu" %>
+
+						<%
+							mega_li_length = (min_li..max_li).to_a.sample
+							mega_set_length = (min_width..max_width).to_a.sample
+						%>
+
+						<div class="group mega-nav" data-index="1" data-type="3" data-child="<%= li_length %>" data-setLen="<%= mega_set_length %>"><div class="in">
+							<div class="ct"><div class="in">
+								<% mega_li_length.times do |j| %>
+
+									<!-- <%= inner %> -->
+										<%= render partial:  inner, locals: set({  index: j + 1, header_text: lorem_word }) %>
+									<!-- <%= inner %> -->
+
+								<% end %>
+							</div></div>
 						</div></div>
-						<div class="ct"><div class="in">
+
+					<% elsif menuType == "TripleMenu" %>
+
+						<% (min_li..max_li).to_a.sample.times do |j| %>
+
+							<!-- <%= inner %> -->
+								<%= render partial:  inner, locals: set({  index: j + 1, header_text: lorem_word }) %>
+							<!-- <%= inner %> -->
+
+						<% end %>
+
+					<% else %>
 
 						<!-- <%= inner %> -->
-							<%= render partial:  inner, locals: set( ) %>
+							<%= render partial:  inner, locals: set({ }) %>
 						<!-- <%= inner %> -->
 
-						</div></div>
-					</div></div>
-				
-				</li><% end %></ul></div></div>
+					<% end %>
+
+				</div></div>
+			</div></div>
+		
+		</li><% end %></ul></div></div>
 </div></div>
