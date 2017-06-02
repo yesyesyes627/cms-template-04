@@ -7,8 +7,7 @@
             > .hd {
                 display: none;
                 > .in {}
-                h3 {
-                }
+                h3 {}
                 span {}
                 a {}
             }
@@ -61,8 +60,6 @@
         }
     }
     .base-extend & {
-        $default-len: 6;
-        $max-len: 8;
         @extend %center;
         @include rwd(1080) {
             margin-right: 30px;
@@ -71,7 +68,6 @@
         @include media('mobile') {
             display: none;
         }
-        @include default-min-len(4, $default-len, $max-len);
         position: relative;
         z-index: 3;
         @include js(false) {
@@ -92,7 +88,6 @@
             background-color: $deep;
             background-color: rgba($deep, $opacity-h);
             border-radius: $border-radius;
-            padding: 0 $interval-l;
             > .hd {
                 display: none;
                 > .in {}
@@ -108,9 +103,11 @@
                             @extend %clear;
                         }
                         > li {
+                            width: 12.5%;
+                            display: inline-block;
                             position: relative;
                             box-sizing: border-box;
-                            padding: $interval-s;
+                            padding: $interval-s 0;
                             @include js(false) {
                                 width: 100%;
                             }

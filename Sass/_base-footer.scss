@@ -1,38 +1,36 @@
 //框架
-
 //頁尾資訊================================================================
-
 .base-footer {
-	padding-top: 60px;
-	background-color: $deep;
-	background-color: rgba($deep, $opacity-h);
-
-	@include media('mobile') {
-		margin-top: 10px;
-	}
-
-	> .in {
-
-		> .hd {
-
-			> .in {
-
-			}
-
-			h3 {
-
-			}
-
-			span {
-
-			}
-		}
-
-		> .ct {
-
-			> .in {
-
-			}
-		}
-	}
+    padding-top: 60px;
+    background-color: $deep;
+    background-color: rgba($deep, $opacity-h);
+    @include media('mobile') {
+        margin-top: 10px;
+    }
+    > .in {
+        > .hd {
+            > .in {}
+            h3 {}
+            span {}
+        }
+        > .ct {
+            > .in {
+                .footer {
+                    .copyright {
+                        ul {
+                            list-style: none;
+                            padding-left: 0;
+                            li {
+                                display: inline-block;
+                                margin-right: 5px;
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

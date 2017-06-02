@@ -47,8 +47,8 @@
         .caption {
             @extend %caption;
             color: $major-color;
-            position: absolute;
-            top: 33px;
+            // position: absolute;
+            // top: 33px;
             span {}
             @include media('phone') {
                 position: initial;
@@ -72,13 +72,13 @@
         }
         .p {
             @extend %paragraph;
-            position: absolute;
-            top: 58px;
+            // position: absolute;
+            // top: 58px;
             @include media('phone') {
                 position: initial;
             }
             p {
-                @include multi-ellipsis(3);
+                // @include multi-ellipsis(3);
                 letter-spacing: 1px;
                 &:after {
                     transition: $transition;
