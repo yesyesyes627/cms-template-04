@@ -57,7 +57,7 @@
         .label {
             @extend %label;
             position: absolute;
-            top: 0;
+            top: 23px;
             ul {}
             li {}
             span {}
@@ -74,8 +74,10 @@
             @extend %paragraph;
             // position: absolute;
             // top: 58px;
+            margin-top: 34px;
             @include media('phone') {
                 position: initial;
+                margin-top: 0px;
             }
             p {
                 // @include multi-ellipsis(3);
