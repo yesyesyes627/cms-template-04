@@ -61,12 +61,12 @@ define(function() {
 
 			if( !$link.length && !_type && add !== false ) {
 
-				$link = $('<h4><a href="#"></a></h4>');
+				$link = $('<h4><span><a href="#">build by getNode</span></a></h4>');
 				$hdIn.append($link);
 
 			}else if( !$link.length && add !== false ) {
 
-				$link = $('<h3><a href="#"></a></h3>');
+				$link = $('<h3><span><a href="#">build by getNode</span></a></h3>');
 				$hdIn.append($link);
 			}
 
@@ -147,7 +147,7 @@ define(function() {
 				$btn = $ftList.children('.'+ className);
 
 			if( !$btn.length && !className && add !== false ) { //空按鈕
-				$btn = $('<li><span><a href="#"></a></span></li>');
+				$btn = $('<li><span><a href="#">build by getNode</a></span></li>');
 				$ftList.append($btn);
 
 				this.updateFtItemLen(env);
