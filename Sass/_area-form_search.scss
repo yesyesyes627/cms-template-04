@@ -67,7 +67,6 @@
         display: inline-block;
         vertical-align: middle;
         text-align: left;
-        
         @include media('mobile') {
             display: none;
         }
@@ -166,7 +165,10 @@
                 display: inline;
                 &.advanced {
                     @extend %btn;
-                    background: $major-deep-color;
+                    background: $major-color;
+                    &:before {
+                        background: deeper($major-color);
+                    }
                 }
             }
             span {}

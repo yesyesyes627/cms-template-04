@@ -103,6 +103,7 @@
 			background: $major-deep-color;
 			transition: $transition;
 			margin-right: 10px;
+			background-color: rgba($white, 0.1);
 			&:hover {
 				background-color: deeper($major-color);
 			}
