@@ -637,7 +637,7 @@
 
 %area-page-no-header {
     //沒有 header 的內頁模組
-    margin-top: $interval-m !important;
+    margin-top: 10px !important;
     > .in {
         > .hd {
             display: none !important;
@@ -682,7 +682,7 @@
 %area-page {
     //內頁模組
     [data-type] + [data-type] {
-        margin-top: $interval-xl;
+        margin-top: 10px;
     }
     [data-type] + .is-hide-header {
         //在內頁模組上下 ".is-hide-header" 的 margin 樣式
@@ -850,7 +850,9 @@
         color: $btn-text-color;
     }
     &:hover {
+        color: $white;
     }
+
     &:active {
         box-shadow: $btn-active;
     }
@@ -862,7 +864,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: $major-deep-color;
+        background: deeper($major-color);
         -webkit-transform: scaleX(0);
         transform: scaleX(0);
         -webkit-transform-origin: 50%;

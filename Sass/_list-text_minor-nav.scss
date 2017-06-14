@@ -1,108 +1,66 @@
 //文字列表
-
 //次選單================================================================
-
 .list-text.minor-nav {
-
-	> .bg-drop-layout > .in, > .in {
-		border: $border;
-		border-bottom-width: $interval-xs;
-		border-radius: 0 0 $interval-xs $interval-xs;
-		background-color: $white;
-	}
-
-	.hd {
-		background-color: $major-color;
-		background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px );
-
-		> .in {
-
-				}
-
-		h4 {
-			padding: 15px;
-			color: $white;
-			font-size: $font-size-xl;
-			line-height: 25px;
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
-
-	.ct {
-		border-top: $border;
-		border-top-color: $white;
-
-		> .in {
-			
-		}
-
-		ul {
-			
-		}
-
-		li {
-
-			+ li {
-				border-top: $border;
-			}
-
-			&.is-active {
-
-				a {
-					background-color: $major-color;
-					color: $white;
-				}
-			}
-		}
-
-		span {
-			display: block;
-		}
-
-		a {
-			display: block;
-			padding: 12px;
-			transition: $transition;
-			font-size: $font-size-l;
-
-			&:hover {
-				background-color: $light;
-				color: currentColor;
-			}
-		}
-
-		/*i*/.mark {
-			
-		}
-	}
-
-	.ft {
-
-		> .in {
-
-		}
-
-		ul {
-
-		}
-
-		li {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
+    > .bg-drop-layout > .in,
+    > .in {
+        border: $border;
+        border-bottom-width: $interval-xs;
+        border-radius: 0 0 $interval-xs $interval-xs;
+        background-color: $white;
+    }
+    .hd {
+        // background-color: $major-color;
+        background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px);
+        > .in {}
+        h4 {
+            padding: 13px 0;
+            color: $white;
+            font-size: $font-size-xl;
+            line-height: 25px;
+            background-position: center !important;
+        }
+        span {}
+        a {
+            color: $black;
+        }
+    }
+    .ct {
+        border-top: $border;
+        border-top-color: $white;
+        > .in {}
+        ul {}
+        li {
+            + li {
+                border-top: $border;
+            }
+            &.is-active {
+                a {
+                    background-color: $major-color;
+                    color: $white;
+                }
+            }
+        }
+        span {
+            display: block;
+        }
+        a {
+            display: block;
+            padding: 12px;
+            transition: $transition;
+            font-size: $font-size-l;
+            &:hover {
+                background-color: $light;
+                color: currentColor;
+            }
+        }
+        /*i*/
+        .mark {}
+    }
+    .ft {
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
 }
