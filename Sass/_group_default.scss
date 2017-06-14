@@ -3,7 +3,7 @@
 .group.default {
     > .bg-drop-layout > .in,
     > .in {
-        .hd {
+        > .hd {
             @extend %header;
             > .in {}
             h3 {}
