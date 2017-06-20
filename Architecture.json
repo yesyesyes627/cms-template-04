@@ -113,7 +113,7 @@
 				"ct": "<span><a href=\"#\"></a></span>",
 				"ft": "",
 				"Class": "simple-text btn",
-				"func": "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close'}}"
+				"func": "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close','focusActive':false}}"
 			},
 			{
 				"GroupType": "FixedModuleString",
