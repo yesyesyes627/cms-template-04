@@ -1,183 +1,94 @@
 //多重列表
-
 //頁次導航列================================================================
-
 .list-multiple.page-select {
-
-	> .bg-drop-layout > .in, > .in {
-
-	}
-
-	.hd {
-		display: none;
-
-		> .in {
-
-		}
-
-		h4 {
-
-		}
-
-		span {
-				
-		}
-
-		a {
-
-		}
-	}
-
-	.ct {
-		padding-top: $interval-s;
-		// border-top: $border;
-
-		> .in {
-			
-			&:after {
-				@extend %clear;
-			}
-		}
-
-		ul {
-
-			&[data-index="1"] {
-				float: left;
-				padding-top: 5px;
-
-				@include media('mobile') {
-					display: none;
-				}
-
-				a {
-					@extend %btn;
-				}
-			}
-
-			&[data-index="2"] {
-				float: right;
-				padding-top: 5px;
-
-				@include media('mobile') {
-					display: none;
-				}
-
-				a {
-					@extend %btn;
-				}
-			}
-
-			&[data-index="3"] {
-				overflow: hidden;
-				text-align: center;
-			}
-		}
-
-		li {
-			display: inline-block;
-
-			+ li {
-				margin-left: $interval-xs;
-			}
-
-			&.first {
-				
-			}
-
-			&.prev {
-				
-			}
-
-			&.next {
-
-			}
-
-			&.last {
-				
-			}
-
-			span {
-
-				a {
-
-				}
-			}
-		}
-
-		span {
-			display: block;
-
-			&.select {
-
-				label {
-
-				}
-			}
-
-			&.number {
-
-				@include media('phone') {
-					display: none;
-				}
-
-				label {
-					
-				}
-			}
-
-			&.count {
-
-				label {
-					
-				}
-			}
-
-			select {
-
-			}
-
-			option {
-
-			}
-
-			input {
-				max-width: 60px;
-			}
-
-			label {
-				
-			}
-		}
-
-		a {
-
-		}
-
-		/*i*/.mark {
-			
-		}
-	}
-
-	.ft {
-
-		> .in {
-
-		}
-
-		ul {
-
-		}
-
-		li {
-
-		}
-
-		span {
-
-		}
-
-		a {
-
-		}
-	}
+    > .bg-drop-layout > .in,
+    > .in {}
+    .hd {
+        display: none;
+        > .in {}
+        h4 {}
+        span {}
+        a {}
+    }
+    .ct {
+        padding-top: $interval-s;
+        // border-top: $border;
+        > .in {
+            &:after {
+                @extend %clear;
+            }
+        }
+        ul {
+            &[data-index="1"] {
+                float: left;
+                // padding-top: 5px;
+                @include media('mobile') {
+                    display: none;
+                }
+                a {
+                    @extend %btn;
+                }
+            }
+            &[data-index="2"] {
+                float: right;
+                padding-top: 5px;
+                @include media('mobile') {
+                    display: none;
+                }
+                a {
+                    @extend %btn;
+                }
+            }
+            &[data-index="3"] {
+                overflow: hidden;
+                text-align: center;
+                position: relative;
+                top: 5px;
+            }
+        }
+        li {
+            display: inline-block;
+            + li {
+                margin-left: $interval-xs;
+            }
+            &.first {}
+            &.prev {}
+            &.next {}
+            &.last {}
+            span {
+                a {}
+            }
+        }
+        span {
+            display: block;
+            &.select {
+                label {}
+            }
+            &.number {
+                @include media('phone') {
+                    display: none;
+                }
+                label {}
+            }
+            &.count {
+                label {}
+            }
+            select {}
+            option {}
+            input {
+                max-width: 60px;
+            }
+            label {}
+        }
+        a {}
+        /*i*/
+        .mark {}
+    }
+    .ft {
+        > .in {}
+        ul {}
+        li {}
+        span {}
+        a {}
+    }
 }
