@@ -71,6 +71,8 @@ define(['getNode'], function(getNode){
 			preventDefaultEvents: false
 		});
 
+		compareWidth();
+
 		function slider(_away){ //輪播的方法
 
 			if( compareWidth() ) {
@@ -122,7 +124,6 @@ define(['getNode'], function(getNode){
 			var timer; //設定計時器
 
 			function auto() { //設定自動撥放涵式
-
 				slider(1);
 				timer = setTimeout(auto, $set.delay);
 			}
