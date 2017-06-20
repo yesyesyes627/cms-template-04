@@ -19,8 +19,9 @@
         li {
             position: relative;
             vertical-align: bottom;
-            @include len-rwd('pad', 4);
-            @include len-rwd('phone', 2);
+            @include len-rwd('mobile', 2);
+            // @include len-rwd('pad', 4);
+            // @include len-rwd('phone', 2);
             &.is-active {
                 @include media('mobile') {
                     top: auto;
@@ -60,7 +61,7 @@
                 color: $white;
                 background: $major-color;
             }
-            &:active{
+            &:active {
                 @extend %btn-shadow;
             }
         }
