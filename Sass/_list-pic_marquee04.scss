@@ -41,26 +41,6 @@
 		a {
 
 		}
-
-		+ .ct {
-
-			+ .ft {
-
-				li {
-
-					&.next, &.prev {
-
-						a {
-							margin-top: -0.5 * $btn-height + 28px;
-						}
-					}
-
-					&.more {
-						display: block;
-					}
-				}
-			}
-		}
 	}
 
 	.ct {
@@ -117,6 +97,7 @@
 	}
 
 	.ft {
+   		margin: $interval-l 0;
 
 		> .in {
 
@@ -169,13 +150,10 @@
 			}
 
 			&.more {
-				display: none;
+				text-align: center;
 
 				a {
-					@extend %btn;
-					position: absolute;
-					top: 0;
-					right: 0;
+					@extend %btn-s;
 				}
 			}
 		}
