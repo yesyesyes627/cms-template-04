@@ -991,7 +991,7 @@
         background-image: none !important;
     }
     a {
-        @extend %btn;
+        @extend %btn-s;
         text-align: center;
     }
 }
