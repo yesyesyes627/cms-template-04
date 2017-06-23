@@ -72,6 +72,23 @@
 					}
 				}
 
+				> .accesskey { //如果有導盲磚
+
+					~ [data-index][data-type] {
+
+						@include media('pad') {
+
+							&:nth-of-type(odd){
+								clear: none;
+							}
+
+							&:nth-of-type(even){
+								clear: left;
+							}
+						}
+					}
+				}
+
 				&:after{
 					@extend %clear;
 				}
