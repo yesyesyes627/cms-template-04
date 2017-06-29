@@ -27,6 +27,9 @@ define(['getNode'], function(getNode){
 			_flag = null, //0 未執行 / 1  執行中 / null 沒有
 			_tab_key = 9;
 
+		var _browserData = navigator.userAgent,
+			_ios = !/(iPhone|iPad|iPod|iOS)/i.test(_browserData); //過濾 ios
+
 		if( !$set.cookie ) {
 			$.cookie(_uuid, null);
 		}else {
@@ -51,7 +54,7 @@ define(['getNode'], function(getNode){
 			$btn = $env.find($set.bindNode);
 		}
 
-		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' ) { //focus 到 hd 時會啟用程式，且離開時會關閉
+		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' && !_ios ) { //focus 到 hd 時會啟用程式，且離開時會關閉
 
 			var $last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1);
 
