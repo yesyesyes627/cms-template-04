@@ -99,11 +99,26 @@
                 @extend %center;
                 > .in {
                     > ul {
+                        &[data-child="1"],
+                        &[data-child="2"],
+                        &[data-child="3"],
+                        &[data-child="4"],
+                        &[data-child="5"],
+                        &[data-child="6"] {
+                            li {
+                                width: (100% / 6);
+                            }
+                        }
+                        &[data-child="7"] {
+                            li {
+                                width: (100% / 7);
+                            }
+                        }
                         &:after {
                             @extend %clear;
                         }
                         > li {
-                            width: 12.5%;
+                            width: (100% / 8);
                             display: inline-block;
                             position: relative;
                             box-sizing: border-box;
