@@ -40,8 +40,6 @@ define(['getNode'], function(getNode){
 					// _index = $this.data('index'), //等同於 i + 1
 					_width = parseFloat($this.attr('data-width')) || 2;
 
-					console.log(_width);
-
 				var $module = $this.children('[data-index][data-type]'),
 					$ct = getNode.getCt($module);
 
