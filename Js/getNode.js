@@ -61,12 +61,12 @@ define(function() {
 
 			if( !$link.length && !_type && add !== false ) {
 
-				$link = $('<h4><span><a href="#">build by getNode</span></a></h4>');
+				$link = $('<h4><span><a title="build by getNode" href="#">build by getNode</span></a></h4>');
 				$hdIn.append($link);
 
 			}else if( !$link.length && add !== false ) {
 
-				$link = $('<h3><span><a href="#">build by getNode</span></a></h3>');
+				$link = $('<h3><span><a title="build by getNode" href="#">build by getNode</span></a></h3>');
 				$hdIn.append($link);
 			}
 
@@ -147,14 +147,21 @@ define(function() {
 				$btn = $ftList.children('.'+ className);
 
 			if( !$btn.length && !className && add !== false ) { //空按鈕
-				$btn = $('<li><span><a href="#">build by getNode</a></span></li>');
+				$btn = $('<li><span><a title="build by getNode" href="#">build by getNode</a></span></li>');
 				$ftList.append($btn);
 
 				this.updateFtItemLen(env);
 				this.updateIndex($btn);
 			}else if( !$btn.length && add !== false ) {
-				$btn = $('<li class="'+ className +'"><span><a href="#">'+ className +'</a></span></li>');
-				$ftList.append($btn);
+
+				var _method = 'append';
+
+				if( className === 'prev' ) {
+					_method = 'prepend';
+				}
+
+				$btn = $('<li class="'+ className +'"><span><a title="'+ className +'" href="#">'+ className +'</a></span></li>');
+				$ftList[_method]($btn);
 
 				this.updateFtItemLen(env);
 				this.updateIndex($btn);
