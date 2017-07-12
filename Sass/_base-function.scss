@@ -1,9 +1,11 @@
 //方法與涵式
 //rwd 與 hack================================================================
-@mixin rwd($max, $min: 0) {
-    //自訂 RWD 寬度，第一個參數是最大值，第二個參數是最小值
+@mixin rwd($max, $min: 0) { //自訂 RWD 寬度，第一個參數是最大值，第二個參數是最小值
+
     @if( $rwd==true) {
-        @media (max-width: #{$max + 0px }) and (min-width: #{$min + 1px}) {
+        $type: 'screen and (max-width: #{$max + 0px }) and (min-width: #{$min + 1px})';
+
+        @media #{$type} {
             @content;
         }
     }
