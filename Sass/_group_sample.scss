@@ -1,0 +1,76 @@
+//群組
+
+//樣本================================================================
+
+.group.sample {
+
+	> .bg-drop-layout > .in, > .in {
+		position: relative;
+		margin-left: $interval-m;
+		margin-right: $interval-m;
+
+		> .hd {
+			@extend %header;
+
+			> .in {
+
+			}
+
+			h3 {
+
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+
+				> [data-index][data-type] {
+
+					> .in {
+						margin-top: 0;
+						margin-bottom: 0;
+						margin-left: 0;
+						margin-right: 0;
+
+						> .ft {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+			@extend %footer;
+
+			> .in {
+
+			}
+
+			ul {
+				
+			}
+
+			li {
+
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}
