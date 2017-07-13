@@ -2,7 +2,7 @@
 
 //樣本================================================================
 
-.group.sample {
+.group-list.sample {
 
 	> .bg-drop-layout > .in, > .in {
 		position: relative;
@@ -33,16 +33,22 @@
 
 			> .in {
 
-				> [data-index][data-type] {
+				> ul {
 
-					> .in {
-						margin-top: 0;
-						margin-bottom: 0;
-						margin-left: 0;
-						margin-right: 0;
+					> li {
 
-						> .ft {
-							display: none;
+						> [data-index][data-type] {
+
+							> .in {
+								margin-top: 0;
+								margin-bottom: 0;
+								margin-left: 0;
+								margin-right: 0;
+
+								> .ft {
+									display: none;
+								}
+							}
 						}
 					}
 				}

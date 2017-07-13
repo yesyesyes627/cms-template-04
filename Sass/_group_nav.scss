@@ -161,7 +161,7 @@
                     display: block;
                 }
                 a {
-                    @extend %ellipsis;
+                    line-height: $line-height-m;
                     display: block;
                     padding: $interval-s $interval-m;
                     margin-bottom: $interval-s;
