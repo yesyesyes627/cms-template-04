@@ -85,8 +85,8 @@
         }
         > .bg-drop-layout > .in,
         > .in {
-            background-color: $deep;
-            background-color: rgba($deep, $opacity-h);
+            background-color: $menu-bg-color;
+            background-color: rgba($menu-bg-color, $opacity-h);
             border-radius: $border-radius;
             > .hd {
                 display: none;
@@ -131,7 +131,8 @@
                                     > .in {
                                         > .hd {
                                             a {
-                                                background-color: $deep;
+                                                color: $menu-btn-text-hover-color;
+                                                background-color: $menu-btn-bg-hover-color;
                                             }
                                         }
                                         > .ct {

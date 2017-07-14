@@ -70,7 +70,9 @@
                     transition: $transition;
                     border-radius: $border-radius;
                     font-size: $font-size-l;
-                    color: $white;
+                    color: $menu-btn-text-color;
+                    background-color: $menu-btn-bg-color;
+
                     @include js(false) {
                         text-align: left;
                         font-weight: $font-weight-b;
