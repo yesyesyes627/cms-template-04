@@ -105,12 +105,12 @@
                         &[data-child="4"],
                         &[data-child="5"],
                         &[data-child="6"] {
-                            li {
+                            > li {
                                 width: (100% / 6);
                             }
                         }
                         &[data-child="7"] {
-                            li {
+                            > li {
                                 width: (100% / 7);
                             }
                         }
