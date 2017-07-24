@@ -28,7 +28,7 @@ define(['getNode'], function(getNode){
 			_tab_key = 9;
 
 		var _browserData = navigator.userAgent,
-			_ios = !/(iPhone|iPad|iPod|iOS)/i.test(_browserData); //過濾 ios
+			_ios = /(iPhone|iPad|iPod|iOS)/i.test(_browserData); //過濾 ios
 
 		if( !$set.cookie ) {
 			$.cookie(_uuid, null);
@@ -54,7 +54,11 @@ define(['getNode'], function(getNode){
 			$btn = $env.find($set.bindNode);
 		}
 
-		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' && !_ios ) { //focus 到 hd 時會啟用程式，且離開時會關閉
+		if( _ios ) { //如果是 ios
+			$set.focusActive = false;
+		}
+
+		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' ) { //focus 到 hd 時會啟用程式，且離開時會關閉
 
 			var $last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1);
 
@@ -74,8 +78,12 @@ define(['getNode'], function(getNode){
 
 		if( !!$set.btnOrangeText && _flag && !!$set.btnActiveText ) { //如果有設定文字
 			$btn.text($set.btnActiveText);
+			$btn.attr('title', $set.btnActiveText);
+
+			console.log($btn, $btn.attr('title'));
 		}else if( !!$set.btnOrangeText ) {
 			$btn.text($set.btnOrangeText);
+			$btn.attr('title', $set.btnOrangeText);
 		}
 
 		$btn.on(_eventNmae, function(){
