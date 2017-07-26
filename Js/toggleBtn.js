@@ -28,7 +28,7 @@ define(['getNode'], function(getNode){
 			_tab_key = 9;
 
 		var _browserData = navigator.userAgent,
-			_ios = /(iPhone|iPad|iPod|iOS)/i.test(_browserData); //過濾 ios
+			_ios = /(iPhone|iPad|iPod|iOS|Firefox)/i.test(_browserData); //過濾 ios
 
 		if( !$set.cookie ) {
 			$.cookie(_uuid, null);
@@ -54,7 +54,7 @@ define(['getNode'], function(getNode){
 			$btn = $env.find($set.bindNode);
 		}
 
-		if( _ios ) { //如果是 ios
+		if( _ios ) { //如果是 ios or firefox
 			$set.focusActive = false;
 		}
 
