@@ -1,4 +1,4 @@
-define(['getNode'], function(getNode){
+define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 	
 	function main(env, opt, file){
 
@@ -9,28 +9,46 @@ define(['getNode'], function(getNode){
 				toggleClass: 'is-active',
 				btnOrangeText: null,
 				btnActiveText: null,
+				clickToRemove: false,
 				event: 'click', //jQuery 事件名稱
-				focusActive: true, //是否可用 focus 啟用功能( 只限於 bindNode 是 .hd )
+				focusActive: true, //是否開啟白癡的無障礙 tab 功能
 				cookie: false,
 				debug: false
 			}
 
 		$.extend($set, opt);
 
-		var _eventNmae = file; //事件名稱
-
 		var $env = $(env),
-			$btn = null, //按鈕物件
-			$target = $($set.targetNode);
+			$target = $($set.targetNode),
+			_eventNmae = file;
 
-		var _uuid = $env.attr('class').replace($set.toggleClass, ''), //!!!!----要想一個 UUID 方法
-			_flag = null, //0 未執行 / 1  執行中 / null 沒有
-			_tab_key = 9;
+		//取觸發 btn，都沒有就取第一個 a
+		var $btn = null; //按鈕物件
 
-		var _browserData = navigator.userAgent,
-			_ios = /(iPhone|iPad|iPod|iOS|Firefox)/i.test(_browserData); //過濾 ios
+		if( $set.bindNode === '.hd' ) { //綁頭、身體或尾巴
+			$btn = getNode.getHdLink(env).find('a');
+		}else if ( $set.bindNode === '.ct' ){
+			$btn = getNode.getCtIn(env).find('a');
+		}else if ( $set.bindNode === '.ft' ){
+			$btn = getNode.getFtItemBtn(env).find('a');
+		}else {
+			$btn = $env.find('a');
+		}
 
-		if( !$set.cookie ) {
+		//設定文字功能...有原生文字及觸發文字
+		if( !!$set.btnOrangeText && _flag && !!$set.btnActiveText ) {
+			$btn.text($set.btnActiveText);
+			$btn.attr('title', $set.btnActiveText);
+		}else if( !!$set.btnOrangeText ) {
+			$btn.text($set.btnOrangeText);
+			$btn.attr('title', $set.btnOrangeText);
+		}
+
+		//紀錄觸發過的事件 cookie(UUID)，有的話就還原它的動作
+		var _uuid = $env.attr('class').replace($set.toggleClass, ''), //!!!!----還要想一個 UUID 方法
+			_flag = null; //0 未執行 / 1  執行中 / null 沒有
+
+		if( !$set.cookie ) { //如果物件有建立 cookie 記錄此 env
 			$.cookie(_uuid, null);
 		}else {
 			_flag = $.cookie(_uuid);
@@ -44,70 +62,75 @@ define(['getNode'], function(getNode){
 			$env.removeClass($set.toggleClass);
 		}
 
-		if( $set.bindNode === '.hd' ) { //綁頭、身體或尾巴
-			$btn = getNode.getHdLink(env).find('a');
-		}else if ( $set.bindNode === '.ct' ){
-			$btn = getNode.getCtIn(env).find('a');
-		}else if ( $set.bindNode === '.ft' ){
-			$btn = getNode.getFtItemBtn(env).find('a');
-		}else {
-			$btn = $env.find($set.bindNode);
-		}
-
-		if( _ios ) { //如果是 ios or firefox
+		//如果是手機瀏覽器，就關閉白癡的無障礙 Tab 尋覽功能
+		if( mobileFilter ) {
 			$set.focusActive = false;
 		}
 
-		if( $set.focusActive && $set.bindNode === '.hd' && $set.event == 'click' ) { //focus 到 hd 時會啟用程式，且離開時會關閉
+		//如果符合條件就開啟白癡的無障礙 tab 尋覽功能，不符合就觸發原生功能
+		if( $set.focusActive ) {
+			var	_tab_key = 9,
+				$last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1),
+				$btns = $btn.add($last_btn);
 
-			var $last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1);
-
-			$last_btn.on('keydown', function(evt){ //最後一個 a 按下 tab 時，關閉所有子選單
+			//第一個 a 及最後一個 a 按下 tab 時，觸發事件
+			$btns.on('keydown', function(evt){
 
 				if( evt.which === _tab_key ) {
 					$btn.trigger(_eventNmae);
 				}
 			});
+		}
 
-			$btn.on('focusin', function(){ //觸發事件
-				$btn.trigger(_eventNmae);
+		//如果符合以下三條件，就開啟 click body 刪除 env class 的功能
+		if( $set.event === 'click' && $set.clickToRemove ) {
+			var $body = $('body');
 
-				$btn.blur();
+			$env.on('click', function(evt){
+				evt.stopPropagation();
+
+				//把不是自己，且 data-funclog 有 'clickToRemove':true 的物件刪除 class
+				var $clickToRemoveNodes = $('[data-funclog]').filter(function(i, d){
+						var _log = d.getAttribute('data-funclog'),
+							_isClickToRemoveNode = /('clickToRemove':true)/i.test(_log),
+							_isSelf = (d != env);
+							
+						return ( _isClickToRemoveNode && _isSelf );
+					});
+
+				$clickToRemoveNodes.removeClass($set.toggleClass);
+			});
+
+			$body.on('click', function(){
+				$env.removeClass($set.toggleClass);
 			});
 		}
 
-		if( !!$set.btnOrangeText && _flag && !!$set.btnActiveText ) { //如果有設定文字
-			$btn.text($set.btnActiveText);
-			$btn.attr('title', $set.btnActiveText);
+		$btn.on( $set.event, function(evt){ //觸發事件
+			evt.preventDefault();
+			
+			$(this).trigger(_eventNmae);
+		});
 
-			console.log($btn, $btn.attr('title'));
-		}else if( !!$set.btnOrangeText ) {
-			$btn.text($set.btnOrangeText);
-			$btn.attr('title', $set.btnOrangeText);
-		}
-
+		//觸發的事件
 		$btn.on(_eventNmae, function(){
+
+			//主要功能...換 class orz
 			$target.toggleClass($set.targetClass);
 			$env.toggleClass($set.toggleClass);
 
-			if( $env.attr('class').search($set.toggleClass) > -1 && $set.cookie ) { //如果有開啟 cookie 功能就紀錄
+			//如果有開啟 cookie 功能就紀錄吧
+			if( $env.attr('class').search($set.toggleClass) > -1 && $set.cookie ) {
 				$.cookie(_uuid, '1');
 			}else if ( !!$set.cookie ){
 				$.cookie(_uuid, '0');
 			}
 
-			if( $btn.text() === $set.btnOrangeText && !!$set.btnActiveText ) { //更改文字
+			//如果有開啟更改文字功能就改吧
+			if( $btn.text() === $set.btnOrangeText && !!$set.btnActiveText ) {
 				$btn.text($set.btnActiveText);
 			}else if( $btn.text() === $set.btnActiveText && !!$set.btnOrangeText ) {
 				$btn.text($set.btnOrangeText);
-			}
-		});
-
-		$btn.on( $set.event, function(evt){ //觸發事件
-			evt.preventDefault();
-
-			if( !$set.focusActive || $set.bindNode !== '.hd' || _ios ) {
-				$(this).trigger(_eventNmae);
 			}
 		});
 

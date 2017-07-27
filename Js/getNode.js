@@ -1,5 +1,7 @@
 define(function() {
 
+	//取共通平台節點的方法物件
+
 	var _type_module = '0', //模組
 		_type_cell = '1', //分割
 		_type_tab = '2', //頁籤
