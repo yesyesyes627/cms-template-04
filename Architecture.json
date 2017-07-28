@@ -86,7 +86,7 @@
 	},
 	{
 		"BaseName": "base-footer",
-		"hd": "footer botton",
+		"hd": "open",
 		"func": "{'toggleBtn':{'btnOrangeText':'open','btnActiveText':'close'}}",
 		"Sub": [
 			{

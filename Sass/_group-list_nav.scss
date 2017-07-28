@@ -207,6 +207,9 @@
                                                     }
                                                 }
                                             }
+                                            > .ct {
+                                                display: block;
+                                            }
                                         }
                                     }
                                     > .in {
@@ -215,9 +218,6 @@
                                                 background-color: $major-color !important;
                                                 color: $white !important;
                                             }
-                                        }
-                                        > .ct {
-                                            display: block;
                                         }
                                     }
                                 }
