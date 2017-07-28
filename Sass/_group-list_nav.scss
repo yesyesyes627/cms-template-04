@@ -235,12 +235,12 @@
             }
         }
     }
+    .base-footer.is-active & {
+        display: none;
+    }
     .base-footer & {
         background-color: $white;
         @include media('mobile') {
-            display: none;
-        }
-        &.is-close {
             display: none;
         }
         > .bg-drop-layout > .in,

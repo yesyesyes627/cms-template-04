@@ -5,8 +5,29 @@
 .base-mobile {
 	z-index: 3;
 
-	&.is-open {
+	&.is-active {
 		right: 0;
+
+		> .in {
+
+			> .hd {
+
+				a {
+					background-image: image-url('icon-pic/icon-mobile_btn_close.png');
+
+					&:after {
+						content: $content;
+					}
+				}
+			}
+
+			> .ct {
+
+				> .in {
+					overflow-y: auto;
+				}
+			}
+		}
 	}
 
 	@include js(false) {
@@ -37,7 +58,8 @@
 	> .in {
 
 		> .hd {
-			display: none;
+			position: absolute;
+			left: 100%;
 
 			> .in {
 
@@ -48,14 +70,47 @@
 			}
 
 			span {
+				display: block;
+			}
 
+			a {
+                @extend %hide-text;
+                display: block;
+                position: relative;
+                top: 10px;
+                left: 10px;
+                width: $rwd-btn-size;
+                height: $rwd-btn-size;
+                font-size: $font-size-xl;
+                background-color: deeper($major-color);
+                background-image: image-url('icon-mobile_btn_menu.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 50%;
+
+                &:after {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    background-color: rgba($deep, $opacity-m);
+                    z-index: -1;
+                }
 			}
 		}
 
 		> .ct {
+			@extend %area-mobile;
 
 			> .in {
-
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				height: 100vh;
+				overflow-y: hidden;
+				background-color: $light;
 			}
 		}
 	}

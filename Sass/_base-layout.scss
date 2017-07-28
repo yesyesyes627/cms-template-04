@@ -1,39 +1,5 @@
 //自訂
 .info {
-    .base-mobile.is-open & {
-        > .bg-drop-layout > .in,
-        > .in {
-            > .ct {
-                > .in {
-                    overflow-y: auto;
-                }
-            }
-        }
-    }
-    .base-mobile & {
-        @extend %area-mobile;
-        > .bg-drop-layout > .in,
-        > .in {
-            > .hd {
-                display: none;
-                > .in {}
-                h3 {}
-                span {}
-                a {}
-            }
-            > .ct {
-                > .in {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    left: 0;
-                    height: 100vh;
-                    overflow-y: hidden;
-                    background-color: $light;
-                }
-            }
-        }
-    }
     .base-extend & {
         background-color: $major-color;
         > .bg-drop-layout > .in,
@@ -91,6 +57,7 @@
             }
         }
     }
+
     .base-footer & {
         background-color: $deep;
         color: $white;
@@ -120,77 +87,43 @@
 }
 
 .msg-tool {
-    .base-header & {
-        position: relative;
-        > .bg-drop-layout > .in,
-        > .in {
-            > .hd {
-                > .in {}
-                h3 {}
-                span {}
-                a {}
-            }
-            > .ct {
-                > .in {}
-            }
-        }
+    position: absolute;
+    right: 0;
+    top: $interval-s;
+
+    @include js(false) {
+        display: none;
     }
 
-    .base-content & {
-        position: absolute;
-        right: 0;
-        top: $interval-s;
-
-        @include js(false) {
-            display: none;
-        }
-
-        @include media('mobile') {
-            display: none;
-        }
-
-        > .bg-drop-layout > .in, > .in {
-
-            > .hd {
-
-                > .in {
-
-                }
-
-                h3 {
-
-                }
-
-                span {
-                        
-                }
-
-                a {
-
-                }
-            }
-
-            > .ct {
-
-                > .in {
-
-                }
-            }
-        }
+    @include media('mobile') {
+        display: none;
     }
-    .base-footer & {
-        overflow: hidden;
-        > .bg-drop-layout > .in,
-        > .in {
-            @extend %area-mobile;
-            > .hd {
-                > .in {}
-                h3 {}
-                span {}
-                a {}
+
+    > .bg-drop-layout > .in, > .in {
+
+        > .hd {
+
+            > .in {
+
             }
-            > .ct {
-                > .in {}
+
+            h3 {
+
+            }
+
+            span {
+                    
+            }
+
+            a {
+
+            }
+        }
+
+        > .ct {
+
+            > .in {
+
             }
         }
     }

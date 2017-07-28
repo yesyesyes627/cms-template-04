@@ -1,48 +1,33 @@
 [
 	{
 		"BaseName": "base-mobile",
+		"hd": "mobile botton",
+		"func": "{'toggleBtn':{}}",
 		"Sub": [
 			{
-				"GroupType": "Module",
-				"Type": 0,
-				"hd": "",
-				"ct": "<span><a href=\"#\"></a></span>",
-				"ft": "",
-				"Class": "simple-text btn",
-				"func": "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-mobile','targetClass':'is-open'}}"
+				"GroupType": "FixedModuleString",
+				"Name": "Search"
 			},
 			{
-				"GroupType": "Group",
-				"Type": 3,
-				"Class": "info",
-				"func": "",
-				"Sub": [
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "Search"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "ShareBox"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "Menu",
-						"func": "{'majorNavMobile':{}}"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "HotKeyWord"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "TopLink"
-					},
-					{
-						"GroupType": "FixedModuleString",
-						"Name": "FooterLink"
-					}
-				]
+				"GroupType": "FixedModuleString",
+				"Name": "ShareBox"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "Menu",
+				"func": "{'majorNavMobile':{}}"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "HotKeyWord"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "TopLink"
+			},
+			{
+				"GroupType": "FixedModuleString",
+				"Name": "FooterLink"
 			}
 		]
 	},
@@ -101,19 +86,12 @@
 	},
 	{
 		"BaseName": "base-footer",
+		"hd": "footer botton",
+		"func": "{'toggleBtn':{'btnOrangeText':'open','btnActiveText':'close'}}",
 		"Sub": [
 			{
 				"GroupType": "FixedModuleString",
 				"Name": "Accesskey_Z"
-			},
-			{
-				"GroupType": "Module",
-				"Type": 0,
-				"hd": "",
-				"ct": "<span><a href=\"#\"></a></span>",
-				"ft": "",
-				"Class": "simple-text btn",
-				"func": "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close','focusActive':false}}"
 			},
 			{
 				"GroupType": "FixedModuleString",

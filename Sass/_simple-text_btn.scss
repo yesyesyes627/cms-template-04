@@ -2,186 +2,68 @@
 //按鈕================================================================
 .simple-text.btn {
 
-    .base-mobile & {
-        position: absolute;
-        left: 100%;
+    > .bg-drop-layout > .in, > .in {
 
-        @include js(false) {
-            display: none;
-        }
+    }
 
-        &.is-active {
+    .hd {
 
-            .ct {
-
-                a {
-                    background-color: transparent;
-                    background-image: image-url('icon-mobile_btn_close.png');
-
-                    &:after {
-                        content: $content;
-                    }
-                }
-            }
-        }
-
-        > .bg-drop-layout > .in, > .in {
+        > .in {
 
         }
 
-        .hd {
-            display: none;
+        h4 {
 
-            > .in {
-
-            }
-
-            h4 {
-
-            }
-
-            span {
-                    
-            }
-
-            a {
-
-            }
         }
 
-        .ct {
-
-            > .in {
+        span {
                 
-            }
-
-            span {
-                display: block;
-            }
-
-            a {
-                @extend %hide-text;
-                display: block;
-                position: relative;
-                top: 10px;
-                left: 10px;
-                width: $rwd-btn-size;
-                height: $rwd-btn-size;
-                font-size: $font-size-xl;
-                background-color: deeper($major-color);
-                background-image: image-url('icon-mobile_btn_menu.png');
-                background-repeat: no-repeat;
-                background-position: center;
-                border-radius: 50%;
-
-                &:after {
-                    position: fixed;
-                    top: 0;
-                    right: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background-color: rgba($deep, $opacity-m);
-                    z-index: -1;
-                }
-            }
-
-            /*i*/.mark {
-                
-            }
         }
 
-        .ft {
+        a {
 
-            > .in {
-
-            }
-
-            ul {
-
-            }
-
-            li {
-
-            }
-
-            span {
-
-            }
-
-            a {
-
-            }
         }
     }
-    .base-wrapper & {
-        border-bottom: $interval-xs solid $minor-color;
-        @include js(false) {
-            display: none;
+
+    .ct {
+
+        > .in {
+            
         }
-        @include media('mobile') {
-            display: none;
+
+        span {
+            
         }
-        &.is-active {
-            .ct {
-                a {
-                    &:before {
-                        @include icon-font('arrow_drop_up');
-                    }
-                }
-            }
+
+        a {
+            
         }
-        > .bg-drop-layout > .in,
-        > .in {}
-        .hd {
-            display: none;
-            > .in {}
-            h4 {}
-            span {}
-            a {}
+
+        /*i*/.mark {
+            
         }
-        .ct {
-            @extend %center;
-            position: relative;
-            > .in {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: -1px;
-                text-align: right;
-            }
-            span {
-                display: inline-block;
-            }
-            a {
-                border: none;
-                background-color: $minor-color;
-                border-radius: 3px 3px 0 0;
-                color: #ffffff;
-                padding: 8px 24px 7px 40px;
-                position: relative;
-                line-height: 28px;
-                &:hover {
-                    background-color: deeper($minor-color);
-                }
-                &:before {
-                    @include icon-font('arrow_drop_down');
-                    font-size: 2em !important;
-                    margin-right: $interval-xs;
-                    color: $white;
-                    position: absolute;
-                    left: 10px;
-                    top: 0px;
-                }
-            }
-            /*i*/
-            .mark {}
+    }
+
+    .ft {
+
+        > .in {
+
         }
-        .ft {
-            > .in {}
-            ul {}
-            li {}
-            span {}
-            a {}
+
+        ul {
+
+        }
+
+        li {
+
+        }
+
+        span {
+
+        }
+
+        a {
+
         }
     }
 }
