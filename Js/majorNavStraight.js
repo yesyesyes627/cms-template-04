@@ -4,54 +4,78 @@ define(['getNode'], function(getNode){
 
 		var $set = {
 				activeClass: 'is-active',
+				parentClass: 'is-parent',
+				focusActive: true, //是否開啟白癡的無障礙 tab 功能
+				event: 'click', //jQuery 事件名稱
 				debug: false
 			}
 
 		$.extend($set, opt);
-		
+
 		var $li = getNode.getCtItem(env), //取 li
-			$child_node_in = getNode.getIn($li.children('[data-type]')).filter(function(i) { //過濾 .content 裡沒有 a 的物件
+			$child_node = getNode.getChildGroup(env), //取 group nav
+			$child_node_header = getNode.getHd($child_node),
+			$a = $child_node_header.find('a'),
+			$last_a = $(env).find('a').eq(-1);
 
-				var $this = $(this),
-					$parent = $this.parent('[data-type]'),
-					$a = $this.children('.ct').find('a');
+		//幫 .content 裡有 a 的物件加上 is-active
+		$child_node.each(function(i, d) { 
 
-				if( $a.length ) {
-					$parent.addClass('is-parent');
+			var $this = $(this),
+				$li_parent = $this.parent('li'),
+				$a = getNode.getCt($this).find('a');
 
-					return true;
-				}else {
-					return false;
-				}
-			}),
-			$child_node_header = $child_node_in.children('.hd'),
-			$a = $child_node_header.find('a');
+			if( $a.length ) {
+				$li_parent.addClass($set.parentClass);
+			}
+		});
 
 		var _eventNmae = file, //事件名稱
 			_active = $set.activeClass; //被選擇的 class name
 
+		//如果符合條件就開啟白癡的無障礙 tab 尋覽功能，不符合就觸發原生功能
+		if( $set.focusActive ) {
+			var	_tab_key = 9;
+
+			//a 按下 tab 時，觸發事件
+			$a.on('keydown', function(evt){
+				var $this = $(this);
+
+				if( evt.which === _tab_key ) {
+					$this.trigger(_eventNmae);
+				}
+			});
+
+			$last_a.on('keydown', function(evt){
+
+				if( evt.which === _tab_key ) {
+					$li.removeClass(_active);
+				}
+			});
+		}
+
+		$a.on( $set.event, function(evt){ //觸發事件
+			var $this = $(this),
+				$li_parent = $this.closest('li');
+
+			if( $li_parent.hasClass($set.parentClass) ) {
+				evt.preventDefault();
+			}
+
+			$this.trigger(_eventNmae);
+		});
+
 		$a.on(_eventNmae, function(){
 			var $this = $(this),
-				$this_li = $this.closest('li');
+				$li_parent = $this.closest('li');
 
-			if( $this_li.hasClass(_active) ) {
-				$this_li.removeClass(_active);
+			if( $li_parent.hasClass(_active) ) {
+				$li_parent.removeClass(_active);
 			}else {
 				$li.removeClass(_active);
-				$this_li.addClass(_active);
+				$li_parent.addClass(_active);
 			}
 		});
-
-		$a.on('click', function(evt){ //觸發事件
-			evt.preventDefault();
-
-			$(this).trigger(_eventNmae);
-		});
-
-		// $a.on('focusin', function(){ //觸發事件
-
-		// 	$(this).click();
-		// });
 
 		if($set.debug) {
 			console.log('預設值:', $set);

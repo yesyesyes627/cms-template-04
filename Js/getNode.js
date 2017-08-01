@@ -1,5 +1,7 @@
 define(function() {
 
+	//取共通平台節點的方法物件
+
 	var _type_module = '0', //模組
 		_type_cell = '1', //分割
 		_type_tab = '2', //頁籤
@@ -154,13 +156,24 @@ define(function() {
 				this.updateIndex($btn);
 			}else if( !$btn.length && add !== false ) {
 
-				var _method = 'append';
+				var _lang = $('body').data('lang') || window.CCMS_LanguageSN;
 
-				if( className === 'prev' ) {
-					_method = 'prepend';
+				var _method = 'append',
+					_text = className;
+
+				if ( _lang === 1 ) {
+
+					if( _text === 'prev' ) {
+						_method = 'prepend';
+						_text = '上一則';
+					}else if( _text === 'next' ) {
+						_text = '下一則';
+					}else if( _text === 'more' ) {
+						_text = '更多';
+					}
 				}
 
-				$btn = $('<li class="'+ className +'"><span><a title="'+ className +'" href="#">'+ className +'</a></span></li>');
+				$btn = $('<li class="'+ className +'"><span><a title="'+ _text +'" href="#">'+ _text +'</a></span></li>');
 				$ftList[_method]($btn);
 
 				this.updateFtItemLen(env);

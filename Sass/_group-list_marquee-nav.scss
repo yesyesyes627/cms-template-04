@@ -1,0 +1,139 @@
+//列表群組
+
+//跑馬燈================================================================
+
+.group-list.marquee-nav {
+	$btn-width: 30px; //設定按鈕寬度
+	$max-li-len: 10; //設定 li 的最大數量
+	$show-li-len: 1; //設定一次要秀的數量
+
+	&[data-child="1"] {
+		
+		> .bg-drop-layout > .in, > .in {
+
+			> .ct {
+
+				> .in {
+					margin: 0;
+				}
+			}
+
+			> .ft {
+				display: none;
+			}
+		}
+	}
+
+	> .bg-drop-layout > .in, > .in {
+
+		> .hd {
+			display: none;
+
+			> .in {
+
+			}
+
+			h3 {
+				
+			}
+
+			span {
+					
+			}
+
+			a {
+
+			}
+		}
+
+		> .ct {
+
+			> .in {
+				overflow: hidden;
+				margin: 0 $btn-width; //如果要與圖不重疊
+
+				@include js(false) {
+					margin: 0;
+				}
+
+				> ul {
+					width: $max-li-len * 100% / $show-li-len;
+
+					@include js(false) {
+						width: 100%;
+					}
+
+					> li {
+						width: 100% / $max-li-len;
+						float: left;
+
+						@include js(false) {
+							display: block;
+							width: 100% / $show-li-len;
+						}
+					}
+				}
+			}
+		}
+
+		> .ft {
+
+			> .in {
+
+			}
+
+			ul {
+
+			}
+
+			li {
+
+				&.next, &.prev {
+
+					@include js(false) {
+						display: none;
+					}
+
+					a {
+						@extend %hide-text;
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						display: block;
+						width: $btn-width;
+						transition: $transition;
+						opacity: $opacity-h;
+
+						&:hover {
+							opacity: 1;
+						}
+					}
+				}
+
+				&.prev {
+
+					a {
+						left: 0;
+						@include bg-to-pic('icon-pic/away-b-left.png', false);
+					}
+				}
+
+				&.next {
+
+					a {
+						right: 0;
+						@include bg-to-pic('icon-pic/away-b-right.png', false);
+					}
+				}
+			}
+
+			span {
+
+			}
+
+			a {
+
+			}
+		}
+	}
+}

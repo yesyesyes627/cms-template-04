@@ -23,8 +23,6 @@ define(['getNode'], function(getNode){
 				var $this = $(this),
 					_width = parseFloat($this.attr('data-width')) || 2;
 
-					console.log(_width);
-
 				var $module = $this.children('[data-index][data-type]'),
 					$ct = getNode.getCt($module);
 
@@ -78,8 +76,6 @@ define(['getNode'], function(getNode){
 					$this_l = ( $this.offset().left ) - $ul_l,
 					$this_w = $this.width(),
 					_width = parseFloat($this.attr('data-width')) || 2;
-
-					console.log(_width);
 
 				var $module = $this.children('[data-index][data-type]'),
 					$ct = getNode.getCt($module),

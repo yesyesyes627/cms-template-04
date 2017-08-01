@@ -230,9 +230,16 @@
 //瀏覽器媒體，給 rwd 用================================================================
 
 	$media: (
-		'center': '(max-width: #{$pc-width})',
-		'pc': '(max-width: #{$pc-width}) and (min-width: #{$pad-width + 1})',
-		'mobile': '(max-width: #{$pad-width})',
-		'pad': '(max-width: #{$pad-width}) and (min-width: #{$phone-width + 1})',
-		'phone': '(max-width: #{$phone-width})'
+		'center': 'screen and (max-width: #{$pc-width})',
+		'pc': 'screen and (max-width: #{$pc-width}) and (min-width: #{$pad-width + 1})',
+		'mobile': 'screen and (max-width: #{$pad-width})',
+		'pad': 'screen and (max-width: #{$pad-width}) and (min-width: #{$phone-width + 1})',
+		'phone': 'screen and (max-width: #{$phone-width})'
 	);
+
+//hyc 想要的顏色================================================================
+	$menu-bg-color: $deep !default; //選單背景色
+	$menu-btn-text-color: $white !default; //選單按鈕文字色
+	$menu-btn-bg-color: transparent !default; //選單按鈕背景色
+	$menu-btn-text-hover-color: $white !default; //選單按鈕文字色(移入)
+	$menu-btn-bg-hover-color: $deep !default; //選單按鈕背景色(移入)
