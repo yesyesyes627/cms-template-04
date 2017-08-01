@@ -124,9 +124,19 @@
                             @include js(false) {
                                 width: 100%;
                             }
-                            &.is-active,
-                            &:hover {
-                                z-index: 1; //避免雙層選單覆蓋問題
+                            &.is-active {
+
+                                &.is-parent {
+                                    z-index: 1; //避免雙層選單覆蓋問題
+                                    > .group.nav {
+                                        > .in {
+                                            > .ct {
+                                                display: block;
+                                            }
+                                        }
+                                    }
+                                }
+
                                 > .group.nav {
                                     > .in {
                                         > .hd {
@@ -134,9 +144,6 @@
                                                 color: $menu-btn-text-hover-color;
                                                 background-color: $menu-btn-bg-hover-color;
                                             }
-                                        }
-                                        > .ct {
-                                            display: block;
                                         }
                                     }
                                 }
