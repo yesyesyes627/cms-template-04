@@ -87,7 +87,7 @@
 	{
 		"BaseName": "base-footer",
 		"hd": "open",
-		"func": "{'toggleBtn':{'btnOrangeText':'open','btnActiveText':'close'}}",
+		"func": "{'toggleBtn':{'btnOrangeText':'open','btnActiveText':'close','focusActive':false}}",
 		"Sub": [
 			{
 				"GroupType": "FixedModuleString",

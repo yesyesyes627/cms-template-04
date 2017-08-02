@@ -161,87 +161,154 @@
             }
         }
     }
-    .base-content & {
-        > .bg-drop-layout > .in,
-        > .in {
-            border: $border;
-            border-bottom-width: $interval-xs;
-            border-radius: 0 0 $interval-xs $interval-xs;
-            background-color: $white;
-            > .hd {
-                background-color: $major-color;
-                background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px);
-                > .in {}
-                h3 {
-                    padding: 25px;
-                    padding-top: 30px;
-                    color: $white;
-                    font-size: $font-size-xl;
-                    line-height: 25px;
-                }
-                span {}
-                a {}
-            }
-            > .ct {
-                border-top: $border;
-                border-top-color: $white;
-                > .in {
-                    > ul {
-                        > li {
-                            + li {
-                                border-top: $border;
-                            }
-                            &.is-active {
-                                > .group.nav {
-                                    &.is-parent {
-                                        > .in {
-                                            > .hd {
-                                                a {
-                                                    $icon_w: 30px;
-                                                    position: relative;
-                                                    padding-right: $icon_w + $interval-m;
-                                                    &:before {
-                                                        content: $content;
-                                                        position: absolute;
-                                                        display: block;
-                                                        width: $icon_w;
-                                                        right: 0;
-                                                        top: 0;
-                                                        bottom: 0;
-                                                        background-image: image-url('icon-pic/away-w-bottom.png');
-                                                        background-repeat: no-repeat;
-                                                        background-position: center;
-                                                    }
-                                                }
-                                            }
-                                            > .ct {
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                    > .in {
-                                        > .hd {
-                                            a {
-                                                background-color: $major-color !important;
-                                                color: $white !important;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            > .ft {
-                > .in {}
-                ul {}
-                li {}
-                span {}
-                a {}
-            }
-        }
-    }
+
+	.base-content & {
+
+		> .bg-drop-layout > .in, > .in {
+			border: $border;
+			border-bottom-width: $interval-xs;
+			border-radius: 0 0 $interval-xs $interval-xs;
+			background-color: $white;
+
+			> .hd {
+				background-color: $major-color;
+				background-image: repeating-linear-gradient(-45deg, rgba($white, $opacity-vl) 3px, rgba($white, $opacity-vl) 6px, transparent 0, transparent 9px );
+
+				> .in {
+
+				}
+
+				h3 {
+					padding: 25px;
+					padding-top: 30px;
+					color: $white;
+					font-size: $font-size-xl;
+					line-height: 25px;
+				}
+
+				span {
+					
+				}
+
+				a {
+
+				}
+			}
+
+			> .ct {
+				border-top: $border;
+				border-top-color: $white;
+
+				> .in {
+
+					> ul {
+
+						> li {
+
+							+ li {
+								border-top: $border;
+							}
+
+							&.is-active {
+
+								> .group.nav {
+
+									> .in {
+
+										> .hd {
+
+											a {
+												background-color: $major-color !important;
+												color: $white !important;
+											}
+										}
+
+										> .ct {
+											display: block;
+										}
+									}
+								}
+							}
+
+							&.is-parent {
+
+								&.is-active {
+
+									> .group.nav {
+
+										> .in {
+
+											> .hd {
+
+												a {
+
+													&:before {
+														background-image: image-url('icon-pic/away-w-bottom.png');
+													}
+												}
+											}
+										}
+									}
+								}
+
+								> .group.nav {
+
+									> .in {
+
+										> .hd {
+
+											a {
+												$icon_w: 30px;
+
+												position: relative;
+												padding-right: $icon_w + $interval-m;
+
+												&:before {
+													content: $content;
+													position: absolute;
+													display: block;
+													width: $icon_w;
+													right: 0;
+													top: 0;
+													bottom: 0;
+													background-image: image-url('icon-pic/away-b-bottom.png');
+													background-repeat: no-repeat;
+													background-position: center;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			> .ft {
+
+				> .in {
+
+				}
+
+				ul {
+
+				}
+
+				li {
+
+				}
+
+				span {
+
+				}
+
+				a {
+
+				}
+			}
+		}
+	}
     .base-footer.is-active & {
         display: none;
     }
