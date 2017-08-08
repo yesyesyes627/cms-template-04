@@ -30,9 +30,6 @@ define(['getNode'], function(getNode){
 			}
 		});
 
-		var _eventNmae = file, //事件名稱
-			_active = $set.activeClass; //被選擇的 class name
-
 		//如果符合條件就開啟白癡的無障礙 tab 尋覽功能，不符合就觸發原生功能
 		if( $set.focusActive ) {
 			var	_tab_key = 9;
@@ -42,19 +39,19 @@ define(['getNode'], function(getNode){
 				var $this = $(this);
 
 				if( evt.which === _tab_key ) {
-					$this.trigger(_eventNmae);
+					$this.trigger(file);
 				}
 			});
 
 			$last_a.on('keydown', function(evt){
 
 				if( evt.which === _tab_key ) {
-					$li.removeClass(_active);
+					$li.removeClass($set.activeClass);
 				}
 			});
 		}
 
-		$a.on( $set.event, function(evt){ //觸發事件
+		$a.on($set.event, function(evt){ //觸發事件
 			var $this = $(this),
 				$li_parent = $this.closest('li');
 
@@ -62,18 +59,18 @@ define(['getNode'], function(getNode){
 				evt.preventDefault();
 			}
 
-			$this.trigger(_eventNmae);
+			$this.trigger(file);
 		});
 
-		$a.on(_eventNmae, function(){
+		$a.on(file, function(){
 			var $this = $(this),
 				$li_parent = $this.closest('li');
 
-			if( $li_parent.hasClass(_active) ) {
-				$li_parent.removeClass(_active);
+			if( $li_parent.hasClass($set.activeClass) ) {
+				$li_parent.removeClass($set.activeClass);
 			}else {
-				$li.removeClass(_active);
-				$li_parent.addClass(_active);
+				$li.removeClass($set.activeClass);
+				$li_parent.addClass($set.activeClass);
 			}
 		});
 

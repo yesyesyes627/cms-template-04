@@ -4,6 +4,10 @@
 
 .area-form.page-search {
 
+	@include js(false) {
+		display: none;
+	}
+
 	&.is-active {
 
 		.hd {

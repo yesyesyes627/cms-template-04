@@ -1,13 +1,12 @@
-<div class="group base-footer" id="base-footer" data-index="<%= index %>" data-type="<%= $row %>" data-child="3"><div class="in">
+<div class="group base-footer" id="base-footer" data-index="<%= index %>" data-type="<%= $row %>" data-child="3" data-func="{'toggleBtn':{'btnOrangeText':'close','btnActiveText':'open','focusActive':false}}"><div class="in">
+	<div class="hd"><div class="in">
+		<h3><span><a href="#">footer botton</a></span></h3>
+	</div></div>
 	<div class="ct"><div class="in">
 
 	<!-- accesskey 導盲磚 -->
 		<%= render partial: "/erb/simple-text_accesskey", locals: set({ access_key: "Z", access_title: "下方選單連結區，此區塊列有[意見信箱]、[資訊安全政策]、[隱私權政策]等連結", header_text: "導盲磚" }) %>
 	<!-- accesskey 結束 -->
-
-	<!-- btn 按鈕 -->
-		<%= render partial: "/erb/simple-text_btn", locals: set({ index: 1, func_set: "{'toggleBtn':{'bindNode':'.ct','targetNode':'.base-footer .group-list.nav','targetClass':'is-close','btnOrangeText':'open','btnActiveText':'close','focusActive':false}}", header_text: "收合選單" }) %>
-	<!-- btn 結束 -->
 
 	<!-- nav 選單 -->
 		<%= render partial: "/erb/group-list_nav", locals: set({ index: 2, header_text: "主選單", inner: "/erb/list-text_nav", func_set: "{'setNavLen':{}}" }) %>

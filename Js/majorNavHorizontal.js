@@ -4,7 +4,9 @@ define(['getNode'], function(getNode){
 
 		var $set = {
 				activeClass: 'is-active',
+				parentClass: 'is-parent',
 				clickToRemove: true,
+				event: 'mouseenter', //jQuery 事件名稱
 				debug: false
 			}
 
@@ -12,58 +14,59 @@ define(['getNode'], function(getNode){
 
 		var $env = $(env),
 			$li = getNode.getCtItem(env), //取 li
-			$child_node = $li.children('div'),
-			$child_node_hd = getNode.getHd($child_node),
-			$a = $child_node_hd.find('a'),
-			$child_node_ct_in = getNode.getCtIn($child_node),
-			$child_node_ct_in_length = $child_node_ct_in.length || 1,
-			$all_a = $env.find('a'),
-			$last_a = $all_a.eq(-1);
+			$child_node = getNode.getChildGroup(env), //取 group nav
+			$child_node_header = getNode.getHd($child_node),
+			$a = $child_node_header.find('a'),
+			$last_a = $env.find('a').eq(-1);
 
-		for( var i = 0; i < $child_node_ct_in_length; i++ ) { //如果 child .in 有 a, 就是 is-parent
-			var _this = $child_node_ct_in.eq(i) || $child_node_ct_in;
+		var _tab_key = 9;
 
-			if( _this.find('a').length ) {
-				_this.closest('li').addClass('is-parent');
-			}
-		}
+		//幫 .content 裡有 a 的物件加上 is-active
+		$child_node.each(function(i, d){
 
-		var _eventNmae = file, //事件名稱
-			_active = $set.activeClass, //被選擇的 class name
-			_tab_key = 9;
-
-		$li.on(_eventNmae, function(){
 			var $this = $(this),
-				_index = $this.closest('li').index();
+				$li_parent = $this.parent('li'),
+				$a = getNode.getCt($this).find('a');
 
-			$li.removeClass(_active);
-			$li.eq(_index).addClass(_active);
-
-			$this.on('mouseleave', function(){
-				$this.removeClass(_active);
-			});
+			if( $a.length ) {
+				$li_parent.addClass($set.parentClass);
+			}
 		});
 
-		$li.on('mouseenter', function(evt){ //觸發事件
-			evt.preventDefault();
+		//為該 li 加入 class name，並刪除其他 li 的 class
+		$a.on(file, function(){
+			var $this = $(this),
+				$li_parent = $this.closest('li');
 
-			$(this).trigger(_eventNmae);
+			$li.removeClass($set.activeClass);
+			$li_parent.addClass($set.activeClass);
 		});
 
-		$li.on('focusin', function(){ //觸發事件
-			$(this).mouseenter();
+		$a.on($set.event, function(){ //觸發事件
+			$(this).trigger(file);
+		});
+
+		//白癡的無障礙 tab 尋覽功能
+		$a.on('keydown', function(evt){
+
+			if( evt.which === _tab_key ) {
+				$(this).trigger(file);
+			}
 		});
 
 		$last_a.on('keydown', function(evt){ //最後一個 a 按下 tab 時，關閉所有子選單
 
 			if( evt.which === _tab_key ) {
-				$li.removeClass(_active);
+				$li.removeClass($set.activeClass);
 			}
 		});
 
-		$env.on('mouseleave', function(){
-			$li.removeClass(_active);
-		});
+		if( $set.event === 'mouseenter' ) {
+
+			$env.on('mouseleave', function(){
+				$li.removeClass($set.activeClass);
+			});
+		}
 
 		if( $set.clickToRemove ) {
 			var $body = $('body');

@@ -4,32 +4,86 @@
     padding-top: 60px;
     background-color: $deep;
     background-color: rgba($deep, $opacity-h);
+
     @include media('mobile') {
         margin-top: 10px;
     }
-    > .in {
-        > .hd {
-            > .in {}
-            h3 {}
-            span {}
-        }
-        > .ct {
-            > .in {
-                .footer {
-                    .copyright {
-                        ul {
-                            list-style: none;
-                            padding-left: 0;
-                            li {
-                                display: inline-block;
-                                margin-right: 5px;
-                                a {
-                                    text-decoration: none;
-                                }
-                            }
-                        }
+
+    &.is-active {
+
+        > .in {
+
+            > .hd {
+
+                a {
+
+                    &:before {
+                        @include icon-font('arrow_drop_up');
                     }
                 }
+            }
+        }
+    }
+
+    > .in {
+
+        > .hd {
+            border-bottom: $interval-xs solid $minor-color;
+
+            @include js(false) {
+                display: none;
+            }
+
+            @include media('mobile') {
+                display: none;
+            }
+
+            > .in {
+                @extend %center;
+                position: relative;
+            }
+
+            h3 {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                text-align: right;
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            a {
+                border: none;
+                background-color: $minor-color;
+                border-radius: 3px 3px 0 0;
+                color: #ffffff;
+                padding: 8px 24px 7px 40px;
+                position: relative;
+                line-height: 28px;
+
+                &:hover {
+                    background-color: deeper($minor-color);
+                }
+                
+                &:before {
+                    @include icon-font('arrow_drop_down');
+                    font-size: 2em !important;
+                    margin-right: $interval-xs;
+                    color: $white;
+                    position: absolute;
+                    left: 10px;
+                    top: 0px;
+                }
+            }
+        }
+
+        > .ct {
+
+            > .in {
+                
             }
         }
     }

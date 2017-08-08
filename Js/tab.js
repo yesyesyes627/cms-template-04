@@ -1,11 +1,11 @@
-define(['getNode'], function(getNode){
+define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 	
 	function main(env, opt, file){
 
 		var $set = {
 				auto: false, //是否自動撥放
 				delay: 5000, //停留時間
-				event: 'click focusin', //jQuery 事件名稱
+				event: 'click', //jQuery 事件名稱
 				activeClass: 'is-active', //啟動的 class
 				debug: false
 			}
@@ -13,88 +13,104 @@ define(['getNode'], function(getNode){
 		$.extend($set, opt);
 
 		var $env = $(env),
-			$all_item = getNode.getCtItem(env),
-			$items = $all_item.filter(function(i) { //過濾第一個 jquery 物件，也就是 tab
+			$li = getNode.getCtItem(env),
+			$tab = $li.eq(0).children('.tab'),
+			$tab_li = $tab.find('li'),
+			$tab_li_length = $tab_li.length,
+			$tab_a = $tab_li.find('a'),
+			$items = $li.filter(function(i) { //過濾第一個 jquery 物件，也就是 tab
 				return !!i;
-			}),
-			$items_l = $items.length,
-			$tabs = $all_item.eq(0),
-			$tabs_li = $tabs.find('li'),
-			$tab_a = $tabs_li.find('a, input'),
-			$tab_a_length = $tab_a.length - 1;
+			});
 
 		var _tab_key = 9,
 			_index = 0;
 
-		$items.each(function(i, n){
-			var $this = $(this),
-				$hd = getNode.getHd($this),
-				$hd_a = $hd.find('a');
+		//如果不是手機就開啟白癡無障礙尋覽功能
+		if( !mobileFilter ) {
 
-			$hd_a.each(function(i, n){
-				var $this = $(this),
-					_href = $this.attr('href');
+			for( var i = 0; i < $tab_li_length; i++ ) {
 
-				if( !_href || _href === '#' ) {
-					$this.removeAttr('href');
-				}
-			});
+				(function(i){
+					var $this = $tab_a.eq(i),
+						$item = $items.eq(i);
+					
+					//移除 hd
+					getNode.getHd($item.children('[data-index]')).remove();
 
-			if( $hd.css('display') === 'none' ) {
-				$hd.find('a').removeAttr('href');
+					var $item_all_a = $item.find('[href], input');
+
+					//如果 item 裡沒有可以 focus 的 a 或 input，按下 tab 鍵要預覽下一個
+					if( $item_all_a.length ) {
+
+						var $item_first_a = $item_all_a.eq(0),
+							$item_last_a = $item_all_a.eq(-1);
+
+						//觸發 this 就 focus 目標裡的第一個 a
+						$this.on('keydown', function(evt){
+
+							if( evt.which === _tab_key ) {
+								evt.preventDefault();
+
+								slider(i);
+								$item_first_a.focus();
+							}
+						});
+
+						//當頁籤中的最後一個 a 被按下 tab，檢測自己是不是最後一個頁籤的最後一個 a
+						if( $tab_li_length > i + 1 ) {
+							
+							//觸發 最後一個 a 就輪播並 focus 下個頁籤裡的 a
+							$item_last_a.on('keydown', function(evt){
+
+								if( evt.which === _tab_key ) {
+									evt.preventDefault();
+
+									$tab_a.eq(i + 1).focus();
+								}
+							});	
+						}
+
+					}else {
+
+						//如果頁籤裡沒有任何 a，且又不是最後一個
+
+						if( $tab_li_length > i + 1 ) {
+
+							//focus 下個頁籤裡的 a
+							$this.on('keydown', function(evt){
+
+								if( evt.which === _tab_key ) {
+									evt.preventDefault();
+	
+									$tab_a.eq(i + 1).focus();
+								}
+							});
+						}
+					}
+				})(i)
 			}
-		});
-
-		for( var i = 0; i < $tab_a_length; i++ ) { //註冊無障礙 tab 事件
-
-			(function(i){
-				var $a = $items.eq(i).find('a[href], input');
-
-				if($a.length) {
-
-					$tab_a.eq(i).on('keydown', function(evt){ //觸發事件
-
-						if( evt.which === _tab_key ) {
-							evt.preventDefault();
-
-							$a.eq(0).focus();
-						}
-					});
-
-					$a.eq(-1).on('keydown', function(evt){ //觸發事件
-
-						if( evt.which === _tab_key ) {
-							evt.preventDefault();
-
-							$tab_a.eq(i + 1).focus();
-						}
-					});
-				}
-			})(i)
 		}
 
-		var _eventNmae = file, //事件名稱
-			_active = $set.activeClass; //被選擇的 class name
-
-		$tab_a.on(_eventNmae, function(){
-			var $this = $(this);
-
-			_index = $this.closest('li').index();
+		//代理事件
+		$tab_a.on(file, function(){
+			var $this = $(this),
+				_index = $this.closest('li').index();
 
 			slider(_index);
 		});
 
-		$tab_a.on( $set.event, function(evt){ //觸發事件
+		//觸發事件舊觸發代理事件
+		$tab_a.on($set.event, function(evt){
 			evt.preventDefault();
 
-			$(this).trigger(_eventNmae);
+			$(this).trigger(file);
 		});
 
 		slider(0);
 
 		function slider(_index) {
-			$tabs_li.removeClass(_active);
-			$tabs_li.eq(_index).addClass(_active);
+			$tab_li.removeClass($set.activeClass);
+			$tab_li.eq(_index).addClass($set.activeClass);
 			$items.hide();
 			$items.eq(_index).show();
 		}
@@ -104,18 +120,27 @@ define(['getNode'], function(getNode){
 
 			function auto() { //設定自動撥放涵式
 
-				_index = (_index + 1 + $items_l) % $items_l; //算出第幾個要被撥放
+				_index = (_index + 1 + $tab_li_length) % $tab_li_length; //算出第幾個要被撥放
 
 				slider(_index); //預設向右撥放
 				timer = setTimeout(auto, $set.delay);
 			}
+
+			function autoStart(){
+				clearTimeout(timer);
+				timer = setTimeout(auto, $set.delay);
+			}
+
+			function autoClear(){
+				clearTimeout(timer);
+			}
 			
 			$env.on('mouseenter', function(){ //設定滑進滑出項目
-				clearTimeout(timer);
+				autoClear();
 			});
 
 			$env.on('mouseleave', function(){
-				timer = setTimeout(auto, $set.delay);
+				autoStart();
 			});
 
 			timer = setTimeout(auto, $set.delay); //輪播開始
