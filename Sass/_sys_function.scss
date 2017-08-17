@@ -21,3 +21,15 @@
 			@return $text_light;
 		}
 	}
+
+	@function revertColor($color) { //依據背景色轉換文字顏色
+		$r: red($color);
+		$g: green($color);
+		$b: blue($color);
+
+		@if ( $r + $g + $b > 380 ) {
+			@return $deep;
+		} @else {
+			@return $white;
+		}
+	}
