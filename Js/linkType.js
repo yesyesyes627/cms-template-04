@@ -47,7 +47,7 @@ define(function(){
 					_length = _href.length,
 					_type = 'other';
 
-				if( _ques_i === -1 || _dot_i > _ques_i ){ //如果沒有問號或問號比.前面
+				if( _dot_i > _ques_i ){ //如果沒有問號或問號比.前面
 					_length = _href.length - _dot_i;
 				}else { //如果有問號
 					_length = _ques_i - _dot_i;
