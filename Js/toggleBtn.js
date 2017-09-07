@@ -38,10 +38,10 @@ define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 		//設定文字功能...有原生文字及觸發文字
 		if( !!$set.btnOrangeText && _flag && !!$set.btnActiveText ) {
 			$btn.text($set.btnActiveText);
-			$btn.attr('title', $set.btnActiveText);
+			$btn.attr('title', $set.btnActiveText + '[連結]');
 		}else if( !!$set.btnOrangeText ) {
 			$btn.text($set.btnOrangeText);
-			$btn.attr('title', $set.btnOrangeText);
+			$btn.attr('title', $set.btnOrangeText + '[連結]');
 		}
 
 		//紀錄觸發過的事件 cookie(UUID)，有的話就還原它的動作
