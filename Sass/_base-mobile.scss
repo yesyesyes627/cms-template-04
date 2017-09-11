@@ -14,6 +14,8 @@
 
 				a {
 					background-image: image-url('icon-pic/icon-mobile_btn_close.png');
+					left: 0;
+					background-color: transparent;
 
 					&:after {
 						content: $content;
@@ -86,7 +88,8 @@
                 background-image: image-url('icon-mobile_btn_menu.png');
                 background-repeat: no-repeat;
                 background-position: center;
-                border-radius: 50%;
+				border-radius: 50%;
+				transition: $transition;
 
                 &:after {
                     position: fixed;
