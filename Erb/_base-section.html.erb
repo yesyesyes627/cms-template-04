@@ -25,6 +25,10 @@
 						<div class="group msg-tool" data-index="2" data-type="<%= $row %>" data-child="4"><div class="in">
 							<div class="ct"><div class="in">
 
+							<!-- accesskey 導盲磚 -->
+								<%= render partial: "/erb/simple-text_accesskey", locals: set({ access_key: "M", access_title: "連至中央區塊", header_text: "導盲磚" }) %>
+							<!-- accesskey 結束 -->
+
 							<!-- open-data 開放資料 -->
 								<%= render partial: "/erb/list-text_open-data", locals: set({ index: 2, header_text: "開放資料" }) %>
 							<!-- open-data 結束 -->

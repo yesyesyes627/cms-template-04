@@ -86,8 +86,8 @@
 	},
 	{
 		"BaseName": "base-footer",
-		"hd": "open",
-		"func": "{'toggleBtn':{'btnOrangeText':'open','btnActiveText':'close','focusActive':false}}",
+		"hd": "close",
+		"func": "{'toggleBtn':{'btnOrangeText':'close','btnActiveText':'open','focusActive':false}}",
 		"Sub": [
 			{
 				"GroupType": "FixedModuleString",
@@ -152,6 +152,10 @@
 						"Class": "msg-tool",
 						"func": "",
 						"Sub": [
+							{
+								"GroupType": "FixedModuleString",
+								"Name": "Accesskey_ToContent"
+							},
 							{
 								"GroupType": "FixedModuleString",
 								"Name": "WebArchive_OpenData"
