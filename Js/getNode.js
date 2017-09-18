@@ -1,4 +1,4 @@
-define(function() {
+define(['langFilter'], function(langFilter) {
 
 	//取共通平台節點的方法物件
 
@@ -156,21 +156,24 @@ define(function() {
 				this.updateIndex($btn);
 			}else if( !$btn.length && add !== false ) {
 
-				var _lang = $('body').data('lang') || window.CCMS_LanguageSN;
-
-				var _method = 'append',
+				var _method = null,
 					_text = className;
 
-				if ( _lang === 1 ) {
+				if ( langFilter ) {
 
 					if( _text === 'prev' ) {
-						_method = 'prepend';
 						_text = '上一則';
 					}else if( _text === 'next' ) {
 						_text = '下一則';
 					}else if( _text === 'more' ) {
 						_text = '更多';
 					}
+				}
+
+				if( _text === 'prev' ) {
+					_method = 'prepend';
+				}else {
+					_method = 'append';
 				}
 
 				$btn = $('<li class="'+ className +'"><span><a title="'+ _text +'" href="#">'+ _text +'</a></span></li>');

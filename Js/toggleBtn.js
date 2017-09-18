@@ -1,4 +1,4 @@
-define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
+define(['getNode', 'mobileFilter', 'langFilter'], function(getNode, mobileFilter, langFilter){
 	
 	function main(env, opt, file){
 
@@ -13,6 +13,8 @@ define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 				event: 'click', //jQuery 事件名稱
 				focusActive: true, //是否開啟白癡的無障礙 tab 功能
 				cookie: false,
+				text: 'link',
+				chText: '連結',
 				debug: false
 			}
 
@@ -34,14 +36,22 @@ define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 		}else {
 			$btn = $env.find('a');
 		}
+		
+		var _text = null;
+
+		if( langFilter ) {
+			_text = $set.chText;
+		}else {
+			_text = $set.text;
+		}
 
 		//設定文字功能...有原生文字及觸發文字
 		if( !!$set.btnOrangeText && _flag && !!$set.btnActiveText ) {
 			$btn.text($set.btnActiveText);
-			$btn.attr('title', $set.btnActiveText + '[連結]');
+			$btn.attr('title', $set.btnActiveText +'['+ _text +']');
 		}else if( !!$set.btnOrangeText ) {
 			$btn.text($set.btnOrangeText);
-			$btn.attr('title', $set.btnOrangeText + '[連結]');
+			$btn.attr('title', $set.btnOrangeText +'['+ _text +']');
 		}
 
 		//紀錄觸發過的事件 cookie(UUID)，有的話就還原它的動作
@@ -129,8 +139,10 @@ define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 			//如果有開啟更改文字功能就改吧
 			if( $btn.text() === $set.btnOrangeText && !!$set.btnActiveText ) {
 				$btn.text($set.btnActiveText);
+				$btn.attr('title', $set.btnActiveText +'['+ _text +']');
 			}else if( $btn.text() === $set.btnActiveText && !!$set.btnOrangeText ) {
 				$btn.text($set.btnOrangeText);
+				$btn.attr('title', $set.btnOrangeText +'['+ _text +']');
 			}
 		});
 

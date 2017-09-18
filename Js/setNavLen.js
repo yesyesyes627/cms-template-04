@@ -1,11 +1,11 @@
-define(['getNode'], function(getNode){
+define(['getNode', 'langFilter'], function(getNode, langFilter){
 	
 	function main(env, opt, file){
 
 		var $set = {
+				navLen: 10,
 				text: 'more...',
 				chText: '更多...',
-				navLen: 10,
 				debug: false
 			}
 
@@ -19,10 +19,12 @@ define(['getNode'], function(getNode){
 			$group_navs = getNode.getChildGroup($groupList_nav);
 
 		var _navLen = parseInt($groupList_nav.data('setnavlen'), 10) || $set.navLen,
-			_text = $set.text;
+			_text = null;
 
-		if( window.CCMS_LanguageSN === 1 ) {
+		if( langFilter ) {
 			_text = $set.chText;
+		}else {
+			_text = $set.text;
 		}
 
 		$group_navs.each(function(i, d){
