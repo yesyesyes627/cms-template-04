@@ -44,12 +44,12 @@ define(function(){
 				var $this = $(this),
 					$closest = $this.closest('[data-type]');
 
-				return ( $($this.attr('href')).length !== 0 && !$closest.hasClass('list-text tab') );
+				return ( $($this.attr('href')).length !== 0 && !$closest.hasClass('list-text tab'));
 			});
 
 		$a.on(_eventNmae, function(){
 
-			var $this = $(this),
+			var $this = $(this)
 				$href = $($this.attr('href'));
 
 			$env.stop().animate({
@@ -58,7 +58,7 @@ define(function(){
 		});
 
 		$a.on('click', function(evt){ //觸發事件
-			evt.preventDefault();
+			// evt.preventDefault();
 
 			$(this).trigger(_eventNmae);
 		});
