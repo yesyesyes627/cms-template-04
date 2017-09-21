@@ -19,12 +19,10 @@ define(['getNode', 'langFilter'], function(getNode, langFilter){
 			$group_navs = getNode.getChildGroup($groupList_nav);
 
 		var _navLen = parseInt($groupList_nav.data('setnavlen'), 10) || $set.navLen,
-			_text = null;
+			_text = $set.text;
 
 		if( langFilter ) {
 			_text = $set.chText;
-		}else {
-			_text = $set.text;
 		}
 
 		$group_navs.each(function(i, d){

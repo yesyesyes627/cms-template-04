@@ -58,7 +58,6 @@ define(function(){
 		});
 
 		$a.on('click', function(evt){ //觸發事件
-			// evt.preventDefault();
 
 			$(this).trigger(_eventNmae);
 		});

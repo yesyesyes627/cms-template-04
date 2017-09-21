@@ -7,6 +7,13 @@ define(['langFilter'], function(langFilter) {
 		_type_tab = '2', //頁籤
 		_type_row = '3', //單欄
 		_type_list = '4'; //清單
+		
+	var _extend = 'link',
+		_method = 'append';
+	
+	if ( langFilter ) {
+		_extend = '連結';
+	}
 
 	return {
 
@@ -50,7 +57,7 @@ define(['langFilter'], function(langFilter) {
 			return this.getIn(this.getHd(env));
 		},
 
-		getHdLink: function(env, add) { //取得 hd li btn 節點
+		getHdLink: function(env, add) { //取得 hd a 節點
 			var $hdIn = this.getHdIn(env),
 				_type = this.getType(env),
 				$link = null;
@@ -61,14 +68,15 @@ define(['langFilter'], function(langFilter) {
 				$link = $hdIn.children('h3');
 			}
 
-			if( !$link.length && !_type && add !== false ) {
-
-				$link = $('<h4><span><a title="build by getNode" href="#">build by getNode</span></a></h4>');
-				$hdIn.append($link);
-
-			}else if( !$link.length && add !== false ) {
-
-				$link = $('<h3><span><a title="build by getNode" href="#">build by getNode</span></a></h3>');
+			if( !$link.length && add !== false ) {
+				
+				if( !_type ) {
+					$link = $('<h4></h4>');
+				}else {
+					$link = $('<h3></h3>');
+				}
+	
+				$link.append('<span><a title="build by getNode['+ _extend +']" href="#">build by getNode</a></span>');
 				$hdIn.append($link);
 			}
 
@@ -148,37 +156,36 @@ define(['langFilter'], function(langFilter) {
 			var $ftList = this.getFtList(env),
 				$btn = $ftList.children('.'+ className);
 
-			if( !$btn.length && !className && add !== false ) { //空按鈕
-				$btn = $('<li><span><a title="build by getNode" href="#">build by getNode</a></span></li>');
-				$ftList.append($btn);
+			if( !$btn.length && add !== false ) { //如果沒有這顆按鈕，且沒有明確指定不加入按鈕
 
-				this.updateFtItemLen(env);
-				this.updateIndex($btn);
-			}else if( !$btn.length && add !== false ) {
+				var _method = 'append';
 
-				var _method = null,
-					_text = className;
+				if( className === undefined ) { //如果是匿名按鈕
+					$btn = $('<li><span><a title="build by getNode['+ _extend +']" href="#">build by getNode</a></span></li>');
 
-				if ( langFilter ) {
-
-					if( _text === 'prev' ) {
-						_text = '上一則';
-					}else if( _text === 'next' ) {
-						_text = '下一則';
-					}else if( _text === 'more' ) {
-						_text = '更多';
-					}
-				}
-
-				if( _text === 'prev' ) {
-					_method = 'prepend';
 				}else {
-					_method = 'append';
+					var _text = className;
+					
+					if( _text === 'prev' ) {
+						_method = 'prepend';
+					}
+
+					if ( langFilter ) {
+
+						if( _text === 'prev' ) {
+							_text = '上一則';
+						}else if( _text === 'next' ) {
+							_text = '下一則';
+						}else if( _text === 'more' ) {
+							_text = '更多';
+						}
+					}
+					
+					$btn = $('<li class="'+ className +'"><span><a title="'+ _text +'['+ _extend +']" href="#">'+ _text +'</a></span></li>');
 				}
 
-				$btn = $('<li class="'+ className +'"><span><a title="'+ _text +'" href="#">'+ _text +'</a></span></li>');
 				$ftList[_method]($btn);
-
+				
 				this.updateFtItemLen(env);
 				this.updateIndex($btn);
 			}

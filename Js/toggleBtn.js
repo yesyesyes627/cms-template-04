@@ -37,12 +37,10 @@ define(['getNode', 'mobileFilter', 'langFilter'], function(getNode, mobileFilter
 			$btn = $env.find('a');
 		}
 		
-		var _text = null;
+		var _text = $set.text;
 
 		if( langFilter ) {
 			_text = $set.chText;
-		}else {
-			_text = $set.text;
 		}
 
 		//設定文字功能...有原生文字及觸發文字
