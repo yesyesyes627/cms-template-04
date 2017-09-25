@@ -1,4 +1,4 @@
-define(['getNode'], function(getNode){
+define(['getNode', 'mobileFilter', 'getFocusNode'], function(getNode, mobileFilter, getFocusNode){
 	
 	function main(env, opt, file){
 
@@ -16,10 +16,10 @@ define(['getNode'], function(getNode){
 			$li = getNode.getCtItem(env), //取 li
 			$child_node = getNode.getChildGroup(env), //取 group nav
 			$child_node_header = getNode.getHd($child_node),
+			$child_node_content = getNode.getCt($child_node),
 			$a = $child_node_header.find('a'),
+			$a_length = $a.length,
 			$last_a = $env.find('a').eq(-1);
-
-		var _tab_key = 9;
 
 		//幫 .content 裡有 a 的物件加上 is-active
 		$child_node.each(function(i, d){
@@ -46,20 +46,68 @@ define(['getNode'], function(getNode){
 			$(this).trigger(file);
 		});
 
-		//白癡的無障礙 tab 尋覽功能
-		$a.on('keydown', function(evt){
+		//如果不是手機就開啟白癡無障礙尋覽功能
+		if( !mobileFilter ) {
+			var _tab_key = 9;
 
-			if( evt.which === _tab_key ) {
-				$(this).trigger(file);
+			var $after_a = getFocusNode($last_a);
+
+			$after_a.on('keydown', function(evt){ //模組後第一個 a
+				
+				if( evt.which === _tab_key && evt.shiftKey ) {
+					evt.preventDefault();
+					$a.eq($a_length - 1).trigger(file);
+					$last_a.focus();
+				}
+			});
+			
+			for( var i = 0; i < $a_length; i++ ) {
+
+				(function(i){
+					var $this = $a.eq(i),
+						$item = $child_node_content.eq(i),
+						$before_item = $child_node_content.eq(i - 1);
+						
+					var $item_all_a = $item.find('[href], input'),
+						$before_item_all_a = $before_item.find('[href], input');
+
+					var _isFirst = ( i === 0 ),
+						_isLast = ( i === $a_length - 1 );
+						
+					var $item_last_a = $item_all_a.eq(-1),
+						$before_item_last_a = $before_item_all_a.eq(-1);
+
+					// 觸發 this 就 focus 目標裡的第一個 a
+					$this.on('keydown', function(evt){
+						$li.removeClass($set.activeClass);
+						
+						if( evt.which === _tab_key && !evt.shiftKey ) {
+
+							if( $item_all_a.length ) {
+								$this.trigger(file);
+							}
+
+						}else if( evt.which === _tab_key && evt.shiftKey && !_isFirst ) {
+							evt.preventDefault();
+
+							if( $before_item_all_a.length ) {
+								$a.eq(i - 1).trigger(file);
+								$before_item_last_a.focus();
+							}else {
+								$a.eq(i - 1).focus();
+							}
+						}
+					});
+					
+					$item_last_a.on('keydown', function(evt){
+
+						if( evt.which === _tab_key && !evt.shiftKey ) {
+							$li.removeClass($set.activeClass);
+						}
+					});
+				})(i);
 			}
-		});
-
-		$last_a.on('keydown', function(evt){ //最後一個 a 按下 tab 時，關閉所有子選單
-
-			if( evt.which === _tab_key ) {
-				$li.removeClass($set.activeClass);
-			}
-		});
+		}
 
 		if( $set.event === 'mouseenter' ) {
 

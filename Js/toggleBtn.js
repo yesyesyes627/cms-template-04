@@ -1,4 +1,4 @@
-define(['getNode', 'mobileFilter', 'langFilter'], function(getNode, mobileFilter, langFilter){
+define(['getNode', 'mobileFilter', 'langFilter', 'getFocusNode'], function(getNode, mobileFilter, langFilter, getFocusNode){
 	
 	function main(env, opt, file){
 
@@ -78,14 +78,28 @@ define(['getNode', 'mobileFilter', 'langFilter'], function(getNode, mobileFilter
 		//如果符合條件就開啟白癡的無障礙 tab 尋覽功能，不符合就觸發原生功能
 		if( $set.focusActive ) {
 			var	_tab_key = 9,
-				$last_btn = getNode.getCtIn(env).find('a, input, select').eq(-1),
-				$btns = $btn.add($last_btn);
+				$all_a = $env.find('[href], input, select'),
+				$first_a = $all_a.eq(0),
+				$before_a = getFocusNode($first_a, 'prev'),
+				$last_a = $all_a.eq(-1),
+				$after_a = getFocusNode($last_a);
 
-			//第一個 a 及最後一個 a 按下 tab 時，觸發事件
-			$btns.on('keydown', function(evt){
-
-				if( evt.which === _tab_key ) {
+			$btn.on('keydown', function(evt){
+				$btn.trigger(_eventNmae);
+			});
+			
+			$last_a.on('keydown', function(evt){ //模組後第一個 a
+				
+				if( evt.which === _tab_key && !evt.shiftKey ) {
 					$btn.trigger(_eventNmae);
+				}
+			});
+			
+			$after_a.on('keydown', function(evt){ //模組後第一個 a
+				
+				if( evt.which === _tab_key && evt.shiftKey ) {
+					$btn.trigger(_eventNmae);
+					$last_a.focus();
 				}
 			});
 		}
@@ -123,7 +137,7 @@ define(['getNode', 'mobileFilter', 'langFilter'], function(getNode, mobileFilter
 		//觸發的事件
 		$btn.on(_eventNmae, function(){
 
-			//主要功能...換 class orz
+			// 主要功能...換 class orz
 			$target.toggleClass($set.targetClass);
 			$env.toggleClass($set.toggleClass);
 

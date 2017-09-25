@@ -1,0 +1,176 @@
+//客製分頁與筆數================================================================
+.area-customize.notitle01-pager {
+
+    >.bg-drop-layout>.in,
+    >.in {}
+
+    .hd {
+        display: none;
+
+        >.in {}
+
+        h4 {}
+
+        span {}
+
+        a {}
+    }
+
+    .ct {
+
+        >.in {
+            text-align: center;
+            &:after {
+                @extend %clear;
+            }
+        }
+
+        ul {
+            padding: 0;
+            display: inline-block;
+            &[data-index="1"] {
+                float: left;
+            }
+
+            &[data-index="2"] {
+                float: right;
+            }
+
+            &[data-index="3"] {
+                text-align: center;
+
+                @include media('phone') {}
+            }
+            &.page,
+            &.single {
+                margin: 0;
+                position: static;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                list-style: none;
+            }
+            &.single {
+                margin-left: 20px;
+                .select {
+                    label {
+                        font-size: 1em;
+                        color: $deep-gray;
+                    }
+                }
+            }
+            &.page {
+                @include media('phone') {
+                    margin: 15px 0px;
+                }
+                li {}
+                a {
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        li {
+            float: left;
+            line-height: 30px;
+
+            +li {}
+
+            &.first {}
+
+            &.prev {}
+
+            &.next {}
+
+            &.last {}
+            &.is-active {
+
+                a {
+                    background-color: $major-color;
+                    color: $white;
+                    box-shadow: inset 0px 0px 4px 0px mix($black, $major-color, 80%);
+
+                    &:hover {
+                        background-color: deeper($major-color);
+                    }
+                }
+            }
+            &.disabled {
+                a {
+                    background: mix($black, $major-color, 30%);
+                }
+            }
+
+            span {
+
+                a {}
+            }
+        }
+
+        span {
+            display: block;
+        }
+
+        a {
+
+            color: $deep-gray;
+            padding: 8px 12px;
+            &:hover {
+                background-color: $light-gray;
+            }
+        }
+        .count {
+            font-size: 1em;
+            color: $deep-gray;
+            i {
+                margin-right: 5px;
+            }
+        }
+        .btn {
+            margin: 0 7px 0 -6px;
+            padding: 5px 12px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            background: $light-gray;
+            border: 1px solid #d0d0d0;
+            &:before {
+                @include icon-font('play_circle_filled');
+                width: 10px;
+                height: 6px;
+                margin-left: -5px;
+                padding: 2px 2px;
+                font-size: 1.1em;
+                color: $black;
+                text-align: center;
+            }
+            &:hover {
+                background: $gray;
+            }
+            &:active {
+                box-shadow: inset 0px 0px 4px 0px #000;
+            }
+            span {
+                font-size: 0;
+            }
+        }
+        .page_empty {
+            padding: 0 8px;
+        }
+        /*i*/
+        .mark {}
+    }
+
+    .ft {
+
+        >.in {}
+
+        ul {}
+
+        li {}
+
+        span {}
+
+        a {}
+    }
+}

@@ -5,7 +5,6 @@ define(['getNode'], function(getNode){
 		var $set = {
 				activeClass: 'is-active',
 				parentClass: 'is-parent',
-				focusActive: true, //是否開啟白癡的無障礙 tab 功能
 				event: 'click', //jQuery 事件名稱
 				debug: false
 			}
@@ -29,27 +28,6 @@ define(['getNode'], function(getNode){
 				$li_parent.addClass($set.parentClass);
 			}
 		});
-
-		//如果符合條件就開啟白癡的無障礙 tab 尋覽功能，不符合就觸發原生功能
-		if( $set.focusActive ) {
-			var	_tab_key = 9;
-
-			//a 按下 tab 時，觸發事件
-			$a.on('keydown', function(evt){
-				var $this = $(this);
-
-				if( evt.which === _tab_key ) {
-					$this.trigger(file);
-				}
-			});
-
-			$last_a.on('keydown', function(evt){
-
-				if( evt.which === _tab_key ) {
-					$li.removeClass($set.activeClass);
-				}
-			});
-		}
 
 		$a.on($set.event, function(evt){ //觸發事件
 			var $this = $(this),

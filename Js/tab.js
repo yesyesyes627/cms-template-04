@@ -22,72 +22,80 @@ define(['getNode', 'mobileFilter'], function(getNode, mobileFilter){
 				return !!i;
 			});
 
-		var _tab_key = 9,
-			_index = 0;
+		var _index = 0;
 
 		//如果不是手機就開啟白癡無障礙尋覽功能
 		if( !mobileFilter ) {
+			var _tab_key = 9;
 
 			for( var i = 0; i < $tab_li_length; i++ ) {
 
 				(function(i){
 					var $this = $tab_a.eq(i),
-						$item = $items.eq(i);
+						$item = $items.eq(i),
+						$before_item = $items.eq(i - 1);
 					
 					//移除 hd
 					getNode.getHd($item.children('[data-index]')).remove();
 
-					var $item_all_a = $item.find('[href], input');
+					var $item_all_a = $item.find('[href], input'),
+						$before_item_all_a = $before_item.find('[href], input');
 
-					//如果 item 裡沒有可以 focus 的 a 或 input，按下 tab 鍵要預覽下一個
-					if( $item_all_a.length ) {
+					var _isFirst = ( i === 0 ),
+						_isLast = ( i === $tab_li_length - 1 );
 
-						var $item_first_a = $item_all_a.eq(0),
-							$item_last_a = $item_all_a.eq(-1);
+					//先寫內頁 a 的邏輯
 
-						//觸發 this 就 focus 目標裡的第一個 a
-						$this.on('keydown', function(evt){
+					var $item_first_a = $item_all_a.eq(0),
+						$item_last_a = $item_all_a.eq(-1),
+						$before_item_first_a = $before_item_all_a.eq(0),
+						$before_item_last_a = $before_item_all_a.eq(-1);
 
-							if( evt.which === _tab_key ) {
-								evt.preventDefault();
+					// 觸發 this 就 focus 目標裡的第一個 a
+					$this.on('keydown', function(evt){
 
-								slider(i);
+						if( evt.which === _tab_key && !evt.shiftKey ) {
+							evt.preventDefault();
+
+							slider(i);
+
+							if( $item_all_a.length ) {
 								$item_first_a.focus();
+							}else {
+								$tab_a.eq(i + 1).focus();
 							}
-						});
 
-						//當頁籤中的最後一個 a 被按下 tab，檢測自己是不是最後一個頁籤的最後一個 a
-						if( $tab_li_length > i + 1 ) {
-							
-							//觸發 最後一個 a 就輪播並 focus 下個頁籤裡的 a
-							$item_last_a.on('keydown', function(evt){
+						}else if( evt.which === _tab_key && evt.shiftKey && !_isFirst ) {
+							evt.preventDefault();
 
-								if( evt.which === _tab_key ) {
-									evt.preventDefault();
+							slider(i - 1);
 
-									$tab_a.eq(i + 1).focus();
-								}
-							});	
+							if( $before_item_all_a.length ) {
+								$before_item_last_a.focus();
+							}else {
+								$tab_a.eq(i - 1).focus();
+							}
 						}
+					});
 
-					}else {
+					$item_first_a.on('keydown', function(evt){
 
-						//如果頁籤裡沒有任何 a，且又不是最後一個
+						if( evt.which === _tab_key && evt.shiftKey ) {
+							evt.preventDefault();
 
-						if( $tab_li_length > i + 1 ) {
-
-							//focus 下個頁籤裡的 a
-							$this.on('keydown', function(evt){
-
-								if( evt.which === _tab_key ) {
-									evt.preventDefault();
-	
-									$tab_a.eq(i + 1).focus();
-								}
-							});
+							$tab_a.eq(i).focus();
 						}
-					}
-				})(i)
+					});	
+					
+					$item_last_a.on('keydown', function(evt){
+
+						if( evt.which === _tab_key && !evt.shiftKey && !_isLast ) {
+							evt.preventDefault();
+
+							$tab_a.eq(i + 1).focus();
+						}
+					});
+				})(i);
 			}
 		}
 
