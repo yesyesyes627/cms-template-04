@@ -154,7 +154,8 @@
 						"Sub": [
 							{
 								"GroupType": "FixedModuleString",
-								"Name": "Accesskey_ToContent"
+								"Name": "Accesskey_ToContent",
+								"func": "{'focusContent':{}}"
 							},
 							{
 								"GroupType": "FixedModuleString",
