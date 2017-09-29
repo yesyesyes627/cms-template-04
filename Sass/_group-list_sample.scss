@@ -5,7 +5,6 @@
 .group-list.sample {
 
 	> .bg-drop-layout > .in, > .in {
-		position: relative;
 		margin-left: $interval-m;
 		margin-right: $interval-m;
 
@@ -36,20 +35,7 @@
 				> ul {
 
 					> li {
-
-						> [data-index][data-type] {
-
-							> .in {
-								margin-top: 0;
-								margin-bottom: 0;
-								margin-left: 0;
-								margin-right: 0;
-
-								> .ft {
-									display: none;
-								}
-							}
-						}
+						
 					}
 				}
 			}
