@@ -75,15 +75,16 @@ define(['getNode', 'mobileFilter', 'getFocusNode'], function(getNode, mobileFilt
 
 					// 觸發 this 就 focus 目標裡的第一個 a
 					$this.on('keydown', function(evt){
-						$li.removeClass($set.activeClass);
 						
 						if( evt.which === _tab_key && !evt.shiftKey ) {
+							$li.removeClass($set.activeClass);
 
 							if( $item_all_a.length ) {
 								$this.trigger(file);
 							}
 
 						}else if( evt.which === _tab_key && evt.shiftKey && !_isFirst ) {
+							$li.removeClass($set.activeClass);
 							evt.preventDefault();
 
 							if( $before_item_all_a.length ) {

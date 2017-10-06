@@ -83,12 +83,19 @@ define(['getNode', 'mobileFilter', 'langFilter', 'getFocusNode'], function(getNo
 				$before_a = getFocusNode($first_a, 'prev'),
 				$last_a = $all_a.eq(-1),
 				$after_a = getFocusNode($last_a);
+				
+			if( $btn.attr('href') === undefined ) { //沒有 href 就加入
+				$btn.attr('href', '#');
+			}
 
 			$btn.on('keydown', function(evt){
-				$btn.trigger(_eventNmae);
+				
+				if( evt.which === _tab_key ) { //註冊的 btn
+					$btn.trigger(_eventNmae);
+				}
 			});
 			
-			$last_a.on('keydown', function(evt){ //模組後第一個 a
+			$last_a.on('keydown', function(evt){ //模組中最後一個 a
 				
 				if( evt.which === _tab_key && !evt.shiftKey ) {
 					$btn.trigger(_eventNmae);
