@@ -16,7 +16,7 @@ define(['getNode'], function(getNode){
 			evt.preventDefault();
 
 			var $href = $($a.attr('href')),
-				$target = $href.find('[href], input, select').eq(0);
+				$target = $href.find('a[href], input, select').eq(0);
 
 			$target.focus();
 		});
