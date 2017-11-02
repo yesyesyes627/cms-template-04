@@ -1,4 +1,4 @@
-define(function(){
+define(['langFilter'], function(langFilter){
 	
 	function main(env, opt, file){
 
@@ -10,24 +10,27 @@ define(function(){
 
 		$.extend($set, opt);
 
-		// var $elem = document.createElement('input'); //建立一個虛擬 input
-		// $elem.setAttribute('type', 'date'); //指定為日期欄位
+		if( langFilter ) { //如果是中文
+			$set.language = 'zh-tw';
+			$set.navTitles = {
+				'days': '<i>民國 rrr 年</i> &nbsp; MM',
+				'months': '民國 rrr 年',
+				'years': '民國 rrr1 至 rrr2 年'
+			}
+		}
 
-		// if ( $elem.type === 'text' ) { //如果 type 仍是 text，及代表尚未實作 date picker
+		var $this = $(env),
+			$date = $this.find('[type="date"]');
 
-			var $this = $(env),
-				$date = $this.find('[type="date"]');
+		$date.each(function(i,n){
+			var $this = $(this),
+				_val = $this.attr('value');
 
-			$date.each(function(i,n){
-				var $this = $(this),
-					_val = $this.attr('value');
+			$this.attr('type', 'text');
+			$this.attr('value', _val);
 
-				$this.attr('type', 'text');
-				$this.attr('value', _val);
-
-				$(n).datepicker($set);
-			});
-		// }
+			$(n).datepicker($set);
+		});
 
 		if($set.debug) {
 			console.log('預設值:', $set);
